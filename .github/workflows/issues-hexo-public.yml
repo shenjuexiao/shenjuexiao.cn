@@ -16,14 +16,11 @@
 # 编写 issues-hexo-public.yml 包含脚本解析 issue，输出日期-标题.md
 # 跨仓库使用 token: ${{ secrets.ISSUES_SHENJUEXIAO }}
 
-
-# workflow_dispatch:
-
 name: Issues to Hexo Blog
 
 on:
   issues:
-    # types: [opened, edited, closed, reopened, labeled, unlabeled]
+    types: [opened, edited, closed, reopened, labeled, unlabeled]
   workflow_dispatch:
     inputs:
       issue_number:
