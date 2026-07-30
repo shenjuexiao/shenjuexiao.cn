@@ -9,7 +9,7 @@
     
     <title>
         
-            git push GitHub + Gitee |
+            Will not delete all non-push URLs |
         
         神觉晓
     </title>
@@ -174,7 +174,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        git push GitHub + Gitee
+                        Will not delete all non-push URLs
                     </div>
                 
 
@@ -202,7 +202,7 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2026-07-30 14:34:04</span>
+                <span class="datetime">2026-07-30 14:37:42</span>
             </span>
 
             
@@ -235,85 +235,44 @@
                     
 
                     
-                         <h1 id="git-push-GitHub-Gitee"><a href="#git-push-GitHub-Gitee" class="headerlink" title="git push GitHub + Gitee"></a>git push GitHub + Gitee</h1><h1 id="同步推送-GitHub-和-Gitee"><a href="#同步推送-GitHub-和-Gitee" class="headerlink" title="同步推送 GitHub 和 Gitee"></a>同步推送 GitHub 和 Gitee</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
-<li><a class="link"   target="_blank" rel="noopener" href="https://chat.deepseek.com/share/jcldaa4ma7iv5xmfb6" >同步推送 GitHub 和 Gitee<i class="fas fa-external-link-alt"></i></a><a class="link"   target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/fcd433c7-8267-4ed0-bd52-ad2a78311fd9" >（Deepseek）<i class="fas fa-external-link-alt"></i></a></li>
-</ul>
-<p>将代码同时推送到 GitHub 和 Gitee，主要有两种方案。你可以根据自己的习惯，选择 Git 原生命令，或使用更自动化的工具。</p>
-<h2 id="方案一：使用-Git-原生命令（推荐）"><a href="#方案一：使用-Git-原生命令（推荐）" class="headerlink" title="方案一：使用 Git 原生命令（推荐）"></a>方案一：使用 Git 原生命令（推荐）</h2><p>这是最基础和灵活的方式，只需几条命令配置好一个“聚合”的远程仓库，之后一条<code>git push</code>命令就能同时推送到两个平台。</p>
-<p><strong>核心原理</strong>：给本地的<code>origin</code>（或任意名字）远程仓库设置<strong>多个推送（push）URL</strong>。这样，当执行<code>git push origin</code>时，Git 会依次向这些 URL 推送代码。</p>
-<p><strong>配置步骤</strong>：</p>
-<ol>
-<li><strong>进入项目目录，并查看当前远程仓库</strong>：</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> your-project</span><br><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+                         <h1 id="Will-not-delete-all-non-push-URLs"><a href="#Will-not-delete-all-non-push-URLs" class="headerlink" title="Will not delete all non-push URLs"></a>Will not delete all non-push URLs</h1><h1 id="Git-远程-URL-修改"><a href="#Git-远程-URL-修改" class="headerlink" title="Git 远程 URL 修改"></a>Git 远程 URL 修改</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PS D:\Git\shenjuexiao&gt; git remote set-url --delete gitee git@gitee.com:shenjuexiao/shenjuexiao.git</span><br><span class="line">fatal: Will not delete all non-push URLs</span><br></pre></td></tr></table></figure>
 
-<ol start="2">
-<li><strong>添加两个平台的仓库地址作为推送目标</strong>：</li>
-</ol>
-<p>假设你的 Gitee 仓库地址是 <code>https://gitee.com/你的用户名/项目名.git</code>，GitHub 仓库地址是 <code>https://github.com/你的用户名/项目名.git</code>。</p>
-<p>首先，将 Gitee 的地址设为 <code>origin</code> 的主要推送地址（如果已有<code>origin</code>，这一步会覆盖它）：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url --push origin https://gitee.com/你的用户名/项目名.git</span><br></pre></td></tr></table></figure>
+<p>这个错误是因为你试图删除远程仓库 <code>gitee</code> 的<strong>唯一</strong> URL，Git 不允许这样做——每个远程仓库至少需要保留一个 URL。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="方案一：先添加新-URL，再删除旧的"><a href="#方案一：先添加新-URL，再删除旧的" class="headerlink" title="方案一：先添加新 URL，再删除旧的"></a>方案一：先添加新 URL，再删除旧的</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先添加一个新的 URL</span></span><br><span class="line">git remote set-url --add gitee git@gitee.com:new-repo.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 然后再删除旧的 URL</span></span><br><span class="line">git remote set-url --delete gitee git@gitee.com:shenjuexiao/shenjuexiao.git</span><br></pre></td></tr></table></figure>
 
-<p>然后，将 GitHub 的地址添加为 <code>origin</code> 的<strong>额外</strong>推送地址：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url --add --push origin https://github.com/你的用户名/项目名.git</span><br></pre></td></tr></table></figure>
+<h3 id="方案二：直接修改-URL（推荐）"><a href="#方案二：直接修改-URL（推荐）" class="headerlink" title="方案二：直接修改 URL（推荐）"></a>方案二：直接修改 URL（推荐）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 直接替换整个 URL，而不是删除</span></span><br><span class="line">git remote set-url gitee git@gitee.com:new-repo.git</span><br></pre></td></tr></table></figure>
 
-<p>实际上，如果不写 <code>--push</code> ，Git 也会默认只添加 <code>(push)</code> ，即以下的命令效果相当：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url --add origin https://github.com/你的用户名/项目名.git</span><br></pre></td></tr></table></figure>
+<h3 id="方案三：删除整个远程仓库再重新添加"><a href="#方案三：删除整个远程仓库再重新添加" class="headerlink" title="方案三：删除整个远程仓库再重新添加"></a>方案三：删除整个远程仓库再重新添加</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除整个远程仓库</span></span><br><span class="line">git remote remove gitee</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重新添加</span></span><br><span class="line">git remote add gitee git@gitee.com:new-repo.git</span><br></pre></td></tr></table></figure>
 
-<ol start="3">
-<li><strong>验证配置</strong>：</li>
-</ol>
-<p>再次运行 <code>git remote -v</code>，你会看到 <code>origin</code> 有了两个 <code>(push)</code> 地址，但 <code>(fetch)</code> 仍只指向 Gitee。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">origin  https://gitee.com/你的用户名/项目名.git (fetch)</span><br><span class="line">origin  https://gitee.com/你的用户名/项目名.git (push)</span><br><span class="line">origin  https://github.com/你的用户名/项目名.git (push)</span><br></pre></td></tr></table></figure>
+<h3 id="方案四：查看当前所有-URL，确认情况"><a href="#方案四：查看当前所有-URL，确认情况" class="headerlink" title="方案四：查看当前所有 URL，确认情况"></a>方案四：查看当前所有 URL，确认情况</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看 gitee 远程仓库的所有 URL</span></span><br><span class="line">git remote get-url --all gitee</span><br></pre></td></tr></table></figure>
 
+<h2 id="最常见的使用场景"><a href="#最常见的使用场景" class="headerlink" title="最常见的使用场景"></a>最常见的使用场景</h2><p>如果你是<strong>想修改远程仓库地址</strong>，直接用方案二最简单：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url gitee git@gitee.com:新的仓库地址.git</span><br></pre></td></tr></table></figure>
 
+<p>如果你是<strong>想添加多个推送地址</strong>（同时推送到多个仓库），用方案一。</p>
+<h2 id="重命名远程仓库"><a href="#重命名远程仓库" class="headerlink" title="重命名远程仓库"></a>重命名远程仓库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote rename github origin</span><br></pre></td></tr></table></figure>
 
-<ol start="4">
-<li><strong>日常使用</strong>：</li>
-</ol>
+<p>这个命令会：</p>
 <ul>
-<li><p><strong>推送</strong>：执行 <code>git push origin main</code>（或你的主分支名），代码就会同时推送到 Gitee 和 GitHub。</p>
-</li>
-<li><p><strong>拉取</strong>：<code>git pull</code> 默认只会从 <code>(fetch)</code> 指向的 Gitee 拉取更新，避免从多个源拉取可能导致的混乱。</p>
-</li>
+<li>将远程仓库 <code>github</code> 重命名为 <code>origin</code></li>
+<li>保留所有原有的 URL 和配置</li>
+<li>更新所有本地跟踪分支（如 <code>github/main</code> → <code>origin/main</code>）</li>
 </ul>
-<blockquote>
-<p><strong>注意</strong>：这种方法的一个小缺点是，如果其中一个仓库推送失败（比如网络问题），整个推送操作会报错，需要你根据提示处理。</p>
-</blockquote>
-<h3 id="方案二：使用第三方工具自动化"><a href="#方案二：使用第三方工具自动化" class="headerlink" title="方案二：使用第三方工具自动化"></a>方案二：使用第三方工具自动化</h3><p>如果你希望有更丰富的功能，比如一键提交并推送、全量同步所有分支和标签，可以考虑使用现成的工具。</p>
-<table>
-<thead>
-<tr>
-<th align="left">工具名称</th>
-<th align="left">安装方式</th>
-<th align="left">特点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><strong>git-multi-sync-tool</strong></td>
-<td align="left"><code>npm install -g git-multi-sync-tool</code></td>
-<td align="left">基于文本配置文件管理多个仓库，支持智能推送策略、提交后自动推送等功能。</td>
-</tr>
-<tr>
-<td align="left"><strong>gtl</strong></td>
-<td align="left">从 <a class="link"   target="_blank" rel="noopener" href="https://github.com/crates-dev/gtl" >GitHub Releases<i class="fas fa-external-link-alt"></i></a> 下载</td>
-<td align="left">提供一键初始化和推送功能，通过配置文件管理多个远程仓库。</td>
-</tr>
-<tr>
-<td align="left"><strong>mgit-push</strong></td>
-<td align="left"><code>npm install -g mgit-push</code></td>
-<td align="left">功能更简洁，专注于一键推送到 GitHub、Gitee 等多个平台</td>
-</tr>
-</tbody></table>
-<p>以 <strong>git-multi-sync-tool</strong> 为例，使用流程大致如下：</p>
-<ol>
-<li>安装：<code>npm install -g git-multi-sync-tool</code></li>
-<li>在项目中初始化配置：<code>git-sync init</code></li>
-<li>编辑生成的 <code>.git-remotes.txt</code> 文件，把 GitHub 和 Gitee 的仓库地址分别写入一行。</li>
-<li>执行 <code>git-sync setup</code> 设置远程仓库。</li>
-<li>之后就可以用 <code>git-sync commit &quot;你的提交信息&quot; -p</code> 来完成“提交并一键推送到所有仓库”了。</li>
-</ol>
-<p>对于大部分开发者来说，方案一（Git 原生命令）已经足够好用，它不依赖额外工具，配置清晰明了。如果你需要管理多个不同项目，或者需要更复杂的同步策略，可以尝试方案二。</p>
+<h3 id="验证是否成功"><a href="#验证是否成功" class="headerlink" title="验证是否成功"></a>验证是否成功</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看所有远程仓库</span></span><br><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+
+<p>你应该能看到类似这样的输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">origin  git@github.com:你的用户名/仓库名.git (fetch)</span><br><span class="line">origin  git@github.com:你的用户名/仓库名.git (push)</span><br></pre></td></tr></table></figure>
+
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>如果 <code>origin</code> 已经存在，这个命令会报错。你需要先删除或重命名现有的 <code>origin</code></li>
+<li>如果你的 <code>origin</code> 已经指向其他仓库，可以先确认一下：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看当前 origin 指向哪里</span></span><br><span class="line">git remote get-url origin</span><br></pre></td></tr></table></figure>
+
+<p>如果 <code>origin</code> 已经存在且不是你想用的，可以先删除它：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote remove origin</span><br><span class="line">git remote rename github origin</span><br></pre></td></tr></table></figure>
+
+<p>执行后记得检查一下 <code>git remote -v</code> 确认结果正确。</p>
 
                     
                 </div>
@@ -334,31 +293,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2026/2026-07-30-Gitee-remote-error-hook-declined/"
-                                   title="Gitee remote error hook declined"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Gitee remote error hook declined</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2026/2026-07-30-NPM-packages-not-found/"
-                                   title="NPM packages not found"
+                                   href="/2026/2026-07-30-Gitee-remote-error-hook-declined/"
+                                   title="Gitee remote error hook declined"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">NPM packages not found</span>
+                                        <span class="post-nav-title-item text-ellipsis">Gitee remote error hook declined</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
