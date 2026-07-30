@@ -9,7 +9,7 @@
     
     <title>
         
-            Gitee remote error hook declined |
+            Astro GitHub Actions |
         
         神觉晓
     </title>
@@ -174,7 +174,7 @@
             <div class="post-content-bottom border-box">
                 
                     <div class="post-title">
-                        Gitee remote error hook declined
+                        Astro GitHub Actions
                     </div>
                 
 
@@ -202,7 +202,7 @@
         
             <span class="meta-info-item post-create-date">
                 <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2026-07-30 14:34:37</span>
+                <span class="datetime">2026-07-30 14:50:51</span>
             </span>
 
             
@@ -235,57 +235,55 @@
                     
 
                     
-                         <h1 id="Gitee-remote-error-hook-declined"><a href="#Gitee-remote-error-hook-declined" class="headerlink" title="Gitee remote error hook declined"></a>Gitee remote error hook declined</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>-同时推送到 GitHub 和 Gitee 两个仓库：</p>
-<h3 id="基本设置"><a href="#基本设置" class="headerlink" title="基本设置"></a>基本设置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url origin git@github.com:shenjuexiao/shenjuexiao.git</span><br><span class="line">git remote set-url --add origin git@gitee.com:shenjuexiao/shenjuexiao.git</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看配置"><a href="#查看配置" class="headerlink" title="查看配置"></a>查看配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br><span class="line">origin  git@github.com:shenjuexiao/shenjuexiao.git (fetch)</span><br><span class="line">origin  git@github.com:shenjuexiao/shenjuexiao.git (push)</span><br><span class="line">origin  git@gitee.com:shenjuexiao/shenjuexiao.git (push)</span><br></pre></td></tr></table></figure>
-
-<h3 id="推送文件"><a href="#推送文件" class="headerlink" title="推送文件"></a>推送文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m <span class="string">&quot;20260722&quot;</span></span><br><span class="line">git push origin main</span><br><span class="line">origin  git@github.com:shenjuexiao/shenjuexiao.git (fetch)</span><br><span class="line">origin  git@github.com:shenjuexiao/shenjuexiao.git (push)</span><br><span class="line">origin  git@gitee.com:shenjuexiao/shenjuexiao.git (push)</span><br></pre></td></tr></table></figure>
-
-<h3 id="返回结果"><a href="#返回结果" class="headerlink" title="返回结果"></a>返回结果</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Everything up-to-date</span><br><span class="line">Enumerating objects: 68, <span class="keyword">done</span>.</span><br><span class="line">Counting objects: 100% (68/68), <span class="keyword">done</span>.</span><br><span class="line">Delta compression using up to 16 threads</span><br><span class="line">Compressing objects: 100% (67/67), <span class="keyword">done</span>.</span><br><span class="line">Writing objects: 100% (68/68), 5.68 MiB | 5.83 MiB/s, <span class="keyword">done</span>.</span><br><span class="line">Total 68 (delta 21), reused 0 (delta 0)</span><br><span class="line">remote: Powered by GITEE.COM [1.1.23]</span><br><span class="line">remote: Set trace flag b6498f96</span><br><span class="line">remote: Push will publish a hidden email, make email public or abandon related commits</span><br><span class="line">remote: error: hook declined to update refs/heads/main</span><br><span class="line">To gitee.com:shenjuexiao/shenjuexiao.git</span><br><span class="line"> ! [remote rejected] main -&gt; main (hook declined)</span><br><span class="line">error: failed to push some refs to <span class="string">&#x27;git@gitee.com:shenjuexiao/shenjuexiao.git&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<p>这个错误是 Gitee 服务端的 <strong>pre-receive hook（预接收钩子）</strong> 拒绝了你的推送。<code>hook declined</code> 表示服务端的自定义检查脚本未通过。</p>
-<p><img   src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Gitee_remote_error_hook_declined.png"  alt="Gitee remote error hook declined"></p>
-<h2 id="常见原因及解决方案"><a href="#常见原因及解决方案" class="headerlink" title="常见原因及解决方案"></a>常见原因及解决方案</h2><h3 id="1-提交信息不符合规范（最常见）"><a href="#1-提交信息不符合规范（最常见）" class="headerlink" title="1. 提交信息不符合规范（最常见）"></a>1. <strong>提交信息不符合规范</strong>（最常见）</h3><p>Gitee 可能要求提交信息符合某种格式（如包含 Issue ID、特定前缀等）。</p>
-<p><strong>解决方案：</strong></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看最后一次提交信息</span></span><br><span class="line">git <span class="built_in">log</span> -1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改最后一次提交信息</span></span><br><span class="line">git commit --amend -m <span class="string">&quot;新的提交信息&quot;</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 强制推送（注意：如果多人协作需谨慎）</span></span><br><span class="line">git push -f origin main</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-邮箱-用户信息未公开"><a href="#2-邮箱-用户信息未公开" class="headerlink" title="2. 邮箱&#x2F;用户信息未公开"></a>2. <strong>邮箱&#x2F;用户信息未公开</strong></h3><p>错误信息中提到 “Push will publish a hidden email, make email public or abandon related commits”，这说明你的提交中使用了 Gitee 的私有邮箱。</p>
-<p><strong>解决方案：</strong></p>
-<ul>
-<li>在 Gitee 网页端设置中，将邮箱设置为公开</li>
-<li>或者修改本地 Git 配置，使用提交邮箱（<code>gitee.com</code> -&gt; <code>设置</code> -&gt; <code>邮箱设置</code>）</li>
+                         <h1 id="Astro-GitHub-Actions"><a href="#Astro-GitHub-Actions" class="headerlink" title="Astro GitHub Actions"></a>Astro GitHub Actions</h1><h1 id="Astro-安装及-GitHub-Actions-自动部署"><a href="#Astro-安装及-GitHub-Actions-自动部署" class="headerlink" title="Astro 安装及 GitHub Actions 自动部署"></a>Astro 安装及 GitHub Actions 自动部署</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
+<li><a class="link"   target="_blank" rel="noopener" href="https://docs.astro.build/zh-cn/install-and-setup/" >安装 Astro<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/v11/commands/npx" >npx<i class="fas fa-external-link-alt"></i></a></li>
 </ul>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config user.email <span class="string">&quot;你的真实邮箱@example.com&quot;</span></span><br><span class="line"><span class="comment"># 然后修改最后一次提交的作者信息</span></span><br><span class="line">git commit --amend --reset-author</span><br></pre></td></tr></table></figure>
+<h2 id="通过-CLI-向导安装"><a href="#通过-CLI-向导安装" class="headerlink" title="通过 CLI 向导安装"></a>通过 CLI 向导安装</h2><p><a class="link"   target="_blank" rel="noopener" href="https://docs.astro.build/zh-cn/install-and-setup/" >docs.astro.build&#x2F;zh-cn&#x2F;install-and-setup&#x2F;<i class="fas fa-external-link-alt"></i></a></p>
+<p>我选择的是 <code>Astro Use blog template</code>，也可以选择其他的选项，使用模板能快速建立页面。</p>
+<p><img   src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Use_blog_template.png"  alt="Astro Use blog template"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 npm 创建一个新项目</span></span><br><span class="line">npm create astro@latest</span><br></pre></td></tr></table></figure>
 
-<h3 id="3-推送了敏感文件或大文件"><a href="#3-推送了敏感文件或大文件" class="headerlink" title="3. 推送了敏感文件或大文件"></a>3. <strong>推送了敏感文件或大文件</strong></h3><p>Gitee 可能限制了文件大小或禁止推送某些类型的文件。</p>
-<p><strong>解决方案：</strong></p>
-<ul>
-<li>检查是否有超过 100MB 的文件</li>
-<li>使用 <code>.gitignore</code> 排除不必要的文件</li>
-</ul>
-<h3 id="4-分支保护规则"><a href="#4-分支保护规则" class="headerlink" title="4. 分支保护规则"></a>4. <strong>分支保护规则</strong></h3><p>main 分支可能设置了保护规则，不允许直接推送。</p>
-<p><strong>解决方案：</strong></p>
-<ul>
-<li>通过 Pull Request&#x2F;Merge Request 方式合并</li>
-<li>或者联系仓库管理员修改保护规则</li>
-</ul>
-<h2 id="快速排查步骤"><a href="#快速排查步骤" class="headerlink" title="快速排查步骤"></a>快速排查步骤</h2><ol>
-<li><strong>查看详细错误信息：</strong></li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GIT_CURL_VERBOSE=1 git push origin main</span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 pnpm 创建一个新项目</span></span><br><span class="line">pnpm create astro@latest</span><br></pre></td></tr></table></figure>
 
-<ol start="2">
-<li><p><strong>检查 Gitee 仓库设置：</strong></p>
+<p>或</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 yarn 创建一个新项目</span></span><br><span class="line">yarn create astro</span><br></pre></td></tr></table></figure>
+
+<p><img   src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_npm_create_astro@latest.png"  alt="npm create astro@latest"></p>
+<h2 id="目录和文件"><a href="#目录和文件" class="headerlink" title="目录和文件"></a>目录和文件</h2><p><a class="link"   target="_blank" rel="noopener" href="https://docs.astro.build/zh-cn/basics/project-structure/" >docs.astro.build&#x2F;zh-cn&#x2F;basics&#x2F;project-structure&#x2F;<i class="fas fa-external-link-alt"></i></a></p>
+<blockquote>
+<p>Astro 采用一套约定俗成的文件夹布局来管理项目。每个 Astro 项目的根目录下都应该包括以下目录和文件：</p>
+</blockquote>
 <ul>
-<li>进入仓库 → 管理 → 提交信息规范</li>
-<li>查看是否有强制要求</li>
+<li>src&#x2F;* - 你的项目源代码（组件、页面、样式、图片等）。</li>
+<li>public&#x2F;* - 你的非代码、未处理的资源（字体、图标等）。</li>
+<li>package.json - 项目清单。</li>
+<li>astro.config.mjs - Astro 配置文件（推荐）。</li>
+<li>tsconfig.json - TypeScript 配置文件（推荐）。</li>
 </ul>
-</li>
-<li><p><strong>尝试使用 –no-verify 跳过（如果允许）：</strong></p>
-</li>
-</ol>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --no-verify origin main</span><br></pre></td></tr></table></figure>
+<h2 id="启动-Astro-开发服务器"><a href="#启动-Astro-开发服务器" class="headerlink" title="启动 Astro 开发服务器"></a>启动 Astro 开发服务器</h2><p><a class="link"   target="_blank" rel="noopener" href="https://docs.astro.build/zh-cn/develop-and-build/" >docs.astro.build&#x2F;zh-cn&#x2F;develop-and-build&#x2F;<i class="fas fa-external-link-alt"></i></a></p>
+<blockquote>
+<p>Astro 自带了一个内置的开发服务器，它包含了项目开发所需的一切。astro dev CLI 命令将启动本地开发服务器，让你第一次看到你的新网站。</p>
+</blockquote>
+<blockquote>
+<p>每个起始模板都预配置了一个脚本，该脚本将为你运行 astro dev。在进入你的项目目录后，使用你喜欢的包管理器运行此命令并启动 Astro 开发服务器。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+
+<p>或</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm run dev</span><br></pre></td></tr></table></figure>
+
+
+<p>或</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn run dev</span><br></pre></td></tr></table></figure>
+
+<h2 id="部署你的-Astro-站点至-GitHub-Pages"><a href="#部署你的-Astro-站点至-GitHub-Pages" class="headerlink" title="部署你的 Astro 站点至 GitHub Pages"></a>部署你的 Astro 站点至 GitHub Pages</h2><p><a class="link"   target="_blank" rel="noopener" href="https://docs.astro.build/zh-cn/guides/deploy/github/" >docs.astro.build&#x2F;zh-cn&#x2F;guides&#x2F;deploy&#x2F;github&#x2F;<i class="fas fa-external-link-alt"></i></a></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">GitHub</span> <span class="string">Pages</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="comment"># 每次推送到 `main` 分支时触发这个“工作流程”</span></span><br><span class="line">  <span class="comment"># 如果你使用了别的分支名，请按需将 `main` 替换成你的分支名</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span> [ <span class="string">main</span> ]</span><br><span class="line">  <span class="comment"># 允许你在 GitHub 上的 Actions 标签中手动触发此“工作流程”</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 允许 job 克隆 repo 并创建一个 page deployment</span></span><br><span class="line"></span><br><span class="line"><span class="string">```yaml</span></span><br><span class="line"><span class="attr">permissions:</span></span><br><span class="line">  <span class="attr">contents:</span> <span class="string">read</span></span><br><span class="line">  <span class="attr">pages:</span> <span class="string">write</span></span><br><span class="line">  <span class="attr">id-token:</span> <span class="string">write</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">your</span> <span class="string">repository</span> <span class="string">using</span> <span class="string">git</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v5</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install,</span> <span class="string">build,</span> <span class="string">and</span> <span class="string">upload</span> <span class="string">your</span> <span class="string">site</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">withastro/action@v5</span></span><br><span class="line">        <span class="comment"># with:</span></span><br><span class="line">          <span class="comment"># path: . # 存储库中 Astro 项目的根位置。（可选）</span></span><br><span class="line">          <span class="comment"># node-version: 20 # 用于构建站点的特定 Node.js 版本，默认为 20。（可选）</span></span><br><span class="line">          <span class="comment"># package-manager: pnpm@latest # 应使用哪个 Node.js 包管理器来安装依赖项和构建站点。会根据存储库中的 lockfile 自动检测。（可选）</span></span><br><span class="line">          <span class="comment"># build-cmd: pnpm run build # 用于构建你的网站的命令。默认运行软件包的构建脚本或任务。（可选）</span></span><br><span class="line">        <span class="comment"># env:</span></span><br><span class="line">          <span class="comment"># PUBLIC_POKEAPI: &#x27;https://pokeapi.co/api/v2&#x27; # 对变量值使用单引号。（可选）</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">deploy:</span></span><br><span class="line">    <span class="attr">needs:</span> <span class="string">build</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">name:</span> <span class="string">github-pages</span></span><br><span class="line">      <span class="attr">url:</span> <span class="string">$&#123;&#123;</span> <span class="string">steps.deployment.outputs.page_url</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">GitHub</span> <span class="string">Pages</span></span><br><span class="line">        <span class="attr">id:</span> <span class="string">deployment</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/deploy-pages@v4</span></span><br></pre></td></tr></table></figure>
+<h2 id="Error-Failed-to-create-deployment-status-404"><a href="#Error-Failed-to-create-deployment-status-404" class="headerlink" title="Error: Failed to create deployment (status: 404)"></a>Error: Failed to create deployment (status: 404)</h2><p><img   src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Deploy_to_GitHub_Pages.png"  alt="Astro Deploy to GitHub Pages"></p>
+<p>这个错误表明 <code>GitHub Pages</code> 部署失败，主要原因是 <code>GitHub Pages</code> 没有在仓库设置中启用。错误信息明确指出：</p>
+<p>Ensure GitHub Pages has been enabled: <a class="link"   target="_blank" rel="noopener" href="https://github.com/shenjuexiao/astro/settings/pages" >https://github.com/shenjuexiao/astro/settings/pages<i class="fas fa-external-link-alt"></i></a></p>
 
                     
                 </div>
@@ -306,31 +304,15 @@
                 
                     <div class="post-nav border-box">
                         
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2026/2026-07-30-Will-not-delete-all-non-push-URLs/"
-                                   title="Will not delete all non-push URLs"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Will not delete all non-push URLs</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
                         
                             <div class="next-post">
                                 <a class="next"
                                    rel="next"
-                                   href="/2026/2026-07-30-git-push-GitHub-Gitee/"
-                                   title="git push GitHub + Gitee"
+                                   href="/2026/2026-07-30-npm-vs-npx/"
+                                   title="npm vs npx"
                                 >
                                     <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">git push GitHub + Gitee</span>
+                                        <span class="post-nav-title-item text-ellipsis">npm vs npx</span>
                                         <span class="post-nav-item">下一篇</span>
                                     </span>
                                     <span class="right arrow-icon flex-center">
