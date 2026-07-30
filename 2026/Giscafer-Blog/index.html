@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="Hexo Theme Keep">
+    <meta name="description" content="Hexo Theme Keep">
+    <meta name="author" content="shenjuexiao">
+    
+    <title>
+        
+            Giscafer Blog |
+        
+        神觉晓
+    </title>
+    
+<link rel="stylesheet" href="/css/style.css">
+
+    
+        <link rel="shortcut icon" href="/images/@shenjuexiao1_600%C3%97600.png">
+    
+    
+<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/regular.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/solid.min.css">
+
+    
+<link rel="stylesheet" href="/font/css/brands.min.css">
+
+    
+    <script>
+        (function () {
+            let theme = localStorage.getItem('KEEP-THEME-STATUS');
+            let classname = "";
+            if (!theme || (JSON.parse(theme).isAutoTheme)){
+                classname = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? "dark-mode" : "light-mode";
+            }
+            else{
+                classname = JSON.parse(theme).isDark ? "dark-mode" : "light-mode";
+            }
+            document.documentElement.classList.add(classname);
+        })();
+    </script>
+    <script class="keep-theme-configurations">
+    const KEEP = window.KEEP || {}
+    KEEP.hexo_config = {"hostname":"mp.gaishanke.com","root":"/","language":"zh-CN"}
+    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"神觉晓","author":"shenjuexiao","avatar":"/images/@shenjuexiao1C_600×600.png","logo":"/images/@shenjuexiao1B_600×600.png","favicon":"/images/@shenjuexiao1_600×600.png"},"menu":{"home":"/","archives":"/archives"},"first_screen":{"enable":false,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep writing and Keep loving.","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"toc":{"enable":false,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":false,"preload":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs","custom":{"enable":false,"url":null}},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","search_db_path":"keep-search.json","source_data":{},"version":"4.3.0"}
+    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
+    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
+    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
+  </script>
+<meta name="generator" content="Hexo 8.1.2"></head>
+
+
+<body>
+<div class="progress-bar-container">
+    
+
+    
+</div>
+
+
+
+<main class="page-container border-box">
+    <!-- home first screen  -->
+    
+
+    <!-- page content -->
+    <div class="page-main-content border-box">
+        <div class="page-main-content-top">
+            
+<header class="header-wrapper">
+
+    <div class="border-box header-content">
+        <div class="left flex-start border-box">
+            
+                <a class="logo-image border-box" href="/">
+                    <img src="/images/@shenjuexiao1B_600%C3%97600.png">
+                </a>
+            
+            <a class="site-name border-box" href="/">
+               神觉晓
+            </a>
+        </div>
+
+        <div class="right border-box">
+            <div class="pc border-box">
+                <ul class="menu-list border-box">
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/">
+                                
+                                首页
+                                
+                            </a>
+                            
+                        </li>
+                    
+                        
+                        <li class="menu-item flex-start border-box">
+                            <a class="menu-text-color border-box" href="/archives">
+                                
+                                归档
+                                
+                            </a>
+                            
+                        </li>
+                    
+                    
+                </ul>
+            </div>
+            <div class="mobile border-box flex-start">
+                
+                <div class="icon-item menu-bar">
+                    <div class="menu-bar-middle"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-drawer">
+        <ul class="drawer-menu-list border-box">
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
+                            
+                            首页
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+                
+                <li class="drawer-menu-item border-box not-sub-menu">
+                    <label class="drawer-menu-label border-box">
+                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
+                            
+                            归档
+                        </a>
+                        
+                    </label>
+                    
+                </li>
+            
+        </ul>
+    </div>
+
+    <div class="window-mask"></div>
+
+</header>
+
+
+        </div>
+
+        <div class="page-main-content-middle border-box">
+
+            <div class="main-content border-box">
+                
+
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        Giscafer Blog
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/@shenjuexiao1C_600%C3%97600.png">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">shenjuexiao</span>
+                                
+                                    <span class="author-badge">Lv2</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2026-07-07 00:00:00</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                    <span class="datetime" data-updated="Mon Jul 06 2026 16:00:00 GMT+0000">2026-07-07 00:00:00</span>
+                </span>
+            
+        
+
+        
+            <span class="meta-info-item post-category border-box"><i class="icon fas fa-folder"></i>&nbsp;
+                <ul class="post-category-ul">
+                    
+                            <li class="category-item"><a href="/categories/git/">git</a></li>
+                        
+                    
+                </ul>
+            </span>
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <h1 id="The-requested-URL-returned-error-403"><a href="#The-requested-URL-returned-error-403" class="headerlink" title="The requested URL returned error: 403"></a>The requested URL returned error: 403</h1><h1 id="GitHub-Actions-push-403-权限拒绝解决"><a href="#GitHub-Actions-push-403-权限拒绝解决" class="headerlink" title="GitHub Actions push 403 权限拒绝解决"></a>GitHub Actions push 403 权限拒绝解决</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
+<li><a class="link"   target="_blank" rel="noopener" href="https://www.doubao.com/chat/38434639772911618" >豆包：GitHub Actions 403<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://github.com/shenjuexiao/giscafer/issues/1" >The requested URL returned error: 403<i class="fas fa-external-link-alt"></i></a></li>
+</ul>
+<img     src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Giscafer_GitHub_Actions_push_403.png"   >
+
+<h2 id="fatal-unable-to-access"><a href="#fatal-unable-to-access" class="headerlink" title="fatal: unable to access"></a>fatal: unable to access</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Run</span> <span class="string">yarn</span> <span class="string">sync-post</span></span><br><span class="line">  <span class="string">yarn</span> <span class="string">sync-post</span></span><br><span class="line">  <span class="string">git</span> <span class="string">add</span> <span class="string">.</span></span><br><span class="line">  <span class="string">git</span> <span class="string">commit</span> <span class="string">-m</span> <span class="string">&#x27;chore(ci): blog sync&#x27;</span></span><br><span class="line">  <span class="string">git</span> <span class="string">push</span></span><br><span class="line">  <span class="attr">shell:</span> <span class="string">/usr/bin/bash</span> <span class="string">-e</span> &#123;<span class="number">0</span>&#125;</span><br><span class="line">  <span class="attr">env:</span></span><br><span class="line">    <span class="attr">GH_TOKEN:</span> <span class="string">***</span></span><br><span class="line">    <span class="attr">GH_USER:</span> <span class="string">***</span></span><br><span class="line">    <span class="attr">GH_PROJECT_NAME:</span> <span class="string">***</span></span><br><span class="line"><span class="string">yarn</span> <span class="string">run</span> <span class="string">v1.22.22</span></span><br><span class="line"><span class="string">$</span> <span class="string">node</span> <span class="string">./scripts/sync-post.js</span></span><br><span class="line"><span class="string">文章全部同步成功！</span> <span class="number">0</span></span><br><span class="line"><span class="string">Done</span> <span class="string">in</span> <span class="number">0.</span><span class="string">33s.</span></span><br><span class="line"><span class="string">ℹ</span> <span class="literal">No</span> <span class="string">staged</span> <span class="string">files</span> <span class="string">found.</span></span><br><span class="line">[<span class="string">main</span> <span class="string">7226b3a</span>] <span class="attr">chore(ci):</span> <span class="string">blog</span> <span class="string">sync</span></span><br><span class="line"> <span class="number">3</span> <span class="string">files</span> <span class="string">changed,</span> <span class="number">33</span> <span class="string">deletions(-)</span></span><br><span class="line"> <span class="string">delete</span> <span class="string">mode</span> <span class="number">100644</span> <span class="string">data/blog/post-1.mdx</span></span><br><span class="line"> <span class="string">delete</span> <span class="string">mode</span> <span class="number">100644</span> <span class="string">data/blog/post-2.mdx</span></span><br><span class="line"> <span class="string">delete</span> <span class="string">mode</span> <span class="number">100644</span> <span class="string">data/blog/post-3.mdx</span></span><br><span class="line"><span class="attr">remote:</span> <span class="string">Permission</span> <span class="string">to</span> <span class="string">***/***.git</span> <span class="string">denied</span> <span class="string">to</span> <span class="string">github-actions[bot].</span></span><br><span class="line"><span class="attr">fatal:</span> <span class="string">unable</span> <span class="string">to</span> <span class="string">access</span> <span class="attr">&#x27;https://github.com/***/***/&#x27;:</span> <span class="attr">The requested URL returned error:</span> <span class="number">403</span></span><br><span class="line"><span class="attr">Error:</span> <span class="string">Process</span> <span class="string">completed</span> <span class="string">with</span> <span class="string">exit</span> <span class="string">code</span> <span class="number">128</span><span class="string">.</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="文件：-github-workflows-sync-post-yml"><a href="#文件：-github-workflows-sync-post-yml" class="headerlink" title="文件：.github/workflows/sync-post.yml"></a>文件：<code>.github/workflows/sync-post.yml</code></h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Sync</span> <span class="string">Post</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Controls when the workflow will run</span></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="comment"># schedule:</span></span><br><span class="line">  <span class="comment">#   - cron: &quot;30 1 * * *&quot;</span></span><br><span class="line">  <span class="comment"># https://docs.github.com/cn/developers/webhooks-and-events/events/issue-event-types</span></span><br><span class="line">  <span class="attr">issues:</span></span><br><span class="line">    <span class="attr">types:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">opened</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">closed</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">renamed</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">labeled</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">unlabeled</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">reopened</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">committed</span> <span class="comment"># 修改？</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line"><span class="attr">env:</span></span><br><span class="line">  <span class="attr">GH_TOKEN:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">  <span class="attr">GH_USER:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_USER</span> <span class="string">&#125;&#125;</span></span><br><span class="line">  <span class="attr">GH_PROJECT_NAME:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_PROJECT_NAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">Publish:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">🛎️</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Git</span> <span class="string">config</span> <span class="string">🔧</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          git config --global user.name &quot;shenjuexiao&quot;</span></span><br><span class="line"><span class="string">          git config --global user.email &quot;shenjuexiao@qq.com&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Display</span> <span class="string">runtime</span> <span class="string">info</span> <span class="string">✨</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          echo &#x27;当前目录：&#x27;</span></span><br><span class="line"><span class="string">          pwd</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">🔧</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">yarn</span> <span class="string">install</span></span><br><span class="line"></span><br><span class="line">      <span class="comment"># - name: Build ⛏️</span></span><br><span class="line">      <span class="comment">#   run: yarn build</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Update</span> <span class="string">blog</span> <span class="string">files</span> <span class="string">⛏️</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          yarn sync-post</span></span><br><span class="line"><span class="string">          git add .</span></span><br><span class="line"><span class="string">          git commit -m &#x27;chore(ci): blog sync&#x27;</span></span><br><span class="line"><span class="string">          git push</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>github-actions[bot]</strong> 没有仓库写入推送权限，触发 403 forbidden。</p>
+<h2 id="三种常见场景"><a href="#三种常见场景" class="headerlink" title="三种常见场景"></a>三种常见场景</h2><ol>
+<li>仅配置 GH_TOKEN，但仓库默认工作流令牌无写权限（默认只读）</li>
+<li>个人 Token 权限范围不足、过期，或未正确注入</li>
+<li>Git remote 使用 https 但未自动替换授权头</li>
+</ol>
+<h2 id="方案一：开启仓库工作流写入权限（最简单，推荐）"><a href="#方案一：开启仓库工作流写入权限（最简单，推荐）" class="headerlink" title="方案一：开启仓库工作流写入权限（最简单，推荐）"></a>方案一：开启仓库工作流写入权限（最简单，推荐）</h2><p>步骤<br>仓库首页 ：<code>Settings</code> -&gt; <code>Actions</code> -&gt; <code>General</code><br>下滑找到 <code>Workflow permissions</code><br>勾选： <code>Read and write permissions</code><br>（默认是 <code> Read repository contents and packages permissions</code>）<br>保存设置，重新运行 Actions。<br>原理：内置 GITHUB_TOKEN 会获得推送、修改文件权限，无需额外个人 Token。</p>
+<img     src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Giscafer_Settings_Actions_General_Workflow-permissions.png"   >
+
+<h2 id="方案二：改用个人-PAT-Token（适合需要跨仓库-更多权限）"><a href="#方案二：改用个人-PAT-Token（适合需要跨仓库-更多权限）" class="headerlink" title="方案二：改用个人 PAT Token（适合需要跨仓库 &#x2F; 更多权限）"></a>方案二：改用个人 PAT Token（适合需要跨仓库 &#x2F; 更多权限）</h2><ol>
+<li>创建 GitHub 个人访问令牌 PAT<br>GitHub 头像，<code>Settings</code> -&gt; <code>Developer settings</code> -&gt; <code>Personal access tokens</code> -&gt; <code>Tokens (classic)</code><br>新建 Token，勾选权限：repo（全部仓库读写权限）。<br>复制生成的 Token（仅展示一次，丢失需重建）。</li>
+<li>仓库配置 Secret<br>仓库首页， <code>Settings</code> -&gt; <code>Secrets and variables</code> -&gt; <code>Actions</code> -&gt; <code>New repository secret</code><br>Name：GH_TOKEN。<br>Value：粘贴上面的 PAT。</li>
+<li>修改 <code>workflow</code> 注入授权（关键，你现有脚本缺授权）<br>你的脚本直接 <code>git push</code>，但 https 地址没带上 token，需要在 shell 里替换 remote url：</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">steps:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v4</span></span><br><span class="line">    <span class="comment"># 必须加上 fetch-depth=0，否则无法正常commit push</span></span><br><span class="line">    <span class="attr">with:</span></span><br><span class="line">      <span class="attr">fetch-depth:</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Sync</span> <span class="string">blog</span> <span class="string">post</span></span><br><span class="line">    <span class="attr">env:</span></span><br><span class="line">      <span class="attr">GH_TOKEN:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_TOKEN</span> <span class="string">&#125;&#125;</span> <span class="comment"># 如果用PAT填GH_TOKEN: $&#123;&#123; secrets.GH_TOKEN &#125;&#125;</span></span><br><span class="line">      <span class="attr">GH_USER:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_USER</span> <span class="string">&#125;&#125;</span></span><br><span class="line">      <span class="attr">GH_PROJECT_NAME:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_PROJECT_NAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">      yarn sync-post</span></span><br><span class="line"><span class="string">      # 核心：替换remote地址，带上token鉴权，解决403</span></span><br><span class="line"><span class="string">      git remote set-url origin https://$&#123;GH_USER&#125;:$&#123;GH_TOKEN&#125;@github.com/$&#123;GH_USER&#125;/$&#123;GH_PROJECT_NAME&#125;.git</span></span><br><span class="line"><span class="string">      git add .</span></span><br><span class="line"><span class="string">      git commit -m &#x27;chore(ci): blog sync&#x27;</span></span><br><span class="line"><span class="string">      git push</span></span><br><span class="line"><span class="string"></span>    <span class="attr">shell:</span> <span class="string">/usr/bin/bash</span> <span class="string">-e</span> &#123;<span class="number">0</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="关键遗漏点（原配置2个问题）"><a href="#关键遗漏点（原配置2个问题）" class="headerlink" title="关键遗漏点（原配置2个问题）"></a>关键遗漏点（原配置2个问题）</h2><ol>
+<li><code>checkout</code> 未加 <code>fetch-depth:0</code><br>默认只拉取最新一次提交，缺少完整 git 历史，<code>commit/push</code> 极易异常。</li>
+<li>未配置带 Token 的 <code>remote origin</code><br>直接 git push 使用无授权的 https 地址，bot 被拦截 403。</li>
+</ol>
+<h2 id="补充排查点"><a href="#补充排查点" class="headerlink" title="补充排查点"></a>补充排查点</h2><ol>
+<li>如果你用内置 <code>$&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;</code><br>必须完成【方案一：开启读写权限】，否则就算改 remote 也推不上去。</li>
+<li>PAT 失效处理<br>重新生成 Token，更新仓库 Secret 内的 <code>GH_TOKEN</code>。</li>
+<li>分支保护规则<br>若 main 分支开启 <code>Require pull request reviews before merging</code>，直接 push 会失败，两种解决：</li>
+</ol>
+<ul>
+<li>临时放开分支保护允许 bot 直接推送</li>
+<li>脚本改成自动创建 PR，而非直接 push</li>
+</ul>
+<h2 id="完整可直接复制的-job-模板"><a href="#完整可直接复制的-job-模板" class="headerlink" title="完整可直接复制的 job 模板"></a>完整可直接复制的 job 模板</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">sync-blog:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">code</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v4</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">fetch-depth:</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Setup</span> <span class="string">Node</span> <span class="string">&amp;</span> <span class="string">Yarn</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@v4</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="number">20</span></span><br><span class="line">          <span class="attr">cache:</span> <span class="string">&#x27;yarn&#x27;</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">dependencies</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">yarn</span> <span class="string">install</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Sync</span> <span class="string">post</span> <span class="string">&amp;</span> <span class="string">push</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="attr">GH_TOKEN:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">GH_USER:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_USER</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">GH_PROJECT_NAME:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_PROJECT_NAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          yarn sync-post</span></span><br><span class="line"><span class="string">          git remote set-url origin https://$&#123;GH_USER&#125;:$&#123;GH_TOKEN&#125;@github.com/$&#123;GH_USER&#125;/$&#123;GH_PROJECT_NAME&#125;.git</span></span><br><span class="line"><span class="string">          git config --global user.name &quot;github-actions[bot]&quot;</span></span><br><span class="line"><span class="string">          git config --global user.email &quot;github-actions[bot]@users.noreply.github.com&quot;</span></span><br><span class="line"><span class="string">          git add .</span></span><br><span class="line"><span class="string">          git commit -m &#x27;chore(ci): blog sync&#x27; || echo &quot;无文件变更，跳过提交&quot;</span></span><br><span class="line"><span class="string">          git push</span></span><br></pre></td></tr></table></figure>
+
+<p>新增 <code>git config</code> 配置提交者用户名邮箱，避免无身份提交报错；<br><code>|| echo</code> 兼容「无修改文件」场景，不会因为没有变更直接终止任务。</p>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2026/Gitblog-main.py/"
+                                   title="Gitblog main.py"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Gitblog main.py</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2026/The-requested-URL-returned-error-403/"
+                                   title="The requested URL returned error 403"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">The requested URL returned error 403</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+    </div>
+</div>
+
+
+                
+            </div>
+        </div>
+
+        <div class="page-main-content-bottom border-box">
+            
+<footer class="footer border-box">
+    <div class="copyright-info info-item">
+    &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2026
+    
+            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">shenjuexiao</a>
+        
+    </div>
+
+    <div class="theme-info info-item">
+        由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
+    </div>
+
+    
+
+    
+
+    
+</footer>
+
+        </div>
+    </div>
+
+    <!-- post tools -->
+    
+        <div class="post-tools right-toc">
+            <div class="post-tools-container border-box">
+    <ul class="post-tools-list border-box">
+        <!-- PC encrypt again -->
+        
+
+        <!-- PC TOC show toggle -->
+        
+
+        <!-- PC go comment -->
+        
+
+        <!-- PC full screen -->
+        <li class="tools-item flex-center full-screen">
+            <i class="fa-solid fa-expand"></i>
+        </li>
+    </ul>
+</div>
+
+        </div>
+    
+
+    <!-- side tools -->
+    <div class="side-tools">
+        <div class="side-tools-container border-box ">
+    <ul class="side-tools-list side-tools-show-handle border-box">
+        <li class="tools-item tool-font-adjust-plus flex-center">
+            <i class="fas fa-search-plus"></i>
+        </li>
+
+        <li class="tools-item tool-font-adjust-minus flex-center">
+            <i class="fas fa-search-minus"></i>
+        </li>
+
+        <!-- toggle mode -->
+        
+            <li class="tools-item tool-toggle-theme-mode flex-center">
+                <i class="fas fa-moon"></i>
+            </li>
+        
+
+        <!-- rss -->
+        
+
+        <!-- to bottom -->
+        <li class="tools-item tool-scroll-to-bottom flex-center">
+            <i class="fas fa-arrow-down"></i>
+        </li>
+    </ul>
+
+    <ul class="exposed-tools-list border-box">
+        
+
+        
+
+        <li class="tools-item tool-toggle-show flex-center">
+            <i class="fas fa-cog fa-spin"></i>
+        </li>
+
+        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
+            <i class="arrow fas fa-arrow-up"></i>
+            <span class="percent"></span>
+        </li>
+    </ul>
+</div>
+
+    </div>
+
+    <!-- image mask -->
+    <div class="zoom-in-image-mask">
+    <img class="zoom-in-image">
+</div>
+
+
+    <!-- local search -->
+    
+
+    <!-- tablet toc -->
+    
+</main>
+
+
+
+
+
+<!-- common js -->
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/header-shrink.js"></script>
+
+<script src="/js/back2top.js"></script>
+
+<script src="/js/toggle-theme.js"></script>
+
+<script src="/js/code-block.js"></script>
+
+<script src="/js/main.js"></script>
+
+<script src="/js/libs/anime.min.js"></script>
+
+
+<!-- local search -->
+
+
+<!-- lazyload -->
+
+
+<div class="">
+    <!-- home page -->
+    
+
+    <!-- post page -->
+    
+        <!-- post-helper -->
+        
+<script src="/js/post/post-helper.js"></script>
+
+
+        <!-- toc -->
+        
+
+        <!-- copyright-info -->
+        
+
+        <!-- share -->
+        
+    
+
+    <!-- categories page -->
+    
+
+    <!-- links page -->
+    
+
+    <!-- photos page -->
+    
+
+    <!-- tools page -->
+    
+</div>
+
+<!-- mermaid -->
+
+
+<!-- pjax -->
+
+
+
+</body>
+</html>
