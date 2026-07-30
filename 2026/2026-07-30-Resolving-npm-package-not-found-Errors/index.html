@@ -208,7 +208,7 @@
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Thu Jul 30 2026 14:51:44 GMT+0000">2026-07-30 22:51:44</span>
+                    <span class="datetime" data-updated="Thu Jul 30 2026 14:52:12 GMT+0000">2026-07-30 22:52:12</span>
                 </span>
             
         
@@ -236,8 +236,7 @@
 
                     
                          <h1 id="Resolving-“npm-package-not-found”-Errors"><a href="#Resolving-“npm-package-not-found”-Errors" class="headerlink" title="Resolving “npm package not found” Errors"></a>Resolving “npm package not found” Errors</h1><p>This error occurs when npm cannot locate a required package in your project, often due to missing installations, incorrect paths, or misconfigured project settings.</p>
-<p>##Example</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm run build</span><br><span class="line">Error: NPM packages not found. Please confirm npm packages <span class="built_in">which</span> need to build are <span class="keyword">in</span> the correct directory</span><br></pre></td></tr></table></figure>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm run build</span><br><span class="line">Error: NPM packages not found. Please confirm npm packages <span class="built_in">which</span> need to build are <span class="keyword">in</span> the correct directory</span><br></pre></td></tr></table></figure>
 
 <p>A common cause is that dependencies listed in package.json have not been installed. Running npm install in the project root usually resolves this by downloading all required packages into the node_modules directory.</p>
 <p>If you are working with environments like WeChat Mini Programs, the issue can also arise if npm packages are outside the miniprogramRoot directory. In such cases, you may need to adjust project.config.json:</p>
