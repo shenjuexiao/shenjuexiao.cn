@@ -23,13 +23,17 @@ name: Issues to Hexo Blog
 
 on:
   issues:
-    types: [opened, edited, closed, reopened, labeled, unlabeled]
+    # types: [opened, edited, closed, reopened, labeled, unlabeled]
   workflow_dispatch:
     inputs:
       issue_number:
         description: '指定要处理的 Issue 编号，留空则处理所有'
         required: false
         default: ''
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
 
 jobs:
   build-and-deploy:
