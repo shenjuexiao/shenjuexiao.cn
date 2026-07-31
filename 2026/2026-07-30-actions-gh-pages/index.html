@@ -208,7 +208,7 @@
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Thu Jul 30 2026 14:53:27 GMT+0000">2026-07-30 22:53:27</span>
+                    <span class="datetime" data-updated="Thu Jul 30 2026 06:30:29 GMT+0000">2026-07-30 14:30:29</span>
                 </span>
             
         
@@ -287,7 +287,7 @@
 <p>Notes: Actually, the GITHUB_TOKEN works for deploying to GitHub Pages but it has still some limitations. For the first deployment, we need to select the gh-pages branch or another branch on the repository settings tab. See First Deployment with GITHUB_TOKEN.</p>
 </blockquote>
 <p>实际上，<code>GITHUB_TOKEN</code> 可用于部署到 <code>GitHub Pages</code>，但仍存在一些限制。对于首次部署，我们需要在仓库设置的选项卡中选择 <code>gh-pages</code> 分支或其他分支。请参阅“使用 GITHUB_TOKEN 进行首次部署”。</p>
-<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><h3 id="GITHUB-TOKEN"><a href="#GITHUB-TOKEN" class="headerlink" title="GITHUB_TOKEN"></a>GITHUB_TOKEN</h3><p>GitHub Actions 工作流的”内置身份”，由系统自动创建和管理，权限仅限于当前仓库。</p>
+<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><h3 id="GITHUB-TOKEN"><a href="#GITHUB-TOKEN" class="headerlink" title="GITHUB_TOKEN"></a>GITHUB_TOKEN</h3><p>GitHub Actions 工作流的&quot;内置身份&quot;，由系统自动创建和管理，权限仅限于当前仓库。</p>
 <h3 id="DEPLOY-KEY"><a href="#DEPLOY-KEY" class="headerlink" title="DEPLOY_KEY"></a>DEPLOY_KEY</h3><p>一种 SSH 密钥，权限被锁定在单个仓库，常用于从服务器拉取或推送代码到此仓库。</p>
 <h3 id="PERSONAL-TOKEN"><a href="#PERSONAL-TOKEN" class="headerlink" title="PERSONAL_TOKEN"></a>PERSONAL_TOKEN</h3><p>关联到你个人账户的令牌，拥有你在 GitHub 上的全部或部分权限，是最强大但也最需谨慎管理的一种。</p>
 <h2 id="对比表格"><a href="#对比表格" class="headerlink" title="对比表格"></a>对比表格</h2><table>
@@ -333,7 +333,7 @@
 <h2 id="如何选择"><a href="#如何选择" class="headerlink" title="如何选择"></a>如何选择</h2><ul>
 <li><p>优先使用 <code>GITHUB_TOKEN</code>：如果工作流只需要访问当前仓库的代码，这是最安全、最便捷的选择，无需任何手动配置。</p>
 </li>
-<li><p>需要访问特定私有仓库时，使用 <code>DEPLOY_KEY</code>：当工作流需要从另一个特定的私有仓库拉取代码（例如一个公共工具库），但又不想把个人账户的所有权限都暴露出去时，<code>DEPLOY_KEY</code> 是绝佳选择。它的权限被”锁死”在目标仓库上。</p>
+<li><p>需要访问特定私有仓库时，使用 <code>DEPLOY_KEY</code>：当工作流需要从另一个特定的私有仓库拉取代码（例如一个公共工具库），但又不想把个人账户的所有权限都暴露出去时，<code>DEPLOY_KEY</code> 是绝佳选择。它的权限被&quot;锁死&quot;在目标仓库上。</p>
 </li>
 <li><p>万不得已时，使用 <code>PERSONAL_TOKEN</code>：当 <code>GITHUB_TOKEN</code> 权限不足（比如需要触发新的工作流），或者操作涉及到当前仓库之外的资源时，才考虑使用个人访问令牌。务必注意：由于它关联的是你的个人账户，权限非常宽泛，潜在风险也最大，因此要谨慎使用，并遵循最小权限原则（只授予必要的权限）</p>
 </li>

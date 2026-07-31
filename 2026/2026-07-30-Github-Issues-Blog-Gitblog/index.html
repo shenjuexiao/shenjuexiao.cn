@@ -208,7 +208,7 @@
             
                 <span class="meta-info-item post-update-date">
                     <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Thu Jul 30 2026 14:53:27 GMT+0000">2026-07-30 22:53:27</span>
+                    <span class="datetime" data-updated="Thu Jul 30 2026 06:00:48 GMT+0000">2026-07-30 14:00:48</span>
                 </span>
             
         
@@ -244,12 +244,10 @@
 
 <h3 id="2-生成tokens"><a href="#2-生成tokens" class="headerlink" title="2. 生成tokens"></a>2. 生成tokens</h3><p>个人首页，<code>Settings</code> -&gt; <code>Developer Settings</code> -&gt; <code>Personal access tokens</code> -&gt; <code>Tokens (classic)</code> -&gt; <code>Generate New Tokens</code> -&gt;  <code>Generate new yokens (classic)</code></p>
 <p>或直达链接：<br><a class="link"   target="_blank" rel="noopener" href="https://github.com/settings/tokens" >settings&#x2F;tokens<i class="fas fa-external-link-alt"></i></a></p>
-<img     src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Gitblog_Settings_Developer-Settings_Personal-access-tokens.png"   >
-
+<p>&lt;img src&#x3D;&quot;<a class="link"   target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Gitblog_Settings_Developer-Settings_Personal-access-tokens.png/" >https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Gitblog_Settings_Developer-Settings_Personal-access-tokens.png\<i class="fas fa-external-link-alt"></i></a>“ &#x2F;&gt;</p>
 <h3 id="3-仓库-actions"><a href="#3-仓库-actions" class="headerlink" title="3. 仓库 actions"></a>3. 仓库 actions</h3><p>仓库首页，<code>Settings</code> -&gt; <code>Security and quality</code> -&gt; <code>Secrets and variables</code> -&gt; <code>Actions</code> -&gt; <code>New repository secret</code></p>
-<img     src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Gitblog_Settings_Security-and-quality_Secrets-and-variables.png"   >
-
-<p>直接使用 <code>G_T</code>，就不用修改文件： <code>.github\workflows\generate_readme.yml</code> 中的 <code>$&#123;&#123; secrets.G_T &#125;&#125;</code> 字段。</p>
+<p>&lt;img src&#x3D;&quot;<a class="link"   target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Gitblog_Settings_Security-and-quality_Secrets-and-variables.png/" >https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Gitblog_Settings_Security-and-quality_Secrets-and-variables.png\<i class="fas fa-external-link-alt"></i></a>“ &#x2F;&gt;</p>
+<p>直接使用 <code>G_T</code>，就不用修改文件： <code>.github\\workflows\\generate_readme.yml</code> 中的 <code>$&#123;&#123; secrets.G_T &#125;&#125;</code> 字段。</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Generate</span> <span class="string">new</span> <span class="string">md</span></span><br><span class="line">  <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">    <span class="string">python</span> <span class="string">main.py</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.G_T</span> <span class="string">&#125;&#125;</span> <span class="string">$&#123;&#123;</span> <span class="string">github.repository</span> <span class="string">&#125;&#125;</span> <span class="string">--issue_number</span> <span class="string">&#x27;$&#123;&#123; github.event.issue.number &#125;&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="4-修改generate-readme-yml"><a href="#4-修改generate-readme-yml" class="headerlink" title="4.  修改generate_readme.yml"></a>4.  <del>修改<code>generate_readme.yml</code></del></h3><p><code>.github/workflows/generate_readme.yml</code><br>新版不需要。</p>
