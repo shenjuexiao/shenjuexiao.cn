@@ -165,444 +165,258 @@
             <div class="main-content border-box">
                 
 
-                    @import "../../common/stylus-variables.styl"
-
-$avatar-width = 3.2rem
-$arrow-icon-width = 1rem
-$post-nav-max-width = 14rem
-$post-title-font-size = 1.6rem
-$toc-container-width = 15rem
-$spacer-padding = 2rem
-
-
-.post-page-container {
-  display flex
-  justify-content space-between
-  width 100%
-  height 100%
-
-  &.show-toc {
-    .pc-post-toc {
-      display block
-    }
-
-    .post-content-container {
-      width 'calc(100% - %s)' % $toc-container-width
-    }
-  }
-
-
-  &.encrypt {
-    .post-aging-tips {
-      display none !important
-    }
-  }
-
-
-  +keep-tablet() {
-    .pc-post-toc {
-      display none !important
-    }
-
-    .post-content-container {
-      width 100% !important
-    }
-  }
-
-
-  .post-content-container {
-    order 0
-    width 100%
-    height 100%
-
-
-    keep-container(1, 0, 2rem)
-
-    +keep-mobile() {
-      padding 0 0.2rem !important
-      box-shadow none !important
-
-      &:hover {
-        box-shadow none !important
-      }
-    }
-
-
-    .post-content-top {
-      display flex
-      align-items flex-end
-      width 100%
-      padding-top $spacer-padding
-      padding-right $spacer-padding
-      overflow hidden
-      background-color var(--background-color-2)
-      border-top-left-radius var(--box-border-radius)
-      border-top-right-radius var(--box-border-radius)
-
-      +keep-tablet() {
-        height 12.8rem
-        padding-top $spacer-padding * 0.8
-        padding-right $spacer-padding  * 0.8
-
-        .cover-post-title {
-          padding $spacer-padding * 0.5 * 0.8 $spacer-padding * 0.8 !important
-          font-size $post-title-font-size * 0.9 !important
-          line-height 1.5 !important
-        }
-      }
-
-
-      +keep-mobile() {
-        height 11.8rem
-        padding-top $spacer-padding * 0.6
-        padding-right $spacer-padding  * 0.6
-
-        .cover-post-title {
-          padding $spacer-padding * 0.5 * 0.6 $spacer-padding * 0.6 !important
-          font-size $post-title-font-size * 0.8 !important
-          line-height 1.4 !important
-        }
-      }
-
-
-      .cover-post-title {
-        position relative
-        z-index $z-index-1
-        box-sizing border-box
-        max-width 100%
-        max-height 100%
-        padding $spacer-padding * 0.5 $spacer-padding
-        overflow-y auto
-        color var(--text-color-2)
-        font-weight 600
-        font-size $post-title-font-size
-        line-height 1.6
-        background var(--background-color-1-transparent)
-        border-top-right-radius var(--box-border-radius)
-        -webkit-backdrop-filter blur(2px)
-        backdrop-filter blur(2px)
-      }
-
-
-      .post-cover {
-        position absolute
-        top 0
-        left 0
-        box-sizing border-box
-        width 100%
-        height 100%
-        object-fit cover
-      }
-    }
-
-
-    .post-content-bottom {
-      padding $spacer-padding
-
-      &.has-cover {
-        padding-top $spacer-padding * 0.5
-      }
-
-      +keep-mobile() {
-        padding $spacer-padding * 0.5 0 !important
-      }
-
-      .post-title {
-        color var(--text-color-2)
-        font-weight 600
-        font-size $post-title-font-size
-        line-height 1.6
-        text-align var(--post-title-align)
-
-        +keep-tablet() {
-          font-size $post-title-font-size * 0.9
-        }
-
-        +keep-mobile() {
-          font-size $post-title-font-size * 0.8
-        }
-      }
-
-
-      .post-header {
-        display flex
-        justify-content flex-start
-        width 100%
-        margin-top 1rem
-
-        +keep-tablet() {
-          margin-top 0.9rem
-          transform scale(0.9)
-          transform-origin left top
-        }
-
-        .avatar-box {
-          display var(--post-author-avatar)
-          flex-shrink 0
-          width $avatar-width
-          height $avatar-width
-          margin-right 0.8rem
-          padding 0.1rem
-          border 1px solid var(--border-color)
-          border-radius 50%
-
-          img {
-            width 100%
-            height 100%
-            background var(--avatar-background-color)
-            border-radius 50%
-          }
-        }
-
-
-        .info-box {
-          display flex
-          flex-direction column
-          justify-content space-between
-          box-sizing border-box
-          width 100%
-          height 100%
-          padding 0.2rem 0
-
-          .author {
-            display var(--post-author-name)
-            align-items center
-            font-weight 600
-            font-size 1.18rem
-
-            .name {
-              color var(--text-color-3)
-            }
-
-            .author-badge {
-              margin-left 0.8rem
-              padding 0 0.4rem
-              color var(--text-color-badge)
-              font-weight 500
-              font-size 0.8rem
-              background var(--primary-color)
-              border-radius 0.4rem
-            }
-          }
-
-          .meta-info {
-            margin-top 0.1rem
-          }
-        }
-      }
-
-
-      .post-content {
-        margin-top calc(var(--component-gap) * 0.8)
-        padding-bottom calc(var(--component-gap) * 0.8)
-        color var(--text-color-3)
-        text-align justify
-        word-wrap break-word
-
-        +keep-tablet() {
-          margin-top calc(var(--component-gap) * 0.6)
-          padding-bottom calc(var(--component-gap) * 0.6)
-        }
-
-
-        .post-aging-tips {
-          position relative
-          display none
-          box-sizing border-box
-          margin-bottom 1.8rem
-          padding 1rem
-          color var(--keep-warning-color)
-          line-height 1.6
-          background var(--keep-warning-background-color)
-          border 0.1rem solid var(--keep-warning-border-color)
-          border-radius 0.4rem
-
-          i {
-            margin-right 0.4rem
-            color var(--keep-warning-color)
-          }
-
-          .days {
-            color var(--keep-warning-color)
-          }
-        }
-
-
-        .post-encrypt-box {
-          margin-left $avatar-width + 0.8rem
-          padding 1rem 0
-
-          .password-input {
-            width 60%
-            margin 0
-            padding 0.8rem 1.2rem
-            color var(--text-color-3)
-            font-weight 400 !important
-            font-size 1.2rem
-            letter-spacing 2px
-            background none
-            border none
-            border-bottom 0.2rem solid var(--border-color)
-            outline none
-
-            +keep-tablet() {
-              width 80%
-            }
-
-            &.error {
-              border 0.2rem solid var(--keep-danger-color)
-            }
-
-            &::placeholder {
-              color var(--text-color-4)
-              font-size 1.1rem
-              letter-spacing 1px
-            }
-
-            &:hover
-            &:focus {
-              background var(--background-color-2)
-            }
-          }
-        }
-
-        if (hexo-config('post') && hexo-config('post.copyright_info') == true) {
-          border-bottom 2px dashed var(--border-color)
-        }
-      }
-
-
-      .post-bottom-tags-and-share {
-        display flex
-        justify-content space-between
-        width 100%
-        margin-top 1rem
-
-        .post-tags-box {
-          display flex
-          flex-wrap wrap
-          align-items center
-          justify-content flex-start
-          width 100%
-          font-size 0.96rem
-
-
-          .tag-item {
-            margin-right 0.4rem
-            line-height 2
-
-            .icon {
-              color var(--text-color-3)
-              font-size 0.88rem
-            }
-          }
-        }
-      }
-
-
-      .post-nav {
-        height 2.8rem
-        margin-top var(--component-gap)
-
-        .prev-post
-        .next-post {
-          box-sizing border-box
-          max-width $post-nav-max-width
-          height 100%
-          keep-container(1, 0.8rem, 0)
-          border-radius 0.32rem
-
-
-          a {
-            position relative
-            display block
-            box-sizing border-box
-            width 100%
-            height 100%
-
-            &.prev {
-              padding-left $arrow-icon-width
-            }
-
-            &.next {
-              padding-right $arrow-icon-width
-            }
-
-            .arrow-icon {
-              position absolute
-              top 0
-              width $arrow-icon-width
-              height 100%
-
-              &.left {
-                left 0
-              }
-
-              &.right {
-                right 0
-              }
-            }
-
-            .title {
-              width 100%
-              height 100%
-            }
-          }
-        }
-
-        .prev-post {
-          float left
-        }
-
-        .next-post {
-          float right
-        }
-
-        .post-nav-item {
-          display none
-
-          +keep-tablet() {
-            display inline-block
-          }
-        }
-
-
-        .post-nav-title-item {
-          +keep-tablet() {
-            display none
-          }
-        }
-      }
-    }
-  }
-
-
-  .pc-post-toc {
-    position sticky
-    top calc(var(--header-height) + var(--component-gap))
-    display none
-    flex-shrink 0
-    box-sizing border-box
-    width $toc-container-width
-    max-height calc(100vh - calc(var(--header-height) + var(--component-gap)))
-    transition-t("top, display, max-height", "0, 0, 0", "0.2, 0.1, 0.2", "ease, ease, ease")
-
-    &.right-toc {
-      order 1
-      padding 2rem 0 2rem 1.8rem
-    }
-
-    &.left-toc {
-      order -1
-      padding 2rem 1.8rem 2rem 0
-    }
-
-    .header-shrink & {
-      top calc(var(--header-shrink-height) + var(--component-gap))
-      max-height calc(100vh - calc(var(--header-shrink-height) + var(--component-gap)))
-    }
-  }
-}
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        actions-gh-pages
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/@shenjuexiao1C_600%C3%97600.png">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">shenjuexiao</span>
+                                
+                                    <span class="author-badge">Lv3</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2026-07-30 14:30:29</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                    <span class="datetime" data-updated="Thu Jul 30 2026 06:30:29 GMT+0000">2026-07-30 14:30:29</span>
+                </span>
+            
+        
+
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <h1 id="actions-gh-pages"><a href="#actions-gh-pages" class="headerlink" title="actions-gh-pages"></a>actions-gh-pages</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
+<li><a class="link"   target="_blank" rel="noopener" href="https://github.com/peaceiris/actions-gh-pages" >actions-gh-pages<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://chat.deepseek.com/share/37lldwwwu2m7wobum4" >GitHub凭证区别<i class="fas fa-external-link-alt"></i></a><a class="link"   target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/351bd0f3-9c56-42f0-ac38-91bf90c0e184" >（Deepseek）<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://chat.deepseek.com/share/8m05dxz9pqrkl0wo8s" >GitHub令牌区别<i class="fas fa-external-link-alt"></i></a><a class="link"   target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/26baece4-d43e-48eb-81d4-d6de0ece8f04" >（Deepseek）<i class="fas fa-external-link-alt"></i></a></li>
+</ul>
+<p>actions-gh-pages 这个项目非常不错，利用 <code>Github Actions</code> 部署静态页面。</p>
+<blockquote>
+<p>This is a GitHub Action to deploy your static files to GitHub Pages. This deploy action can be combined simply and freely with Static Site Generators. (Hugo, MkDocs, Gatsby, mdBook, Next, Nuxt, and so on.)</p>
+</blockquote>
+<p>这是一个用于将静态文件部署到 <code>GitHub Pages</code> 的 <code>GitHub Action</code>。此部署操作可与静态网站生成器简单灵活地结合使用（Hugo、MkDocs、Gatsby、mdBook、Next、Nuxt等）。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span></span><br><span class="line">  <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v4</span></span><br><span class="line">  <span class="attr">with:</span></span><br><span class="line">    <span class="attr">github_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">publish_dir:</span> <span class="string">./public</span></span><br></pre></td></tr></table></figure>
+
+<p>值得注意的是，<code>github_token</code> 可以选择三种的类型，即该项目支持的三种。</p>
+<blockquote>
+<p>Three tokens are supported.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">Token</th>
+<th align="center">Private repo</th>
+<th align="center">Public repo</th>
+<th align="center">Protocol</th>
+<th align="left">Setup</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">github_token</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">HTTPS</td>
+<td align="left">Unnecessary</td>
+</tr>
+<tr>
+<td align="left">deploy_key</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">SSH</td>
+<td align="left">Necessary</td>
+</tr>
+<tr>
+<td align="left">personal_token</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">HTTPS</td>
+<td align="left">Necessary</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>Notes: Actually, the GITHUB_TOKEN works for deploying to GitHub Pages but it has still some limitations. For the first deployment, we need to select the gh-pages branch or another branch on the repository settings tab. See First Deployment with GITHUB_TOKEN.</p>
+</blockquote>
+<p>实际上，<code>GITHUB_TOKEN</code> 可用于部署到 <code>GitHub Pages</code>，但仍存在一些限制。对于首次部署，我们需要在仓库设置的选项卡中选择 <code>gh-pages</code> 分支或其他分支。请参阅“使用 GITHUB_TOKEN 进行首次部署”。</p>
+<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><h3 id="GITHUB-TOKEN"><a href="#GITHUB-TOKEN" class="headerlink" title="GITHUB_TOKEN"></a>GITHUB_TOKEN</h3><p>GitHub Actions 工作流的&quot;内置身份&quot;，由系统自动创建和管理，权限仅限于当前仓库。</p>
+<h3 id="DEPLOY-KEY"><a href="#DEPLOY-KEY" class="headerlink" title="DEPLOY_KEY"></a>DEPLOY_KEY</h3><p>一种 SSH 密钥，权限被锁定在单个仓库，常用于从服务器拉取或推送代码到此仓库。</p>
+<h3 id="PERSONAL-TOKEN"><a href="#PERSONAL-TOKEN" class="headerlink" title="PERSONAL_TOKEN"></a>PERSONAL_TOKEN</h3><p>关联到你个人账户的令牌，拥有你在 GitHub 上的全部或部分权限，是最强大但也最需谨慎管理的一种。</p>
+<h2 id="对比表格"><a href="#对比表格" class="headerlink" title="对比表格"></a>对比表格</h2><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>GITHUB_TOKEN</th>
+<th>DEPLOY_KEY</th>
+<th>PERSONAL_TOKEN</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>关联对象</td>
+<td>当前工作流运行</td>
+<td>单个仓库</td>
+<td>你的个人账户</td>
+</tr>
+<tr>
+<td>权限范围</td>
+<td>仅限于当前仓库</td>
+<td>仅限于绑定的单个仓库（可读或读写）</td>
+<td>可访问你账户有权访问的所有仓库及资源</td>
+</tr>
+<tr>
+<td>身份验证方式</td>
+<td>HTTPS (Token)</td>
+<td>SSH (公钥&#x2F;私钥)</td>
+<td>HTTPS (Token)</td>
+</tr>
+<tr>
+<td>有效期</td>
+<td>每次工作流作业开始时创建，作业完成后失效</td>
+<td>长期有效，直到手动删除</td>
+<td>长期有效，直到手动撤销或过期</td>
+</tr>
+<tr>
+<td>典型使用场景</td>
+<td>GitHub Actions 中拉取当前仓库代码、进行常规操作</td>
+<td>在 Actions 中拉取或推送代码到特定仓库（尤其是私有仓库）</td>
+<td>需要在 Actions 中访问其他仓库、调用 GitHub API</td>
+</tr>
+</tbody></table>
+<h2 id="如何选择"><a href="#如何选择" class="headerlink" title="如何选择"></a>如何选择</h2><ul>
+<li><p>优先使用 <code>GITHUB_TOKEN</code>：如果工作流只需要访问当前仓库的代码，这是最安全、最便捷的选择，无需任何手动配置。</p>
+</li>
+<li><p>需要访问特定私有仓库时，使用 <code>DEPLOY_KEY</code>：当工作流需要从另一个特定的私有仓库拉取代码（例如一个公共工具库），但又不想把个人账户的所有权限都暴露出去时，<code>DEPLOY_KEY</code> 是绝佳选择。它的权限被&quot;锁死&quot;在目标仓库上。</p>
+</li>
+<li><p>万不得已时，使用 <code>PERSONAL_TOKEN</code>：当 <code>GITHUB_TOKEN</code> 权限不足（比如需要触发新的工作流），或者操作涉及到当前仓库之外的资源时，才考虑使用个人访问令牌。务必注意：由于它关联的是你的个人账户，权限非常宽泛，潜在风险也最大，因此要谨慎使用，并遵循最小权限原则（只授予必要的权限）</p>
+</li>
+</ul>
+<h2 id="如何设置"><a href="#如何设置" class="headerlink" title="如何设置"></a>如何设置</h2><ul>
+<li><p><code>GITHUB_TOKEN</code> 并不需要你手动去“设置”或“创建”。它是在 <code>GitHub Actions</code> 工作流运行时，由 GitHub 系统自动生成的一个临时凭证。你只需要在工作流的 YAML 文件中通过特定的语法来使用它。</p>
+</li>
+<li><p><code>DEPLOY_KEY</code> 的设置需要分两步走：生成密钥对，然后分别把公钥和私钥添加到正确的地方。它本质上是一个 SSH 密钥对，专门用于授权访问单个 GitHub 仓库。</p>
+</li>
+<li><p>设置 <code>PERSONAL_TOKEN</code>（个人访问令牌，简称 PAT）主要分几步：进入创建页面、配置权限、生成并安全保存。你可以把它当作 GitHub 密码的替代品，用于命令行或 API 操作。</p>
+</li>
+</ul>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2026/2026-07-30-Resolving-npm-package-not-found-Errors/"
+                                   title="Resolving &#34;npm package not found&#34; Errors"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Resolving &#34;npm package not found&#34; Errors</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2026/2026-07-30-Astro-Template/"
+                                   title="Astro Template"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Astro Template</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+    </div>
+</div>
 
 
                 

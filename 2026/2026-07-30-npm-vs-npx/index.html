@@ -165,444 +165,191 @@
             <div class="main-content border-box">
                 
 
-                    @import "../../common/stylus-variables.styl"
-
-$avatar-width = 3.2rem
-$arrow-icon-width = 1rem
-$post-nav-max-width = 14rem
-$post-title-font-size = 1.6rem
-$toc-container-width = 15rem
-$spacer-padding = 2rem
-
-
-.post-page-container {
-  display flex
-  justify-content space-between
-  width 100%
-  height 100%
-
-  &.show-toc {
-    .pc-post-toc {
-      display block
-    }
-
-    .post-content-container {
-      width 'calc(100% - %s)' % $toc-container-width
-    }
-  }
-
-
-  &.encrypt {
-    .post-aging-tips {
-      display none !important
-    }
-  }
-
-
-  +keep-tablet() {
-    .pc-post-toc {
-      display none !important
-    }
-
-    .post-content-container {
-      width 100% !important
-    }
-  }
-
-
-  .post-content-container {
-    order 0
-    width 100%
-    height 100%
-
-
-    keep-container(1, 0, 2rem)
-
-    +keep-mobile() {
-      padding 0 0.2rem !important
-      box-shadow none !important
-
-      &:hover {
-        box-shadow none !important
-      }
-    }
-
-
-    .post-content-top {
-      display flex
-      align-items flex-end
-      width 100%
-      padding-top $spacer-padding
-      padding-right $spacer-padding
-      overflow hidden
-      background-color var(--background-color-2)
-      border-top-left-radius var(--box-border-radius)
-      border-top-right-radius var(--box-border-radius)
-
-      +keep-tablet() {
-        height 12.8rem
-        padding-top $spacer-padding * 0.8
-        padding-right $spacer-padding  * 0.8
-
-        .cover-post-title {
-          padding $spacer-padding * 0.5 * 0.8 $spacer-padding * 0.8 !important
-          font-size $post-title-font-size * 0.9 !important
-          line-height 1.5 !important
-        }
-      }
-
-
-      +keep-mobile() {
-        height 11.8rem
-        padding-top $spacer-padding * 0.6
-        padding-right $spacer-padding  * 0.6
-
-        .cover-post-title {
-          padding $spacer-padding * 0.5 * 0.6 $spacer-padding * 0.6 !important
-          font-size $post-title-font-size * 0.8 !important
-          line-height 1.4 !important
-        }
-      }
-
-
-      .cover-post-title {
-        position relative
-        z-index $z-index-1
-        box-sizing border-box
-        max-width 100%
-        max-height 100%
-        padding $spacer-padding * 0.5 $spacer-padding
-        overflow-y auto
-        color var(--text-color-2)
-        font-weight 600
-        font-size $post-title-font-size
-        line-height 1.6
-        background var(--background-color-1-transparent)
-        border-top-right-radius var(--box-border-radius)
-        -webkit-backdrop-filter blur(2px)
-        backdrop-filter blur(2px)
-      }
-
-
-      .post-cover {
-        position absolute
-        top 0
-        left 0
-        box-sizing border-box
-        width 100%
-        height 100%
-        object-fit cover
-      }
-    }
-
-
-    .post-content-bottom {
-      padding $spacer-padding
-
-      &.has-cover {
-        padding-top $spacer-padding * 0.5
-      }
-
-      +keep-mobile() {
-        padding $spacer-padding * 0.5 0 !important
-      }
-
-      .post-title {
-        color var(--text-color-2)
-        font-weight 600
-        font-size $post-title-font-size
-        line-height 1.6
-        text-align var(--post-title-align)
-
-        +keep-tablet() {
-          font-size $post-title-font-size * 0.9
-        }
-
-        +keep-mobile() {
-          font-size $post-title-font-size * 0.8
-        }
-      }
-
-
-      .post-header {
-        display flex
-        justify-content flex-start
-        width 100%
-        margin-top 1rem
-
-        +keep-tablet() {
-          margin-top 0.9rem
-          transform scale(0.9)
-          transform-origin left top
-        }
-
-        .avatar-box {
-          display var(--post-author-avatar)
-          flex-shrink 0
-          width $avatar-width
-          height $avatar-width
-          margin-right 0.8rem
-          padding 0.1rem
-          border 1px solid var(--border-color)
-          border-radius 50%
-
-          img {
-            width 100%
-            height 100%
-            background var(--avatar-background-color)
-            border-radius 50%
-          }
-        }
-
-
-        .info-box {
-          display flex
-          flex-direction column
-          justify-content space-between
-          box-sizing border-box
-          width 100%
-          height 100%
-          padding 0.2rem 0
-
-          .author {
-            display var(--post-author-name)
-            align-items center
-            font-weight 600
-            font-size 1.18rem
-
-            .name {
-              color var(--text-color-3)
-            }
-
-            .author-badge {
-              margin-left 0.8rem
-              padding 0 0.4rem
-              color var(--text-color-badge)
-              font-weight 500
-              font-size 0.8rem
-              background var(--primary-color)
-              border-radius 0.4rem
-            }
-          }
-
-          .meta-info {
-            margin-top 0.1rem
-          }
-        }
-      }
-
-
-      .post-content {
-        margin-top calc(var(--component-gap) * 0.8)
-        padding-bottom calc(var(--component-gap) * 0.8)
-        color var(--text-color-3)
-        text-align justify
-        word-wrap break-word
-
-        +keep-tablet() {
-          margin-top calc(var(--component-gap) * 0.6)
-          padding-bottom calc(var(--component-gap) * 0.6)
-        }
-
-
-        .post-aging-tips {
-          position relative
-          display none
-          box-sizing border-box
-          margin-bottom 1.8rem
-          padding 1rem
-          color var(--keep-warning-color)
-          line-height 1.6
-          background var(--keep-warning-background-color)
-          border 0.1rem solid var(--keep-warning-border-color)
-          border-radius 0.4rem
-
-          i {
-            margin-right 0.4rem
-            color var(--keep-warning-color)
-          }
-
-          .days {
-            color var(--keep-warning-color)
-          }
-        }
-
-
-        .post-encrypt-box {
-          margin-left $avatar-width + 0.8rem
-          padding 1rem 0
-
-          .password-input {
-            width 60%
-            margin 0
-            padding 0.8rem 1.2rem
-            color var(--text-color-3)
-            font-weight 400 !important
-            font-size 1.2rem
-            letter-spacing 2px
-            background none
-            border none
-            border-bottom 0.2rem solid var(--border-color)
-            outline none
-
-            +keep-tablet() {
-              width 80%
-            }
-
-            &.error {
-              border 0.2rem solid var(--keep-danger-color)
-            }
-
-            &::placeholder {
-              color var(--text-color-4)
-              font-size 1.1rem
-              letter-spacing 1px
-            }
-
-            &:hover
-            &:focus {
-              background var(--background-color-2)
-            }
-          }
-        }
-
-        if (hexo-config('post') && hexo-config('post.copyright_info') == true) {
-          border-bottom 2px dashed var(--border-color)
-        }
-      }
-
-
-      .post-bottom-tags-and-share {
-        display flex
-        justify-content space-between
-        width 100%
-        margin-top 1rem
-
-        .post-tags-box {
-          display flex
-          flex-wrap wrap
-          align-items center
-          justify-content flex-start
-          width 100%
-          font-size 0.96rem
-
-
-          .tag-item {
-            margin-right 0.4rem
-            line-height 2
-
-            .icon {
-              color var(--text-color-3)
-              font-size 0.88rem
-            }
-          }
-        }
-      }
-
-
-      .post-nav {
-        height 2.8rem
-        margin-top var(--component-gap)
-
-        .prev-post
-        .next-post {
-          box-sizing border-box
-          max-width $post-nav-max-width
-          height 100%
-          keep-container(1, 0.8rem, 0)
-          border-radius 0.32rem
-
-
-          a {
-            position relative
-            display block
-            box-sizing border-box
-            width 100%
-            height 100%
-
-            &.prev {
-              padding-left $arrow-icon-width
-            }
-
-            &.next {
-              padding-right $arrow-icon-width
-            }
-
-            .arrow-icon {
-              position absolute
-              top 0
-              width $arrow-icon-width
-              height 100%
-
-              &.left {
-                left 0
-              }
-
-              &.right {
-                right 0
-              }
-            }
-
-            .title {
-              width 100%
-              height 100%
-            }
-          }
-        }
-
-        .prev-post {
-          float left
-        }
-
-        .next-post {
-          float right
-        }
-
-        .post-nav-item {
-          display none
-
-          +keep-tablet() {
-            display inline-block
-          }
-        }
-
-
-        .post-nav-title-item {
-          +keep-tablet() {
-            display none
-          }
-        }
-      }
-    }
-  }
-
-
-  .pc-post-toc {
-    position sticky
-    top calc(var(--header-height) + var(--component-gap))
-    display none
-    flex-shrink 0
-    box-sizing border-box
-    width $toc-container-width
-    max-height calc(100vh - calc(var(--header-height) + var(--component-gap)))
-    transition-t("top, display, max-height", "0, 0, 0", "0.2, 0.1, 0.2", "ease, ease, ease")
-
-    &.right-toc {
-      order 1
-      padding 2rem 0 2rem 1.8rem
-    }
-
-    &.left-toc {
-      order -1
-      padding 2rem 1.8rem 2rem 0
-    }
-
-    .header-shrink & {
-      top calc(var(--header-shrink-height) + var(--component-gap))
-      max-height calc(100vh - calc(var(--header-shrink-height) + var(--component-gap)))
-    }
-  }
-}
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        npm vs npx
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/@shenjuexiao1C_600%C3%97600.png">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">shenjuexiao</span>
+                                
+                                    <span class="author-badge">Lv3</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2026-07-30 14:49:05</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                    <span class="datetime" data-updated="Thu Jul 30 2026 06:49:05 GMT+0000">2026-07-30 14:49:05</span>
+                </span>
+            
+        
+
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <h1 id="npm-vs-npx"><a href="#npm-vs-npx" class="headerlink" title="npm vs npx"></a>npm vs npx</h1><h1 id="npm-与-npx-区别"><a href="#npm-与-npx-区别" class="headerlink" title="npm 与 npx 区别"></a>npm 与 npx 区别</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
+<li><a class="link"   target="_blank" rel="noopener" href="https://chat.deepseek.com/share/nib71ed8ghaqfuyb1y" >npm 与 npx 区别<i class="fas fa-external-link-alt"></i></a><a class="link"   target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/1ea1f80c-e11d-4e1f-845f-8023549a044c" >（Deepseek）<i class="fas fa-external-link-alt"></i></a></li>
+<li><a class="link"   target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/v11/commands/npx" >npx<i class="fas fa-external-link-alt"></i></a></li>
+</ul>
+<h2 id="简单说明"><a href="#简单说明" class="headerlink" title="简单说明"></a>简单说明</h2><p><code>npm</code> 和 <code>npx</code> 是 <strong>Node.js</strong> 生态里两个核心但职责不同的工具，可以用一句话来区分它们：</p>
+<blockquote>
+<p><strong>npm 是“包管理器”，负责安装、管理依赖；而 npx 是“包执行器”，负责运行命令，无需显式安装</strong>。</p>
+</blockquote>
+<h2 id="表格比较"><a href="#表格比较" class="headerlink" title="表格比较"></a>表格比较</h2><table>
+<thead>
+<tr>
+<th align="left">特性</th>
+<th align="left">npm (Node Package Manager)</th>
+<th align="left">npx (Node Package Execute)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>核心职责</strong></td>
+<td align="left">管理项目的依赖包，比如安装、卸载、更新、发布包</td>
+<td align="left">执行某个 Node.js 包提供的命令</td>
+</tr>
+<tr>
+<td align="left"><strong>是否需要安装</strong></td>
+<td align="left"><strong>需要</strong>。包会被下载并保存到 <code>node_modules</code> 或全局目录</td>
+<td align="left"><strong>通常不需要</strong>。它会临时下载并执行，用完即走，不污染环境</td>
+</tr>
+<tr>
+<td align="left"><strong>典型场景</strong></td>
+<td align="left">为项目安装核心依赖（如 <code>npm install react</code>）<br>运行 <code>package.json</code> 中定义的脚本（如 <code>npm run build</code>）</td>
+<td align="left">运行一次性的脚手架工具（如 <code>npx create-react-app my-app</code>）<br>快速测试不同版本的包（如 <code>npx webpack@4.44.1 -v</code>）</td>
+</tr>
+<tr>
+<td align="left"><strong>执行本地包</strong></td>
+<td align="left">需要通过 <code>./node_modules/.bin/</code> 路径或 <code>npm run</code> 命令间接运行</td>
+<td align="left">可以直接运行，它会自动在 <code>node_modules/.bin/</code> 中查找命令</td>
+</tr>
+</tbody></table>
+<p>除了用法上的不同，<code>npx</code> 还有一个非常便利的特性：它可以临时下载并运行一个远程的 npm 包，这在测试新工具或运行一次性脚本时能帮你节省不少时间。</p>
+<h3 id="💡-如何选择？"><a href="#💡-如何选择？" class="headerlink" title="💡 如何选择？"></a>💡 如何选择？</h3><p>一个很实用的场景是：创建 React 项目时，会先全局安装 <code>create-react-app</code>，再用它生成项目。有了 <code>npx</code>，可以直接 <code>npx create-react-app my-app</code>，不用全局安装，每次用的还都是最新版，非常方便。</p>
+<p><strong>一句话总结就是</strong>：</p>
+<ul>
+<li>需要一个包长期使用（比如项目依赖）→ 用 <strong><code>npm install</code></strong>。</li>
+<li>只是想临时跑一下某个命令或工具 → 用 <strong><code>npx</code></strong>。</li>
+</ul>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2026/2026-07-30-Astro-GitHub-Actions/"
+                                   title="Astro GitHub Actions"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Astro GitHub Actions</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2026/2026-07-30-GitHub-raw-vs-cdn/"
+                                   title="GitHub raw vs cdn"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">GitHub raw vs cdn</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+    </div>
+</div>
 
 
                 

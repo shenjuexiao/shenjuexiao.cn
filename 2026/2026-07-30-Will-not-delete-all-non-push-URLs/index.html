@@ -165,444 +165,185 @@
             <div class="main-content border-box">
                 
 
-                    @import "../../common/stylus-variables.styl"
-
-$avatar-width = 3.2rem
-$arrow-icon-width = 1rem
-$post-nav-max-width = 14rem
-$post-title-font-size = 1.6rem
-$toc-container-width = 15rem
-$spacer-padding = 2rem
-
-
-.post-page-container {
-  display flex
-  justify-content space-between
-  width 100%
-  height 100%
-
-  &.show-toc {
-    .pc-post-toc {
-      display block
-    }
-
-    .post-content-container {
-      width 'calc(100% - %s)' % $toc-container-width
-    }
-  }
-
-
-  &.encrypt {
-    .post-aging-tips {
-      display none !important
-    }
-  }
-
-
-  +keep-tablet() {
-    .pc-post-toc {
-      display none !important
-    }
-
-    .post-content-container {
-      width 100% !important
-    }
-  }
-
-
-  .post-content-container {
-    order 0
-    width 100%
-    height 100%
-
-
-    keep-container(1, 0, 2rem)
-
-    +keep-mobile() {
-      padding 0 0.2rem !important
-      box-shadow none !important
-
-      &:hover {
-        box-shadow none !important
-      }
-    }
-
-
-    .post-content-top {
-      display flex
-      align-items flex-end
-      width 100%
-      padding-top $spacer-padding
-      padding-right $spacer-padding
-      overflow hidden
-      background-color var(--background-color-2)
-      border-top-left-radius var(--box-border-radius)
-      border-top-right-radius var(--box-border-radius)
-
-      +keep-tablet() {
-        height 12.8rem
-        padding-top $spacer-padding * 0.8
-        padding-right $spacer-padding  * 0.8
-
-        .cover-post-title {
-          padding $spacer-padding * 0.5 * 0.8 $spacer-padding * 0.8 !important
-          font-size $post-title-font-size * 0.9 !important
-          line-height 1.5 !important
-        }
-      }
-
-
-      +keep-mobile() {
-        height 11.8rem
-        padding-top $spacer-padding * 0.6
-        padding-right $spacer-padding  * 0.6
-
-        .cover-post-title {
-          padding $spacer-padding * 0.5 * 0.6 $spacer-padding * 0.6 !important
-          font-size $post-title-font-size * 0.8 !important
-          line-height 1.4 !important
-        }
-      }
-
-
-      .cover-post-title {
-        position relative
-        z-index $z-index-1
-        box-sizing border-box
-        max-width 100%
-        max-height 100%
-        padding $spacer-padding * 0.5 $spacer-padding
-        overflow-y auto
-        color var(--text-color-2)
-        font-weight 600
-        font-size $post-title-font-size
-        line-height 1.6
-        background var(--background-color-1-transparent)
-        border-top-right-radius var(--box-border-radius)
-        -webkit-backdrop-filter blur(2px)
-        backdrop-filter blur(2px)
-      }
-
-
-      .post-cover {
-        position absolute
-        top 0
-        left 0
-        box-sizing border-box
-        width 100%
-        height 100%
-        object-fit cover
-      }
-    }
-
-
-    .post-content-bottom {
-      padding $spacer-padding
-
-      &.has-cover {
-        padding-top $spacer-padding * 0.5
-      }
-
-      +keep-mobile() {
-        padding $spacer-padding * 0.5 0 !important
-      }
-
-      .post-title {
-        color var(--text-color-2)
-        font-weight 600
-        font-size $post-title-font-size
-        line-height 1.6
-        text-align var(--post-title-align)
-
-        +keep-tablet() {
-          font-size $post-title-font-size * 0.9
-        }
-
-        +keep-mobile() {
-          font-size $post-title-font-size * 0.8
-        }
-      }
-
-
-      .post-header {
-        display flex
-        justify-content flex-start
-        width 100%
-        margin-top 1rem
-
-        +keep-tablet() {
-          margin-top 0.9rem
-          transform scale(0.9)
-          transform-origin left top
-        }
-
-        .avatar-box {
-          display var(--post-author-avatar)
-          flex-shrink 0
-          width $avatar-width
-          height $avatar-width
-          margin-right 0.8rem
-          padding 0.1rem
-          border 1px solid var(--border-color)
-          border-radius 50%
-
-          img {
-            width 100%
-            height 100%
-            background var(--avatar-background-color)
-            border-radius 50%
-          }
-        }
-
-
-        .info-box {
-          display flex
-          flex-direction column
-          justify-content space-between
-          box-sizing border-box
-          width 100%
-          height 100%
-          padding 0.2rem 0
-
-          .author {
-            display var(--post-author-name)
-            align-items center
-            font-weight 600
-            font-size 1.18rem
-
-            .name {
-              color var(--text-color-3)
-            }
-
-            .author-badge {
-              margin-left 0.8rem
-              padding 0 0.4rem
-              color var(--text-color-badge)
-              font-weight 500
-              font-size 0.8rem
-              background var(--primary-color)
-              border-radius 0.4rem
-            }
-          }
-
-          .meta-info {
-            margin-top 0.1rem
-          }
-        }
-      }
-
-
-      .post-content {
-        margin-top calc(var(--component-gap) * 0.8)
-        padding-bottom calc(var(--component-gap) * 0.8)
-        color var(--text-color-3)
-        text-align justify
-        word-wrap break-word
-
-        +keep-tablet() {
-          margin-top calc(var(--component-gap) * 0.6)
-          padding-bottom calc(var(--component-gap) * 0.6)
-        }
-
-
-        .post-aging-tips {
-          position relative
-          display none
-          box-sizing border-box
-          margin-bottom 1.8rem
-          padding 1rem
-          color var(--keep-warning-color)
-          line-height 1.6
-          background var(--keep-warning-background-color)
-          border 0.1rem solid var(--keep-warning-border-color)
-          border-radius 0.4rem
-
-          i {
-            margin-right 0.4rem
-            color var(--keep-warning-color)
-          }
-
-          .days {
-            color var(--keep-warning-color)
-          }
-        }
-
-
-        .post-encrypt-box {
-          margin-left $avatar-width + 0.8rem
-          padding 1rem 0
-
-          .password-input {
-            width 60%
-            margin 0
-            padding 0.8rem 1.2rem
-            color var(--text-color-3)
-            font-weight 400 !important
-            font-size 1.2rem
-            letter-spacing 2px
-            background none
-            border none
-            border-bottom 0.2rem solid var(--border-color)
-            outline none
-
-            +keep-tablet() {
-              width 80%
-            }
-
-            &.error {
-              border 0.2rem solid var(--keep-danger-color)
-            }
-
-            &::placeholder {
-              color var(--text-color-4)
-              font-size 1.1rem
-              letter-spacing 1px
-            }
-
-            &:hover
-            &:focus {
-              background var(--background-color-2)
-            }
-          }
-        }
-
-        if (hexo-config('post') && hexo-config('post.copyright_info') == true) {
-          border-bottom 2px dashed var(--border-color)
-        }
-      }
-
-
-      .post-bottom-tags-and-share {
-        display flex
-        justify-content space-between
-        width 100%
-        margin-top 1rem
-
-        .post-tags-box {
-          display flex
-          flex-wrap wrap
-          align-items center
-          justify-content flex-start
-          width 100%
-          font-size 0.96rem
-
-
-          .tag-item {
-            margin-right 0.4rem
-            line-height 2
-
-            .icon {
-              color var(--text-color-3)
-              font-size 0.88rem
-            }
-          }
-        }
-      }
-
-
-      .post-nav {
-        height 2.8rem
-        margin-top var(--component-gap)
-
-        .prev-post
-        .next-post {
-          box-sizing border-box
-          max-width $post-nav-max-width
-          height 100%
-          keep-container(1, 0.8rem, 0)
-          border-radius 0.32rem
-
-
-          a {
-            position relative
-            display block
-            box-sizing border-box
-            width 100%
-            height 100%
-
-            &.prev {
-              padding-left $arrow-icon-width
-            }
-
-            &.next {
-              padding-right $arrow-icon-width
-            }
-
-            .arrow-icon {
-              position absolute
-              top 0
-              width $arrow-icon-width
-              height 100%
-
-              &.left {
-                left 0
-              }
-
-              &.right {
-                right 0
-              }
-            }
-
-            .title {
-              width 100%
-              height 100%
-            }
-          }
-        }
-
-        .prev-post {
-          float left
-        }
-
-        .next-post {
-          float right
-        }
-
-        .post-nav-item {
-          display none
-
-          +keep-tablet() {
-            display inline-block
-          }
-        }
-
-
-        .post-nav-title-item {
-          +keep-tablet() {
-            display none
-          }
-        }
-      }
-    }
-  }
-
-
-  .pc-post-toc {
-    position sticky
-    top calc(var(--header-height) + var(--component-gap))
-    display none
-    flex-shrink 0
-    box-sizing border-box
-    width $toc-container-width
-    max-height calc(100vh - calc(var(--header-height) + var(--component-gap)))
-    transition-t("top, display, max-height", "0, 0, 0", "0.2, 0.1, 0.2", "ease, ease, ease")
-
-    &.right-toc {
-      order 1
-      padding 2rem 0 2rem 1.8rem
-    }
-
-    &.left-toc {
-      order -1
-      padding 2rem 1.8rem 2rem 0
-    }
-
-    .header-shrink & {
-      top calc(var(--header-shrink-height) + var(--component-gap))
-      max-height calc(100vh - calc(var(--header-shrink-height) + var(--component-gap)))
-    }
-  }
-}
+                    
+<div class="fade-in-down-animation">
+    <div class="post-page-container border-box">
+        <div class="post-content-container border-box">
+            
+
+            <div class="post-content-bottom border-box">
+                
+                    <div class="post-title">
+                        Will not delete all non-push URLs
+                    </div>
+                
+
+                
+                    <div class="post-header border-box">
+                        
+                            <div class="avatar-box border-box">
+                                <img src="/images/@shenjuexiao1C_600%C3%97600.png">
+                            </div>
+                        
+                        <div class="info-box">
+                            <div class="author border-box">
+                                <span class="name">shenjuexiao</span>
+                                
+                                    <span class="author-badge">Lv3</span>
+                                
+                            </div>
+                            <div class="meta-info border-box">
+                                
+
+<div class="post-meta-info-container border-box post">
+    <div class="post-meta-info border-box">
+        
+
+        
+            <span class="meta-info-item post-create-date">
+                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
+                <span class="datetime">2026-07-30 14:37:42</span>
+            </span>
+
+            
+                <span class="meta-info-item post-update-date">
+                    <i class="icon fa-solid fa-file-pen"></i>&nbsp;
+                    <span class="datetime" data-updated="Thu Jul 30 2026 06:37:42 GMT+0000">2026-07-30 14:37:42</span>
+                </span>
+            
+        
+
+        
+
+        
+
+        
+        
+        
+        
+    </div>
+
+    
+</div>
+
+                            </div>
+                        </div>
+                    </div>
+                
+
+                <div class="post-content keep-markdown-body ">
+                    
+
+                    
+                         <h1 id="Will-not-delete-all-non-push-URLs"><a href="#Will-not-delete-all-non-push-URLs" class="headerlink" title="Will not delete all non-push URLs"></a>Will not delete all non-push URLs</h1><h1 id="Git-远程-URL-修改"><a href="#Git-远程-URL-修改" class="headerlink" title="Git 远程 URL 修改"></a>Git 远程 URL 修改</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PS D:\\Git\\shenjuexiao&gt; git remote set-url --delete gitee git@gitee.com:shenjuexiao/shenjuexiao.git</span><br><span class="line">fatal: Will not delete all non-push URLs</span><br></pre></td></tr></table></figure>
+
+<p>这个错误是因为你试图删除远程仓库 <code>gitee</code> 的<strong>唯一</strong> URL，Git 不允许这样做——每个远程仓库至少需要保留一个 URL。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="方案一：先添加新-URL，再删除旧的"><a href="#方案一：先添加新-URL，再删除旧的" class="headerlink" title="方案一：先添加新 URL，再删除旧的"></a>方案一：先添加新 URL，再删除旧的</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先添加一个新的 URL</span></span><br><span class="line">git remote set-url --add gitee git@gitee.com:new-repo.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 然后再删除旧的 URL</span></span><br><span class="line">git remote set-url --delete gitee git@gitee.com:shenjuexiao/shenjuexiao.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="方案二：直接修改-URL（推荐）"><a href="#方案二：直接修改-URL（推荐）" class="headerlink" title="方案二：直接修改 URL（推荐）"></a>方案二：直接修改 URL（推荐）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 直接替换整个 URL，而不是删除</span></span><br><span class="line">git remote set-url gitee git@gitee.com:new-repo.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="方案三：删除整个远程仓库再重新添加"><a href="#方案三：删除整个远程仓库再重新添加" class="headerlink" title="方案三：删除整个远程仓库再重新添加"></a>方案三：删除整个远程仓库再重新添加</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除整个远程仓库</span></span><br><span class="line">git remote remove gitee</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重新添加</span></span><br><span class="line">git remote add gitee git@gitee.com:new-repo.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="方案四：查看当前所有-URL，确认情况"><a href="#方案四：查看当前所有-URL，确认情况" class="headerlink" title="方案四：查看当前所有 URL，确认情况"></a>方案四：查看当前所有 URL，确认情况</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看 gitee 远程仓库的所有 URL</span></span><br><span class="line">git remote get-url --all gitee</span><br></pre></td></tr></table></figure>
+
+<h2 id="最常见的使用场景"><a href="#最常见的使用场景" class="headerlink" title="最常见的使用场景"></a>最常见的使用场景</h2><p>如果你是<strong>想修改远程仓库地址</strong>，直接用方案二最简单：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url gitee git@gitee.com:新的仓库地址.git</span><br></pre></td></tr></table></figure>
+
+<p>如果你是<strong>想添加多个推送地址</strong>（同时推送到多个仓库），用方案一。</p>
+<h2 id="重命名远程仓库"><a href="#重命名远程仓库" class="headerlink" title="重命名远程仓库"></a>重命名远程仓库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote rename github origin</span><br></pre></td></tr></table></figure>
+
+<p>这个命令会：</p>
+<ul>
+<li>将远程仓库 <code>github</code> 重命名为 <code>origin</code></li>
+<li>保留所有原有的 URL 和配置</li>
+<li>更新所有本地跟踪分支（如 <code>github/main</code> → <code>origin/main</code>）</li>
+</ul>
+<h3 id="验证是否成功"><a href="#验证是否成功" class="headerlink" title="验证是否成功"></a>验证是否成功</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看所有远程仓库</span></span><br><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+
+<p>你应该能看到类似这样的输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">origin  git@github.com:你的用户名/仓库名.git (fetch)</span><br><span class="line">origin  git@github.com:你的用户名/仓库名.git (push)</span><br></pre></td></tr></table></figure>
+
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>如果 <code>origin</code> 已经存在，这个命令会报错。你需要先删除或重命名现有的 <code>origin</code></li>
+<li>如果你的 <code>origin</code> 已经指向其他仓库，可以先确认一下：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看当前 origin 指向哪里</span></span><br><span class="line">git remote get-url origin</span><br></pre></td></tr></table></figure>
+
+<p>如果 <code>origin</code> 已经存在且不是你想用的，可以先删除它：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote remove origin</span><br><span class="line">git remote rename github origin</span><br></pre></td></tr></table></figure>
+
+<p>执行后记得检查一下 <code>git remote -v</code> 确认结果正确。</p>
+
+                    
+                </div>
+
+                
+
+                <div class="post-bottom-tags-and-share border-box">
+                    <div>
+                        
+                    </div>
+                    <div>
+                        
+                    </div>
+                </div>
+
+                
+
+                
+                    <div class="post-nav border-box">
+                        
+                            <div class="prev-post">
+                                <a class="prev"
+                                   rel="prev"
+                                   href="/2026/2026-07-30-Bing-Wallpaper-API/"
+                                   title="Bing Wallpaper API"
+                                >
+                                    <span class="left arrow-icon flex-center">
+                                        <i class="fas fa-chevron-left"></i>
+                                    </span>
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Bing Wallpaper API</span>
+                                        <span class="post-nav-item">上一篇</span>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                        
+                            <div class="next-post">
+                                <a class="next"
+                                   rel="next"
+                                   href="/2026/2026-07-30-Gitee-remote-error-hook-declined/"
+                                   title="Gitee remote error hook declined"
+                                >
+                                    <span class="title flex-center">
+                                        <span class="post-nav-title-item text-ellipsis">Gitee remote error hook declined</span>
+                                        <span class="post-nav-item">下一篇</span>
+                                    </span>
+                                    <span class="right arrow-icon flex-center">
+                                        <i class="fas fa-chevron-right"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        
+                    </div>
+                
+
+                
+                    
+
+
+
+
+
+
+                
+            </div>
+        </div>
+
+        
+    </div>
+</div>
 
 
                 
