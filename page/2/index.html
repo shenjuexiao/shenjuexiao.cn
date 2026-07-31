@@ -1,887 +1,1501 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="Hexo Theme Keep">
-    <meta name="description" content="Hexo Theme Keep">
-    <meta name="author" content="shenjuexiao">
-    
-    <title>
-        
-        神觉晓
-    </title>
-    
-<link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
 
-    
-        <link rel="shortcut icon" href="/images/@shenjuexiao1_600%C3%97600.png">
-    
-    
-<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-    
-<link rel="stylesheet" href="/font/css/regular.min.css">
-
-    
-<link rel="stylesheet" href="/font/css/solid.min.css">
-
-    
-<link rel="stylesheet" href="/font/css/brands.min.css">
-
-    
-    <script>
-        (function () {
-            let theme = localStorage.getItem('KEEP-THEME-STATUS');
-            let classname = "";
-            if (!theme || (JSON.parse(theme).isAutoTheme)){
-                classname = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? "dark-mode" : "light-mode";
-            }
-            else{
-                classname = JSON.parse(theme).isDark ? "dark-mode" : "light-mode";
-            }
-            document.documentElement.classList.add(classname);
-        })();
-    </script>
-    <script class="keep-theme-configurations">
-    const KEEP = window.KEEP || {}
-    KEEP.hexo_config = {"hostname":"mp.gaishanke.com","root":"/","language":"zh-CN"}
-    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"神觉晓","author":"shenjuexiao","avatar":"/images/@shenjuexiao1C_600×600.png","logo":"/images/@shenjuexiao1B_600×600.png","favicon":"/images/@shenjuexiao1_600×600.png"},"menu":{"home":"/","archives":"/archives"},"first_screen":{"enable":false,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep writing and Keep loving.","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"toc":{"enable":false,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":false,"preload":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs","custom":{"enable":false,"url":null}},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","search_db_path":"keep-search.json","source_data":{},"version":"4.3.0"}
-    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
-    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
-    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
-  </script>
-<meta name="generator" content="Hexo 8.1.2"></head>
+<link rel="stylesheet" href="/css/main.css">
 
 
-<body>
-<div class="progress-bar-container">
-    
 
-    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"shenjuexiao.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta property="og:type" content="website">
+<meta property="og:title" content="神觉晓">
+<meta property="og:url" content="https://shenjuexiao.com/page/2/index.html">
+<meta property="og:site_name" content="神觉晓">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="shenjuexiao">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://shenjuexiao.com/page/2/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":true,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"page/2/index.html","title":""}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>神觉晓</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">神觉晓</h1>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">@shenjuexiao</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
 </div>
 
 
 
-<main class="page-container border-box">
-    <!-- home first screen  -->
-    
 
-    <!-- page content -->
-    <div class="page-main-content border-box is-home">
-        <div class="page-main-content-top">
-            
-<header class="header-wrapper">
 
-    <div class="border-box header-content">
-        <div class="left flex-start border-box">
-            
-                <a class="logo-image border-box" href="/">
-                    <img src="/images/@shenjuexiao1B_600%C3%97600.png">
-                </a>
-            
-            <a class="site-name border-box" href="/">
-               神觉晓
-            </a>
-        </div>
 
-        <div class="right border-box">
-            <div class="pc border-box">
-                <ul class="menu-list border-box">
-                    
-                        
-                        <li class="menu-item flex-start border-box">
-                            <a class="menu-text-color border-box" href="/">
-                                
-                                首页
-                                
-                            </a>
-                            
-                        </li>
-                    
-                        
-                        <li class="menu-item flex-start border-box">
-                            <a class="menu-text-color border-box" href="/archives">
-                                
-                                归档
-                                
-                            </a>
-                            
-                        </li>
-                    
-                    
-                </ul>
-            </div>
-            <div class="mobile border-box flex-start">
-                
-                <div class="icon-item menu-bar">
-                    <div class="menu-bar-middle"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="header-drawer">
-        <ul class="drawer-menu-list border-box">
-            
-                
-                <li class="drawer-menu-item border-box not-sub-menu">
-                    <label class="drawer-menu-label border-box">
-                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
-                            
-                            首页
-                        </a>
-                        
-                    </label>
-                    
-                </li>
-            
-                
-                <li class="drawer-menu-item border-box not-sub-menu">
-                    <label class="drawer-menu-label border-box">
-                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
-                            
-                            归档
-                        </a>
-                        
-                    </label>
-                    
-                </li>
-            
-        </ul>
-    </div>
-
-    <div class="window-mask"></div>
 
 </header>
-
-
-        </div>
-
-        <div class="page-main-content-middle border-box">
-
-            <div class="main-content border-box">
-                
-
-                    <div class="home-content-container fade-in-down-animation">
-    
-    <ul class="home-post-list border-box">
-        
-            <li class="home-post-item">
-
-                
-
-                <div class="home-post-item-bottom border-box">
-                    
-                    <h3 class="home-post-title border-box">
-                        <a href="/2026/2026-07-30-Resolving-npm-package-not-found-Errors/">
-                            Resolving &#34;npm package not found&#34; Errors
-                        </a>
-                    </h3>
-
-                    <div class="home-post-content keep-markdown-body">
-                        
-                            Resolving &quot;npm package not found&quot; ErrorsThis error occurs when npm cannot locate a required package in your project...
-                        
-                    </div>
-
-                    
-
-<div class="post-meta-info-container border-box home">
-    <div class="post-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Thu Jul 30 2026 14:51:48 GMT+0800"
-                >2026-07-30 14:51:48</span>
-            </span>
-        
-
-        
-
-        
-
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2026/2026-07-30-Resolving-npm-package-not-found-Errors/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-post-item">
-
-                
-
-                <div class="home-post-item-bottom border-box">
-                    
-                    <h3 class="home-post-title border-box">
-                        <a href="/2026/2026-07-30-actions-gh-pages/">
-                            actions-gh-pages
-                        </a>
-                    </h3>
-
-                    <div class="home-post-content keep-markdown-body">
-                        
-                            actions-gh-pages内容来源
-actions-gh-pages
-GitHub凭证区别（Deepseek）
-GitHub令牌区别（Deepseek）
-
-actions-gh-pages 这个项目非常不错，利用 Github Actions ...
-                        
-                    </div>
-
-                    
-
-<div class="post-meta-info-container border-box home">
-    <div class="post-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Thu Jul 30 2026 14:30:29 GMT+0800"
-                >2026-07-30 14:30:29</span>
-            </span>
-        
-
-        
-
-        
-
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2026/2026-07-30-actions-gh-pages/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-post-item">
-
-                
-
-                <div class="home-post-item-bottom border-box">
-                    
-                    <h3 class="home-post-title border-box">
-                        <a href="/2026/2026-07-30-Astro-Template/">
-                            Astro Template
-                        </a>
-                    </h3>
-
-                    <div class="home-post-content keep-markdown-body">
-                        
-                            Astro TemplateAstro 模板Astro Paper高评分、暗黑模式、RSS&#x2F;SEO 完善Demo: astro-paper.pages.devGithub: satnaing&#x2F;astro-paper
-Astrofy...
-                        
-                    </div>
-
-                    
-
-<div class="post-meta-info-container border-box home">
-    <div class="post-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Thu Jul 30 2026 14:29:48 GMT+0800"
-                >2026-07-30 14:29:48</span>
-            </span>
-        
-
-        
-
-        
-
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2026/2026-07-30-Astro-Template/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-post-item">
-
-                
-
-                <div class="home-post-item-bottom border-box">
-                    
-                    <h3 class="home-post-title border-box">
-                        <a href="/2026/2026-07-30-The-requested-URL-returned-error-403/">
-                            The requested URL returned error: 403
-                        </a>
-                    </h3>
-
-                    <div class="home-post-content keep-markdown-body">
-                        
-                            The requested URL returned error: 403GitHub Actions push 403 权限拒绝解决内容来源
-豆包：GitHub Actions 403
-The requested URL returned erro...
-                        
-                    </div>
-
-                    
-
-<div class="post-meta-info-container border-box home">
-    <div class="post-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Fri Jul 31 2026 14:45:48 GMT+0800"
-                >2026-07-31 14:45:48</span>
-            </span>
-        
-
-        
-
-        
-
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2026/2026-07-30-The-requested-URL-returned-error-403/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-post-item">
-
-                
-
-                <div class="home-post-item-bottom border-box">
-                    
-                    <h3 class="home-post-title border-box">
-                        <a href="/2026/2026-07-30-Gitblog-main-py/">
-                            Gitblog main.py
-                        </a>
-                    </h3>
-
-                    <div class="home-post-content keep-markdown-body">
-                        
-                            Gitblog main.py内容来源
-Deepseek：#Gitblog main.py 代码解析
-The requested URL returned error: 403
-
-main.py1234567891011121314151617181...
-                        
-                    </div>
-
-                    
-
-<div class="post-meta-info-container border-box home">
-    <div class="post-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Thu Jul 30 2026 14:09:38 GMT+0800"
-                >2026-07-30 14:09:38</span>
-            </span>
-        
-
-        
-
-        
-
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2026/2026-07-30-Gitblog-main-py/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-post-item">
-
-                
-
-                <div class="home-post-item-bottom border-box">
-                    
-                    <h3 class="home-post-title border-box">
-                        <a href="/2026/2026-07-30-Gmeek-Deploy/">
-                            Gmeek Deploy
-                        </a>
-                    </h3>
-
-                    <div class="home-post-content keep-markdown-body">
-                        
-                            Gmeek DeployGmeek 部署内容来源
-Gmeek快速上手
-Gmeek 部署
-
-Gmeek 博客框架
-超轻量级个人博客模板
-完全基于 Github Pages 、 Github Issues 和 Github Actions，
-不需要本地部...
-                        
-                    </div>
-
-                    
-
-<div class="post-meta-info-container border-box home">
-    <div class="post-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Thu Jul 30 2026 14:27:32 GMT+0800"
-                >2026-07-30 14:27:32</span>
-            </span>
         
-
-        
-
-        
-
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2026/2026-07-30-Gmeek-Deploy/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-post-item">
-
-                
-
-                <div class="home-post-item-bottom border-box">
-                    
-                    <h3 class="home-post-title border-box">
-                        <a href="/2026/2026-07-30-Github-Issues-Blog-List/">
-                            Github Issues Blog List
-                        </a>
-                    </h3>
-
-                    <div class="home-post-content keep-markdown-body">
-                        
-                            Github Issues Blog ListGithub Issues 博客项目（不完全统计）内容来源
-Github Issues 搭建的博客项目列表
-
-@rena.to&#x2F;github-blog
-技术栈：TypeScript（核心API库...
-                        
-                    </div>
-
-                    
-
-<div class="post-meta-info-container border-box home">
-    <div class="post-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Thu Jul 30 2026 14:26:56 GMT+0800"
-                >2026-07-30 14:26:56</span>
-            </span>
-        
-
-        
-
-        
-
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2026/2026-07-30-Github-Issues-Blog-List/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-post-item">
-
-                
-
-                <div class="home-post-item-bottom border-box">
-                    
-                    <h3 class="home-post-title border-box">
-                        <a href="/2026/2026-07-30-Github-Issues-Blog-Gitblog/">
-                            Github Issues Blog Gitblog
-                        </a>
-                    </h3>
-
-                    <div class="home-post-content keep-markdown-body">
-                        
-                            Github Issues Blog Gitblog用过 Jekyll、Hexo，捣鼓了一阵子，都没能长期使用持续写作，现在转头使用 GIthub Issue 搭建的博客系统。后者有两个优点，一来省去了生成、部署的操作；二来解决了图床的需求。只要仓库...
-                        
-                    </div>
-
-                    
-
-<div class="post-meta-info-container border-box home">
-    <div class="post-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Thu Jul 30 2026 14:00:48 GMT+0800"
-                >2026-07-30 14:00:48</span>
-            </span>
-        
-
-        
-
-        
-
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2026/2026-07-30-Github-Issues-Blog-Gitblog/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-post-item">
-
-                
-
-                <div class="home-post-item-bottom border-box">
-                    
-                    <h3 class="home-post-title border-box">
-                        <a href="/2026/2026-07-30-Hello-World-2026/">
-                            Hello World 2026
-                        </a>
-                    </h3>
-
-                    <div class="home-post-content keep-markdown-body">
-                        
-                            Hello World 2026Quick StartCreate a new post1$ hexo new \&quot;My New Post\&quot;
-
-More info: Writing
-Run server1$ hexo serve...
-                        
-                    </div>
-
-                    
-
-<div class="post-meta-info-container border-box home">
-    <div class="post-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Thu Jul 30 2026 13:20:33 GMT+0800"
-                >2026-07-30 13:20:33</span>
-            </span>
-        
-
-        
-
-        
-
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2026/2026-07-30-Hello-World-2026/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-            <li class="home-post-item">
-
-                
-
-                <div class="home-post-item-bottom border-box">
-                    
-                    <h3 class="home-post-title border-box">
-                        <a href="/2026/2026-07-30-Hello-World-2015/">
-                            Hello World 2015
-                        </a>
-                    </h3>
-
-                    <div class="home-post-content keep-markdown-body">
-                        
-                            Hello World 2015Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems whe...
-                        
-                    </div>
-
-                    
-
-<div class="post-meta-info-container border-box home">
-    <div class="post-meta-info border-box">
-        
-            <span class="meta-info-item border-box">
-                <i class="icon fa-solid fa-history"></i>&nbsp;<span class="home-post-history"
-                                                                                data-updated="Thu Jul 30 2026 13:19:55 GMT+0800"
-                >2026-07-30 13:19:55</span>
-            </span>
-        
-
-        
-
-        
-
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-        <a class="home-read-more" href="/2026/2026-07-30-Hello-World-2015/">阅读全文&nbsp;<i class="icon fas fa-angle-right"></i></a>
-    
-</div>
-
-                </div>
-            </li>
-        
-    </ul>
-    
-    <div class="paginator border-box flex-center">
-        <div class="border-box first-page paginator-btn allowed">
-            <a class="border-box"><i class="fa-solid fa-angle-double-left"></i></a>
-        </div>
-
-        <div class="border-box paginator-btn allowed">
-            <a class="border-box"
-               href="/"
-            ><i class="fa-solid fa-chevron-left"></i></a>
-        </div>
-
-
-        <div class="page-number-box border-box flex-center">
-            <input class="page-number-input border-box base-style"
-                   type="number"
-                   value="2"
-                   min="1"
-                   max="2"
-            /><span class="delimiter base-style">/</span><span class="base-style">2</span>
-        </div>
-
-
-        <div class="border-box paginator-btn">
-            <a class="border-box"
-               href="/"
-            ><i class="fa-solid fa-chevron-right"></i></a>
-        </div>
-
-        <div class="border-box last-page paginator-btn not-allow">
-            <a class="border-box"><i class="fa-solid fa-angle-double-right"></i></a>
-        </div>
-    </div>
-
-
-
-
-</div>
-
-
-                
-            </div>
-        </div>
-
-        <div class="page-main-content-bottom border-box">
-            
-<footer class="footer border-box">
-    <div class="copyright-info info-item">
-    &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2026
-    
-            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">shenjuexiao</a>
-        
-    </div>
-
-    <div class="theme-info info-item">
-        由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
-    </div>
-
-    
-
-    
-
-    
-</footer>
-
-        </div>
-    </div>
-
-    <!-- post tools -->
-    
+  
+  <aside class="sidebar">
 
-    <!-- side tools -->
-    <div class="side-tools">
-        <div class="side-tools-container border-box side-tools-show-handle">
-    <ul class="side-tools-list side-tools-show-handle border-box">
-        <li class="tools-item tool-font-adjust-plus flex-center">
-            <i class="fas fa-search-plus"></i>
+    <div class="sidebar-inner sidebar-overview-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
         </li>
-
-        <li class="tools-item tool-font-adjust-minus flex-center">
-            <i class="fas fa-search-minus"></i>
+        <li class="sidebar-nav-overview">
+          站点概览
         </li>
+      </ul>
 
-        <!-- toggle mode -->
-        
-            <li class="tools-item tool-toggle-theme-mode flex-center">
-                <i class="fas fa-moon"></i>
-            </li>
-        
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+        </div>
+        <!--/noindex-->
 
-        <!-- rss -->
-        
-
-        <!-- to bottom -->
-        <li class="tools-item tool-scroll-to-bottom flex-center">
-            <i class="fas fa-arrow-down"></i>
-        </li>
-    </ul>
-
-    <ul class="exposed-tools-list border-box">
-        
-
-        
-
-        <li class="tools-item tool-toggle-show flex-center">
-            <i class="fas fa-cog fa-spin"></i>
-        </li>
-
-        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
-            <i class="arrow fas fa-arrow-up"></i>
-            <span class="percent"></span>
-        </li>
-    </ul>
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">shenjuexiao</p>
+  <div class="site-description" itemprop="description"></div>
 </div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/shenjuexiao" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;shenjuexiao" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
 
     </div>
 
-    <!-- image mask -->
-    <div class="zoom-in-image-mask">
-    <img class="zoom-in-image">
+    <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-Resolving-npm-package-not-found-Errors/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-07-30-Resolving-npm-package-not-found-Errors/" class="post-title-link" itemprop="url">Resolving "npm package not found" Errors</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-07-30 14:32:27 / 修改时间：14:51:48" itemprop="dateCreated datePublished" datetime="2026-07-30T14:32:27+08:00">2026-07-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Resolving-npm-package-not-found-Errors"><a href="#Resolving-npm-package-not-found-Errors" class="headerlink" title="Resolving &quot;npm package not found&quot; Errors"></a>Resolving &quot;npm package not found&quot; Errors</h1><p>This error occurs when npm cannot locate a required package in your project, often due to missing installations, incorrect paths, or misconfigured project settings.</p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ npm run build</span><br><span class="line">Error: NPM packages not found. Please confirm npm packages <span class="built_in">which</span> need to build are <span class="keyword">in</span> the correct directory</span><br></pre></td></tr></table></figure>
+
+<p>A common cause is that dependencies listed in package.json have not been installed. Running npm install in the project root usually resolves this by downloading all required packages into the node_modules directory.</p>
+<p>If you are working with environments like WeChat Mini Programs, the issue can also arise if npm packages are outside the miniprogramRoot directory. In such cases, you may need to adjust project.config.json:</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">\<span class="string">&quot;packNpmManually\&quot;: true,</span></span><br><span class="line"><span class="string">\&quot;packNpmRelationList\&quot;: [</span></span><br><span class="line"><span class="string">&#123;</span></span><br><span class="line"><span class="string">\&quot;packageJsonPath\&quot;: \&quot;./package.json\&quot;,</span></span><br><span class="line"><span class="string">\&quot;miniprogramNpmDistDir\&quot;: \&quot;./miniprogram/\&quot;</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">]</span></span><br></pre></td></tr></table></figure>
+
+<p>After updating, restart the development tool and rebuild npm.</p>
+<p>Sometimes, the error appears because npm itself is not installed or not accessible. Verify installation with:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm -v</span><br></pre></td></tr></table></figure>
+
+<p>If it fails, reinstall Node.js (which includes npm) and ensure its binary path is added to your system’s PATH environment variable.</p>
+<p>For corrupted or incomplete installs, delete node_modules and package-lock.json, then reinstall:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">rm</span> -rf node_modules package-lock.json</span><br><span class="line">npm install</span><br></pre></td></tr></table></figure>
+
+<p>In summary, ensure dependencies are installed, paths are correctly configured, and npm is properly set up in your environment. Restarting your IDE or build tool after changes often helps apply configurations.</p>
+<h2 id="了解详细信息"><a href="#了解详细信息" class="headerlink" title="了解详细信息"></a>了解详细信息</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43492356/article/details/130863125">blog.csdn.net</a></li>
+<li><a target="_blank" rel="noopener" href="https://developers.weixin.qq.com/community/minihome/doc/0002c4582ac3303e4413d1da561c00">developers.weixin.qq.com</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.geeksforgeeks.org/node-js/how-to-resolve-npm-command-not-found-error-in-node-js/">geeksforgeeks.org</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
 </div>
 
 
-    <!-- local search -->
-    
 
-    <!-- tablet toc -->
-    
-</main>
-
-
-
-
-
-
-<!-- common js -->
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/header-shrink.js"></script>
-
-<script src="/js/back2top.js"></script>
-
-<script src="/js/toggle-theme.js"></script>
-
-<script src="/js/code-block.js"></script>
-
-<script src="/js/main.js"></script>
-
-<script src="/js/libs/anime.min.js"></script>
-
-
-<!-- local search -->
-
-
-<!-- lazyload -->
-
-
-<div class="">
-    <!-- home page -->
-    
-        
-<script src="/js/page/home-page.js"></script>
 
     
 
-    <!-- post page -->
-    
 
-    <!-- categories page -->
-    
+<div class="post-block">
+  
+  
 
-    <!-- links page -->
-    
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-actions-gh-pages/">
 
-    <!-- photos page -->
-    
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
 
-    <!-- tools page -->
-    
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-07-30-actions-gh-pages/" class="post-title-link" itemprop="url">actions-gh-pages</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-07-30 14:30:29" itemprop="dateCreated datePublished" datetime="2026-07-30T14:30:29+08:00">2026-07-30</time>
+    </span>
+
+  
 </div>
 
-<!-- mermaid -->
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="actions-gh-pages"><a href="#actions-gh-pages" class="headerlink" title="actions-gh-pages"></a>actions-gh-pages</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/peaceiris/actions-gh-pages">actions-gh-pages</a></li>
+<li><a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/37lldwwwu2m7wobum4">GitHub凭证区别</a><a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/351bd0f3-9c56-42f0-ac38-91bf90c0e184">（Deepseek）</a></li>
+<li><a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/8m05dxz9pqrkl0wo8s">GitHub令牌区别</a><a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/26baece4-d43e-48eb-81d4-d6de0ece8f04">（Deepseek）</a></li>
+</ul>
+<p>actions-gh-pages 这个项目非常不错，利用 <code>Github Actions</code> 部署静态页面。</p>
+<blockquote>
+<p>This is a GitHub Action to deploy your static files to GitHub Pages. This deploy action can be combined simply and freely with Static Site Generators. (Hugo, MkDocs, Gatsby, mdBook, Next, Nuxt, and so on.)</p>
+</blockquote>
+<p>这是一个用于将静态文件部署到 <code>GitHub Pages</code> 的 <code>GitHub Action</code>。此部署操作可与静态网站生成器简单灵活地结合使用（Hugo、MkDocs、Gatsby、mdBook、Next、Nuxt等）。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span></span><br><span class="line">  <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v4</span></span><br><span class="line">  <span class="attr">with:</span></span><br><span class="line">    <span class="attr">github_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">publish_dir:</span> <span class="string">./public</span></span><br></pre></td></tr></table></figure>
+
+<p>值得注意的是，<code>github_token</code> 可以选择三种的类型，即该项目支持的三种。</p>
+<blockquote>
+<p>Three tokens are supported.</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th align="left">Token</th>
+<th align="center">Private repo</th>
+<th align="center">Public repo</th>
+<th align="center">Protocol</th>
+<th align="left">Setup</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">github_token</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">HTTPS</td>
+<td align="left">Unnecessary</td>
+</tr>
+<tr>
+<td align="left">deploy_key</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">SSH</td>
+<td align="left">Necessary</td>
+</tr>
+<tr>
+<td align="left">personal_token</td>
+<td align="center">✅</td>
+<td align="center">✅</td>
+<td align="center">HTTPS</td>
+<td align="left">Necessary</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>Notes: Actually, the GITHUB_TOKEN works for deploying to GitHub Pages but it has still some limitations. For the first deployment, we need to select the gh-pages branch or another branch on the repository settings tab. See First Deployment with GITHUB_TOKEN.</p>
+</blockquote>
+<p>实际上，<code>GITHUB_TOKEN</code> 可用于部署到 <code>GitHub Pages</code>，但仍存在一些限制。对于首次部署，我们需要在仓库设置的选项卡中选择 <code>gh-pages</code> 分支或其他分支。请参阅“使用 GITHUB_TOKEN 进行首次部署”。</p>
+<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a>区别</h2><h3 id="GITHUB-TOKEN"><a href="#GITHUB-TOKEN" class="headerlink" title="GITHUB_TOKEN"></a>GITHUB_TOKEN</h3><p>GitHub Actions 工作流的&quot;内置身份&quot;，由系统自动创建和管理，权限仅限于当前仓库。</p>
+<h3 id="DEPLOY-KEY"><a href="#DEPLOY-KEY" class="headerlink" title="DEPLOY_KEY"></a>DEPLOY_KEY</h3><p>一种 SSH 密钥，权限被锁定在单个仓库，常用于从服务器拉取或推送代码到此仓库。</p>
+<h3 id="PERSONAL-TOKEN"><a href="#PERSONAL-TOKEN" class="headerlink" title="PERSONAL_TOKEN"></a>PERSONAL_TOKEN</h3><p>关联到你个人账户的令牌，拥有你在 GitHub 上的全部或部分权限，是最强大但也最需谨慎管理的一种。</p>
+<h2 id="对比表格"><a href="#对比表格" class="headerlink" title="对比表格"></a>对比表格</h2><table>
+<thead>
+<tr>
+<th>特性</th>
+<th>GITHUB_TOKEN</th>
+<th>DEPLOY_KEY</th>
+<th>PERSONAL_TOKEN</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>关联对象</td>
+<td>当前工作流运行</td>
+<td>单个仓库</td>
+<td>你的个人账户</td>
+</tr>
+<tr>
+<td>权限范围</td>
+<td>仅限于当前仓库</td>
+<td>仅限于绑定的单个仓库（可读或读写）</td>
+<td>可访问你账户有权访问的所有仓库及资源</td>
+</tr>
+<tr>
+<td>身份验证方式</td>
+<td>HTTPS (Token)</td>
+<td>SSH (公钥&#x2F;私钥)</td>
+<td>HTTPS (Token)</td>
+</tr>
+<tr>
+<td>有效期</td>
+<td>每次工作流作业开始时创建，作业完成后失效</td>
+<td>长期有效，直到手动删除</td>
+<td>长期有效，直到手动撤销或过期</td>
+</tr>
+<tr>
+<td>典型使用场景</td>
+<td>GitHub Actions 中拉取当前仓库代码、进行常规操作</td>
+<td>在 Actions 中拉取或推送代码到特定仓库（尤其是私有仓库）</td>
+<td>需要在 Actions 中访问其他仓库、调用 GitHub API</td>
+</tr>
+</tbody></table>
+<h2 id="如何选择"><a href="#如何选择" class="headerlink" title="如何选择"></a>如何选择</h2><ul>
+<li><p>优先使用 <code>GITHUB_TOKEN</code>：如果工作流只需要访问当前仓库的代码，这是最安全、最便捷的选择，无需任何手动配置。</p>
+</li>
+<li><p>需要访问特定私有仓库时，使用 <code>DEPLOY_KEY</code>：当工作流需要从另一个特定的私有仓库拉取代码（例如一个公共工具库），但又不想把个人账户的所有权限都暴露出去时，<code>DEPLOY_KEY</code> 是绝佳选择。它的权限被&quot;锁死&quot;在目标仓库上。</p>
+</li>
+<li><p>万不得已时，使用 <code>PERSONAL_TOKEN</code>：当 <code>GITHUB_TOKEN</code> 权限不足（比如需要触发新的工作流），或者操作涉及到当前仓库之外的资源时，才考虑使用个人访问令牌。务必注意：由于它关联的是你的个人账户，权限非常宽泛，潜在风险也最大，因此要谨慎使用，并遵循最小权限原则（只授予必要的权限）</p>
+</li>
+</ul>
+<h2 id="如何设置"><a href="#如何设置" class="headerlink" title="如何设置"></a>如何设置</h2><ul>
+<li><p><code>GITHUB_TOKEN</code> 并不需要你手动去“设置”或“创建”。它是在 <code>GitHub Actions</code> 工作流运行时，由 GitHub 系统自动生成的一个临时凭证。你只需要在工作流的 YAML 文件中通过特定的语法来使用它。</p>
+</li>
+<li><p><code>DEPLOY_KEY</code> 的设置需要分两步走：生成密钥对，然后分别把公钥和私钥添加到正确的地方。它本质上是一个 SSH 密钥对，专门用于授权访问单个 GitHub 仓库。</p>
+</li>
+<li><p>设置 <code>PERSONAL_TOKEN</code>（个人访问令牌，简称 PAT）主要分几步：进入创建页面、配置权限、生成并安全保存。你可以把它当作 GitHub 密码的替代品，用于命令行或 API 操作。</p>
+</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
 
 
-<!-- pjax -->
 
 
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-Astro-Template/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-07-30-Astro-Template/" class="post-title-link" itemprop="url">Astro Template</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-07-30 14:29:48" itemprop="dateCreated datePublished" datetime="2026-07-30T14:29:48+08:00">2026-07-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Astro-Template"><a href="#Astro-Template" class="headerlink" title="Astro Template"></a>Astro Template</h1><h1 id="Astro-模板"><a href="#Astro-模板" class="headerlink" title="Astro 模板"></a>Astro 模板</h1><h2 id="Astro-Paper"><a href="#Astro-Paper" class="headerlink" title="Astro Paper"></a>Astro Paper</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Template_satnaing_astro-paper.png" alt="satnaing&#x2F;astro-paper"><br>高评分、暗黑模式、RSS&#x2F;SEO 完善<br>Demo: <a target="_blank" rel="noopener" href="https://astro-paper.pages.dev/">astro-paper.pages.dev</a><br>Github: <a target="_blank" rel="noopener" href="https://github.com/satnaing/astro-paper">satnaing&#x2F;astro-paper</a></p>
+<h2 id="Astrofy"><a href="#Astrofy" class="headerlink" title="Astrofy"></a>Astrofy</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Template_manuelernestog_astrofy.png" alt="manuelernestog&#x2F;astrofy"><br>含简历&#x2F;商店&#x2F;博客多合一，CV+ 项目画廊<br>Demo: <a target="_blank" rel="noopener" href="https://astrofy-template.netlify.app/">astrofy-template.netlify.app</a><br>Github: <a target="_blank" rel="noopener" href="https://github.com/manuelernestog/astrofy">manuelernestog&#x2F;astrofy</a></p>
+<h2 id="EV0"><a href="#EV0" class="headerlink" title="EV0"></a>EV0</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Template_gndx_ev0-astro-theme.png" alt="gndx&#x2F;ev0-astro-theme"><br>极简响应式<br>Demo: <a target="_blank" rel="noopener" href="https://ev0.gndx.dev/">ev0.gndx.dev</a><br>Github: <a target="_blank" rel="noopener" href="https://github.com/gndx/ev0-astro-theme">withastro&#x2F;starlight</a></p>
+<h2 id="Firefly"><a href="#Firefly" class="headerlink" title="Firefly"></a>Firefly</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Template_CuteLeaf_Firefly.png" alt="CuteLeaf&#x2F;Firefly"><br>专为技术文档设计，支持多语言、搜索、版本切换<br>Demo: <a target="_blank" rel="noopener" href="https://firefly.cuteleaf.cn/">firefly.cuteleaf.cn</a><br>Github: <a target="_blank" rel="noopener" href="https://github.com/CuteLeaf/Firefly">CuteLeaf&#x2F;Firefly</a><br>Docs: <a target="_blank" rel="noopener" href="https://docs-firefly.cuteleaf.cn/zh/">docs-firefly.cuteleaf.cn</a></p>
+<h2 id="Pure"><a href="#Pure" class="headerlink" title="Pure"></a>Pure</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Template_cworld1_astro-theme-pure.png" alt="cworld1&#x2F;astro-theme-pure"><br>极简 + 全文搜索<br>Demo: <a target="_blank" rel="noopener" href="https://astro-pure.js.org/">astro-pure.js.org</a><br>Github: <a target="_blank" rel="noopener" href="https://github.com/cworld1/astro-theme-pure">cworld1&#x2F;astro-theme-pure</a></p>
+<blockquote>
+<p>这位作者的 Github 主页，可以追溯到 1990 年，不知道怎么弄出来的。</p>
+</blockquote>
+<h2 id="Sorolla"><a href="#Sorolla" class="headerlink" title="Sorolla"></a>Sorolla</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Template_jramma_sorollaportfolio.png" alt="jramma&#x2F;sorollaportfolio"><br>画册式排版<br>Demo: <a target="_blank" rel="noopener" href="https://sorolla.casset.cat/">sorolla.casset.cat</a><br>Github: <a target="_blank" rel="noopener" href="https://github.com/jramma/sorollaportfolio">jramma&#x2F;sorollaportfolio</a></p>
+<h2 id="Starlight‌-官方"><a href="#Starlight‌-官方" class="headerlink" title="Starlight‌ 官方"></a>Starlight‌ 官方</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Template_withastro_starlight.png" alt="withastro&#x2F;starlight"><br>专为技术文档设计，支持多语言、搜索、版本切换<br>Demo: <a target="_blank" rel="noopener" href="https://starlight.astro.build/">starlight.astro.build</a><br>Github: <a target="_blank" rel="noopener" href="https://github.com/withastro/starlight">withastro&#x2F;starlight</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-The-requested-URL-returned-error-403/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-07-30-The-requested-URL-returned-error-403/" class="post-title-link" itemprop="url">The requested URL returned error: 403</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-07-30 14:24:56" itemprop="dateCreated datePublished" datetime="2026-07-30T14:24:56+08:00">2026-07-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-07-31 14:45:48" itemprop="dateModified" datetime="2026-07-31T14:45:48+08:00">2026-07-31</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="The-requested-URL-returned-error-403"><a href="#The-requested-URL-returned-error-403" class="headerlink" title="The requested URL returned error: 403"></a>The requested URL returned error: 403</h1><h1 id="GitHub-Actions-push-403-权限拒绝解决"><a href="#GitHub-Actions-push-403-权限拒绝解决" class="headerlink" title="GitHub Actions push 403 权限拒绝解决"></a>GitHub Actions push 403 权限拒绝解决</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.doubao.com/chat/38434639772911618">豆包：GitHub Actions 403</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/shenjuexiao/giscafer/issues/1">The requested URL returned error: 403</a></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Giscafer_GitHub_Actions_push_403.png" alt="Giscafer GitHub Actions push 403"></p>
+<h2 id="fatal-unable-to-access"><a href="#fatal-unable-to-access" class="headerlink" title="fatal: unable to access"></a>fatal: unable to access</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Run</span> <span class="string">yarn</span> <span class="string">sync-post</span></span><br><span class="line">  <span class="string">yarn</span> <span class="string">sync-post</span></span><br><span class="line">  <span class="string">git</span> <span class="string">add</span> <span class="string">.</span></span><br><span class="line">  <span class="string">git</span> <span class="string">commit</span> <span class="string">-m</span> <span class="string">&#x27;chore(ci): blog sync&#x27;</span></span><br><span class="line">  <span class="string">git</span> <span class="string">push</span></span><br><span class="line">  <span class="attr">shell:</span> <span class="string">/usr/bin/bash</span> <span class="string">-e</span> &#123;<span class="number">0</span>&#125;</span><br><span class="line">  <span class="attr">env:</span></span><br><span class="line">    <span class="attr">GH_TOKEN:</span> <span class="string">***</span></span><br><span class="line">    <span class="attr">GH_USER:</span> <span class="string">***</span></span><br><span class="line">    <span class="attr">GH_PROJECT_NAME:</span> <span class="string">***</span></span><br><span class="line"><span class="string">yarn</span> <span class="string">run</span> <span class="string">v1.22.22</span></span><br><span class="line"><span class="string">$</span> <span class="string">node</span> <span class="string">./scripts/sync-post.js</span></span><br><span class="line"><span class="string">文章全部同步成功！</span> <span class="number">0</span></span><br><span class="line"><span class="string">Done</span> <span class="string">in</span> <span class="number">0.</span><span class="string">33s.</span></span><br><span class="line"><span class="string">ℹ</span> <span class="literal">No</span> <span class="string">staged</span> <span class="string">files</span> <span class="string">found.</span></span><br><span class="line">[<span class="string">main</span> <span class="string">7226b3a</span>] <span class="attr">chore(ci):</span> <span class="string">blog</span> <span class="string">sync</span></span><br><span class="line"> <span class="number">3</span> <span class="string">files</span> <span class="string">changed,</span> <span class="number">33</span> <span class="string">deletions(-)</span></span><br><span class="line"> <span class="string">delete</span> <span class="string">mode</span> <span class="number">100644</span> <span class="string">data/blog/post-1.mdx</span></span><br><span class="line"> <span class="string">delete</span> <span class="string">mode</span> <span class="number">100644</span> <span class="string">data/blog/post-2.mdx</span></span><br><span class="line"> <span class="string">delete</span> <span class="string">mode</span> <span class="number">100644</span> <span class="string">data/blog/post-3.mdx</span></span><br><span class="line"><span class="attr">remote:</span> <span class="string">Permission</span> <span class="string">to</span> <span class="string">***/***.git</span> <span class="string">denied</span> <span class="string">to</span> <span class="string">github-actions[bot].</span></span><br><span class="line"><span class="attr">fatal:</span> <span class="string">unable</span> <span class="string">to</span> <span class="string">access</span> <span class="attr">&#x27;https://github.com/***/***/&#x27;:</span> <span class="attr">The requested URL returned error:</span> <span class="number">403</span></span><br><span class="line"><span class="attr">Error:</span> <span class="string">Process</span> <span class="string">completed</span> <span class="string">with</span> <span class="string">exit</span> <span class="string">code</span> <span class="number">128</span><span class="string">.</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="文件：giscafer-github-workflows-sync-post-yml"><a href="#文件：giscafer-github-workflows-sync-post-yml" class="headerlink" title="文件：giscafer/.github/workflows/sync-post.yml"></a>文件：<code>giscafer/.github/workflows/sync-post.yml</code></h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Sync</span> <span class="string">Post</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Controls when the workflow will run</span></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="comment"># schedule:</span></span><br><span class="line">  <span class="comment">#   - cron: \&quot;30 1 * * *\&quot;</span></span><br><span class="line">  <span class="comment"># https://docs.github.com/cn/developers/webhooks-and-events/events/issue-event-types</span></span><br><span class="line">  <span class="attr">issues:</span></span><br><span class="line">    <span class="attr">types:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">opened</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">closed</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">renamed</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">labeled</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">unlabeled</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">reopened</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">committed</span> <span class="comment"># 修改？</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line"><span class="attr">env:</span></span><br><span class="line">  <span class="attr">GH_TOKEN:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">  <span class="attr">GH_USER:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_USER</span> <span class="string">&#125;&#125;</span></span><br><span class="line">  <span class="attr">GH_PROJECT_NAME:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_PROJECT_NAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">Publish:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">🛎️</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Git</span> <span class="string">config</span> <span class="string">🔧</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          git config --global user.name \&quot;shenjuexiao\&quot;</span></span><br><span class="line"><span class="string">          git config --global user.email \&quot;shenjuexiao@qq.com\&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Display</span> <span class="string">runtime</span> <span class="string">info</span> <span class="string">✨</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          echo &#x27;当前目录：&#x27;</span></span><br><span class="line"><span class="string">          pwd</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">🔧</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">yarn</span> <span class="string">install</span></span><br><span class="line"></span><br><span class="line">      <span class="comment"># - name: Build ⛏️</span></span><br><span class="line">      <span class="comment">#   run: yarn build</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Update</span> <span class="string">blog</span> <span class="string">files</span> <span class="string">⛏️</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          yarn sync-post</span></span><br><span class="line"><span class="string">          git add .</span></span><br><span class="line"><span class="string">          git commit -m &#x27;chore(ci): blog sync&#x27;</span></span><br><span class="line"><span class="string">          git push</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>github-actions[bot]</strong> 没有仓库写入推送权限，触发 403 forbidden。</p>
+<h2 id="三种常见场景"><a href="#三种常见场景" class="headerlink" title="三种常见场景"></a>三种常见场景</h2><ol>
+<li>仅配置 GH_TOKEN，但仓库默认工作流令牌无写权限（默认只读）</li>
+<li>个人 Token 权限范围不足、过期，或未正确注入</li>
+<li>Git remote 使用 https 但未自动替换授权头</li>
+</ol>
+<h2 id="方案一：开启仓库工作流写入权限（最简单，推荐）"><a href="#方案一：开启仓库工作流写入权限（最简单，推荐）" class="headerlink" title="方案一：开启仓库工作流写入权限（最简单，推荐）"></a>方案一：开启仓库工作流写入权限（最简单，推荐）</h2><p>步骤<br>仓库首页 ：<code>Settings</code> -&gt; <code>Actions</code> -&gt; <code>General</code><br>下滑找到 <code>Workflow permissions</code><br>勾选： <code>Read and write permissions</code><br>（默认是 <code> Read repository contents and packages permissions</code>）<br>保存设置，重新运行 Actions。<br>原理：内置 GITHUB_TOKEN 会获得推送、修改文件权限，无需额外个人 Token。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Giscafer_Settings_Actions_General_Workflow-permissions.png" alt="Giscafer Settings Actions General Workflow-permissions"></p>
+<h2 id="方案二：改用个人-PAT-Token（适合需要跨仓库-更多权限）"><a href="#方案二：改用个人-PAT-Token（适合需要跨仓库-更多权限）" class="headerlink" title="方案二：改用个人 PAT Token（适合需要跨仓库 &#x2F; 更多权限）"></a>方案二：改用个人 PAT Token（适合需要跨仓库 &#x2F; 更多权限）</h2><ol>
+<li>创建 GitHub 个人访问令牌 PAT<br>GitHub 头像，<code>Settings</code> -&gt; <code>Developer settings</code> -&gt; <code>Personal access tokens</code> -&gt; <code>Tokens (classic)</code><br>新建 Token，勾选权限：repo（全部仓库读写权限）。<br>复制生成的 Token（仅展示一次，丢失需重建）。</li>
+<li>仓库配置 Secret<br>仓库首页， <code>Settings</code> -&gt; <code>Secrets and variables</code> -&gt; <code>Actions</code> -&gt; <code>New repository secret</code><br>Name：GH_TOKEN。<br>Value：粘贴上面的 PAT。</li>
+<li>修改 <code>workflow</code> 注入授权（关键，你现有脚本缺授权）<br>你的脚本直接 <code>git push</code>，但 https 地址没带上 token，需要在 shell 里替换 remote url：</li>
+</ol>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">steps:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v4</span></span><br><span class="line">    <span class="comment"># 必须加上 fetch-depth=0，否则无法正常commit push</span></span><br><span class="line">    <span class="attr">with:</span></span><br><span class="line">      <span class="attr">fetch-depth:</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Sync</span> <span class="string">blog</span> <span class="string">post</span></span><br><span class="line">    <span class="attr">env:</span></span><br><span class="line">      <span class="attr">GH_TOKEN:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_TOKEN</span> <span class="string">&#125;&#125;</span> <span class="comment"># 如果用PAT填GH_TOKEN: $&#123;&#123; secrets.GH_TOKEN &#125;&#125;</span></span><br><span class="line">      <span class="attr">GH_USER:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_USER</span> <span class="string">&#125;&#125;</span></span><br><span class="line">      <span class="attr">GH_PROJECT_NAME:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_PROJECT_NAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">      yarn sync-post</span></span><br><span class="line"><span class="string">      # 核心：替换remote地址，带上token鉴权，解决403</span></span><br><span class="line"><span class="string">      git remote set-url origin https://$&#123;GH_USER&#125;:$&#123;GH_TOKEN&#125;@github.com/$&#123;GH_USER&#125;/$&#123;GH_PROJECT_NAME&#125;.git</span></span><br><span class="line"><span class="string">      git add .</span></span><br><span class="line"><span class="string">      git commit -m &#x27;chore(ci): blog sync&#x27;</span></span><br><span class="line"><span class="string">      git push</span></span><br><span class="line"><span class="string"></span>    <span class="attr">shell:</span> <span class="string">/usr/bin/bash</span> <span class="string">-e</span> &#123;<span class="number">0</span>&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="关键遗漏点（原配置2个问题）"><a href="#关键遗漏点（原配置2个问题）" class="headerlink" title="关键遗漏点（原配置2个问题）"></a>关键遗漏点（原配置2个问题）</h2><ol>
+<li><code>checkout</code> 未加 <code>fetch-depth:0</code><br>默认只拉取最新一次提交，缺少完整 git 历史，<code>commit/push</code> 极易异常。</li>
+<li>未配置带 Token 的 <code>remote origin</code><br>直接 git push 使用无授权的 https 地址，bot 被拦截 403。</li>
+</ol>
+<h2 id="补充排查点"><a href="#补充排查点" class="headerlink" title="补充排查点"></a>补充排查点</h2><ol>
+<li>如果你用内置 <code>$&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;</code><br>必须完成【方案一：开启读写权限】，否则就算改 remote 也推不上去。</li>
+<li>PAT 失效处理<br>重新生成 Token，更新仓库 Secret 内的 <code>GH_TOKEN</code>。</li>
+<li>分支保护规则<br>若 main 分支开启 <code>Require pull request reviews before merging</code>，直接 push 会失败，两种解决：</li>
+</ol>
+<ul>
+<li>临时放开分支保护允许 bot 直接推送</li>
+<li>脚本改成自动创建 PR，而非直接 push</li>
+</ul>
+<h2 id="完整可直接复制的-job-模板"><a href="#完整可直接复制的-job-模板" class="headerlink" title="完整可直接复制的 job 模板"></a>完整可直接复制的 job 模板</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">sync-blog:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">code</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v4</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">fetch-depth:</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Setup</span> <span class="string">Node</span> <span class="string">&amp;</span> <span class="string">Yarn</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@v4</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="number">20</span></span><br><span class="line">          <span class="attr">cache:</span> <span class="string">&#x27;yarn&#x27;</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">dependencies</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">yarn</span> <span class="string">install</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Sync</span> <span class="string">post</span> <span class="string">&amp;</span> <span class="string">push</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="attr">GH_TOKEN:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">GH_USER:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_USER</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">GH_PROJECT_NAME:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_PROJECT_NAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          yarn sync-post</span></span><br><span class="line"><span class="string">          git remote set-url origin https://$&#123;GH_USER&#125;:$&#123;GH_TOKEN&#125;@github.com/$&#123;GH_USER&#125;/$&#123;GH_PROJECT_NAME&#125;.git</span></span><br><span class="line"><span class="string">          git config --global user.name \&quot;github-actions[bot]\&quot;</span></span><br><span class="line"><span class="string">          git config --global user.email \&quot;github-actions[bot]@users.noreply.github.com\&quot;</span></span><br><span class="line"><span class="string">          git add .</span></span><br><span class="line"><span class="string">          git commit -m &#x27;chore(ci): blog sync&#x27; || echo \&quot;无文件变更，跳过提交\&quot;</span></span><br><span class="line"><span class="string">          git push</span></span><br></pre></td></tr></table></figure>
+
+<p>新增 <code>git config</code> 配置提交者用户名邮箱，避免无身份提交报错；<br><code>|| echo</code> 兼容「无修改文件」场景，不会因为没有变更直接终止任务。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-Gitblog-main-py/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-07-30-Gitblog-main-py/" class="post-title-link" itemprop="url">Gitblog main.py</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-07-30 14:09:38" itemprop="dateCreated datePublished" datetime="2026-07-30T14:09:38+08:00">2026-07-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Gitblog-main-py"><a href="#Gitblog-main-py" class="headerlink" title="Gitblog main.py"></a>Gitblog main.py</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/0k49t8521q3gk2acx9">Deepseek：#Gitblog main.py 代码解析</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/shenjuexiao/giscafer/issues/1">The requested URL returned error: 403</a></li>
+</ul>
+<h2 id="main-py"><a href="#main-py" class="headerlink" title="main.py"></a>main.py</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br><span class="line">180</span><br><span class="line">181</span><br><span class="line">182</span><br><span class="line">183</span><br><span class="line">184</span><br><span class="line">185</span><br><span class="line">186</span><br><span class="line">187</span><br><span class="line">188</span><br><span class="line">189</span><br><span class="line">190</span><br><span class="line">191</span><br><span class="line">192</span><br><span class="line">193</span><br><span class="line">194</span><br><span class="line">195</span><br><span class="line">196</span><br><span class="line">197</span><br><span class="line">198</span><br><span class="line">199</span><br><span class="line">200</span><br><span class="line">201</span><br><span class="line">202</span><br><span class="line">203</span><br><span class="line">204</span><br><span class="line">205</span><br><span class="line">206</span><br><span class="line">207</span><br><span class="line">208</span><br><span class="line">209</span><br><span class="line">210</span><br><span class="line">211</span><br><span class="line">212</span><br><span class="line">213</span><br><span class="line">214</span><br><span class="line">215</span><br><span class="line">216</span><br><span class="line">217</span><br><span class="line">218</span><br><span class="line">219</span><br><span class="line">220</span><br><span class="line">221</span><br><span class="line">222</span><br><span class="line">223</span><br><span class="line">224</span><br><span class="line">225</span><br><span class="line">226</span><br><span class="line">227</span><br><span class="line">228</span><br><span class="line">229</span><br><span class="line">230</span><br><span class="line">231</span><br><span class="line">232</span><br><span class="line">233</span><br><span class="line">234</span><br><span class="line">235</span><br><span class="line">236</span><br><span class="line">237</span><br><span class="line">238</span><br><span class="line">239</span><br><span class="line">240</span><br><span class="line">241</span><br><span class="line">242</span><br><span class="line">243</span><br><span class="line">244</span><br><span class="line">245</span><br><span class="line">246</span><br><span class="line">247</span><br><span class="line">248</span><br><span class="line">249</span><br><span class="line">250</span><br><span class="line">251</span><br><span class="line">252</span><br><span class="line">253</span><br><span class="line">254</span><br><span class="line">255</span><br><span class="line">256</span><br><span class="line">257</span><br><span class="line">258</span><br><span class="line">259</span><br><span class="line">260</span><br><span class="line">261</span><br><span class="line">262</span><br><span class="line">263</span><br><span class="line">264</span><br><span class="line">265</span><br><span class="line">266</span><br><span class="line">267</span><br><span class="line">268</span><br><span class="line">269</span><br><span class="line">270</span><br><span class="line">271</span><br><span class="line">272</span><br><span class="line">273</span><br><span class="line">274</span><br><span class="line">275</span><br><span class="line">276</span><br><span class="line">277</span><br><span class="line">278</span><br><span class="line">279</span><br><span class="line">280</span><br><span class="line">281</span><br><span class="line">282</span><br><span class="line">283</span><br><span class="line">284</span><br><span class="line">285</span><br><span class="line">286</span><br><span class="line">287</span><br><span class="line">288</span><br><span class="line">289</span><br><span class="line">290</span><br><span class="line">291</span><br><span class="line">292</span><br><span class="line">293</span><br><span class="line">294</span><br><span class="line">295</span><br><span class="line">296</span><br><span class="line">297</span><br><span class="line">298</span><br><span class="line">299</span><br><span class="line">300</span><br><span class="line">301</span><br><span class="line">302</span><br><span class="line">303</span><br><span class="line">304</span><br><span class="line">305</span><br><span class="line">306</span><br><span class="line">307</span><br><span class="line">308</span><br><span class="line">309</span><br><span class="line">310</span><br><span class="line">311</span><br><span class="line">312</span><br><span class="line">313</span><br><span class="line">314</span><br><span class="line">315</span><br><span class="line">316</span><br><span class="line">317</span><br><span class="line">318</span><br><span class="line">319</span><br><span class="line">320</span><br><span class="line">321</span><br><span class="line">322</span><br><span class="line">323</span><br><span class="line">324</span><br><span class="line">325</span><br><span class="line">326</span><br><span class="line">327</span><br><span class="line">328</span><br><span class="line">329</span><br><span class="line">330</span><br><span class="line">331</span><br><span class="line">332</span><br><span class="line">333</span><br><span class="line">334</span><br><span class="line">335</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># main.py</span></span><br><span class="line"><span class="comment"># -*- coding: utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> argparse</span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> re</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> markdown</span><br><span class="line"><span class="keyword">from</span> feedgen.feed <span class="keyword">import</span> FeedGenerator</span><br><span class="line"><span class="keyword">from</span> github <span class="keyword">import</span> Github</span><br><span class="line"><span class="keyword">from</span> lxml.etree <span class="keyword">import</span> CDATA</span><br><span class="line"><span class="keyword">from</span> marko.ext.gfm <span class="keyword">import</span> gfm <span class="keyword">as</span> marko</span><br><span class="line"></span><br><span class="line">MD_HEAD = \<span class="string">&quot;\&quot;\&quot;## [Gitblog](https://yihong0618.github.io/gitblog/)</span></span><br><span class="line"><span class="string">My personal blog([About Me](https://github.com/yihong0618/gitblog/issues/282)) using issues and GitHub Actions (随意转载，无需署名)</span></span><br><span class="line"><span class="string">[Things I like](https://github.com/yihong0618/gitblog/issues/311)</span></span><br><span class="line"><span class="string">![image](https://github.com/user-attachments/assets/a168bf11-661e-4566-b042-7fc9544de528)</span></span><br><span class="line"><span class="string">[RSS Feed](https://raw.githubusercontent.com/&#123;repo_name&#125;/master/feed.xml)</span></span><br><span class="line"><span class="string">\&quot;\&quot;\&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">BACKUP_DIR = \&quot;BACKUP\&quot;</span></span><br><span class="line"><span class="string">ANCHOR_NUMBER = 5</span></span><br><span class="line"><span class="string">TOP_ISSUES_LABELS = [\&quot;Top\&quot;]</span></span><br><span class="line"><span class="string">TODO_ISSUES_LABELS = [\&quot;TODO\&quot;]</span></span><br><span class="line"><span class="string">FRIENDS_LABELS = [\&quot;Friends\&quot;]</span></span><br><span class="line"><span class="string">ABOUT_LABELS = [\&quot;About\&quot;]</span></span><br><span class="line"><span class="string">THINGS_LABELS = [\&quot;Things\&quot;]</span></span><br><span class="line"><span class="string">IGNORE_LABELS = (</span></span><br><span class="line"><span class="string">    FRIENDS_LABELS</span></span><br><span class="line"><span class="string">    + TOP_ISSUES_LABELS</span></span><br><span class="line"><span class="string">    + TODO_ISSUES_LABELS</span></span><br><span class="line"><span class="string">    + ABOUT_LABELS</span></span><br><span class="line"><span class="string">    + THINGS_LABELS</span></span><br><span class="line"><span class="string">)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">FRIENDS_TABLE_HEAD = \&quot;| Name | Link | Desc | \\n | ---- | ---- | ---- |\\n\&quot;</span></span><br><span class="line"><span class="string">FRIENDS_TABLE_TEMPLATE = \&quot;| &#123;name&#125; | &#123;link&#125; | &#123;desc&#125; |\\n\&quot;</span></span><br><span class="line"><span class="string">FRIENDS_INFO_DICT = &#123;</span></span><br><span class="line"><span class="string">    \&quot;名字\&quot;: \&quot;\&quot;,</span></span><br><span class="line"><span class="string">    \&quot;链接\&quot;: \&quot;\&quot;,</span></span><br><span class="line"><span class="string">    \&quot;描述\&quot;: \&quot;\&quot;,</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def get_me(user):</span></span><br><span class="line"><span class="string">    return user.get_user().login</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def is_me(issue, me):</span></span><br><span class="line"><span class="string">    return issue.user.login == me</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def is_hearted_by_me(comment, me):</span></span><br><span class="line"><span class="string">    reactions = list(comment.get_reactions())</span></span><br><span class="line"><span class="string">    for r in reactions:</span></span><br><span class="line"><span class="string">        if r.content == \&quot;heart\&quot; and r.user.login == me:</span></span><br><span class="line"><span class="string">            return True</span></span><br><span class="line"><span class="string">    return False</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def _make_friend_table_string(s):</span></span><br><span class="line"><span class="string">    info_dict = FRIENDS_INFO_DICT.copy()</span></span><br><span class="line"><span class="string">    try:</span></span><br><span class="line"><span class="string">        string_list = s.splitlines()</span></span><br><span class="line"><span class="string">        # drop empty line</span></span><br><span class="line"><span class="string">        string_list = [l for l in string_list if l and not l.isspace()]</span></span><br><span class="line"><span class="string">        for l in string_list:</span></span><br><span class="line"><span class="string">            string_info_list = re.split(\&quot;：\&quot;, l)</span></span><br><span class="line"><span class="string">            if len(string_info_list) &lt; 2:</span></span><br><span class="line"><span class="string">                continue</span></span><br><span class="line"><span class="string">            info_dict[string_info_list[0]] = string_info_list[1]</span></span><br><span class="line"><span class="string">        return FRIENDS_TABLE_TEMPLATE.format(</span></span><br><span class="line"><span class="string">            name=info_dict[\&quot;名字\&quot;], link=info_dict[\&quot;链接\&quot;], desc=info_dict[\&quot;描述\&quot;]</span></span><br><span class="line"><span class="string">        )</span></span><br><span class="line"><span class="string">    except Exception as e:</span></span><br><span class="line"><span class="string">        print(str(e))</span></span><br><span class="line"><span class="string">        return</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># help to covert xml vaild string</span></span><br><span class="line"><span class="string">def _valid_xml_char_ordinal(c):</span></span><br><span class="line"><span class="string">    codepoint = ord(c)</span></span><br><span class="line"><span class="string">    # conditions ordered by presumed frequency</span></span><br><span class="line"><span class="string">    return (</span></span><br><span class="line"><span class="string">        0x20 &lt;= codepoint &lt;= 0xD7FF</span></span><br><span class="line"><span class="string">        or codepoint in (0x9, 0xA, 0xD)</span></span><br><span class="line"><span class="string">        or 0xE000 &lt;= codepoint &lt;= 0xFFFD</span></span><br><span class="line"><span class="string">        or 0x10000 &lt;= codepoint &lt;= 0x10FFFF</span></span><br><span class="line"><span class="string">    )</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def format_time(time):</span></span><br><span class="line"><span class="string">    return str(time)[:10]</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def login(token):</span></span><br><span class="line"><span class="string">    return Github(token)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def get_repo(user: Github, repo: str):</span></span><br><span class="line"><span class="string">    return user.get_repo(repo)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def parse_TODO(issue):</span></span><br><span class="line"><span class="string">    body = issue.body.splitlines()</span></span><br><span class="line"><span class="string">    todo_undone = [l for l in body if l.startswith(\&quot;- [ ] \&quot;)]</span></span><br><span class="line"><span class="string">    todo_done = [l for l in body if l.startswith(\&quot;- [x] \&quot;)]</span></span><br><span class="line"><span class="string">    # just add info all done</span></span><br><span class="line"><span class="string">    if not todo_undone:</span></span><br><span class="line"><span class="string">        return f\&quot;[&#123;issue.title&#125;](&#123;issue.html_url&#125;) all done\&quot;, []</span></span><br><span class="line"><span class="string">    return (</span></span><br><span class="line"><span class="string">        f\&quot;[&#123;issue.title&#125;](&#123;issue.html_url&#125;)--&#123;len(todo_undone)&#125; jobs to do--&#123;len(todo_done)&#125; jobs done\&quot;,</span></span><br><span class="line"><span class="string">        todo_done + todo_undone,</span></span><br><span class="line"><span class="string">    )</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def get_top_issues(repo):</span></span><br><span class="line"><span class="string">    return repo.get_issues(labels=TOP_ISSUES_LABELS)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def get_todo_issues(repo):</span></span><br><span class="line"><span class="string">    return repo.get_issues(labels=TODO_ISSUES_LABELS)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def get_repo_labels(repo):</span></span><br><span class="line"><span class="string">    return [l for l in repo.get_labels()]</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def get_issues_from_label(repo, label):</span></span><br><span class="line"><span class="string">    return repo.get_issues(labels=(label,))</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def add_issue_info(issue, md):</span></span><br><span class="line"><span class="string">    time = format_time(issue.created_at)</span></span><br><span class="line"><span class="string">    md.write(f\&quot;- [&#123;issue.title&#125;](&#123;issue.html_url&#125;)--&#123;time&#125;\\n\&quot;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def add_md_todo(repo, md, me):</span></span><br><span class="line"><span class="string">    todo_issues = list(get_todo_issues(repo))</span></span><br><span class="line"><span class="string">    if not TODO_ISSUES_LABELS or not todo_issues:</span></span><br><span class="line"><span class="string">        return</span></span><br><span class="line"><span class="string">    with open(md, \&quot;a+\&quot;, encoding=\&quot;utf-8\&quot;) as md:</span></span><br><span class="line"><span class="string">        md.write(\&quot;## TODO\\n\&quot;)</span></span><br><span class="line"><span class="string">        for issue in todo_issues:</span></span><br><span class="line"><span class="string">            if is_me(issue, me):</span></span><br><span class="line"><span class="string">                todo_title, todo_list = parse_TODO(issue)</span></span><br><span class="line"><span class="string">                md.write(\&quot;TODO list from \&quot; + todo_title + \&quot;\\n\&quot;)</span></span><br><span class="line"><span class="string">                for t in todo_list:</span></span><br><span class="line"><span class="string">                    md.write(t + \&quot;\\n\&quot;)</span></span><br><span class="line"><span class="string">                # new line</span></span><br><span class="line"><span class="string">                md.write(\&quot;\\n\&quot;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def add_md_top(repo, md, me):</span></span><br><span class="line"><span class="string">    top_issues = list(get_top_issues(repo))</span></span><br><span class="line"><span class="string">    if not TOP_ISSUES_LABELS or not top_issues:</span></span><br><span class="line"><span class="string">        return</span></span><br><span class="line"><span class="string">    with open(md, \&quot;a+\&quot;, encoding=\&quot;utf-8\&quot;) as md:</span></span><br><span class="line"><span class="string">        md.write(\&quot;## 置顶文章\\n\&quot;)</span></span><br><span class="line"><span class="string">        for issue in top_issues:</span></span><br><span class="line"><span class="string">            if is_me(issue, me):</span></span><br><span class="line"><span class="string">                add_issue_info(issue, md)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def add_md_firends(repo, md, me):</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    s = FRIENDS_TABLE_HEAD</span></span><br><span class="line"><span class="string">    friends_issues = list(repo.get_issues(labels=FRIENDS_LABELS))</span></span><br><span class="line"><span class="string">    if not FRIENDS_LABELS or not friends_issues:</span></span><br><span class="line"><span class="string">        return</span></span><br><span class="line"><span class="string">    friends_issue_number = friends_issues[0].number</span></span><br><span class="line"><span class="string">    for issue in friends_issues:</span></span><br><span class="line"><span class="string">        for comment in issue.get_comments():</span></span><br><span class="line"><span class="string">            if is_hearted_by_me(comment, me):</span></span><br><span class="line"><span class="string">                try:</span></span><br><span class="line"><span class="string">                    s += _make_friend_table_string(comment.body or \&quot;\&quot;)</span></span><br><span class="line"><span class="string">                except Exception as e:</span></span><br><span class="line"><span class="string">                    print(str(e))</span></span><br><span class="line"><span class="string">                    pass</span></span><br><span class="line"><span class="string">    s = markdown.markdown(s, output_format=\&quot;html\&quot;, extensions=[\&quot;extra\&quot;])</span></span><br><span class="line"><span class="string">    with open(md, \&quot;a+\&quot;, encoding=\&quot;utf-8\&quot;) as md:</span></span><br><span class="line"><span class="string">        md.write(</span></span><br><span class="line"><span class="string">            f\&quot;## [友情链接](https://github.com/&#123;str(me)&#125;/gitblog/issues/&#123;friends_issue_number&#125;)\\n\&quot;</span></span><br><span class="line"><span class="string">        )</span></span><br><span class="line"><span class="string">        md.write(\&quot;&lt;details&gt;&lt;summary&gt;显示&lt;/summary&gt;\\n\&quot;)</span></span><br><span class="line"><span class="string">        md.write(s)</span></span><br><span class="line"><span class="string">        md.write(\&quot;&lt;/details&gt;\\n\&quot;)</span></span><br><span class="line"><span class="string">        md.write(\&quot;\\n\\n\&quot;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def add_md_recent(repo, md, me, limit=5):</span></span><br><span class="line"><span class="string">    count = 0</span></span><br><span class="line"><span class="string">    with open(md, \&quot;a+\&quot;, encoding=\&quot;utf-8\&quot;) as md:</span></span><br><span class="line"><span class="string">        # one the issue that only one issue and delete (pyGitHub raise an exception)</span></span><br><span class="line"><span class="string">        try:</span></span><br><span class="line"><span class="string">            md.write(\&quot;## 最近更新\\n\&quot;)</span></span><br><span class="line"><span class="string">            for issue in repo.get_issues(sort=\&quot;created\&quot;, direction=\&quot;desc\&quot;):</span></span><br><span class="line"><span class="string">                if is_me(issue, me):</span></span><br><span class="line"><span class="string">                    add_issue_info(issue, md)</span></span><br><span class="line"><span class="string">                    count += 1</span></span><br><span class="line"><span class="string">                    if count &gt;= limit:</span></span><br><span class="line"><span class="string">                        break</span></span><br><span class="line"><span class="string">        except Exception as e:</span></span><br><span class="line"><span class="string">            print(str(e))</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def add_md_header(md, repo_name):</span></span><br><span class="line"><span class="string">    with open(md, \&quot;w\&quot;, encoding=\&quot;utf-8\&quot;) as md:</span></span><br><span class="line"><span class="string">        md.write(MD_HEAD.format(repo_name=repo_name))</span></span><br><span class="line"><span class="string">        md.write(\&quot;\\n\&quot;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def add_md_label(repo, md, me):</span></span><br><span class="line"><span class="string">    labels = get_repo_labels(repo)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    # sort lables by description info if it exists, otherwise sort by name,</span></span><br><span class="line"><span class="string">    # for example, we can let the description start with a number (1#Java, 2#Docker, 3#K8s, etc.)</span></span><br><span class="line"><span class="string">    labels = sorted(</span></span><br><span class="line"><span class="string">        labels,</span></span><br><span class="line"><span class="string">        key=lambda x: (</span></span><br><span class="line"><span class="string">            x.description is None,</span></span><br><span class="line"><span class="string">            x.description == \&quot;\&quot;,</span></span><br><span class="line"><span class="string">            x.description,</span></span><br><span class="line"><span class="string">            x.name,</span></span><br><span class="line"><span class="string">        ),</span></span><br><span class="line"><span class="string">    )</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    with open(md, \&quot;a+\&quot;, encoding=\&quot;utf-8\&quot;) as md:</span></span><br><span class="line"><span class="string">        for label in labels:</span></span><br><span class="line"><span class="string">            # we don&#x27;t need add top label again</span></span><br><span class="line"><span class="string">            if label.name in IGNORE_LABELS:</span></span><br><span class="line"><span class="string">                continue</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">            issues = get_issues_from_label(repo, label)</span></span><br><span class="line"><span class="string">            issues = list(sorted(issues, key=lambda x: x.created_at, reverse=True))</span></span><br><span class="line"><span class="string">            if len(issues) != 0:</span></span><br><span class="line"><span class="string">                md.write(\&quot;## \&quot; + label.name + \&quot;\\n\\n\&quot;)</span></span><br><span class="line"><span class="string">            i = 0</span></span><br><span class="line"><span class="string">            for issue in issues:</span></span><br><span class="line"><span class="string">                if not issue:</span></span><br><span class="line"><span class="string">                    continue</span></span><br><span class="line"><span class="string">                if is_me(issue, me):</span></span><br><span class="line"><span class="string">                    if i == ANCHOR_NUMBER:</span></span><br><span class="line"><span class="string">                        md.write(\&quot;&lt;details&gt;&lt;summary&gt;显示更多&lt;/summary&gt;\\n\&quot;)</span></span><br><span class="line"><span class="string">                        md.write(\&quot;\\n\&quot;)</span></span><br><span class="line"><span class="string">                    add_issue_info(issue, md)</span></span><br><span class="line"><span class="string">                    i += 1</span></span><br><span class="line"><span class="string">            if i &gt; ANCHOR_NUMBER:</span></span><br><span class="line"><span class="string">                md.write(\&quot;&lt;/details&gt;\\n\&quot;)</span></span><br><span class="line"><span class="string">                md.write(\&quot;\\n\&quot;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def get_to_generate_issues(repo, dir_name, issue_number=None):</span></span><br><span class="line"><span class="string">    md_files = os.listdir(dir_name)</span></span><br><span class="line"><span class="string">    generated_issues_numbers = [</span></span><br><span class="line"><span class="string">        int(i.split(\&quot;_\&quot;)[0]) for i in md_files if i.split(\&quot;_\&quot;)[0].isdigit()</span></span><br><span class="line"><span class="string">    ]</span></span><br><span class="line"><span class="string">    to_generate_issues = [</span></span><br><span class="line"><span class="string">        i</span></span><br><span class="line"><span class="string">        for i in list(repo.get_issues())</span></span><br><span class="line"><span class="string">        if int(i.number) not in generated_issues_numbers</span></span><br><span class="line"><span class="string">    ]</span></span><br><span class="line"><span class="string">    if issue_number:</span></span><br><span class="line"><span class="string">        to_generate_issues.append(repo.get_issue(int(issue_number)))</span></span><br><span class="line"><span class="string">    return to_generate_issues</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def generate_rss_feed(repo, filename, me):</span></span><br><span class="line"><span class="string">    generator = FeedGenerator()</span></span><br><span class="line"><span class="string">    generator.id(repo.html_url)</span></span><br><span class="line"><span class="string">    generator.title(f\&quot;RSS feed of &#123;repo.owner.login&#125;&#x27;s &#123;repo.name&#125;\&quot;)</span></span><br><span class="line"><span class="string">    generator.author(</span></span><br><span class="line"><span class="string">        &#123;\&quot;name\&quot;: os.getenv(\&quot;GITHUB_NAME\&quot;), \&quot;email\&quot;: os.getenv(\&quot;GITHUB_EMAIL\&quot;)&#125;</span></span><br><span class="line"><span class="string">    )</span></span><br><span class="line"><span class="string">    generator.link(href=repo.html_url)</span></span><br><span class="line"><span class="string">    generator.link(</span></span><br><span class="line"><span class="string">        href=f\&quot;https://raw.githubusercontent.com/&#123;repo.full_name&#125;/master/&#123;filename&#125;\&quot;,</span></span><br><span class="line"><span class="string">        rel=\&quot;self\&quot;,</span></span><br><span class="line"><span class="string">    )</span></span><br><span class="line"><span class="string">    for issue in repo.get_issues():</span></span><br><span class="line"><span class="string">        if not issue.body or not is_me(issue, me) or issue.pull_request:</span></span><br><span class="line"><span class="string">            continue</span></span><br><span class="line"><span class="string">        item = generator.add_entry(order=\&quot;append\&quot;)</span></span><br><span class="line"><span class="string">        item.id(issue.html_url)</span></span><br><span class="line"><span class="string">        item.link(href=issue.html_url)</span></span><br><span class="line"><span class="string">        item.title(issue.title)</span></span><br><span class="line"><span class="string">        item.published(issue.created_at.strftime(\&quot;%Y-%m-%dT%H:%M:%SZ\&quot;))</span></span><br><span class="line"><span class="string">        for label in issue.labels:</span></span><br><span class="line"><span class="string">            item.category(&#123;\&quot;term\&quot;: label.name&#125;)</span></span><br><span class="line"><span class="string">        body = \&quot;\&quot;.join(c for c in issue.body if _valid_xml_char_ordinal(c))</span></span><br><span class="line"><span class="string">        item.content(CDATA(marko.convert(body)), type=\&quot;html\&quot;)</span></span><br><span class="line"><span class="string">    generator.atom_file(filename)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def main(token, repo_name, issue_number=None, dir_name=BACKUP_DIR):</span></span><br><span class="line"><span class="string">    user = login(token)</span></span><br><span class="line"><span class="string">    me = get_me(user)</span></span><br><span class="line"><span class="string">    repo = get_repo(user, repo_name)</span></span><br><span class="line"><span class="string">    # add to readme one by one, change order here</span></span><br><span class="line"><span class="string">    add_md_header(\&quot;README.md\&quot;, repo_name)</span></span><br><span class="line"><span class="string">    for func in [add_md_firends, add_md_top, add_md_recent, add_md_label, add_md_todo]:</span></span><br><span class="line"><span class="string">        func(repo, \&quot;README.md\&quot;, me)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    generate_rss_feed(repo, \&quot;feed.xml\&quot;, me)</span></span><br><span class="line"><span class="string">    to_generate_issues = get_to_generate_issues(repo, dir_name, issue_number)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    # save md files to backup folder</span></span><br><span class="line"><span class="string">    for issue in to_generate_issues:</span></span><br><span class="line"><span class="string">        save_issue(issue, me, dir_name)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">def save_issue(issue, me, dir_name=BACKUP_DIR):</span></span><br><span class="line"><span class="string">    md_name = os.path.join(</span></span><br><span class="line"><span class="string">        dir_name, f\&quot;&#123;issue.number&#125;_&#123;issue.title.replace(&#x27;/&#x27;, &#x27;-&#x27;).replace(&#x27; &#x27;, &#x27;.&#x27;)&#125;.md\&quot;</span></span><br><span class="line"><span class="string">    )</span></span><br><span class="line"><span class="string">    with open(md_name, \&quot;w\&quot;) as f:</span></span><br><span class="line"><span class="string">        f.write(f\&quot;# [&#123;issue.title&#125;](&#123;issue.html_url&#125;)\\n\\n\&quot;)</span></span><br><span class="line"><span class="string">        f.write(issue.body or \&quot;\&quot;)</span></span><br><span class="line"><span class="string">        if issue.comments:</span></span><br><span class="line"><span class="string">            for c in issue.get_comments():</span></span><br><span class="line"><span class="string">                if is_me(c, me):</span></span><br><span class="line"><span class="string">                    f.write(\&quot;\\n\\n---\\n\\n\&quot;)</span></span><br><span class="line"><span class="string">                    f.write(c.body or \&quot;\&quot;)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">if __name__ == \&quot;__main__\&quot;:</span></span><br><span class="line"><span class="string">    if not os.path.exists(BACKUP_DIR):</span></span><br><span class="line"><span class="string">        os.mkdir(BACKUP_DIR)</span></span><br><span class="line"><span class="string">    parser = argparse.ArgumentParser()</span></span><br><span class="line"><span class="string">    parser.add_argument(\&quot;github_token\&quot;, help=\&quot;github_token\&quot;)</span></span><br><span class="line"><span class="string">    parser.add_argument(\&quot;repo_name\&quot;, help=\&quot;repo_name\&quot;)</span></span><br><span class="line"><span class="string">    parser.add_argument(</span></span><br><span class="line"><span class="string">        \&quot;--issue_number\&quot;, help=\&quot;issue_number\&quot;, default=None, required=False</span></span><br><span class="line"><span class="string">    )</span></span><br><span class="line"><span class="string">    options = parser.parse_args()</span></span><br><span class="line"><span class="string">    main(options.github_token, options.repo_name, options.issue_number)</span></span><br></pre></td></tr></table></figure>
+
+
+<p>这是一个使用GitHub Issues作为博客系统的Python脚本，名为Gitblog。它通过GitHub API将issues转换为静态博客内容。我来详细解析它的功能：</p>
+<h2 id="主要功能"><a href="#主要功能" class="headerlink" title="主要功能"></a>主要功能</h2><h3 id="1-README-md生成"><a href="#1-README-md生成" class="headerlink" title="1. README.md生成"></a>1. <strong>README.md生成</strong></h3><p>脚本会生成一个README.md文件，包含以下部分：</p>
+<ul>
+<li><strong>置顶文章</strong>：带有&quot;Top&quot;标签的issues</li>
+<li><strong>最近更新</strong>：最新的5篇文章</li>
+<li><strong>按标签分类</strong>：其他所有issues按标签分组显示</li>
+<li><strong>友情链接</strong>：通过&quot;Friends&quot;标签的issue评论区管理</li>
+<li><strong>TODO列表</strong>：带有&quot;TODO&quot;标签的issue中的任务列表</li>
+</ul>
+<h3 id="2-RSS-Feed生成"><a href="#2-RSS-Feed生成" class="headerlink" title="2. RSS Feed生成"></a>2. <strong>RSS Feed生成</strong></h3><p>自动生成<code>feed.xml</code>文件，支持订阅博客更新。</p>
+<h3 id="3-文章备份"><a href="#3-文章备份" class="headerlink" title="3. 文章备份"></a>3. <strong>文章备份</strong></h3><p>将所有文章备份到<code>BACKUP</code>目录，以<code>{issue编号}_{标题}.md</code>格式保存。</p>
+<h2 id="代码结构"><a href="#代码结构" class="headerlink" title="代码结构"></a>代码结构</h2><h3 id="核心函数："><a href="#核心函数：" class="headerlink" title="核心函数："></a>核心函数：</h3><table>
+<thead>
+<tr>
+<th>函数</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>login()</code></td>
+<td>使用GitHub token登录</td>
+</tr>
+<tr>
+<td><code>get_repo()</code></td>
+<td>获取指定的仓库</td>
+</tr>
+<tr>
+<td><code>is_me()</code></td>
+<td>判断issue是否由自己创建</td>
+</tr>
+<tr>
+<td><code>is_hearted_by_me()</code></td>
+<td>判断评论是否被自己点赞（❤️）</td>
+</tr>
+<tr>
+<td><code>parse_TODO()</code></td>
+<td>解析TODO列表，统计完成&#x2F;未完成项</td>
+</tr>
+<tr>
+<td><code>generate_rss_feed()</code></td>
+<td>生成RSS订阅文件</td>
+</tr>
+<tr>
+<td><code>save_issue()</code></td>
+<td>备份单个issue到本地</td>
+</tr>
+</tbody></table>
+<h3 id="特殊标签处理："><a href="#特殊标签处理：" class="headerlink" title="特殊标签处理："></a>特殊标签处理：</h3><ul>
+<li><strong>Top</strong>：置顶文章</li>
+<li><strong>TODO</strong>：任务列表</li>
+<li><strong>Friends</strong>：友情链接</li>
+<li><strong>About&#x2F;Things</strong>：特殊页面（被忽略不显示在普通标签中）</li>
+</ul>
+<h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">python main.py &lt;github_token&gt; &lt;repo_name&gt; [--issue_number &lt;number&gt;]</span><br></pre></td></tr></table></figure>
+
+<h3 id="参数说明："><a href="#参数说明：" class="headerlink" title="参数说明："></a>参数说明：</h3><ul>
+<li><code>github_token</code>：GitHub个人访问令牌</li>
+<li><code>repo_name</code>：仓库名称（格式：<code>username/repo</code>）</li>
+<li><code>--issue_number</code>：可选，指定备份特定文章</li>
+</ul>
+<h2 id="技术特点"><a href="#技术特点" class="headerlink" title="技术特点"></a>技术特点</h2><ol>
+<li><p><strong>依赖库</strong>：</p>
+<ul>
+<li><code>feedgen</code>：生成RSS feed</li>
+<li><code>github</code>：GitHub API客户端（PyGithub）</li>
+<li><code>markdown</code>&#x2F;<code>marko</code>：Markdown解析</li>
+<li><code>lxml</code>：XML处理</li>
+</ul>
+</li>
+<li><p><strong>自动化</strong>：可通过GitHub Actions定时运行，自动更新博客</p>
+</li>
+<li><p><strong>数据持久化</strong>：通过BACKUP目录缓存，避免重复处理</p>
+</li>
+<li><p><strong>评论支持</strong>：可以保留issue的评论内容</p>
+</li>
+</ol>
+<p>这个项目特别适合开发者用GitHub Issues管理个人博客，无需额外服务器，完全利用GitHub平台。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-Gmeek-Deploy/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-07-30-Gmeek-Deploy/" class="post-title-link" itemprop="url">Gmeek Deploy</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-07-30 14:06:30 / 修改时间：14:27:32" itemprop="dateCreated datePublished" datetime="2026-07-30T14:06:30+08:00">2026-07-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Gmeek-Deploy"><a href="#Gmeek-Deploy" class="headerlink" title="Gmeek Deploy"></a>Gmeek Deploy</h1><h1 id="Gmeek-部署"><a href="#Gmeek-部署" class="headerlink" title="Gmeek 部署"></a>Gmeek 部署</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.meekdai.com/post/Gmeek-kuai-su-shang-shou.html">Gmeek快速上手</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/gaishanke/gaishanke.github.io/issues/3">Gmeek 部署</a></li>
+</ul>
+<h2 id="Gmeek-博客框架"><a href="#Gmeek-博客框架" class="headerlink" title="Gmeek 博客框架"></a>Gmeek 博客框架</h2><ul>
+<li>超轻量级个人博客模板</li>
+<li>完全基于 <code>Github Pages</code> 、 <code>Github Issues</code> 和 <code>Github Actions</code>，</li>
+<li>不需要本地部署</li>
+</ul>
+<h2 id="一、资源"><a href="#一、资源" class="headerlink" title="一、资源"></a>一、资源</h2><h2 id="Gmeek"><a href="#Gmeek" class="headerlink" title="Gmeek"></a>Gmeek</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://blog.meekdai.com/post/Gmeek-kuai-su-shang-shou.html">Gmeek快速上手</a>  </li>
+<li><a target="_blank" rel="noopener" href="https://github.com/Meekdai/Gmeek">Gmeek Github 源码</a></li>
+</ul>
+<h3 id="Markdown-语法"><a href="#Markdown-语法" class="headerlink" title="Markdown 语法"></a>Markdown 语法</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">Basic writing and formatting syntax</a>  </li>
+<li><a target="_blank" rel="noopener" href="https://docs.github.com/zh/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">基本撰写和格式语法</a></li>
+</ul>
+<h3 id="在线编辑工具"><a href="#在线编辑工具" class="headerlink" title="在线编辑工具"></a>在线编辑工具</h3><ul>
+<li><a target="_blank" rel="noopener" href="https://markdown.com.cn/editor/">markdown.com.cn</a></li>
+</ul>
+<h2 id="二、安装"><a href="#二、安装" class="headerlink" title="二、安装"></a>二、安装</h2><h3 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h3><ul>
+<li>点击<a target="_blank" rel="noopener" href="https://github.com/new?template_name=Gmeek-template&template_owner=Meekdai">通过模板创建仓库</a>，仓库名称：<code>&lt;用户名&gt;.github.io</code></li>
+</ul>
+<h3 id="启用-Pages"><a href="#启用-Pages" class="headerlink" title="启用 Pages"></a>启用 Pages</h3><ul>
+<li>仓库页面导航：<code>Settings</code> -&gt; <code>Pages</code> -&gt; <code>Build and deployment</code></li>
+<li><code>Source</code> 下拉选择 <code>Github Actions</code></li>
+</ul>
+<p>&lt;img src&#x3D;&quot;<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Gmeek_Settings_Github-Pages_Github-Actions.png/">https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Gmeek_Settings_Github-Pages_Github-Actions.png\</a>“ &#x2F;&gt;</p>
+<h3 id="开始写作"><a href="#开始写作" class="headerlink" title="开始写作"></a>开始写作</h3><ul>
+<li>仓库页面导航：<code>Issues</code> -&gt; <code>New issue</code></li>
+<li><code>Add a title</code>（写标题），<code>Add a description</code>（写描述）。至少添加一个 Labels（标签），Create（创建）</li>
+<li>片刻后可通过<code>&lt;用户名&gt;.github.io</code> 访问</li>
+<li>仓库页面导航：<code>Actions</code> -&gt; <code>build Gmeek</code>，可查看构建进度</li>
+</ul>
+<p>&lt;img src&#x3D;&quot;<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Gmeek_Issues_New-issue_Labels.png/">https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Gmeek_Issues_New-issue_Labels.png\</a>“ &#x2F;&gt;</p>
+<h3 id="手动全局生成（修改-config-json-或按需要）"><a href="#手动全局生成（修改-config-json-或按需要）" class="headerlink" title="手动全局生成（修改 config.json 或按需要）"></a>手动全局生成（修改 config.json 或按需要）</h3><ul>
+<li>仓库页面导航：<code>Actions</code> -&gt; <code>build Gmeek</code> -&gt; <code>Run workflow</code></li>
+</ul>
+<p>&lt;img src&#x3D;&quot;<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Gmeek_Actions_build-Gmeek_Run-workflow.png/">https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Gmeek_Actions_build-Gmeek_Run-workflow.png\</a>“ &#x2F;&gt;</p>
+<blockquote>
+<p>网友制作的视频教程：<br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1GM4m1m7ZD/">https://www.bilibili.com/video/BV1GM4m1m7ZD/</a></p>
+</blockquote>
+<h2 id="三、配置"><a href="#三、配置" class="headerlink" title="三、配置"></a>三、配置</h2><h3 id="config-json-必要字段"><a href="#config-json-必要字段" class="headerlink" title="config.json 必要字段"></a>config.json 必要字段</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">    \<span class="string">&quot;title\&quot;:\&quot;Meekdai\&quot;,</span></span><br><span class="line"><span class="string">    \&quot;subTitle\&quot;:\&quot;童话是一种生活态度，仅此而已。\&quot;,</span></span><br><span class="line"><span class="string">    \&quot;avatarUrl\&quot;:\&quot;https://github.githubassets.com/favicons/favicon.svg\&quot;,</span></span><br><span class="line"><span class="string">    \&quot;GMEEK_VERSION\&quot;:\&quot;last\&quot;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th>配置参数</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>title</td>
+<td>是</td>
+<td>博客标题</td>
+</tr>
+<tr>
+<td>subTitle</td>
+<td>是</td>
+<td>博客描述&amp;自述</td>
+</tr>
+<tr>
+<td>avatarUrl</td>
+<td>是</td>
+<td>博客头像</td>
+</tr>
+<tr>
+<td>GMEEK_VERSION</td>
+<td>是</td>
+<td>Gmeek 版本，一般写 last 也可以用具体 tag 版本</td>
+</tr>
+</tbody></table>
+<h3 id="config-json-其他字段"><a href="#config-json-其他字段" class="headerlink" title="config.json 其他字段"></a>config.json 其他字段</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">\<span class="string">&quot;displayTitle\&quot;:\&quot;Meekdai\&quot;,</span></span><br><span class="line"><span class="string">\&quot;homeUrl\&quot;:\&quot;http://blog.meekdai.com\&quot;,</span></span><br><span class="line"><span class="string">\&quot;faviconUrl\&quot;:\&quot;https://github.githubassets.com/favicons/favicon.svg\&quot;,</span></span><br><span class="line"><span class="string">\&quot;email\&quot;:\&quot;meekdai@163.com\&quot;,</span></span><br><span class="line"><span class="string">\&quot;startSite\&quot;:\&quot;02/16/2015\&quot;,</span></span><br><span class="line"><span class="string">\&quot;filingNum\&quot;:\&quot;浙ICP备20023628号\&quot;,</span></span><br><span class="line"><span class="string">\&quot;onePageListNum\&quot;:15,</span></span><br><span class="line"><span class="string">\&quot;singlePage\&quot;:[\&quot;about\&quot;],</span></span><br><span class="line"><span class="string">\&quot;iconList\&quot;:&#123;\&quot;music\&quot;:\&quot;M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z\&quot;&#125;,</span></span><br><span class="line"><span class="string">\&quot;exlink\&quot;:&#123;\&quot;music\&quot;:\&quot;https://music.meekdai.com\&quot;&#125;,</span></span><br><span class="line"><span class="string">\&quot;commentLabelColor\&quot;:\&quot;#006b75\&quot;,</span></span><br><span class="line"><span class="string">\&quot;yearColorList\&quot;:[\&quot;#bc4c00\&quot;, \&quot;#0969da\&quot;, \&quot;#1f883d\&quot;, \&quot;#A333D0\&quot;],</span></span><br><span class="line"><span class="string">\&quot;i18n\&quot;:\&quot;CN\&quot;,</span></span><br><span class="line"><span class="string">\&quot;UTC\&quot;:8,</span></span><br><span class="line"><span class="string">\&quot;themeMode\&quot;:\&quot;manual\&quot;,</span></span><br><span class="line"><span class="string">\&quot;dayTheme\&quot;:\&quot;light\&quot;,</span></span><br><span class="line"><span class="string">\&quot;nightTheme\&quot;:\&quot;dark_colorblind\&quot;,</span></span><br><span class="line"><span class="string">\&quot;urlMode\&quot;:\&quot;pinyin\&quot;,</span></span><br><span class="line"><span class="string">\&quot;style\&quot;:\&quot;\&quot;,</span></span><br><span class="line"><span class="string">\&quot;script\&quot;:\&quot;\&quot;,</span></span><br><span class="line"><span class="string">\&quot;head\&quot;:\&quot;\&quot;,</span></span><br><span class="line"><span class="string">\&quot;allHead\&quot;:\&quot;\&quot;,</span></span><br><span class="line"><span class="string">\&quot;indexStyle\&quot;:\&quot;\&quot;,</span></span><br><span class="line"><span class="string">\&quot;indexScript\&quot;:\&quot;\&quot;,</span></span><br><span class="line"><span class="string">\&quot;showPostSource\&quot;:1,</span></span><br><span class="line"><span class="string">\&quot;rssSplit\&quot;:\&quot;sentence\&quot;,</span></span><br><span class="line"><span class="string">\&quot;bottomText\&quot;:\&quot;转载请注明出处\&quot;,</span></span><br><span class="line"><span class="string">\&quot;ogImage\&quot;:\&quot;https://cdn.jsdelivr.net/gh/Meekdai/meekdai.github.io/logo64.jpg\&quot;,</span></span><br><span class="line"><span class="string">\&quot;primerCSS\&quot;:\&quot;&lt;link href=&#x27;https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css&#x27; rel=&#x27;stylesheet&#x27; /&gt;\&quot;,</span></span><br><span class="line"><span class="string">\&quot;needComment\&quot;:0</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>最后一行配置末尾不需要逗号，其他行末尾都需要逗号（英文逗号）</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>配置参数</th>
+<th>必填</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>displayTitle</td>
+<td>否</td>
+<td>用于头像后面的标题展示，如果和 title 一致则不用添加</td>
+</tr>
+<tr>
+<td>homeUrl</td>
+<td>否</td>
+<td>博客的主页地址，自定义域名时需要配置</td>
+</tr>
+<tr>
+<td>faviconUrl</td>
+<td>否</td>
+<td>页面的 favicon 地址，如果和 avatarUrl 一致则不用添加</td>
+</tr>
+<tr>
+<td>email</td>
+<td>否</td>
+<td>用于自动提交仓库时用，不添加也可以</td>
+</tr>
+<tr>
+<td>startSite</td>
+<td>否</td>
+<td>用于页面底部显示网站运行天数</td>
+</tr>
+<tr>
+<td>filingNum</td>
+<td>否</td>
+<td>用于页面底部显示备案信息</td>
+</tr>
+<tr>
+<td>onePageListNum</td>
+<td>否</td>
+<td>用于首页每页展示的文章数量</td>
+</tr>
+<tr>
+<td>singlePage</td>
+<td>否</td>
+<td>自定义独立页面，例如 about 或者 link 等</td>
+</tr>
+<tr>
+<td>iconList</td>
+<td>否</td>
+<td>用于定义 singlePage 按钮展示的 SVG 图标 (16px)，about 和 link 内置无需定义</td>
+</tr>
+<tr>
+<td>exlink</td>
+<td>否</td>
+<td>用于自定义首页右上角圆形按钮到外部链接功能，按钮图标定义在 iconList 中</td>
+</tr>
+<tr>
+<td>commentLabelColor</td>
+<td>否</td>
+<td>用于自定义显示评论数量标签的颜色</td>
+</tr>
+<tr>
+<td>yearColorList</td>
+<td>否</td>
+<td>用于自定义显示不同年份标签的颜色</td>
+</tr>
+<tr>
+<td>i18n</td>
+<td>否</td>
+<td>用于定义博客语言，目前支持 EN&#x2F;CN&#x2F;RU</td>
+</tr>
+<tr>
+<td>UTC</td>
+<td>否</td>
+<td>用于定义时区</td>
+</tr>
+<tr>
+<td>themeMode</td>
+<td>否</td>
+<td>用于定义主题模式，默认为 manual，也可选择 fix 详细说明</td>
+</tr>
+<tr>
+<td>dayTheme</td>
+<td>否</td>
+<td>用于定义亮主题</td>
+</tr>
+<tr>
+<td>nightTheme</td>
+<td>否</td>
+<td>用于定义暗主题</td>
+</tr>
+<tr>
+<td>urlMode</td>
+<td>否</td>
+<td>用于定义文章链接生成模式，目前支持 pinyin&#x2F;issue&#x2F;ru_translit</td>
+</tr>
+<tr>
+<td>style</td>
+<td>否</td>
+<td>用于自定义文章页 CSS</td>
+</tr>
+<tr>
+<td>script</td>
+<td>否</td>
+<td>用于自定义文章页 JavaScript</td>
+</tr>
+<tr>
+<td>head</td>
+<td>否</td>
+<td>用于自定义文章页 head 内容</td>
+</tr>
+<tr>
+<td>allHead</td>
+<td>否</td>
+<td>用于自定义所有页面 head 内容</td>
+</tr>
+<tr>
+<td>indexStyle</td>
+<td>否</td>
+<td>用于自定义首页 CSS</td>
+</tr>
+<tr>
+<td>indexScript</td>
+<td>否</td>
+<td>用于自定义首页 JavaScript</td>
+</tr>
+<tr>
+<td>showPostSource</td>
+<td>否</td>
+<td>设置为 1 则在文章页显示 issue 链接按钮，设置为 0 则不显示</td>
+</tr>
+<tr>
+<td>rssSplit</td>
+<td>否</td>
+<td>设置 RSS 输出的截断符号，默认 sentence 为第一句话，可配置其他特殊符号</td>
+</tr>
+<tr>
+<td>bottomText</td>
+<td>否</td>
+<td>用于设置文章页面右下角显示的内容</td>
+</tr>
+<tr>
+<td>ogImage</td>
+<td>否</td>
+<td>用于设置 Open Graph 协议展示的图片</td>
+</tr>
+<tr>
+<td>primerCSS</td>
+<td>否</td>
+<td>用于设置 primer.css 的 CDN 地址，默认使用南科大</td>
+</tr>
+<tr>
+<td>needComment</td>
+<td>否</td>
+<td>用于设置是否需要评论功能，1 开启评论，0 关闭</td>
+</tr>
+</tbody></table>
+<h3 id="修改发布时间"><a href="#修改发布时间" class="headerlink" title="修改发布时间"></a>修改发布时间</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- ##<span class="punctuation">&#123;</span>\<span class="string">&quot;timestamp\&quot;:1490764800&#125;## --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义单篇文章页面的-style-和-script"><a href="#自定义单篇文章页面的-style-和-script" class="headerlink" title="自定义单篇文章页面的 style 和 script"></a>自定义单篇文章页面的 style 和 script</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- ##&#123;\&quot;style\&quot;:\&quot;&lt;style&gt;#postBody&#123;font-size:20px&#125;&lt;/style&gt;\&quot;&#125;## --&gt;</span><br><span class="line">&lt;!-- ##&#123;\&quot;script\&quot;:\&quot;&lt;script async src=&#x27;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&#x27;&gt;&lt;/script&gt;\&quot;&#125;## --&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="多种自定义参数"><a href="#多种自定义参数" class="headerlink" title="多种自定义参数"></a>多种自定义参数</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;!-- ##<span class="punctuation">&#123;</span>\<span class="string">&quot;script\&quot;:\&quot;&lt;script async src=&#x27;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&#x27;&gt;&lt;/script&gt;\&quot;,\&quot;style\&quot;:\&quot;&lt;style&gt;#postBody&#123;font-size:20px&#125;&lt;/style&gt;\&quot;,\&quot;timestamp\&quot;:1490764800&#125;## --&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="自定义全局文章页面的-style-和-script，config-json-文件添加"><a href="#自定义全局文章页面的-style-和-script，config-json-文件添加" class="headerlink" title="自定义全局文章页面的 style 和 script，config.json 文件添加"></a>自定义全局文章页面的 style 和 script，config.json 文件添加</h3><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">\<span class="string">&quot;style\&quot;:\&quot;&lt;style&gt;#postBody&#123;font-size:20px&#125;&lt;/style&gt;\&quot;,</span></span><br><span class="line"><span class="string">\&quot;script\&quot;:\&quot;&lt;script async src=&#x27;//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js&#x27;&gt;&lt;/script&gt;\&quot;,</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="置顶文章"><a href="#置顶文章" class="headerlink" title="置顶文章"></a>置顶文章</h3><p><code>Pin issue</code>，手动全局生成一次即可。</p>
+<h3 id="删除文章"><a href="#删除文章" class="headerlink" title="删除文章"></a>删除文章</h3><p><code>Close issue</code> 或者 <code>Delete issue</code>，手动全局生成一次即可。</p>
+<h2 id="四、进阶"><a href="#四、进阶" class="headerlink" title="四、进阶"></a>四、进阶</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://meekdai.github.io/tag.html#Gmeek">Gmeek官方进阶教程</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-Github-Issues-Blog-List/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-07-30-Github-Issues-Blog-List/" class="post-title-link" itemprop="url">Github Issues Blog List</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-07-30 14:05:47 / 修改时间：14:26:56" itemprop="dateCreated datePublished" datetime="2026-07-30T14:05:47+08:00">2026-07-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Github-Issues-Blog-List"><a href="#Github-Issues-Blog-List" class="headerlink" title="Github Issues Blog List"></a>Github Issues Blog List</h1><h1 id="Github-Issues-博客项目（不完全统计）"><a href="#Github-Issues-博客项目（不完全统计）" class="headerlink" title="Github Issues 博客项目（不完全统计）"></a>Github Issues 博客项目（不完全统计）</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/gaishanke/gaiashanke.github.io/issues/2">Github Issues 搭建的博客项目列表</a></li>
+</ul>
+<h2 id="rena-to-github-blog"><a href="#rena-to-github-blog" class="headerlink" title="@rena.to&#x2F;github-blog"></a>@rena.to&#x2F;github-blog</h2><ul>
+<li><strong>技术栈</strong>：TypeScript（核心API库）</li>
+<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/@rena.to/github-blog">https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;@rena.to&#x2F;github-blog</a></li>
+</ul>
+<h2 id="AllanChain-blog"><a href="#AllanChain-blog" class="headerlink" title="AllanChain&#x2F;blog"></a>AllanChain&#x2F;blog</h2><ul>
+<li><strong>技术栈</strong>：Astro</li>
+<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/AllanChain/blog">https://github.com/AllanChain/blog</a></li>
+</ul>
+<h2 id="babilema"><a href="#babilema" class="headerlink" title="babilema"></a>babilema</h2><ul>
+<li><strong>技术栈</strong>：Go（静态博客生成器）</li>
+<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://pkg.go.dev/github.com/ByteBakersCo/babilema">https://pkg.go.dev/github.com/ByteBakersCo/babilema</a></li>
+</ul>
+<h2 id="ginb"><a href="#ginb" class="headerlink" title="ginb"></a>ginb</h2><ul>
+<li><strong>技术栈</strong>：Next.js, Tailwind CSS, React</li>
+<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/ChrAlpha/ginb">https://github.com/ChrAlpha/ginb</a></li>
+</ul>
+<h2 id="gitblog"><a href="#gitblog" class="headerlink" title="gitblog"></a>gitblog</h2><ul>
+<li><strong>技术栈</strong>：Python</li>
+<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/yihong0618/gitblog">https://github.com/yihong0618/gitblog</a></li>
+</ul>
+<h2 id="gitblog-1"><a href="#gitblog-1" class="headerlink" title="gitblog"></a>gitblog</h2><ul>
+<li><strong>技术栈</strong>：JavaScript</li>
+<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/imuncle/gitblog">https://github.com/imuncle/gitblog</a></li>
+</ul>
+<h2 id="Gmeek"><a href="#Gmeek" class="headerlink" title="Gmeek"></a>Gmeek</h2><ul>
+<li><strong>技术栈</strong>：GitHub Pages, GitHub Actions, jinja2, primer.style</li>
+<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/Ambop/Gmeek">https://github.com/Ambop/Gmeek</a></li>
+</ul>
+<h2 id="Issue-Blog-With-Github-Action"><a href="#Issue-Blog-With-Github-Action" class="headerlink" title="Issue-Blog-With-Github-Action"></a>Issue-Blog-With-Github-Action</h2><ul>
+<li><strong>技术栈</strong>：Vuepress</li>
+<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/Yidadaa/Issue-Blog-With-Github-Action">https://github.com/Yidadaa/Issue-Blog-With-Github-Action</a></li>
+</ul>
+<h2 id="qiwihui-blog"><a href="#qiwihui-blog" class="headerlink" title="qiwihui&#x2F;blog"></a>qiwihui&#x2F;blog</h2><ul>
+<li><strong>技术栈</strong>：CSS</li>
+<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/qiwihui/blog">https://github.com/qiwihui/blog</a></li>
+</ul>
+<h2 id="Sep0lkit-git-issues-blog"><a href="#Sep0lkit-git-issues-blog" class="headerlink" title="Sep0lkit&#x2F;git-issues-blog"></a>Sep0lkit&#x2F;git-issues-blog</h2><ul>
+<li><strong>技术栈</strong>：Python</li>
+<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/Sep0lkit/git-issues-blog">https://github.com/Sep0lkit/git-issues-blog</a></li>
+</ul>
+<h2 id="ttop5-issue-blog"><a href="#ttop5-issue-blog" class="headerlink" title="ttop5&#x2F;issue-blog"></a>ttop5&#x2F;issue-blog</h2><ul>
+<li><strong>技术栈</strong>：Vue</li>
+<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/ttop5/issue-blog">https://github.com/ttop5/issue-blog</a></li>
+</ul>
+<h2 id="whyour-issue-blog"><a href="#whyour-issue-blog" class="headerlink" title="whyour&#x2F;issue-blog"></a>whyour&#x2F;issue-blog</h2><ul>
+<li><strong>技术栈</strong>：TypeScript（VS Code插件）</li>
+<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/whyour/issue-blog">https://github.com/whyour/issue-blog</a></li>
+</ul>
+<h2 id="xizhibei-blog"><a href="#xizhibei-blog" class="headerlink" title="xizhibei&#x2F;blog"></a>xizhibei&#x2F;blog</h2><ul>
+<li><strong>技术栈</strong>：Node.js, Golang</li>
+<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/xizhibei/blog">https://github.com/xizhibei/blog</a></li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-Github-Issues-Blog-Gitblog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-07-30-Github-Issues-Blog-Gitblog/" class="post-title-link" itemprop="url">Github Issues Blog Gitblog</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-07-30 14:00:48" itemprop="dateCreated datePublished" datetime="2026-07-30T14:00:48+08:00">2026-07-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Github-Issues-Blog-Gitblog"><a href="#Github-Issues-Blog-Gitblog" class="headerlink" title="Github Issues Blog Gitblog"></a>Github Issues Blog Gitblog</h1><p>用过 Jekyll、Hexo，捣鼓了一阵子，都没能长期使用持续写作，现在转头使用 GIthub Issue 搭建的博客系统。后者有两个优点，一来省去了生成、部署的操作；二来解决了图床的需求。只要仓库存在，Issues 可以一直保留，改天也可以换个相似的博客系统。</p>
+<h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/gaishanke/gaishanke.github.io/issues/1">Gitblog</a></li>
+</ul>
+<h2 id="项目地址和安装指南"><a href="#项目地址和安装指南" class="headerlink" title="项目地址和安装指南"></a>项目地址和安装指南</h2><p><a target="_blank" rel="noopener" href="https://github.com/yihong0618/gitblog">yihong0618&#x2F;gitblog</a><br><a target="_blank" rel="noopener" href="https://github.com/yihong0618/gitblog/issues/177">这个博客开源了</a></p>
+<h2 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h2><h3 id="1-克隆仓库"><a href="#1-克隆仓库" class="headerlink" title="1. 克隆仓库"></a>1. 克隆仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:yihong0618/gitblog.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-生成tokens"><a href="#2-生成tokens" class="headerlink" title="2. 生成tokens"></a>2. 生成tokens</h3><p>个人首页，<code>Settings</code> -&gt; <code>Developer Settings</code> -&gt; <code>Personal access tokens</code> -&gt; <code>Tokens (classic)</code> -&gt; <code>Generate New Tokens</code> -&gt;  <code>Generate new yokens (classic)</code></p>
+<p>或直达链接：<br><a target="_blank" rel="noopener" href="https://github.com/settings/tokens">settings&#x2F;tokens</a></p>
+<p>&lt;img src&#x3D;&quot;<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Gitblog_Settings_Developer-Settings_Personal-access-tokens.png/">https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Gitblog_Settings_Developer-Settings_Personal-access-tokens.png\</a>“ &#x2F;&gt;</p>
+<h3 id="3-仓库-actions"><a href="#3-仓库-actions" class="headerlink" title="3. 仓库 actions"></a>3. 仓库 actions</h3><p>仓库首页，<code>Settings</code> -&gt; <code>Security and quality</code> -&gt; <code>Secrets and variables</code> -&gt; <code>Actions</code> -&gt; <code>New repository secret</code></p>
+<p>&lt;img src&#x3D;&quot;<a target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Gitblog_Settings_Security-and-quality_Secrets-and-variables.png/">https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Gitblog_Settings_Security-and-quality_Secrets-and-variables.png\</a>“ &#x2F;&gt;</p>
+<p>直接使用 <code>G_T</code>，就不用修改文件： <code>.github\\workflows\\generate_readme.yml</code> 中的 <code>$&#123;&#123; secrets.G_T &#125;&#125;</code> 字段。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Generate</span> <span class="string">new</span> <span class="string">md</span></span><br><span class="line">  <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">    <span class="string">python</span> <span class="string">main.py</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.G_T</span> <span class="string">&#125;&#125;</span> <span class="string">$&#123;&#123;</span> <span class="string">github.repository</span> <span class="string">&#125;&#125;</span> <span class="string">--issue_number</span> <span class="string">&#x27;$&#123;&#123; github.event.issue.number &#125;&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-修改generate-readme-yml"><a href="#4-修改generate-readme-yml" class="headerlink" title="4.  修改generate_readme.yml"></a>4.  <del>修改<code>generate_readme.yml</code></del></h3><p><code>.github/workflows/generate_readme.yml</code><br>新版不需要。</p>
+<h2 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h2><p>原作者后续更新了 <code>*.yml</code> 文件，有些参数不需要修改了。<br>后续更新补充。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-Hello-World-2026/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-07-30-Hello-World-2026/" class="post-title-link" itemprop="url">Hello World 2026</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-07-30 13:20:33" itemprop="dateCreated datePublished" datetime="2026-07-30T13:20:33+08:00">2026-07-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Hello-World-2026"><a href="#Hello-World-2026" class="headerlink" title="Hello World 2026"></a>Hello World 2026</h1><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new \&quot;My New Post\&quot;</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-Hello-World-2015/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-07-30-Hello-World-2015/" class="post-title-link" itemprop="url">Hello World 2015</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2026-07-30 12:42:23 / 修改时间：13:19:55" itemprop="dateCreated datePublished" datetime="2026-07-30T12:42:23+08:00">2026-07-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Hello-World-2015"><a href="#Hello-World-2015" class="headerlink" title="Hello World 2015"></a>Hello World 2015</h1><p>Welcome to <a target="_blank" rel="noopener" href="http://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="http://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="http://hexo.io/docs/troubleshooting.html">trobuleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new \&quot;My New Post\&quot;</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="http://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="http://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="http://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a target="_blank" rel="noopener" href="http://hexo.io/docs/deployment.html">Deployment</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
+
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">shenjuexiao</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
 </body>
 </html>

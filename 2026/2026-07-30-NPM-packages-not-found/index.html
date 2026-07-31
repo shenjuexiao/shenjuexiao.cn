@@ -1,244 +1,227 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="keywords" content="Hexo Theme Keep">
-    <meta name="description" content="Hexo Theme Keep">
-    <meta name="author" content="shenjuexiao">
-    
-    <title>
-        
-            NPM packages not found |
-        
-        神觉晓
-    </title>
-    
-<link rel="stylesheet" href="/css/style.css">
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
 
-    
-        <link rel="shortcut icon" href="/images/@shenjuexiao1_600%C3%97600.png">
-    
-    
-<link rel="stylesheet" href="/font/css/fontawesome.min.css">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-    
-<link rel="stylesheet" href="/font/css/regular.min.css">
-
-    
-<link rel="stylesheet" href="/font/css/solid.min.css">
-
-    
-<link rel="stylesheet" href="/font/css/brands.min.css">
-
-    
-    <script>
-        (function () {
-            let theme = localStorage.getItem('KEEP-THEME-STATUS');
-            let classname = "";
-            if (!theme || (JSON.parse(theme).isAutoTheme)){
-                classname = (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) ? "dark-mode" : "light-mode";
-            }
-            else{
-                classname = JSON.parse(theme).isDark ? "dark-mode" : "light-mode";
-            }
-            document.documentElement.classList.add(classname);
-        })();
-    </script>
-    <script class="keep-theme-configurations">
-    const KEEP = window.KEEP || {}
-    KEEP.hexo_config = {"hostname":"mp.gaishanke.com","root":"/","language":"zh-CN"}
-    KEEP.theme_config = {"base_info":{"primary_color":"#0066cc","title":"神觉晓","author":"shenjuexiao","avatar":"/images/@shenjuexiao1C_600×600.png","logo":"/images/@shenjuexiao1B_600×600.png","favicon":"/images/@shenjuexiao1_600×600.png"},"menu":{"home":"/","archives":"/archives"},"first_screen":{"enable":false,"background_img":"/images/bg.svg","background_img_dark":"/images/bg.svg","description":"Keep writing and Keep loving.","hitokoto":false},"social_contact":{"enable":false,"links":{"github":null,"weixin":null,"qq":null,"weibo":null,"zhihu":null,"twitter":null,"x":null,"facebook":null,"email":null}},"scroll":{"progress_bar":false,"percent":false,"hide_header":true},"home":{"announcement":null,"category":false,"tag":false,"post_datetime":"updated"},"post":{"author_badge":{"enable":true,"level_badge":true,"custom_badge":["One","Two","Three"]},"word_count":{"wordcount":false,"min2read":false},"datetime_format":"YYYY-MM-DD HH:mm:ss","copyright_info":false,"share":false,"reward":{"enable":false,"img_link":null,"text":null,"icon":null}},"code_block":{"tools":{"enable":false,"style":"default"},"highlight_theme":"default"},"toc":{"enable":false,"number":false,"expand_all":false,"init_open":true,"layout":"right"},"website_count":{"busuanzi_count":{"enable":false,"site_uv":false,"site_pv":false,"page_pv":false}},"local_search":{"enable":false,"preload":false},"comment":{"enable":false,"use":"valine","valine":{"appid":null,"appkey":null,"server_urls":null,"placeholder":null},"gitalk":{"github_id":null,"github_admins":null,"repository":null,"client_id":null,"client_secret":null,"proxy":null},"twikoo":{"env_id":null,"region":null,"version":"1.6.39"},"waline":{"server_url":null,"reaction":false,"version":"3.3.2"},"giscus":{"repo":null,"repo_id":null,"category":"Announcements","category_id":null,"reactions_enabled":false},"artalk":{"server":null},"disqus":{"shortname":null}},"rss":{"enable":false},"lazyload":{"enable":false},"cdn":{"enable":false,"provider":"cdnjs","custom":{"enable":false,"url":null}},"pjax":{"enable":false},"footer":{"since":2020,"word_count":false,"site_deploy":{"enable":false,"provider":"github","url":null},"record":{"enable":false,"list":[{"code":null,"link":null}]}},"inject":{"enable":false,"css":[null],"js":[null]},"root":"","search_db_path":"keep-search.json","source_data":{},"version":"4.3.0"}
-    KEEP.language_ago = {"second":"%s 秒前","minute":"%s 分钟前","hour":"%s 小时前","day":"%s 天前","week":"%s 周前","month":"%s 个月前","year":"%s 年前"}
-    KEEP.language_code_block = {"copy":"复制代码","copied":"已复制","fold":"折叠代码块","folded":"已折叠"}
-    KEEP.language_copy_copyright = {"copy":"复制版权信息","copied":"已复制","title":"原文标题","author":"原文作者","link":"原文链接"}
-  </script>
-<meta name="generator" content="Hexo 8.1.2"></head>
+<link rel="stylesheet" href="/css/main.css">
 
 
-<body>
-<div class="progress-bar-container">
-    
 
-    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"shenjuexiao.com","root":"/","images":"/images","scheme":"Muse","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="NPM packages not found内容来源 TDesign小程序看板设计（Deepseek）    NPM packages not found. Please confirm npm packages which need to build are belong to miniprogramRoot directory. Or you may edit project.config.j">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NPM packages not found">
+<meta property="og:url" content="https://shenjuexiao.com/2026/2026-07-30-NPM-packages-not-found/index.html">
+<meta property="og:site_name" content="神觉晓">
+<meta property="og:description" content="NPM packages not found内容来源 TDesign小程序看板设计（Deepseek）    NPM packages not found. Please confirm npm packages which need to build are belong to miniprogramRoot directory. Or you may edit project.config.j">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/wechat_devtools_NPM_packages.png">
+<meta property="article:published_time" content="2026-07-30T06:33:11.000Z">
+<meta property="article:modified_time" content="2026-07-31T05:56:02.000Z">
+<meta property="article:author" content="shenjuexiao">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/wechat_devtools_NPM_packages.png">
+
+
+<link rel="canonical" href="https://shenjuexiao.com/2026/2026-07-30-NPM-packages-not-found/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://shenjuexiao.com/2026/2026-07-30-NPM-packages-not-found/","path":"2026/2026-07-30-NPM-packages-not-found/","title":"NPM packages not found"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>NPM packages not found | 神觉晓</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">神觉晓</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">@shenjuexiao</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
 </div>
 
 
 
-<main class="page-container border-box">
-    <!-- home first screen  -->
-    
 
-    <!-- page content -->
-    <div class="page-main-content border-box">
-        <div class="page-main-content-top">
-            
-<header class="header-wrapper">
 
-    <div class="border-box header-content">
-        <div class="left flex-start border-box">
-            
-                <a class="logo-image border-box" href="/">
-                    <img src="/images/@shenjuexiao1B_600%C3%97600.png">
-                </a>
-            
-            <a class="site-name border-box" href="/">
-               神觉晓
-            </a>
-        </div>
 
-        <div class="right border-box">
-            <div class="pc border-box">
-                <ul class="menu-list border-box">
-                    
-                        
-                        <li class="menu-item flex-start border-box">
-                            <a class="menu-text-color border-box" href="/">
-                                
-                                首页
-                                
-                            </a>
-                            
-                        </li>
-                    
-                        
-                        <li class="menu-item flex-start border-box">
-                            <a class="menu-text-color border-box" href="/archives">
-                                
-                                归档
-                                
-                            </a>
-                            
-                        </li>
-                    
-                    
-                </ul>
-            </div>
-            <div class="mobile border-box flex-start">
-                
-                <div class="icon-item menu-bar">
-                    <div class="menu-bar-middle"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="header-drawer">
-        <ul class="drawer-menu-list border-box">
-            
-                
-                <li class="drawer-menu-item border-box not-sub-menu">
-                    <label class="drawer-menu-label border-box">
-                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/">
-                            
-                            首页
-                        </a>
-                        
-                    </label>
-                    
-                </li>
-            
-                
-                <li class="drawer-menu-item border-box not-sub-menu">
-                    <label class="drawer-menu-label border-box">
-                        <a class="drawer-menu-text-color left-side flex-start border-box" href="/archives">
-                            
-                            归档
-                        </a>
-                        
-                    </label>
-                    
-                </li>
-            
-        </ul>
-    </div>
-
-    <div class="window-mask"></div>
 
 </header>
+        
+  
+  <aside class="sidebar">
 
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#NPM-packages-not-found"><span class="nav-number">1.</span> <span class="nav-text">NPM packages not found</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AE%B9%E6%9D%A5%E6%BA%90"><span class="nav-number">1.1.</span> <span class="nav-text">内容来源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8E%AF%E6%A0%B9%E6%9C%AC%E5%8E%9F%E5%9B%A0"><span class="nav-number">1.2.</span> <span class="nav-text">🎯根本原因</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AD%A5%EF%BC%9A%E7%A1%AE%E8%AE%A4%E9%A1%B9%E7%9B%AE%E7%BB%93%E6%9E%84"><span class="nav-number">1.2.1.</span> <span class="nav-text">第一步：确认项目结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AD%A5%EF%BC%9A%E4%BF%AE%E6%94%B9-project-config-json%EF%BC%88%E5%85%B3%E9%94%AE%EF%BC%89"><span class="nav-number">1.2.2.</span> <span class="nav-text">第二步：修改 project.config.json（关键）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E6%AD%A5%EF%BC%9A%E9%87%8D%E6%96%B0%E6%9E%84%E5%BB%BA"><span class="nav-number">1.2.3.</span> <span class="nav-text">第三步：重新构建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%F0%9F%94%A7-%E2%80%9C%E6%9D%80%E6%89%8B%E9%94%8F%E2%80%9D"><span class="nav-number">1.2.4.</span> <span class="nav-text">🔧 “杀手锏”</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%BF%AE%E6%94%B9%E5%90%8E%E7%9A%84-project-config-json"><span class="nav-number">1.3.</span> <span class="nav-text">修改后的 project.config.json</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">shenjuexiao</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/shenjuexiao" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;shenjuexiao" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
 
         </div>
-
-        <div class="page-main-content-middle border-box">
-
-            <div class="main-content border-box">
-                
-
-                    
-<div class="fade-in-down-animation">
-    <div class="post-page-container border-box">
-        <div class="post-content-container border-box">
-            
-
-            <div class="post-content-bottom border-box">
-                
-                    <div class="post-title">
-                        NPM packages not found
-                    </div>
-                
-
-                
-                    <div class="post-header border-box">
-                        
-                            <div class="avatar-box border-box">
-                                <img src="/images/@shenjuexiao1C_600%C3%97600.png">
-                            </div>
-                        
-                        <div class="info-box">
-                            <div class="author border-box">
-                                <span class="name">shenjuexiao</span>
-                                
-                                    <span class="author-badge">Lv3</span>
-                                
-                            </div>
-                            <div class="meta-info border-box">
-                                
-
-<div class="post-meta-info-container border-box post">
-    <div class="post-meta-info border-box">
-        
-
-        
-            <span class="meta-info-item post-create-date">
-                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2026-07-30 14:33:11</span>
-            </span>
-
-            
-                <span class="meta-info-item post-update-date">
-                    <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Fri Jul 31 2026 05:56:02 GMT+0000">2026-07-31 13:56:02</span>
-                </span>
-            
-        
-
-        
-
-        
-
-        
-        
-        
-        
+      </div>
     </div>
 
     
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-NPM-packages-not-found/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="NPM packages not found | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          NPM packages not found
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-07-30 14:33:11" itemprop="dateCreated datePublished" datetime="2026-07-30T14:33:11+08:00">2026-07-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-07-31 13:56:02" itemprop="dateModified" datetime="2026-07-31T13:56:02+08:00">2026-07-31</time>
+    </span>
+
+  
 </div>
 
-                            </div>
-                        </div>
-                    </div>
-                
+        </div>
+      </header>
 
-                <div class="post-content keep-markdown-body ">
-                    
-
-                    
-                         <h1 id="NPM-packages-not-found"><a href="#NPM-packages-not-found" class="headerlink" title="NPM packages not found"></a>NPM packages not found</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
-<li><a class="link"   target="_blank" rel="noopener" href="https://chat.deepseek.com/share/75k9rg5oxr7uivdn3h" >TDesign小程序看板设计<i class="fas fa-external-link-alt"></i></a><a class="link"   target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/1baeab24-723a-4953-be69-007b610bc7ed" >（Deepseek）<i class="fas fa-external-link-alt"></i></a></li>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="NPM-packages-not-found"><a href="#NPM-packages-not-found" class="headerlink" title="NPM packages not found"></a>NPM packages not found</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/75k9rg5oxr7uivdn3h">TDesign小程序看板设计</a><a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/1baeab24-723a-4953-be69-007b610bc7ed">（Deepseek）</a></li>
 </ul>
-<p><img   src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/wechat_devtools_NPM_packages.png"  alt="NPM packages not found"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/wechat_devtools_NPM_packages.png" alt="NPM packages not found"></p>
 <blockquote>
 <p>NPM packages not found. Please confirm npm packages which need to build are belong to <code>miniprogramRoot</code> directory. Or you may edit project.config.json’s <code>packNpmManually</code> and <code>packNpmRelationList</code><br>appid: wx429151859caeb046<br>openid: o6zAJsws4oaOjHasDK8qBirpUw8Q<br>ideVersion: 2.01.2510290<br>osType: win32-x64</p>
 </blockquote>
@@ -304,256 +287,72 @@
 <p>然后再点击 <code>工具</code> -&gt; <code>构建 npm</code>。</p>
 <h2 id="修改后的-project-config-json"><a href="#修改后的-project-config-json" class="headerlink" title="修改后的 project.config.json"></a>修改后的 <code>project.config.json</code></h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  \<span class="string">&quot;miniprogramRoot\&quot;: \&quot;miniprogram/\&quot;,</span></span><br><span class="line"><span class="string">  \&quot;cloudfunctionRoot\&quot;: \&quot;cloudfunctions/\&quot;,</span></span><br><span class="line"><span class="string">  \&quot;setting\&quot;: &#123;</span></span><br><span class="line"><span class="string">    \&quot;urlCheck\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;es6\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;enhance\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;postcss\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;preloadBackgroundData\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;minified\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;newFeature\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;coverView\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;nodeModules\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;autoAudits\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;showShadowRootInWxmlPanel\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;scopeDataCheck\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;uglifyFileName\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;checkInvalidKey\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;checkSiteMap\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;uploadWithSourceMap\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;compileHotReLoad\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;useMultiFrameRuntime\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;useApiHook\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;useApiHostProcess\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;babelSetting\&quot;: &#123;</span></span><br><span class="line"><span class="string">      \&quot;ignore\&quot;: [],</span></span><br><span class="line"><span class="string">      \&quot;disablePlugins\&quot;: [],</span></span><br><span class="line"><span class="string">      \&quot;outputPath\&quot;: \&quot;\&quot;</span></span><br><span class="line"><span class="string">    &#125;,</span></span><br><span class="line"><span class="string">    \&quot;enableEngineNative\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;useIsolateContext\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;useCompilerModule\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;userConfirmedUseCompilerModuleSwitch\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;userConfirmedBundleSwitch\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;packNpmManually\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;packNpmRelationList\&quot;: [</span></span><br><span class="line"><span class="string">      &#123;</span></span><br><span class="line"><span class="string">        \&quot;packageJsonPath\&quot;: \&quot;./package.json\&quot;,</span></span><br><span class="line"><span class="string">        \&quot;miniprogramNpmDistDir\&quot;: \&quot;./miniprogram/\&quot;</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    ],</span></span><br><span class="line"><span class="string">    \&quot;minifyWXSS\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;compileWorklet\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;minifyWXML\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;localPlugins\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;disableUseStrict\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;useCompilerPlugins\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;condition\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;swc\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;disableSWC\&quot;: true</span></span><br><span class="line"><span class="string">  &#125;,</span></span><br><span class="line"><span class="string">  \&quot;appid\&quot;: \&quot;wx429151859caeb046\&quot;,</span></span><br><span class="line"><span class="string">  \&quot;projectname\&quot;: \&quot;quickstart-wx-cloud\&quot;,</span></span><br><span class="line"><span class="string">  \&quot;libVersion\&quot;: \&quot;3.17.0\&quot;,</span></span><br><span class="line"><span class="string">  \&quot;cloudfunctionTemplateRoot\&quot;: \&quot;cloudfunctionTemplate/\&quot;,</span></span><br><span class="line"><span class="string">  \&quot;condition\&quot;: &#123;</span></span><br><span class="line"><span class="string">    \&quot;search\&quot;: &#123;</span></span><br><span class="line"><span class="string">      \&quot;list\&quot;: []</span></span><br><span class="line"><span class="string">    &#125;,</span></span><br><span class="line"><span class="string">    \&quot;conversation\&quot;: &#123;</span></span><br><span class="line"><span class="string">      \&quot;list\&quot;: []</span></span><br><span class="line"><span class="string">    &#125;,</span></span><br><span class="line"><span class="string">    \&quot;plugin\&quot;: &#123;</span></span><br><span class="line"><span class="string">      \&quot;list\&quot;: []</span></span><br><span class="line"><span class="string">    &#125;,</span></span><br><span class="line"><span class="string">    \&quot;game\&quot;: &#123;</span></span><br><span class="line"><span class="string">      \&quot;list\&quot;: []</span></span><br><span class="line"><span class="string">    &#125;,</span></span><br><span class="line"><span class="string">    \&quot;miniprogram\&quot;: &#123;</span></span><br><span class="line"><span class="string">      \&quot;list\&quot;: [</span></span><br><span class="line"><span class="string">        &#123;</span></span><br><span class="line"><span class="string">          \&quot;id\&quot;: -1,</span></span><br><span class="line"><span class="string">          \&quot;name\&quot;: \&quot;db guide\&quot;,</span></span><br><span class="line"><span class="string">          \&quot;pathName\&quot;: \&quot;pages/databaseGuide/databaseGuide\&quot;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      ]</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  &#125;,</span></span><br><span class="line"><span class="string">  \&quot;compileType\&quot;: \&quot;miniprogram\&quot;,</span></span><br><span class="line"><span class="string">  \&quot;srcMiniprogramRoot\&quot;: \&quot;miniprogram/\&quot;,</span></span><br><span class="line"><span class="string">  \&quot;packOptions\&quot;: &#123;</span></span><br><span class="line"><span class="string">    \&quot;ignore\&quot;: [],</span></span><br><span class="line"><span class="string">    \&quot;include\&quot;: []</span></span><br><span class="line"><span class="string">  &#125;,</span></span><br><span class="line"><span class="string">  \&quot;editorSetting\&quot;: &#123;</span></span><br><span class="line"><span class="string">    \&quot;tabIndent\&quot;: \&quot;insertSpaces\&quot;,</span></span><br><span class="line"><span class="string">    \&quot;tabSize\&quot;: 2</span></span><br><span class="line"><span class="string">  &#125;,</span></span><br><span class="line"><span class="string">  \&quot;simulatorPluginLibVersion\&quot;: &#123;&#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
 
-                    
-                </div>
+    </div>
 
-                
+    
+    
+    
 
-                <div class="post-bottom-tags-and-share border-box">
-                    <div>
-                        
-                    </div>
-                    <div>
-                        
-                    </div>
-                </div>
+    <footer class="post-footer">
 
-                
+        
 
-                
-                    <div class="post-nav border-box">
-                        
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2026/2026-07-30-git-push-GitHub-Gitee/"
-                                   title="git push GitHub + Gitee"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">git push GitHub + Gitee</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
-                        
-                            <div class="next-post">
-                                <a class="next"
-                                   rel="next"
-                                   href="/2026/2026-07-30-Resolving-npm-package-not-found-Errors/"
-                                   title="Resolving &#34;npm package not found&#34; Errors"
-                                >
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Resolving &#34;npm package not found&#34; Errors</span>
-                                        <span class="post-nav-item">下一篇</span>
-                                    </span>
-                                    <span class="right arrow-icon flex-center">
-                                        <i class="fas fa-chevron-right"></i>
-                                    </span>
-                                </a>
-                            </div>
-                        
-                    </div>
-                
-
-                
-                    
-
-
-
-
-
-
-                
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/2026-07-30-Resolving-npm-package-not-found-Errors/" rel="prev" title="Resolving &quot;npm package not found&quot; Errors">
+                  <i class="fa fa-angle-left"></i> Resolving "npm package not found" Errors
+                </a>
             </div>
-        </div>
-
-        
-    </div>
-</div>
-
-
-                
+            <div class="post-nav-item">
+                <a href="/2026/2026-07-30-git-push-GitHub-Gitee/" rel="next" title="git push GitHub + Gitee">
+                  git push GitHub + Gitee <i class="fa fa-angle-right"></i>
+                </a>
             </div>
-        </div>
-
-        <div class="page-main-content-bottom border-box">
-            
-<footer class="footer border-box">
-    <div class="copyright-info info-item">
-    &copy;&nbsp;<span>2020</span>&nbsp;-&nbsp;2026
-    
-            &nbsp;<i class="fas fa-heart icon-animate"></i>&nbsp;&nbsp;<a href="/">shenjuexiao</a>
-        
-    </div>
-
-    <div class="theme-info info-item">
-        由&nbsp;<a target="_blank" href="https://hexo.io">Hexo</a>&nbsp;驱动&nbsp;&&nbsp;主题&nbsp;<a class="keep-version" target="_blank" href="https://github.com/XPoet/hexo-theme-keep">Keep</a>
-    </div>
-
-    
-
-    
-
-    
-</footer>
-
-        </div>
-    </div>
-
-    <!-- post tools -->
-    
-        <div class="post-tools right-toc">
-            <div class="post-tools-container border-box">
-    <ul class="post-tools-list border-box">
-        <!-- PC encrypt again -->
-        
-
-        <!-- PC TOC show toggle -->
-        
-
-        <!-- PC go comment -->
-        
-
-        <!-- PC full screen -->
-        <li class="tools-item flex-center full-screen">
-            <i class="fa-solid fa-expand"></i>
-        </li>
-    </ul>
-</div>
-
-        </div>
-    
-
-    <!-- side tools -->
-    <div class="side-tools">
-        <div class="side-tools-container border-box ">
-    <ul class="side-tools-list side-tools-show-handle border-box">
-        <li class="tools-item tool-font-adjust-plus flex-center">
-            <i class="fas fa-search-plus"></i>
-        </li>
-
-        <li class="tools-item tool-font-adjust-minus flex-center">
-            <i class="fas fa-search-minus"></i>
-        </li>
-
-        <!-- toggle mode -->
-        
-            <li class="tools-item tool-toggle-theme-mode flex-center">
-                <i class="fas fa-moon"></i>
-            </li>
-        
-
-        <!-- rss -->
-        
-
-        <!-- to bottom -->
-        <li class="tools-item tool-scroll-to-bottom flex-center">
-            <i class="fas fa-arrow-down"></i>
-        </li>
-    </ul>
-
-    <ul class="exposed-tools-list border-box">
-        
-
-        
-
-        <li class="tools-item tool-toggle-show flex-center">
-            <i class="fas fa-cog fa-spin"></i>
-        </li>
-
-        <li class="tools-item tool-scroll-to-top flex-center show-arrow">
-            <i class="arrow fas fa-arrow-up"></i>
-            <span class="percent"></span>
-        </li>
-    </ul>
-</div>
-
-    </div>
-
-    <!-- image mask -->
-    <div class="zoom-in-image-mask">
-    <img class="zoom-in-image">
+          </div>
+    </footer>
+  </article>
 </div>
 
 
-    <!-- local search -->
-    
-
-    <!-- tablet toc -->
-    
-</main>
 
 
 
 
-
-<!-- common js -->
-
-<script src="/js/utils.js"></script>
-
-<script src="/js/header-shrink.js"></script>
-
-<script src="/js/back2top.js"></script>
-
-<script src="/js/toggle-theme.js"></script>
-
-<script src="/js/code-block.js"></script>
-
-<script src="/js/main.js"></script>
-
-<script src="/js/libs/anime.min.js"></script>
-
-
-<!-- local search -->
-
-
-<!-- lazyload -->
-
-
-<div class="">
-    <!-- home page -->
-    
-
-    <!-- post page -->
-    
-        <!-- post-helper -->
-        
-<script src="/js/post/post-helper.js"></script>
-
-
-        <!-- toc -->
-        
-
-        <!-- copyright-info -->
-        
-
-        <!-- share -->
-        
-    
-
-    <!-- categories page -->
-    
-
-    <!-- links page -->
-    
-
-    <!-- photos page -->
-    
-
-    <!-- tools page -->
-    
 </div>
+  </main>
 
-<!-- mermaid -->
+  <footer class="footer">
+    <div class="footer-inner">
 
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">shenjuexiao</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
+  </div>
 
-<!-- pjax -->
+    </div>
+  </footer>
 
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
 
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
 
 </body>
 </html>
