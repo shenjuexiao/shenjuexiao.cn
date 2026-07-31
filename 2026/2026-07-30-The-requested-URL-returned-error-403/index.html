@@ -165,187 +165,444 @@
             <div class="main-content border-box">
                 
 
-                    
-<div class="fade-in-down-animation">
-    <div class="post-page-container border-box">
-        <div class="post-content-container border-box">
-            
+                    @import "../../common/stylus-variables.styl"
 
-            <div class="post-content-bottom border-box">
-                
-                    <div class="post-title">
-                        The requested URL returned error: 403
-                    </div>
-                
-
-                
-                    <div class="post-header border-box">
-                        
-                            <div class="avatar-box border-box">
-                                <img src="/images/@shenjuexiao1C_600%C3%97600.png">
-                            </div>
-                        
-                        <div class="info-box">
-                            <div class="author border-box">
-                                <span class="name">shenjuexiao</span>
-                                
-                                    <span class="author-badge">Lv3</span>
-                                
-                            </div>
-                            <div class="meta-info border-box">
-                                
-
-<div class="post-meta-info-container border-box post">
-    <div class="post-meta-info border-box">
-        
-
-        
-            <span class="meta-info-item post-create-date">
-                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2026-07-30 14:24:56</span>
-            </span>
-
-            
-                <span class="meta-info-item post-update-date">
-                    <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Thu Jul 30 2026 06:24:56 GMT+0000">2026-07-30 14:24:56</span>
-                </span>
-            
-        
-
-        
-
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-</div>
-
-                            </div>
-                        </div>
-                    </div>
-                
-
-                <div class="post-content keep-markdown-body ">
-                    
-
-                    
-                         <h1 id="The-requested-URL-returned-error-403"><a href="#The-requested-URL-returned-error-403" class="headerlink" title="The requested URL returned error: 403"></a>The requested URL returned error: 403</h1><h1 id="GitHub-Actions-push-403-权限拒绝解决"><a href="#GitHub-Actions-push-403-权限拒绝解决" class="headerlink" title="GitHub Actions push 403 权限拒绝解决"></a>GitHub Actions push 403 权限拒绝解决</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
-<li><a class="link"   target="_blank" rel="noopener" href="https://www.doubao.com/chat/38434639772911618" >豆包：GitHub Actions 403<i class="fas fa-external-link-alt"></i></a></li>
-<li><a class="link"   target="_blank" rel="noopener" href="https://github.com/shenjuexiao/giscafer/issues/1" >The requested URL returned error: 403<i class="fas fa-external-link-alt"></i></a></li>
-</ul>
-<p>&lt;img src&#x3D;&quot;<a class="link"   target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Giscafer_GitHub_Actions_push_403.png/" >https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Giscafer_GitHub_Actions_push_403.png\<i class="fas fa-external-link-alt"></i></a>“ &#x2F;&gt;</p>
-<h2 id="fatal-unable-to-access"><a href="#fatal-unable-to-access" class="headerlink" title="fatal: unable to access"></a>fatal: unable to access</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">Run</span> <span class="string">yarn</span> <span class="string">sync-post</span></span><br><span class="line">  <span class="string">yarn</span> <span class="string">sync-post</span></span><br><span class="line">  <span class="string">git</span> <span class="string">add</span> <span class="string">.</span></span><br><span class="line">  <span class="string">git</span> <span class="string">commit</span> <span class="string">-m</span> <span class="string">&#x27;chore(ci): blog sync&#x27;</span></span><br><span class="line">  <span class="string">git</span> <span class="string">push</span></span><br><span class="line">  <span class="attr">shell:</span> <span class="string">/usr/bin/bash</span> <span class="string">-e</span> &#123;<span class="number">0</span>&#125;</span><br><span class="line">  <span class="attr">env:</span></span><br><span class="line">    <span class="attr">GH_TOKEN:</span> <span class="string">***</span></span><br><span class="line">    <span class="attr">GH_USER:</span> <span class="string">***</span></span><br><span class="line">    <span class="attr">GH_PROJECT_NAME:</span> <span class="string">***</span></span><br><span class="line"><span class="string">yarn</span> <span class="string">run</span> <span class="string">v1.22.22</span></span><br><span class="line"><span class="string">$</span> <span class="string">node</span> <span class="string">./scripts/sync-post.js</span></span><br><span class="line"><span class="string">文章全部同步成功！</span> <span class="number">0</span></span><br><span class="line"><span class="string">Done</span> <span class="string">in</span> <span class="number">0.</span><span class="string">33s.</span></span><br><span class="line"><span class="string">ℹ</span> <span class="literal">No</span> <span class="string">staged</span> <span class="string">files</span> <span class="string">found.</span></span><br><span class="line">[<span class="string">main</span> <span class="string">7226b3a</span>] <span class="attr">chore(ci):</span> <span class="string">blog</span> <span class="string">sync</span></span><br><span class="line"> <span class="number">3</span> <span class="string">files</span> <span class="string">changed,</span> <span class="number">33</span> <span class="string">deletions(-)</span></span><br><span class="line"> <span class="string">delete</span> <span class="string">mode</span> <span class="number">100644</span> <span class="string">data/blog/post-1.mdx</span></span><br><span class="line"> <span class="string">delete</span> <span class="string">mode</span> <span class="number">100644</span> <span class="string">data/blog/post-2.mdx</span></span><br><span class="line"> <span class="string">delete</span> <span class="string">mode</span> <span class="number">100644</span> <span class="string">data/blog/post-3.mdx</span></span><br><span class="line"><span class="attr">remote:</span> <span class="string">Permission</span> <span class="string">to</span> <span class="string">***/***.git</span> <span class="string">denied</span> <span class="string">to</span> <span class="string">github-actions[bot].</span></span><br><span class="line"><span class="attr">fatal:</span> <span class="string">unable</span> <span class="string">to</span> <span class="string">access</span> <span class="attr">&#x27;https://github.com/***/***/&#x27;:</span> <span class="attr">The requested URL returned error:</span> <span class="number">403</span></span><br><span class="line"><span class="attr">Error:</span> <span class="string">Process</span> <span class="string">completed</span> <span class="string">with</span> <span class="string">exit</span> <span class="string">code</span> <span class="number">128</span><span class="string">.</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="文件：-github-workflows-sync-post-yml"><a href="#文件：-github-workflows-sync-post-yml" class="headerlink" title="文件：.github/workflows/sync-post.yml"></a>文件：<code>.github/workflows/sync-post.yml</code></h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Sync</span> <span class="string">Post</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># Controls when the workflow will run</span></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="comment"># schedule:</span></span><br><span class="line">  <span class="comment">#   - cron: \&quot;30 1 * * *\&quot;</span></span><br><span class="line">  <span class="comment"># https://docs.github.com/cn/developers/webhooks-and-events/events/issue-event-types</span></span><br><span class="line">  <span class="attr">issues:</span></span><br><span class="line">    <span class="attr">types:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">opened</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">closed</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">renamed</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">labeled</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">unlabeled</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">reopened</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">committed</span> <span class="comment"># 修改？</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line"><span class="attr">env:</span></span><br><span class="line">  <span class="attr">GH_TOKEN:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">  <span class="attr">GH_USER:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_USER</span> <span class="string">&#125;&#125;</span></span><br><span class="line">  <span class="attr">GH_PROJECT_NAME:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_PROJECT_NAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">Publish:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">🛎️</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Git</span> <span class="string">config</span> <span class="string">🔧</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          git config --global user.name \&quot;shenjuexiao\&quot;</span></span><br><span class="line"><span class="string">          git config --global user.email \&quot;shenjuexiao@qq.com\&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Display</span> <span class="string">runtime</span> <span class="string">info</span> <span class="string">✨</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          echo &#x27;当前目录：&#x27;</span></span><br><span class="line"><span class="string">          pwd</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">🔧</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">yarn</span> <span class="string">install</span></span><br><span class="line"></span><br><span class="line">      <span class="comment"># - name: Build ⛏️</span></span><br><span class="line">      <span class="comment">#   run: yarn build</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Update</span> <span class="string">blog</span> <span class="string">files</span> <span class="string">⛏️</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          yarn sync-post</span></span><br><span class="line"><span class="string">          git add .</span></span><br><span class="line"><span class="string">          git commit -m &#x27;chore(ci): blog sync&#x27;</span></span><br><span class="line"><span class="string">          git push</span></span><br></pre></td></tr></table></figure>
-
-<p><strong>github-actions[bot]</strong> 没有仓库写入推送权限，触发 403 forbidden。</p>
-<h2 id="三种常见场景"><a href="#三种常见场景" class="headerlink" title="三种常见场景"></a>三种常见场景</h2><ol>
-<li>仅配置 GH_TOKEN，但仓库默认工作流令牌无写权限（默认只读）</li>
-<li>个人 Token 权限范围不足、过期，或未正确注入</li>
-<li>Git remote 使用 https 但未自动替换授权头</li>
-</ol>
-<h2 id="方案一：开启仓库工作流写入权限（最简单，推荐）"><a href="#方案一：开启仓库工作流写入权限（最简单，推荐）" class="headerlink" title="方案一：开启仓库工作流写入权限（最简单，推荐）"></a>方案一：开启仓库工作流写入权限（最简单，推荐）</h2><p>步骤<br>仓库首页 ：<code>Settings</code> -&gt; <code>Actions</code> -&gt; <code>General</code><br>下滑找到 <code>Workflow permissions</code><br>勾选： <code>Read and write permissions</code><br>（默认是 <code> Read repository contents and packages permissions</code>）<br>保存设置，重新运行 Actions。<br>原理：内置 GITHUB_TOKEN 会获得推送、修改文件权限，无需额外个人 Token。</p>
-<p>&lt;img src&#x3D;&quot;<a class="link"   target="_blank" rel="noopener" href="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Giscafer_Settings_Actions_General_Workflow-permissions.png/" >https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Giscafer_Settings_Actions_General_Workflow-permissions.png\<i class="fas fa-external-link-alt"></i></a>“ &#x2F;&gt;</p>
-<h2 id="方案二：改用个人-PAT-Token（适合需要跨仓库-更多权限）"><a href="#方案二：改用个人-PAT-Token（适合需要跨仓库-更多权限）" class="headerlink" title="方案二：改用个人 PAT Token（适合需要跨仓库 &#x2F; 更多权限）"></a>方案二：改用个人 PAT Token（适合需要跨仓库 &#x2F; 更多权限）</h2><ol>
-<li>创建 GitHub 个人访问令牌 PAT<br>GitHub 头像，<code>Settings</code> -&gt; <code>Developer settings</code> -&gt; <code>Personal access tokens</code> -&gt; <code>Tokens (classic)</code><br>新建 Token，勾选权限：repo（全部仓库读写权限）。<br>复制生成的 Token（仅展示一次，丢失需重建）。</li>
-<li>仓库配置 Secret<br>仓库首页， <code>Settings</code> -&gt; <code>Secrets and variables</code> -&gt; <code>Actions</code> -&gt; <code>New repository secret</code><br>Name：GH_TOKEN。<br>Value：粘贴上面的 PAT。</li>
-<li>修改 <code>workflow</code> 注入授权（关键，你现有脚本缺授权）<br>你的脚本直接 <code>git push</code>，但 https 地址没带上 token，需要在 shell 里替换 remote url：</li>
-</ol>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">steps:</span></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v4</span></span><br><span class="line">    <span class="comment"># 必须加上 fetch-depth=0，否则无法正常commit push</span></span><br><span class="line">    <span class="attr">with:</span></span><br><span class="line">      <span class="attr">fetch-depth:</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">  <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Sync</span> <span class="string">blog</span> <span class="string">post</span></span><br><span class="line">    <span class="attr">env:</span></span><br><span class="line">      <span class="attr">GH_TOKEN:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_TOKEN</span> <span class="string">&#125;&#125;</span> <span class="comment"># 如果用PAT填GH_TOKEN: $&#123;&#123; secrets.GH_TOKEN &#125;&#125;</span></span><br><span class="line">      <span class="attr">GH_USER:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_USER</span> <span class="string">&#125;&#125;</span></span><br><span class="line">      <span class="attr">GH_PROJECT_NAME:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_PROJECT_NAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">      yarn sync-post</span></span><br><span class="line"><span class="string">      # 核心：替换remote地址，带上token鉴权，解决403</span></span><br><span class="line"><span class="string">      git remote set-url origin https://$&#123;GH_USER&#125;:$&#123;GH_TOKEN&#125;@github.com/$&#123;GH_USER&#125;/$&#123;GH_PROJECT_NAME&#125;.git</span></span><br><span class="line"><span class="string">      git add .</span></span><br><span class="line"><span class="string">      git commit -m &#x27;chore(ci): blog sync&#x27;</span></span><br><span class="line"><span class="string">      git push</span></span><br><span class="line"><span class="string"></span>    <span class="attr">shell:</span> <span class="string">/usr/bin/bash</span> <span class="string">-e</span> &#123;<span class="number">0</span>&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="关键遗漏点（原配置2个问题）"><a href="#关键遗漏点（原配置2个问题）" class="headerlink" title="关键遗漏点（原配置2个问题）"></a>关键遗漏点（原配置2个问题）</h2><ol>
-<li><code>checkout</code> 未加 <code>fetch-depth:0</code><br>默认只拉取最新一次提交，缺少完整 git 历史，<code>commit/push</code> 极易异常。</li>
-<li>未配置带 Token 的 <code>remote origin</code><br>直接 git push 使用无授权的 https 地址，bot 被拦截 403。</li>
-</ol>
-<h2 id="补充排查点"><a href="#补充排查点" class="headerlink" title="补充排查点"></a>补充排查点</h2><ol>
-<li>如果你用内置 <code>$&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;</code><br>必须完成【方案一：开启读写权限】，否则就算改 remote 也推不上去。</li>
-<li>PAT 失效处理<br>重新生成 Token，更新仓库 Secret 内的 <code>GH_TOKEN</code>。</li>
-<li>分支保护规则<br>若 main 分支开启 <code>Require pull request reviews before merging</code>，直接 push 会失败，两种解决：</li>
-</ol>
-<ul>
-<li>临时放开分支保护允许 bot 直接推送</li>
-<li>脚本改成自动创建 PR，而非直接 push</li>
-</ul>
-<h2 id="完整可直接复制的-job-模板"><a href="#完整可直接复制的-job-模板" class="headerlink" title="完整可直接复制的 job 模板"></a>完整可直接复制的 job 模板</h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">sync-blog:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">code</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v4</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">fetch-depth:</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Setup</span> <span class="string">Node</span> <span class="string">&amp;</span> <span class="string">Yarn</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@v4</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="number">20</span></span><br><span class="line">          <span class="attr">cache:</span> <span class="string">&#x27;yarn&#x27;</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">dependencies</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">yarn</span> <span class="string">install</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Sync</span> <span class="string">post</span> <span class="string">&amp;</span> <span class="string">push</span></span><br><span class="line">        <span class="attr">env:</span></span><br><span class="line">          <span class="attr">GH_TOKEN:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">GH_USER:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_USER</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">GH_PROJECT_NAME:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GH_PROJECT_NAME</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          yarn sync-post</span></span><br><span class="line"><span class="string">          git remote set-url origin https://$&#123;GH_USER&#125;:$&#123;GH_TOKEN&#125;@github.com/$&#123;GH_USER&#125;/$&#123;GH_PROJECT_NAME&#125;.git</span></span><br><span class="line"><span class="string">          git config --global user.name \&quot;github-actions[bot]\&quot;</span></span><br><span class="line"><span class="string">          git config --global user.email \&quot;github-actions[bot]@users.noreply.github.com\&quot;</span></span><br><span class="line"><span class="string">          git add .</span></span><br><span class="line"><span class="string">          git commit -m &#x27;chore(ci): blog sync&#x27; || echo \&quot;无文件变更，跳过提交\&quot;</span></span><br><span class="line"><span class="string">          git push</span></span><br></pre></td></tr></table></figure>
-
-<p>新增 <code>git config</code> 配置提交者用户名邮箱，避免无身份提交报错；<br><code>|| echo</code> 兼容「无修改文件」场景，不会因为没有变更直接终止任务。</p>
-
-                    
-                </div>
-
-                
-
-                <div class="post-bottom-tags-and-share border-box">
-                    <div>
-                        
-                    </div>
-                    <div>
-                        
-                    </div>
-                </div>
-
-                
-
-                
-                    <div class="post-nav border-box">
-                        
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2026/2026-07-30-Astro-Template/"
-                                   title="Astro Template"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Astro Template</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
-                        
-                            <div class="next-post">
-                                <a class="next"
-                                   rel="next"
-                                   href="/2026/2026-07-30-Gitblog-main-py/"
-                                   title="Gitblog main.py"
-                                >
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Gitblog main.py</span>
-                                        <span class="post-nav-item">下一篇</span>
-                                    </span>
-                                    <span class="right arrow-icon flex-center">
-                                        <i class="fas fa-chevron-right"></i>
-                                    </span>
-                                </a>
-                            </div>
-                        
-                    </div>
-                
-
-                
-                    
+$avatar-width = 3.2rem
+$arrow-icon-width = 1rem
+$post-nav-max-width = 14rem
+$post-title-font-size = 1.6rem
+$toc-container-width = 15rem
+$spacer-padding = 2rem
 
 
+.post-page-container {
+  display flex
+  justify-content space-between
+  width 100%
+  height 100%
+
+  &.show-toc {
+    .pc-post-toc {
+      display block
+    }
+
+    .post-content-container {
+      width 'calc(100% - %s)' % $toc-container-width
+    }
+  }
 
 
+  &.encrypt {
+    .post-aging-tips {
+      display none !important
+    }
+  }
 
 
-                
-            </div>
-        </div>
+  +keep-tablet() {
+    .pc-post-toc {
+      display none !important
+    }
 
-        
-    </div>
-</div>
+    .post-content-container {
+      width 100% !important
+    }
+  }
+
+
+  .post-content-container {
+    order 0
+    width 100%
+    height 100%
+
+
+    keep-container(1, 0, 2rem)
+
+    +keep-mobile() {
+      padding 0 0.2rem !important
+      box-shadow none !important
+
+      &:hover {
+        box-shadow none !important
+      }
+    }
+
+
+    .post-content-top {
+      display flex
+      align-items flex-end
+      width 100%
+      padding-top $spacer-padding
+      padding-right $spacer-padding
+      overflow hidden
+      background-color var(--background-color-2)
+      border-top-left-radius var(--box-border-radius)
+      border-top-right-radius var(--box-border-radius)
+
+      +keep-tablet() {
+        height 12.8rem
+        padding-top $spacer-padding * 0.8
+        padding-right $spacer-padding  * 0.8
+
+        .cover-post-title {
+          padding $spacer-padding * 0.5 * 0.8 $spacer-padding * 0.8 !important
+          font-size $post-title-font-size * 0.9 !important
+          line-height 1.5 !important
+        }
+      }
+
+
+      +keep-mobile() {
+        height 11.8rem
+        padding-top $spacer-padding * 0.6
+        padding-right $spacer-padding  * 0.6
+
+        .cover-post-title {
+          padding $spacer-padding * 0.5 * 0.6 $spacer-padding * 0.6 !important
+          font-size $post-title-font-size * 0.8 !important
+          line-height 1.4 !important
+        }
+      }
+
+
+      .cover-post-title {
+        position relative
+        z-index $z-index-1
+        box-sizing border-box
+        max-width 100%
+        max-height 100%
+        padding $spacer-padding * 0.5 $spacer-padding
+        overflow-y auto
+        color var(--text-color-2)
+        font-weight 600
+        font-size $post-title-font-size
+        line-height 1.6
+        background var(--background-color-1-transparent)
+        border-top-right-radius var(--box-border-radius)
+        -webkit-backdrop-filter blur(2px)
+        backdrop-filter blur(2px)
+      }
+
+
+      .post-cover {
+        position absolute
+        top 0
+        left 0
+        box-sizing border-box
+        width 100%
+        height 100%
+        object-fit cover
+      }
+    }
+
+
+    .post-content-bottom {
+      padding $spacer-padding
+
+      &.has-cover {
+        padding-top $spacer-padding * 0.5
+      }
+
+      +keep-mobile() {
+        padding $spacer-padding * 0.5 0 !important
+      }
+
+      .post-title {
+        color var(--text-color-2)
+        font-weight 600
+        font-size $post-title-font-size
+        line-height 1.6
+        text-align var(--post-title-align)
+
+        +keep-tablet() {
+          font-size $post-title-font-size * 0.9
+        }
+
+        +keep-mobile() {
+          font-size $post-title-font-size * 0.8
+        }
+      }
+
+
+      .post-header {
+        display flex
+        justify-content flex-start
+        width 100%
+        margin-top 1rem
+
+        +keep-tablet() {
+          margin-top 0.9rem
+          transform scale(0.9)
+          transform-origin left top
+        }
+
+        .avatar-box {
+          display var(--post-author-avatar)
+          flex-shrink 0
+          width $avatar-width
+          height $avatar-width
+          margin-right 0.8rem
+          padding 0.1rem
+          border 1px solid var(--border-color)
+          border-radius 50%
+
+          img {
+            width 100%
+            height 100%
+            background var(--avatar-background-color)
+            border-radius 50%
+          }
+        }
+
+
+        .info-box {
+          display flex
+          flex-direction column
+          justify-content space-between
+          box-sizing border-box
+          width 100%
+          height 100%
+          padding 0.2rem 0
+
+          .author {
+            display var(--post-author-name)
+            align-items center
+            font-weight 600
+            font-size 1.18rem
+
+            .name {
+              color var(--text-color-3)
+            }
+
+            .author-badge {
+              margin-left 0.8rem
+              padding 0 0.4rem
+              color var(--text-color-badge)
+              font-weight 500
+              font-size 0.8rem
+              background var(--primary-color)
+              border-radius 0.4rem
+            }
+          }
+
+          .meta-info {
+            margin-top 0.1rem
+          }
+        }
+      }
+
+
+      .post-content {
+        margin-top calc(var(--component-gap) * 0.8)
+        padding-bottom calc(var(--component-gap) * 0.8)
+        color var(--text-color-3)
+        text-align justify
+        word-wrap break-word
+
+        +keep-tablet() {
+          margin-top calc(var(--component-gap) * 0.6)
+          padding-bottom calc(var(--component-gap) * 0.6)
+        }
+
+
+        .post-aging-tips {
+          position relative
+          display none
+          box-sizing border-box
+          margin-bottom 1.8rem
+          padding 1rem
+          color var(--keep-warning-color)
+          line-height 1.6
+          background var(--keep-warning-background-color)
+          border 0.1rem solid var(--keep-warning-border-color)
+          border-radius 0.4rem
+
+          i {
+            margin-right 0.4rem
+            color var(--keep-warning-color)
+          }
+
+          .days {
+            color var(--keep-warning-color)
+          }
+        }
+
+
+        .post-encrypt-box {
+          margin-left $avatar-width + 0.8rem
+          padding 1rem 0
+
+          .password-input {
+            width 60%
+            margin 0
+            padding 0.8rem 1.2rem
+            color var(--text-color-3)
+            font-weight 400 !important
+            font-size 1.2rem
+            letter-spacing 2px
+            background none
+            border none
+            border-bottom 0.2rem solid var(--border-color)
+            outline none
+
+            +keep-tablet() {
+              width 80%
+            }
+
+            &.error {
+              border 0.2rem solid var(--keep-danger-color)
+            }
+
+            &::placeholder {
+              color var(--text-color-4)
+              font-size 1.1rem
+              letter-spacing 1px
+            }
+
+            &:hover
+            &:focus {
+              background var(--background-color-2)
+            }
+          }
+        }
+
+        if (hexo-config('post') && hexo-config('post.copyright_info') == true) {
+          border-bottom 2px dashed var(--border-color)
+        }
+      }
+
+
+      .post-bottom-tags-and-share {
+        display flex
+        justify-content space-between
+        width 100%
+        margin-top 1rem
+
+        .post-tags-box {
+          display flex
+          flex-wrap wrap
+          align-items center
+          justify-content flex-start
+          width 100%
+          font-size 0.96rem
+
+
+          .tag-item {
+            margin-right 0.4rem
+            line-height 2
+
+            .icon {
+              color var(--text-color-3)
+              font-size 0.88rem
+            }
+          }
+        }
+      }
+
+
+      .post-nav {
+        height 2.8rem
+        margin-top var(--component-gap)
+
+        .prev-post
+        .next-post {
+          box-sizing border-box
+          max-width $post-nav-max-width
+          height 100%
+          keep-container(1, 0.8rem, 0)
+          border-radius 0.32rem
+
+
+          a {
+            position relative
+            display block
+            box-sizing border-box
+            width 100%
+            height 100%
+
+            &.prev {
+              padding-left $arrow-icon-width
+            }
+
+            &.next {
+              padding-right $arrow-icon-width
+            }
+
+            .arrow-icon {
+              position absolute
+              top 0
+              width $arrow-icon-width
+              height 100%
+
+              &.left {
+                left 0
+              }
+
+              &.right {
+                right 0
+              }
+            }
+
+            .title {
+              width 100%
+              height 100%
+            }
+          }
+        }
+
+        .prev-post {
+          float left
+        }
+
+        .next-post {
+          float right
+        }
+
+        .post-nav-item {
+          display none
+
+          +keep-tablet() {
+            display inline-block
+          }
+        }
+
+
+        .post-nav-title-item {
+          +keep-tablet() {
+            display none
+          }
+        }
+      }
+    }
+  }
+
+
+  .pc-post-toc {
+    position sticky
+    top calc(var(--header-height) + var(--component-gap))
+    display none
+    flex-shrink 0
+    box-sizing border-box
+    width $toc-container-width
+    max-height calc(100vh - calc(var(--header-height) + var(--component-gap)))
+    transition-t("top, display, max-height", "0, 0, 0", "0.2, 0.1, 0.2", "ease, ease, ease")
+
+    &.right-toc {
+      order 1
+      padding 2rem 0 2rem 1.8rem
+    }
+
+    &.left-toc {
+      order -1
+      padding 2rem 1.8rem 2rem 0
+    }
+
+    .header-shrink & {
+      top calc(var(--header-shrink-height) + var(--component-gap))
+      max-height calc(100vh - calc(var(--header-shrink-height) + var(--component-gap)))
+    }
+  }
+}
 
 
                 

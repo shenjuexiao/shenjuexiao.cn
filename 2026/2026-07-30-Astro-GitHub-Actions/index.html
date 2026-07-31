@@ -165,196 +165,444 @@
             <div class="main-content border-box">
                 
 
-                    
-<div class="fade-in-down-animation">
-    <div class="post-page-container border-box">
-        <div class="post-content-container border-box">
-            
+                    @import "../../common/stylus-variables.styl"
 
-            <div class="post-content-bottom border-box">
-                
-                    <div class="post-title">
-                        Astro GitHub Actions
-                    </div>
-                
-
-                
-                    <div class="post-header border-box">
-                        
-                            <div class="avatar-box border-box">
-                                <img src="/images/@shenjuexiao1C_600%C3%97600.png">
-                            </div>
-                        
-                        <div class="info-box">
-                            <div class="author border-box">
-                                <span class="name">shenjuexiao</span>
-                                
-                                    <span class="author-badge">Lv3</span>
-                                
-                            </div>
-                            <div class="meta-info border-box">
-                                
-
-<div class="post-meta-info-container border-box post">
-    <div class="post-meta-info border-box">
-        
-
-        
-            <span class="meta-info-item post-create-date">
-                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2026-07-30 14:50:51</span>
-            </span>
-
-            
-                <span class="meta-info-item post-update-date">
-                    <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Thu Jul 30 2026 06:50:51 GMT+0000">2026-07-30 14:50:51</span>
-                </span>
-            
-        
-
-        
-
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-</div>
-
-                            </div>
-                        </div>
-                    </div>
-                
-
-                <div class="post-content keep-markdown-body ">
-                    
-
-                    
-                         <h1 id="Astro-GitHub-Actions"><a href="#Astro-GitHub-Actions" class="headerlink" title="Astro GitHub Actions"></a>Astro GitHub Actions</h1><h1 id="Astro-安装及-GitHub-Actions-自动部署"><a href="#Astro-安装及-GitHub-Actions-自动部署" class="headerlink" title="Astro 安装及 GitHub Actions 自动部署"></a>Astro 安装及 GitHub Actions 自动部署</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
-<li><a class="link"   target="_blank" rel="noopener" href="https://docs.astro.build/zh-cn/install-and-setup/" >安装 Astro<i class="fas fa-external-link-alt"></i></a></li>
-<li><a class="link"   target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/v11/commands/npx" >npx<i class="fas fa-external-link-alt"></i></a></li>
-</ul>
-<h2 id="通过-CLI-向导安装"><a href="#通过-CLI-向导安装" class="headerlink" title="通过 CLI 向导安装"></a>通过 CLI 向导安装</h2><p><a class="link"   target="_blank" rel="noopener" href="https://docs.astro.build/zh-cn/install-and-setup/" >docs.astro.build&#x2F;zh-cn&#x2F;install-and-setup&#x2F;<i class="fas fa-external-link-alt"></i></a></p>
-<p>我选择的是 <code>Astro Use blog template</code>，也可以选择其他的选项，使用模板能快速建立页面。</p>
-<p><img   src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Use_blog_template.png"  alt="Astro Use blog template"></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 npm 创建一个新项目</span></span><br><span class="line">npm create astro@latest</span><br></pre></td></tr></table></figure>
-
-<p>或</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 pnpm 创建一个新项目</span></span><br><span class="line">pnpm create astro@latest</span><br></pre></td></tr></table></figure>
-
-<p>或</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 yarn 创建一个新项目</span></span><br><span class="line">yarn create astro</span><br></pre></td></tr></table></figure>
-
-<p><img   src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_npm_create_astro@latest.png"  alt="npm create astro@latest"></p>
-<h2 id="目录和文件"><a href="#目录和文件" class="headerlink" title="目录和文件"></a>目录和文件</h2><p><a class="link"   target="_blank" rel="noopener" href="https://docs.astro.build/zh-cn/basics/project-structure/" >docs.astro.build&#x2F;zh-cn&#x2F;basics&#x2F;project-structure&#x2F;<i class="fas fa-external-link-alt"></i></a></p>
-<blockquote>
-<p>Astro 采用一套约定俗成的文件夹布局来管理项目。每个 Astro 项目的根目录下都应该包括以下目录和文件：</p>
-</blockquote>
-<ul>
-<li>src&#x2F;* - 你的项目源代码（组件、页面、样式、图片等）。</li>
-<li>public&#x2F;* - 你的非代码、未处理的资源（字体、图标等）。</li>
-<li>package.json - 项目清单。</li>
-<li>astro.config.mjs - Astro 配置文件（推荐）。</li>
-<li>tsconfig.json - TypeScript 配置文件（推荐）。</li>
-</ul>
-<h2 id="启动-Astro-开发服务器"><a href="#启动-Astro-开发服务器" class="headerlink" title="启动 Astro 开发服务器"></a>启动 Astro 开发服务器</h2><p><a class="link"   target="_blank" rel="noopener" href="https://docs.astro.build/zh-cn/develop-and-build/" >docs.astro.build&#x2F;zh-cn&#x2F;develop-and-build&#x2F;<i class="fas fa-external-link-alt"></i></a></p>
-<blockquote>
-<p>Astro 自带了一个内置的开发服务器，它包含了项目开发所需的一切。astro dev CLI 命令将启动本地开发服务器，让你第一次看到你的新网站。</p>
-</blockquote>
-<blockquote>
-<p>每个起始模板都预配置了一个脚本，该脚本将为你运行 astro dev。在进入你的项目目录后，使用你喜欢的包管理器运行此命令并启动 Astro 开发服务器。</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+$avatar-width = 3.2rem
+$arrow-icon-width = 1rem
+$post-nav-max-width = 14rem
+$post-title-font-size = 1.6rem
+$toc-container-width = 15rem
+$spacer-padding = 2rem
 
 
-<p>或</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm run dev</span><br></pre></td></tr></table></figure>
+.post-page-container {
+  display flex
+  justify-content space-between
+  width 100%
+  height 100%
+
+  &.show-toc {
+    .pc-post-toc {
+      display block
+    }
+
+    .post-content-container {
+      width 'calc(100% - %s)' % $toc-container-width
+    }
+  }
 
 
-<p>或</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn run dev</span><br></pre></td></tr></table></figure>
-
-<h2 id="部署你的-Astro-站点至-GitHub-Pages"><a href="#部署你的-Astro-站点至-GitHub-Pages" class="headerlink" title="部署你的 Astro 站点至 GitHub Pages"></a>部署你的 Astro 站点至 GitHub Pages</h2><p><a class="link"   target="_blank" rel="noopener" href="https://docs.astro.build/zh-cn/guides/deploy/github/" >docs.astro.build&#x2F;zh-cn&#x2F;guides&#x2F;deploy&#x2F;github&#x2F;<i class="fas fa-external-link-alt"></i></a></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">GitHub</span> <span class="string">Pages</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="comment"># 每次推送到 `main` 分支时触发这个“工作流程”</span></span><br><span class="line">  <span class="comment"># 如果你使用了别的分支名，请按需将 `main` 替换成你的分支名</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span> [ <span class="string">main</span> ]</span><br><span class="line">  <span class="comment"># 允许你在 GitHub 上的 Actions 标签中手动触发此“工作流程”</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 允许 job 克隆 repo 并创建一个 page deployment</span></span><br><span class="line"></span><br><span class="line"><span class="string">```yaml</span></span><br><span class="line"><span class="attr">permissions:</span></span><br><span class="line">  <span class="attr">contents:</span> <span class="string">read</span></span><br><span class="line">  <span class="attr">pages:</span> <span class="string">write</span></span><br><span class="line">  <span class="attr">id-token:</span> <span class="string">write</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">your</span> <span class="string">repository</span> <span class="string">using</span> <span class="string">git</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v5</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install,</span> <span class="string">build,</span> <span class="string">and</span> <span class="string">upload</span> <span class="string">your</span> <span class="string">site</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">withastro/action@v5</span></span><br><span class="line">        <span class="comment"># with:</span></span><br><span class="line">          <span class="comment"># path: . # 存储库中 Astro 项目的根位置。（可选）</span></span><br><span class="line">          <span class="comment"># node-version: 20 # 用于构建站点的特定 Node.js 版本，默认为 20。（可选）</span></span><br><span class="line">          <span class="comment"># package-manager: pnpm@latest # 应使用哪个 Node.js 包管理器来安装依赖项和构建站点。会根据存储库中的 lockfile 自动检测。（可选）</span></span><br><span class="line">          <span class="comment"># build-cmd: pnpm run build # 用于构建你的网站的命令。默认运行软件包的构建脚本或任务。（可选）</span></span><br><span class="line">        <span class="comment"># env:</span></span><br><span class="line">          <span class="comment"># PUBLIC_POKEAPI: &#x27;https://pokeapi.co/api/v2&#x27; # 对变量值使用单引号。（可选）</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">deploy:</span></span><br><span class="line">    <span class="attr">needs:</span> <span class="string">build</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">name:</span> <span class="string">github-pages</span></span><br><span class="line">      <span class="attr">url:</span> <span class="string">$&#123;&#123;</span> <span class="string">steps.deployment.outputs.page_url</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">GitHub</span> <span class="string">Pages</span></span><br><span class="line">        <span class="attr">id:</span> <span class="string">deployment</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/deploy-pages@v4</span></span><br></pre></td></tr></table></figure>
-<h2 id="Error-Failed-to-create-deployment-status-404"><a href="#Error-Failed-to-create-deployment-status-404" class="headerlink" title="Error: Failed to create deployment (status: 404)"></a>Error: Failed to create deployment (status: 404)</h2><p><img   src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Deploy_to_GitHub_Pages.png"  alt="Astro Deploy to GitHub Pages"></p>
-<p>这个错误表明 <code>GitHub Pages</code> 部署失败，主要原因是 <code>GitHub Pages</code> 没有在仓库设置中启用。错误信息明确指出：</p>
-<p>Ensure GitHub Pages has been enabled: <a class="link"   target="_blank" rel="noopener" href="https://github.com/shenjuexiao/astro/settings/pages" >https://github.com/shenjuexiao/astro/settings/pages<i class="fas fa-external-link-alt"></i></a></p>
-
-                    
-                </div>
-
-                
-
-                <div class="post-bottom-tags-and-share border-box">
-                    <div>
-                        
-                    </div>
-                    <div>
-                        
-                    </div>
-                </div>
-
-                
-
-                
-                    <div class="post-nav border-box">
-                        
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2026/2026-07-30-GitHub-CNAME/"
-                                   title="GitHub CNAME"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">GitHub CNAME</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
-                        
-                            <div class="next-post">
-                                <a class="next"
-                                   rel="next"
-                                   href="/2026/2026-07-30-npm-vs-npx/"
-                                   title="npm vs npx"
-                                >
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">npm vs npx</span>
-                                        <span class="post-nav-item">下一篇</span>
-                                    </span>
-                                    <span class="right arrow-icon flex-center">
-                                        <i class="fas fa-chevron-right"></i>
-                                    </span>
-                                </a>
-                            </div>
-                        
-                    </div>
-                
-
-                
-                    
+  &.encrypt {
+    .post-aging-tips {
+      display none !important
+    }
+  }
 
 
+  +keep-tablet() {
+    .pc-post-toc {
+      display none !important
+    }
+
+    .post-content-container {
+      width 100% !important
+    }
+  }
 
 
+  .post-content-container {
+    order 0
+    width 100%
+    height 100%
 
 
-                
-            </div>
-        </div>
+    keep-container(1, 0, 2rem)
 
-        
-    </div>
-</div>
+    +keep-mobile() {
+      padding 0 0.2rem !important
+      box-shadow none !important
+
+      &:hover {
+        box-shadow none !important
+      }
+    }
+
+
+    .post-content-top {
+      display flex
+      align-items flex-end
+      width 100%
+      padding-top $spacer-padding
+      padding-right $spacer-padding
+      overflow hidden
+      background-color var(--background-color-2)
+      border-top-left-radius var(--box-border-radius)
+      border-top-right-radius var(--box-border-radius)
+
+      +keep-tablet() {
+        height 12.8rem
+        padding-top $spacer-padding * 0.8
+        padding-right $spacer-padding  * 0.8
+
+        .cover-post-title {
+          padding $spacer-padding * 0.5 * 0.8 $spacer-padding * 0.8 !important
+          font-size $post-title-font-size * 0.9 !important
+          line-height 1.5 !important
+        }
+      }
+
+
+      +keep-mobile() {
+        height 11.8rem
+        padding-top $spacer-padding * 0.6
+        padding-right $spacer-padding  * 0.6
+
+        .cover-post-title {
+          padding $spacer-padding * 0.5 * 0.6 $spacer-padding * 0.6 !important
+          font-size $post-title-font-size * 0.8 !important
+          line-height 1.4 !important
+        }
+      }
+
+
+      .cover-post-title {
+        position relative
+        z-index $z-index-1
+        box-sizing border-box
+        max-width 100%
+        max-height 100%
+        padding $spacer-padding * 0.5 $spacer-padding
+        overflow-y auto
+        color var(--text-color-2)
+        font-weight 600
+        font-size $post-title-font-size
+        line-height 1.6
+        background var(--background-color-1-transparent)
+        border-top-right-radius var(--box-border-radius)
+        -webkit-backdrop-filter blur(2px)
+        backdrop-filter blur(2px)
+      }
+
+
+      .post-cover {
+        position absolute
+        top 0
+        left 0
+        box-sizing border-box
+        width 100%
+        height 100%
+        object-fit cover
+      }
+    }
+
+
+    .post-content-bottom {
+      padding $spacer-padding
+
+      &.has-cover {
+        padding-top $spacer-padding * 0.5
+      }
+
+      +keep-mobile() {
+        padding $spacer-padding * 0.5 0 !important
+      }
+
+      .post-title {
+        color var(--text-color-2)
+        font-weight 600
+        font-size $post-title-font-size
+        line-height 1.6
+        text-align var(--post-title-align)
+
+        +keep-tablet() {
+          font-size $post-title-font-size * 0.9
+        }
+
+        +keep-mobile() {
+          font-size $post-title-font-size * 0.8
+        }
+      }
+
+
+      .post-header {
+        display flex
+        justify-content flex-start
+        width 100%
+        margin-top 1rem
+
+        +keep-tablet() {
+          margin-top 0.9rem
+          transform scale(0.9)
+          transform-origin left top
+        }
+
+        .avatar-box {
+          display var(--post-author-avatar)
+          flex-shrink 0
+          width $avatar-width
+          height $avatar-width
+          margin-right 0.8rem
+          padding 0.1rem
+          border 1px solid var(--border-color)
+          border-radius 50%
+
+          img {
+            width 100%
+            height 100%
+            background var(--avatar-background-color)
+            border-radius 50%
+          }
+        }
+
+
+        .info-box {
+          display flex
+          flex-direction column
+          justify-content space-between
+          box-sizing border-box
+          width 100%
+          height 100%
+          padding 0.2rem 0
+
+          .author {
+            display var(--post-author-name)
+            align-items center
+            font-weight 600
+            font-size 1.18rem
+
+            .name {
+              color var(--text-color-3)
+            }
+
+            .author-badge {
+              margin-left 0.8rem
+              padding 0 0.4rem
+              color var(--text-color-badge)
+              font-weight 500
+              font-size 0.8rem
+              background var(--primary-color)
+              border-radius 0.4rem
+            }
+          }
+
+          .meta-info {
+            margin-top 0.1rem
+          }
+        }
+      }
+
+
+      .post-content {
+        margin-top calc(var(--component-gap) * 0.8)
+        padding-bottom calc(var(--component-gap) * 0.8)
+        color var(--text-color-3)
+        text-align justify
+        word-wrap break-word
+
+        +keep-tablet() {
+          margin-top calc(var(--component-gap) * 0.6)
+          padding-bottom calc(var(--component-gap) * 0.6)
+        }
+
+
+        .post-aging-tips {
+          position relative
+          display none
+          box-sizing border-box
+          margin-bottom 1.8rem
+          padding 1rem
+          color var(--keep-warning-color)
+          line-height 1.6
+          background var(--keep-warning-background-color)
+          border 0.1rem solid var(--keep-warning-border-color)
+          border-radius 0.4rem
+
+          i {
+            margin-right 0.4rem
+            color var(--keep-warning-color)
+          }
+
+          .days {
+            color var(--keep-warning-color)
+          }
+        }
+
+
+        .post-encrypt-box {
+          margin-left $avatar-width + 0.8rem
+          padding 1rem 0
+
+          .password-input {
+            width 60%
+            margin 0
+            padding 0.8rem 1.2rem
+            color var(--text-color-3)
+            font-weight 400 !important
+            font-size 1.2rem
+            letter-spacing 2px
+            background none
+            border none
+            border-bottom 0.2rem solid var(--border-color)
+            outline none
+
+            +keep-tablet() {
+              width 80%
+            }
+
+            &.error {
+              border 0.2rem solid var(--keep-danger-color)
+            }
+
+            &::placeholder {
+              color var(--text-color-4)
+              font-size 1.1rem
+              letter-spacing 1px
+            }
+
+            &:hover
+            &:focus {
+              background var(--background-color-2)
+            }
+          }
+        }
+
+        if (hexo-config('post') && hexo-config('post.copyright_info') == true) {
+          border-bottom 2px dashed var(--border-color)
+        }
+      }
+
+
+      .post-bottom-tags-and-share {
+        display flex
+        justify-content space-between
+        width 100%
+        margin-top 1rem
+
+        .post-tags-box {
+          display flex
+          flex-wrap wrap
+          align-items center
+          justify-content flex-start
+          width 100%
+          font-size 0.96rem
+
+
+          .tag-item {
+            margin-right 0.4rem
+            line-height 2
+
+            .icon {
+              color var(--text-color-3)
+              font-size 0.88rem
+            }
+          }
+        }
+      }
+
+
+      .post-nav {
+        height 2.8rem
+        margin-top var(--component-gap)
+
+        .prev-post
+        .next-post {
+          box-sizing border-box
+          max-width $post-nav-max-width
+          height 100%
+          keep-container(1, 0.8rem, 0)
+          border-radius 0.32rem
+
+
+          a {
+            position relative
+            display block
+            box-sizing border-box
+            width 100%
+            height 100%
+
+            &.prev {
+              padding-left $arrow-icon-width
+            }
+
+            &.next {
+              padding-right $arrow-icon-width
+            }
+
+            .arrow-icon {
+              position absolute
+              top 0
+              width $arrow-icon-width
+              height 100%
+
+              &.left {
+                left 0
+              }
+
+              &.right {
+                right 0
+              }
+            }
+
+            .title {
+              width 100%
+              height 100%
+            }
+          }
+        }
+
+        .prev-post {
+          float left
+        }
+
+        .next-post {
+          float right
+        }
+
+        .post-nav-item {
+          display none
+
+          +keep-tablet() {
+            display inline-block
+          }
+        }
+
+
+        .post-nav-title-item {
+          +keep-tablet() {
+            display none
+          }
+        }
+      }
+    }
+  }
+
+
+  .pc-post-toc {
+    position sticky
+    top calc(var(--header-height) + var(--component-gap))
+    display none
+    flex-shrink 0
+    box-sizing border-box
+    width $toc-container-width
+    max-height calc(100vh - calc(var(--header-height) + var(--component-gap)))
+    transition-t("top, display, max-height", "0, 0, 0", "0.2, 0.1, 0.2", "ease, ease, ease")
+
+    &.right-toc {
+      order 1
+      padding 2rem 0 2rem 1.8rem
+    }
+
+    &.left-toc {
+      order -1
+      padding 2rem 1.8rem 2rem 0
+    }
+
+    .header-shrink & {
+      top calc(var(--header-shrink-height) + var(--component-gap))
+      max-height calc(100vh - calc(var(--header-shrink-height) + var(--component-gap)))
+    }
+  }
+}
 
 
                 

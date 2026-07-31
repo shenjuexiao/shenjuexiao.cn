@@ -165,193 +165,444 @@
             <div class="main-content border-box">
                 
 
-                    
-<div class="fade-in-down-animation">
-    <div class="post-page-container border-box">
-        <div class="post-content-container border-box">
-            
+                    @import "../../common/stylus-variables.styl"
 
-            <div class="post-content-bottom border-box">
-                
-                    <div class="post-title">
-                        GitHub raw vs cdn
-                    </div>
-                
-
-                
-                    <div class="post-header border-box">
-                        
-                            <div class="avatar-box border-box">
-                                <img src="/images/@shenjuexiao1C_600%C3%97600.png">
-                            </div>
-                        
-                        <div class="info-box">
-                            <div class="author border-box">
-                                <span class="name">shenjuexiao</span>
-                                
-                                    <span class="author-badge">Lv3</span>
-                                
-                            </div>
-                            <div class="meta-info border-box">
-                                
-
-<div class="post-meta-info-container border-box post">
-    <div class="post-meta-info border-box">
-        
-
-        
-            <span class="meta-info-item post-create-date">
-                <i class="icon fa-solid fa-calendar-plus"></i>&nbsp;
-                <span class="datetime">2026-07-30 14:48:16</span>
-            </span>
-
-            
-                <span class="meta-info-item post-update-date">
-                    <i class="icon fa-solid fa-file-pen"></i>&nbsp;
-                    <span class="datetime" data-updated="Thu Jul 30 2026 06:48:16 GMT+0000">2026-07-30 14:48:16</span>
-                </span>
-            
-        
-
-        
-
-        
-
-        
-        
-        
-        
-    </div>
-
-    
-</div>
-
-                            </div>
-                        </div>
-                    </div>
-                
-
-                <div class="post-content keep-markdown-body ">
-                    
-
-                    
-                         <h1 id="GitHub-raw-vs-cdn"><a href="#GitHub-raw-vs-cdn" class="headerlink" title="GitHub raw vs cdn"></a>GitHub raw vs cdn</h1><h1 id="GitHub-图片加速对比"><a href="#GitHub-图片加速对比" class="headerlink" title="GitHub 图片加速对比"></a>GitHub 图片加速对比</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
-<li><a class="link"   target="_blank" rel="noopener" href="https://chat.deepseek.com/share/d6zojxbtsmt6vo9uyi" >GitHub 图片加速对比<i class="fas fa-external-link-alt"></i></a><a class="link"   target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/c18ff170-9222-4548-a7a4-5b8be0cae5e4" >（Deepseek）<i class="fas fa-external-link-alt"></i></a></li>
-</ul>
-<h2 id="🔍比较图片引用"><a href="#🔍比较图片引用" class="headerlink" title="🔍比较图片引用"></a>🔍比较图片引用</h2><p><code>raw.githubusercontent.com</code> 和 <code>cdn.jsdelivr.net/gh</code></p>
-<p>简单来说，<code>raw.githubusercontent.com</code> 是图片在 GitHub 上的<strong>源服务器地址</strong>，而 <code>cdn.jsdelivr.net/gh</code> 则是一个<strong>免费的 CDN 加速服务</strong>，它的核心作用就是为前者&quot;提速&quot;。</p>
-<p>下面是它们在几个关键维度上的直接对比：</p>
-<table>
-<thead>
-<tr>
-<th align="left">对比维度</th>
-<th align="left"><code>raw.githubusercontent.com</code> (源站)</th>
-<th align="left"><code>cdn.jsdelivr.net/gh</code> (CDN)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><strong>核心作用</strong></td>
-<td align="left">直接访问 GitHub 服务器上的原始文件</td>
-<td align="left">通过全球 CDN 节点缓存并分发文件，进行加速</td>
-</tr>
-<tr>
-<td align="left"><strong>访问速度</strong></td>
-<td align="left"><strong>通常较慢</strong>，尤其在中国大陆地区，延迟高，加载不稳定</td>
-<td align="left"><strong>显著更快</strong>，利用全球边缘节点就近响应，可大幅缩短加载时间</td>
-</tr>
-<tr>
-<td align="left"><strong>稳定性与限制</strong></td>
-<td align="left">存在<strong>请求频率限制 (Rate Limit)</strong>，高并发或大量图片时可能返回 <strong>HTTP 429 错误</strong>，导致图片无法加载</td>
-<td align="left">通常<strong>无严格的请求限制</strong>，但有<strong>单文件 50MB 的大小限制</strong>，且<strong>仅支持公开仓库</strong></td>
-</tr>
-<tr>
-<td align="left"><strong>缓存机制</strong></td>
-<td align="left">缓存策略较弱，重复访问可能仍需重新下载</td>
-<td align="left">具备<strong>强大的缓存机制</strong>（默认缓存24小时或更久），重复访问直接从 CDN 节点读取，速度极快</td>
-</tr>
-<tr>
-<td align="left"><strong>URL 格式示例</strong></td>
-<td align="left"><code>https://raw.githubusercontent.com/用户名/仓库名/分支名/图片路径.png</code></td>
-<td align="left"><code>https://cdn.jsdelivr.net/gh/用户名/仓库名@分支名或版本号/图片路径.png</code></td>
-</tr>
-</tbody></table>
-<h3 id="⚠️-重要的潜在问题与建议"><a href="#⚠️-重要的潜在问题与建议" class="headerlink" title="⚠️ 重要的潜在问题与建议"></a>⚠️ 重要的潜在问题与建议</h3><p>虽然 <code>jsDelivr</code> 优势明显，但在国内使用时需要留意一个已知风险：</p>
-<p><strong>国内 DNS 污染问题</strong>：<code>jsDelivr</code> 的官方域名 <code>cdn.jsdelivr.net</code> 在国内曾因DNS污染导致访问失败。如果你遇到这种情况，可以考虑使用它未被污染的备用域名，例如 <code>fastly.jsdelivr.net</code> 或 <code>gcore.jsdelivr.net</code> 作为替代方案。</p>
-<h3 id="💎-总结与选择建议"><a href="#💎-总结与选择建议" class="headerlink" title="💎 总结与选择建议"></a>💎 总结与选择建议</h3><ul>
-<li>对于个人项目、博客、官网等公开场景：强烈建议使用 <code>cdn.jsdelivr.net/gh</code>**。它能带来质的飞跃，让图片&quot;秒开&quot;不再困难，综合体验完胜直连源站。</li>
-<li><code>raw.githubusercontent.com</code> 的适用场景**：主要用于在 GitHub 页面上直接预览文件内容，或在你需要从服务器后台程序以编程方式获取文件原始内容时使用。</li>
-</ul>
-
-                    
-                </div>
-
-                
-
-                <div class="post-bottom-tags-and-share border-box">
-                    <div>
-                        
-                    </div>
-                    <div>
-                        
-                    </div>
-                </div>
-
-                
-
-                
-                    <div class="post-nav border-box">
-                        
-                            <div class="prev-post">
-                                <a class="prev"
-                                   rel="prev"
-                                   href="/2026/2026-07-30-npm-vs-npx/"
-                                   title="npm vs npx"
-                                >
-                                    <span class="left arrow-icon flex-center">
-                                        <i class="fas fa-chevron-left"></i>
-                                    </span>
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">npm vs npx</span>
-                                        <span class="post-nav-item">上一篇</span>
-                                    </span>
-                                </a>
-                            </div>
-                        
-                        
-                            <div class="next-post">
-                                <a class="next"
-                                   rel="next"
-                                   href="/2026/2026-07-30-Bing-Wallpaper-API/"
-                                   title="Bing Wallpaper API"
-                                >
-                                    <span class="title flex-center">
-                                        <span class="post-nav-title-item text-ellipsis">Bing Wallpaper API</span>
-                                        <span class="post-nav-item">下一篇</span>
-                                    </span>
-                                    <span class="right arrow-icon flex-center">
-                                        <i class="fas fa-chevron-right"></i>
-                                    </span>
-                                </a>
-                            </div>
-                        
-                    </div>
-                
-
-                
-                    
+$avatar-width = 3.2rem
+$arrow-icon-width = 1rem
+$post-nav-max-width = 14rem
+$post-title-font-size = 1.6rem
+$toc-container-width = 15rem
+$spacer-padding = 2rem
 
 
+.post-page-container {
+  display flex
+  justify-content space-between
+  width 100%
+  height 100%
+
+  &.show-toc {
+    .pc-post-toc {
+      display block
+    }
+
+    .post-content-container {
+      width 'calc(100% - %s)' % $toc-container-width
+    }
+  }
 
 
+  &.encrypt {
+    .post-aging-tips {
+      display none !important
+    }
+  }
 
 
-                
-            </div>
-        </div>
+  +keep-tablet() {
+    .pc-post-toc {
+      display none !important
+    }
 
-        
-    </div>
-</div>
+    .post-content-container {
+      width 100% !important
+    }
+  }
+
+
+  .post-content-container {
+    order 0
+    width 100%
+    height 100%
+
+
+    keep-container(1, 0, 2rem)
+
+    +keep-mobile() {
+      padding 0 0.2rem !important
+      box-shadow none !important
+
+      &:hover {
+        box-shadow none !important
+      }
+    }
+
+
+    .post-content-top {
+      display flex
+      align-items flex-end
+      width 100%
+      padding-top $spacer-padding
+      padding-right $spacer-padding
+      overflow hidden
+      background-color var(--background-color-2)
+      border-top-left-radius var(--box-border-radius)
+      border-top-right-radius var(--box-border-radius)
+
+      +keep-tablet() {
+        height 12.8rem
+        padding-top $spacer-padding * 0.8
+        padding-right $spacer-padding  * 0.8
+
+        .cover-post-title {
+          padding $spacer-padding * 0.5 * 0.8 $spacer-padding * 0.8 !important
+          font-size $post-title-font-size * 0.9 !important
+          line-height 1.5 !important
+        }
+      }
+
+
+      +keep-mobile() {
+        height 11.8rem
+        padding-top $spacer-padding * 0.6
+        padding-right $spacer-padding  * 0.6
+
+        .cover-post-title {
+          padding $spacer-padding * 0.5 * 0.6 $spacer-padding * 0.6 !important
+          font-size $post-title-font-size * 0.8 !important
+          line-height 1.4 !important
+        }
+      }
+
+
+      .cover-post-title {
+        position relative
+        z-index $z-index-1
+        box-sizing border-box
+        max-width 100%
+        max-height 100%
+        padding $spacer-padding * 0.5 $spacer-padding
+        overflow-y auto
+        color var(--text-color-2)
+        font-weight 600
+        font-size $post-title-font-size
+        line-height 1.6
+        background var(--background-color-1-transparent)
+        border-top-right-radius var(--box-border-radius)
+        -webkit-backdrop-filter blur(2px)
+        backdrop-filter blur(2px)
+      }
+
+
+      .post-cover {
+        position absolute
+        top 0
+        left 0
+        box-sizing border-box
+        width 100%
+        height 100%
+        object-fit cover
+      }
+    }
+
+
+    .post-content-bottom {
+      padding $spacer-padding
+
+      &.has-cover {
+        padding-top $spacer-padding * 0.5
+      }
+
+      +keep-mobile() {
+        padding $spacer-padding * 0.5 0 !important
+      }
+
+      .post-title {
+        color var(--text-color-2)
+        font-weight 600
+        font-size $post-title-font-size
+        line-height 1.6
+        text-align var(--post-title-align)
+
+        +keep-tablet() {
+          font-size $post-title-font-size * 0.9
+        }
+
+        +keep-mobile() {
+          font-size $post-title-font-size * 0.8
+        }
+      }
+
+
+      .post-header {
+        display flex
+        justify-content flex-start
+        width 100%
+        margin-top 1rem
+
+        +keep-tablet() {
+          margin-top 0.9rem
+          transform scale(0.9)
+          transform-origin left top
+        }
+
+        .avatar-box {
+          display var(--post-author-avatar)
+          flex-shrink 0
+          width $avatar-width
+          height $avatar-width
+          margin-right 0.8rem
+          padding 0.1rem
+          border 1px solid var(--border-color)
+          border-radius 50%
+
+          img {
+            width 100%
+            height 100%
+            background var(--avatar-background-color)
+            border-radius 50%
+          }
+        }
+
+
+        .info-box {
+          display flex
+          flex-direction column
+          justify-content space-between
+          box-sizing border-box
+          width 100%
+          height 100%
+          padding 0.2rem 0
+
+          .author {
+            display var(--post-author-name)
+            align-items center
+            font-weight 600
+            font-size 1.18rem
+
+            .name {
+              color var(--text-color-3)
+            }
+
+            .author-badge {
+              margin-left 0.8rem
+              padding 0 0.4rem
+              color var(--text-color-badge)
+              font-weight 500
+              font-size 0.8rem
+              background var(--primary-color)
+              border-radius 0.4rem
+            }
+          }
+
+          .meta-info {
+            margin-top 0.1rem
+          }
+        }
+      }
+
+
+      .post-content {
+        margin-top calc(var(--component-gap) * 0.8)
+        padding-bottom calc(var(--component-gap) * 0.8)
+        color var(--text-color-3)
+        text-align justify
+        word-wrap break-word
+
+        +keep-tablet() {
+          margin-top calc(var(--component-gap) * 0.6)
+          padding-bottom calc(var(--component-gap) * 0.6)
+        }
+
+
+        .post-aging-tips {
+          position relative
+          display none
+          box-sizing border-box
+          margin-bottom 1.8rem
+          padding 1rem
+          color var(--keep-warning-color)
+          line-height 1.6
+          background var(--keep-warning-background-color)
+          border 0.1rem solid var(--keep-warning-border-color)
+          border-radius 0.4rem
+
+          i {
+            margin-right 0.4rem
+            color var(--keep-warning-color)
+          }
+
+          .days {
+            color var(--keep-warning-color)
+          }
+        }
+
+
+        .post-encrypt-box {
+          margin-left $avatar-width + 0.8rem
+          padding 1rem 0
+
+          .password-input {
+            width 60%
+            margin 0
+            padding 0.8rem 1.2rem
+            color var(--text-color-3)
+            font-weight 400 !important
+            font-size 1.2rem
+            letter-spacing 2px
+            background none
+            border none
+            border-bottom 0.2rem solid var(--border-color)
+            outline none
+
+            +keep-tablet() {
+              width 80%
+            }
+
+            &.error {
+              border 0.2rem solid var(--keep-danger-color)
+            }
+
+            &::placeholder {
+              color var(--text-color-4)
+              font-size 1.1rem
+              letter-spacing 1px
+            }
+
+            &:hover
+            &:focus {
+              background var(--background-color-2)
+            }
+          }
+        }
+
+        if (hexo-config('post') && hexo-config('post.copyright_info') == true) {
+          border-bottom 2px dashed var(--border-color)
+        }
+      }
+
+
+      .post-bottom-tags-and-share {
+        display flex
+        justify-content space-between
+        width 100%
+        margin-top 1rem
+
+        .post-tags-box {
+          display flex
+          flex-wrap wrap
+          align-items center
+          justify-content flex-start
+          width 100%
+          font-size 0.96rem
+
+
+          .tag-item {
+            margin-right 0.4rem
+            line-height 2
+
+            .icon {
+              color var(--text-color-3)
+              font-size 0.88rem
+            }
+          }
+        }
+      }
+
+
+      .post-nav {
+        height 2.8rem
+        margin-top var(--component-gap)
+
+        .prev-post
+        .next-post {
+          box-sizing border-box
+          max-width $post-nav-max-width
+          height 100%
+          keep-container(1, 0.8rem, 0)
+          border-radius 0.32rem
+
+
+          a {
+            position relative
+            display block
+            box-sizing border-box
+            width 100%
+            height 100%
+
+            &.prev {
+              padding-left $arrow-icon-width
+            }
+
+            &.next {
+              padding-right $arrow-icon-width
+            }
+
+            .arrow-icon {
+              position absolute
+              top 0
+              width $arrow-icon-width
+              height 100%
+
+              &.left {
+                left 0
+              }
+
+              &.right {
+                right 0
+              }
+            }
+
+            .title {
+              width 100%
+              height 100%
+            }
+          }
+        }
+
+        .prev-post {
+          float left
+        }
+
+        .next-post {
+          float right
+        }
+
+        .post-nav-item {
+          display none
+
+          +keep-tablet() {
+            display inline-block
+          }
+        }
+
+
+        .post-nav-title-item {
+          +keep-tablet() {
+            display none
+          }
+        }
+      }
+    }
+  }
+
+
+  .pc-post-toc {
+    position sticky
+    top calc(var(--header-height) + var(--component-gap))
+    display none
+    flex-shrink 0
+    box-sizing border-box
+    width $toc-container-width
+    max-height calc(100vh - calc(var(--header-height) + var(--component-gap)))
+    transition-t("top, display, max-height", "0, 0, 0", "0.2, 0.1, 0.2", "ease, ease, ease")
+
+    &.right-toc {
+      order 1
+      padding 2rem 0 2rem 1.8rem
+    }
+
+    &.left-toc {
+      order -1
+      padding 2rem 1.8rem 2rem 0
+    }
+
+    .header-shrink & {
+      top calc(var(--header-shrink-height) + var(--component-gap))
+      max-height calc(100vh - calc(var(--header-shrink-height) + var(--component-gap)))
+    }
+  }
+}
 
 
                 
