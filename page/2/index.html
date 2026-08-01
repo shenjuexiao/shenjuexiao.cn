@@ -138,7 +138,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">20</span>
+          <span class="site-state-item-count">21</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -164,6 +164,149 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-NPM-packages-not-found/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-07-30-NPM-packages-not-found/" class="post-title-link" itemprop="url">NPM packages not found</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-07-30 14:33:11" itemprop="dateCreated datePublished" datetime="2026-07-30T14:33:11+08:00">2026-07-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-07-31 13:56:02" itemprop="dateModified" datetime="2026-07-31T13:56:02+08:00">2026-07-31</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="NPM-packages-not-found"><a href="#NPM-packages-not-found" class="headerlink" title="NPM packages not found"></a>NPM packages not found</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/75k9rg5oxr7uivdn3h">TDesign小程序看板设计</a><a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/1baeab24-723a-4953-be69-007b610bc7ed">（Deepseek）</a></li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/wechat_devtools_NPM_packages.png" alt="NPM packages not found"></p>
+<blockquote>
+<p>NPM packages not found. Please confirm npm packages which need to build are belong to <code>miniprogramRoot</code> directory. Or you may edit project.config.json’s <code>packNpmManually</code> and <code>packNpmRelationList</code><br>appid: wx429151859caeb046<br>openid: o6zAJsws4oaOjHasDK8qBirpUw8Q<br>ideVersion: 2.01.2510290<br>osType: win32-x64</p>
+</blockquote>
+<p>开发者工具找不到需要构建的 npm 包。 </p>
+<p>微信web开发者工具：wechat_devtools_2.01.2510290_win32_x64.exe  </p>
+<p> IDE 版本（2.01.2510290），这套新版的配置方式确实需要特别注意。</p>
+<h2 id="🎯根本原因"><a href="#🎯根本原因" class="headerlink" title="🎯根本原因"></a>🎯根本原因</h2><p> <code>project.config.json</code> 中可能同时存在 <code>miniprogramRoot</code> 配置，而 <code>packNpmRelationList</code> 中的路径没有与之匹配，导致工具找不到 <code>node_modules</code>。</p>
+<p>##✅ 解决方案（三步走）</p>
+<h3 id="第一步：确认项目结构"><a href="#第一步：确认项目结构" class="headerlink" title="第一步：确认项目结构"></a>第一步：确认项目结构</h3><p>典型的微信小程序项目结构：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">你的项目文件夹/</span><br><span class="line">├── miniprogram/	← 小程序代码（app.json<span class="punctuation">,</span> pages/ 等）</span><br><span class="line">├── node_modules/	← npm 包（安装后自动生成）</span><br><span class="line">├── package.json</span><br><span class="line">├── project.config.json</span><br><span class="line">└── ...</span><br></pre></td></tr></table></figure>
+<p>如果 <code>miniprogram/</code> 存在，说明 <code>miniprogramRoot</code> 已经指向了 <code>miniprogram</code> 文件夹。</p>
+<h3 id="第二步：修改-project-config-json（关键）"><a href="#第二步：修改-project-config-json（关键）" class="headerlink" title="第二步：修改 project.config.json（关键）"></a>第二步：修改 <code>project.config.json</code>（关键）</h3><p>在 <code>project.config.json</code> 中，按以下方式配置，注意 <code>miniprogramNpmDistDir</code> 的值要根据你的实际 <code>miniprogramRoot</code> 来调整。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">	<span class="comment">// 假设你的代码在 miniprogram 文件夹</span></span><br><span class="line">  \<span class="string">&quot;miniprogramRoot\&quot;: \&quot;miniprogram/\&quot;,   </span></span><br><span class="line"><span class="string">  \&quot;setting\&quot;: &#123;</span></span><br><span class="line"><span class="string">    \&quot;packNpmManually\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;packNpmRelationList\&quot;: [</span></span><br><span class="line"><span class="string">      &#123;</span></span><br><span class="line"><span class="string">        \&quot;packageJsonPath\&quot;: \&quot;./package.json\&quot;,</span></span><br><span class="line"><span class="string">        \&quot;miniprogramNpmDistDir\&quot;: \&quot;./miniprogram/\&quot;</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    ]</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>关键点说明：  </p>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>miniprogramRoot</td>
+<td>&quot;miniprogram&#x2F;&quot;</td>
+<td>小程序代码文件夹</td>
+</tr>
+<tr>
+<td>packageJsonPath</td>
+<td>&quot;.&#x2F;package.json&quot;</td>
+<td>package.json 在项目根目录</td>
+</tr>
+<tr>
+<td>miniprogramNpmDistDir</td>
+<td>&quot;.&#x2F;miniprogram&#x2F;&quot;</td>
+<td>构建后的 miniprogram_npm 在 miniprogram&#x2F; 下面，小程序能引用</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>💡 如果你的小程序代码直接在根目录（没有 <code>miniprogram/</code> 文件夹），那么 <code>miniprogramRoot</code> 应该是 &quot;.&#x2F;&quot;，<code>miniprogramNpmDistDir</code> 也设为 &quot;.&#x2F;&quot; 即可。</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<h3 id="第三步：重新构建"><a href="#第三步：重新构建" class="headerlink" title="第三步：重新构建"></a>第三步：重新构建</h3><p>保存 <code>project.config.json</code> 文件。</p>
+<p>点击微信开发者工具菜单栏：<code>工具</code> -&gt; <code>构建 npm</code>。</p>
+<p>等待构建完成，项目根目录（或 <code>miniprogram/</code> 下）会出现 <code>miniprogram_npm</code> 文件夹。</p>
+<h3 id="🔧-“杀手锏”"><a href="#🔧-“杀手锏”" class="headerlink" title="🔧 “杀手锏”"></a>🔧 “杀手锏”</h3><p>如果还是报错，试试这个“杀手锏”。</p>
+<p>有些情况下，开发者工具缓存了旧配置，导致新配置不生效。可以这样做：</p>
+<p>完全关闭微信开发者工具。</p>
+<p>手动删除项目下的 <code>miniprogram_npm</code> 文件夹（如果有）。</p>
+<p>重新打开开发者工具，先不要点击<code>构建 npm</code>。</p>
+<p>先点击菜单栏 项目 -&gt; 重新打开此项目，让工具重新加载所有配置。</p>
+<p>然后再点击 <code>工具</code> -&gt; <code>构建 npm</code>。</p>
+<h2 id="修改后的-project-config-json"><a href="#修改后的-project-config-json" class="headerlink" title="修改后的 project.config.json"></a>修改后的 <code>project.config.json</code></h2><figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  \<span class="string">&quot;miniprogramRoot\&quot;: \&quot;miniprogram/\&quot;,</span></span><br><span class="line"><span class="string">  \&quot;cloudfunctionRoot\&quot;: \&quot;cloudfunctions/\&quot;,</span></span><br><span class="line"><span class="string">  \&quot;setting\&quot;: &#123;</span></span><br><span class="line"><span class="string">    \&quot;urlCheck\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;es6\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;enhance\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;postcss\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;preloadBackgroundData\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;minified\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;newFeature\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;coverView\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;nodeModules\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;autoAudits\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;showShadowRootInWxmlPanel\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;scopeDataCheck\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;uglifyFileName\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;checkInvalidKey\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;checkSiteMap\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;uploadWithSourceMap\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;compileHotReLoad\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;useMultiFrameRuntime\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;useApiHook\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;useApiHostProcess\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;babelSetting\&quot;: &#123;</span></span><br><span class="line"><span class="string">      \&quot;ignore\&quot;: [],</span></span><br><span class="line"><span class="string">      \&quot;disablePlugins\&quot;: [],</span></span><br><span class="line"><span class="string">      \&quot;outputPath\&quot;: \&quot;\&quot;</span></span><br><span class="line"><span class="string">    &#125;,</span></span><br><span class="line"><span class="string">    \&quot;enableEngineNative\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;useIsolateContext\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;useCompilerModule\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;userConfirmedUseCompilerModuleSwitch\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;userConfirmedBundleSwitch\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;packNpmManually\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;packNpmRelationList\&quot;: [</span></span><br><span class="line"><span class="string">      &#123;</span></span><br><span class="line"><span class="string">        \&quot;packageJsonPath\&quot;: \&quot;./package.json\&quot;,</span></span><br><span class="line"><span class="string">        \&quot;miniprogramNpmDistDir\&quot;: \&quot;./miniprogram/\&quot;</span></span><br><span class="line"><span class="string">      &#125;</span></span><br><span class="line"><span class="string">    ],</span></span><br><span class="line"><span class="string">    \&quot;minifyWXSS\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;compileWorklet\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;minifyWXML\&quot;: true,</span></span><br><span class="line"><span class="string">    \&quot;localPlugins\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;disableUseStrict\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;useCompilerPlugins\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;condition\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;swc\&quot;: false,</span></span><br><span class="line"><span class="string">    \&quot;disableSWC\&quot;: true</span></span><br><span class="line"><span class="string">  &#125;,</span></span><br><span class="line"><span class="string">  \&quot;appid\&quot;: \&quot;wx429151859caeb046\&quot;,</span></span><br><span class="line"><span class="string">  \&quot;projectname\&quot;: \&quot;quickstart-wx-cloud\&quot;,</span></span><br><span class="line"><span class="string">  \&quot;libVersion\&quot;: \&quot;3.17.0\&quot;,</span></span><br><span class="line"><span class="string">  \&quot;cloudfunctionTemplateRoot\&quot;: \&quot;cloudfunctionTemplate/\&quot;,</span></span><br><span class="line"><span class="string">  \&quot;condition\&quot;: &#123;</span></span><br><span class="line"><span class="string">    \&quot;search\&quot;: &#123;</span></span><br><span class="line"><span class="string">      \&quot;list\&quot;: []</span></span><br><span class="line"><span class="string">    &#125;,</span></span><br><span class="line"><span class="string">    \&quot;conversation\&quot;: &#123;</span></span><br><span class="line"><span class="string">      \&quot;list\&quot;: []</span></span><br><span class="line"><span class="string">    &#125;,</span></span><br><span class="line"><span class="string">    \&quot;plugin\&quot;: &#123;</span></span><br><span class="line"><span class="string">      \&quot;list\&quot;: []</span></span><br><span class="line"><span class="string">    &#125;,</span></span><br><span class="line"><span class="string">    \&quot;game\&quot;: &#123;</span></span><br><span class="line"><span class="string">      \&quot;list\&quot;: []</span></span><br><span class="line"><span class="string">    &#125;,</span></span><br><span class="line"><span class="string">    \&quot;miniprogram\&quot;: &#123;</span></span><br><span class="line"><span class="string">      \&quot;list\&quot;: [</span></span><br><span class="line"><span class="string">        &#123;</span></span><br><span class="line"><span class="string">          \&quot;id\&quot;: -1,</span></span><br><span class="line"><span class="string">          \&quot;name\&quot;: \&quot;db guide\&quot;,</span></span><br><span class="line"><span class="string">          \&quot;pathName\&quot;: \&quot;pages/databaseGuide/databaseGuide\&quot;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">      ]</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  &#125;,</span></span><br><span class="line"><span class="string">  \&quot;compileType\&quot;: \&quot;miniprogram\&quot;,</span></span><br><span class="line"><span class="string">  \&quot;srcMiniprogramRoot\&quot;: \&quot;miniprogram/\&quot;,</span></span><br><span class="line"><span class="string">  \&quot;packOptions\&quot;: &#123;</span></span><br><span class="line"><span class="string">    \&quot;ignore\&quot;: [],</span></span><br><span class="line"><span class="string">    \&quot;include\&quot;: []</span></span><br><span class="line"><span class="string">  &#125;,</span></span><br><span class="line"><span class="string">  \&quot;editorSetting\&quot;: &#123;</span></span><br><span class="line"><span class="string">    \&quot;tabIndent\&quot;: \&quot;insertSpaces\&quot;,</span></span><br><span class="line"><span class="string">    \&quot;tabSize\&quot;: 2</span></span><br><span class="line"><span class="string">  &#125;,</span></span><br><span class="line"><span class="string">  \&quot;simulatorPluginLibVersion\&quot;: &#123;&#125;</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1386,90 +1529,8 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-Hello-World-2015/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="shenjuexiao">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="神觉晓">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 神觉晓">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/2026-07-30-Hello-World-2015/" class="post-title-link" itemprop="url">Hello World 2015</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2026-07-30 12:42:23 / 修改时间：13:19:55" itemprop="dateCreated datePublished" datetime="2026-07-30T12:42:23+08:00">2026-07-30</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Hello-World-2015"><a href="#Hello-World-2015" class="headerlink" title="Hello World 2015"></a>Hello World 2015</h1><p>Welcome to <a target="_blank" rel="noopener" href="http://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="http://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="http://hexo.io/docs/troubleshooting.html">trobuleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new \&quot;My New Post\&quot;</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="http://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="http://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="http://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="http://hexo.io/docs/deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
   <nav class="pagination">
-    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+    <a class="extend prev" rel="prev" title="上一页" aria-label="上一页" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" title="下一页" aria-label="下一页" href="/page/3/"><i class="fa fa-angle-right"></i></a>
   </nav>
 
 </div>
@@ -1507,6 +1568,8 @@
 <noscript>
   <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
 </noscript>
+<script class="next-config" data-name="utterances" type="application/json">{"enable":true,"repo":"shenjuexiao/shenjuexiao.github.io","issue_term":"pathname","theme":"github-light"}</script>
+<script src="/js/third-party/comments/utterances.js" defer></script>
 
 </body>
 </html>
