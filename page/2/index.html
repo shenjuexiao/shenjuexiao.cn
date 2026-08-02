@@ -138,7 +138,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">23</span>
+          <span class="site-state-item-count">24</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -164,6 +164,112 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-Will-not-delete-all-non-push-URLs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-07-30-Will-not-delete-all-non-push-URLs/" class="post-title-link" itemprop="url">Will not delete all non-push URLs</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-07-30 14:37:42" itemprop="dateCreated datePublished" datetime="2026-07-30T14:37:42+08:00">2026-07-30</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Will-not-delete-all-non-push-URLs"><a href="#Will-not-delete-all-non-push-URLs" class="headerlink" title="Will not delete all non-push URLs"></a>Will not delete all non-push URLs</h1><h1 id="Git-远程-URL-修改"><a href="#Git-远程-URL-修改" class="headerlink" title="Git 远程 URL 修改"></a>Git 远程 URL 修改</h1><h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">PS D:\\Git\\shenjuexiao&gt; git remote set-url --delete gitee git@gitee.com:shenjuexiao/shenjuexiao.git</span><br><span class="line">fatal: Will not delete all non-push URLs</span><br></pre></td></tr></table></figure>
+
+<p>这个错误是因为你试图删除远程仓库 <code>gitee</code> 的<strong>唯一</strong> URL，Git 不允许这样做——每个远程仓库至少需要保留一个 URL。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><h3 id="方案一：先添加新-URL，再删除旧的"><a href="#方案一：先添加新-URL，再删除旧的" class="headerlink" title="方案一：先添加新 URL，再删除旧的"></a>方案一：先添加新 URL，再删除旧的</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 先添加一个新的 URL</span></span><br><span class="line">git remote set-url --add gitee git@gitee.com:new-repo.git</span><br><span class="line"></span><br><span class="line"><span class="comment"># 然后再删除旧的 URL</span></span><br><span class="line">git remote set-url --delete gitee git@gitee.com:shenjuexiao/shenjuexiao.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="方案二：直接修改-URL（推荐）"><a href="#方案二：直接修改-URL（推荐）" class="headerlink" title="方案二：直接修改 URL（推荐）"></a>方案二：直接修改 URL（推荐）</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 直接替换整个 URL，而不是删除</span></span><br><span class="line">git remote set-url gitee git@gitee.com:new-repo.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="方案三：删除整个远程仓库再重新添加"><a href="#方案三：删除整个远程仓库再重新添加" class="headerlink" title="方案三：删除整个远程仓库再重新添加"></a>方案三：删除整个远程仓库再重新添加</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 删除整个远程仓库</span></span><br><span class="line">git remote remove gitee</span><br><span class="line"></span><br><span class="line"><span class="comment"># 重新添加</span></span><br><span class="line">git remote add gitee git@gitee.com:new-repo.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="方案四：查看当前所有-URL，确认情况"><a href="#方案四：查看当前所有-URL，确认情况" class="headerlink" title="方案四：查看当前所有 URL，确认情况"></a>方案四：查看当前所有 URL，确认情况</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看 gitee 远程仓库的所有 URL</span></span><br><span class="line">git remote get-url --all gitee</span><br></pre></td></tr></table></figure>
+
+<h2 id="最常见的使用场景"><a href="#最常见的使用场景" class="headerlink" title="最常见的使用场景"></a>最常见的使用场景</h2><p>如果你是<strong>想修改远程仓库地址</strong>，直接用方案二最简单：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url gitee git@gitee.com:新的仓库地址.git</span><br></pre></td></tr></table></figure>
+
+<p>如果你是<strong>想添加多个推送地址</strong>（同时推送到多个仓库），用方案一。</p>
+<h2 id="重命名远程仓库"><a href="#重命名远程仓库" class="headerlink" title="重命名远程仓库"></a>重命名远程仓库</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote rename github origin</span><br></pre></td></tr></table></figure>
+
+<p>这个命令会：</p>
+<ul>
+<li>将远程仓库 <code>github</code> 重命名为 <code>origin</code></li>
+<li>保留所有原有的 URL 和配置</li>
+<li>更新所有本地跟踪分支（如 <code>github/main</code> → <code>origin/main</code>）</li>
+</ul>
+<h3 id="验证是否成功"><a href="#验证是否成功" class="headerlink" title="验证是否成功"></a>验证是否成功</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看所有远程仓库</span></span><br><span class="line">git remote -v</span><br></pre></td></tr></table></figure>
+
+<p>你应该能看到类似这样的输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">origin  git@github.com:你的用户名/仓库名.git (fetch)</span><br><span class="line">origin  git@github.com:你的用户名/仓库名.git (push)</span><br></pre></td></tr></table></figure>
+
+<h3 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h3><ul>
+<li>如果 <code>origin</code> 已经存在，这个命令会报错。你需要先删除或重命名现有的 <code>origin</code></li>
+<li>如果你的 <code>origin</code> 已经指向其他仓库，可以先确认一下：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看当前 origin 指向哪里</span></span><br><span class="line">git remote get-url origin</span><br></pre></td></tr></table></figure>
+
+<p>如果 <code>origin</code> 已经存在且不是你想用的，可以先删除它：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote remove origin</span><br><span class="line">git remote rename github origin</span><br></pre></td></tr></table></figure>
+
+<p>执行后记得检查一下 <code>git remote -v</code> 确认结果正确。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1487,130 +1593,6 @@
 <h3 id="删除文章"><a href="#删除文章" class="headerlink" title="删除文章"></a>删除文章</h3><p><code>Close issue</code> 或者 <code>Delete issue</code>，手动全局生成一次即可。</p>
 <h2 id="四、进阶"><a href="#四、进阶" class="headerlink" title="四、进阶"></a>四、进阶</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://meekdai.github.io/tag.html#Gmeek">Gmeek官方进阶教程</a></li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-Github-Issues-Blog-List/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="shenjuexiao">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="神觉晓">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 神觉晓">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/2026-07-30-Github-Issues-Blog-List/" class="post-title-link" itemprop="url">Github Issues Blog List</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2026-07-30 14:05:47 / 修改时间：14:26:56" itemprop="dateCreated datePublished" datetime="2026-07-30T14:05:47+08:00">2026-07-30</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Github-Issues-Blog-List"><a href="#Github-Issues-Blog-List" class="headerlink" title="Github Issues Blog List"></a>Github Issues Blog List</h1><h1 id="Github-Issues-博客项目（不完全统计）"><a href="#Github-Issues-博客项目（不完全统计）" class="headerlink" title="Github Issues 博客项目（不完全统计）"></a>Github Issues 博客项目（不完全统计）</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/gaishanke/gaiashanke.github.io/issues/2">Github Issues 搭建的博客项目列表</a></li>
-</ul>
-<h2 id="rena-to-github-blog"><a href="#rena-to-github-blog" class="headerlink" title="@rena.to&#x2F;github-blog"></a>@rena.to&#x2F;github-blog</h2><ul>
-<li><strong>技术栈</strong>：TypeScript（核心API库）</li>
-<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://www.npmjs.com/package/@rena.to/github-blog">https:&#x2F;&#x2F;www.npmjs.com&#x2F;package&#x2F;@rena.to&#x2F;github-blog</a></li>
-</ul>
-<h2 id="AllanChain-blog"><a href="#AllanChain-blog" class="headerlink" title="AllanChain&#x2F;blog"></a>AllanChain&#x2F;blog</h2><ul>
-<li><strong>技术栈</strong>：Astro</li>
-<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/AllanChain/blog">https://github.com/AllanChain/blog</a></li>
-</ul>
-<h2 id="babilema"><a href="#babilema" class="headerlink" title="babilema"></a>babilema</h2><ul>
-<li><strong>技术栈</strong>：Go（静态博客生成器）</li>
-<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://pkg.go.dev/github.com/ByteBakersCo/babilema">https://pkg.go.dev/github.com/ByteBakersCo/babilema</a></li>
-</ul>
-<h2 id="ginb"><a href="#ginb" class="headerlink" title="ginb"></a>ginb</h2><ul>
-<li><strong>技术栈</strong>：Next.js, Tailwind CSS, React</li>
-<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/ChrAlpha/ginb">https://github.com/ChrAlpha/ginb</a></li>
-</ul>
-<h2 id="gitblog"><a href="#gitblog" class="headerlink" title="gitblog"></a>gitblog</h2><ul>
-<li><strong>技术栈</strong>：Python</li>
-<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/yihong0618/gitblog">https://github.com/yihong0618/gitblog</a></li>
-</ul>
-<h2 id="gitblog-1"><a href="#gitblog-1" class="headerlink" title="gitblog"></a>gitblog</h2><ul>
-<li><strong>技术栈</strong>：JavaScript</li>
-<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/imuncle/gitblog">https://github.com/imuncle/gitblog</a></li>
-</ul>
-<h2 id="Gmeek"><a href="#Gmeek" class="headerlink" title="Gmeek"></a>Gmeek</h2><ul>
-<li><strong>技术栈</strong>：GitHub Pages, GitHub Actions, jinja2, primer.style</li>
-<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/Ambop/Gmeek">https://github.com/Ambop/Gmeek</a></li>
-</ul>
-<h2 id="Issue-Blog-With-Github-Action"><a href="#Issue-Blog-With-Github-Action" class="headerlink" title="Issue-Blog-With-Github-Action"></a>Issue-Blog-With-Github-Action</h2><ul>
-<li><strong>技术栈</strong>：Vuepress</li>
-<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/Yidadaa/Issue-Blog-With-Github-Action">https://github.com/Yidadaa/Issue-Blog-With-Github-Action</a></li>
-</ul>
-<h2 id="qiwihui-blog"><a href="#qiwihui-blog" class="headerlink" title="qiwihui&#x2F;blog"></a>qiwihui&#x2F;blog</h2><ul>
-<li><strong>技术栈</strong>：CSS</li>
-<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/qiwihui/blog">https://github.com/qiwihui/blog</a></li>
-</ul>
-<h2 id="Sep0lkit-git-issues-blog"><a href="#Sep0lkit-git-issues-blog" class="headerlink" title="Sep0lkit&#x2F;git-issues-blog"></a>Sep0lkit&#x2F;git-issues-blog</h2><ul>
-<li><strong>技术栈</strong>：Python</li>
-<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/Sep0lkit/git-issues-blog">https://github.com/Sep0lkit/git-issues-blog</a></li>
-</ul>
-<h2 id="ttop5-issue-blog"><a href="#ttop5-issue-blog" class="headerlink" title="ttop5&#x2F;issue-blog"></a>ttop5&#x2F;issue-blog</h2><ul>
-<li><strong>技术栈</strong>：Vue</li>
-<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/ttop5/issue-blog">https://github.com/ttop5/issue-blog</a></li>
-</ul>
-<h2 id="whyour-issue-blog"><a href="#whyour-issue-blog" class="headerlink" title="whyour&#x2F;issue-blog"></a>whyour&#x2F;issue-blog</h2><ul>
-<li><strong>技术栈</strong>：TypeScript（VS Code插件）</li>
-<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/whyour/issue-blog">https://github.com/whyour/issue-blog</a></li>
-</ul>
-<h2 id="xizhibei-blog"><a href="#xizhibei-blog" class="headerlink" title="xizhibei&#x2F;blog"></a>xizhibei&#x2F;blog</h2><ul>
-<li><strong>技术栈</strong>：Node.js, Golang</li>
-<li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/xizhibei/blog">https://github.com/xizhibei/blog</a></li>
 </ul>
 
       
