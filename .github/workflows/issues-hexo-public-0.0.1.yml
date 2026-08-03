@@ -10,7 +10,7 @@
 # v0.0.0-20260730
 # chat.deepseek.com/a/chat/s/7301aff4-6217-425d-ad64-30636fa19e73
 # 源仓库（shenjuexiao/hexo-shenjuexiao）：存放 Hexo 主题、配置、依赖等源文件
-# 博客仓库（shenjuexiao/shenjuexiao.github.io）：使用 Issues 作为文章存储，每个 Issue 就是一篇文章
+# 博客仓库（shenjuexiao/shenjuexiao.cn）：使用 Issues 作为文章存储，每个 Issue 就是一篇文章
 # 自动化构建：博客仓库通过 GitHub Actions（issues-hexo-public.yml），将 Issues 转换为 Hexo 文章（日期-标题.md），
 # 拉取源仓库的 Hexo，作为博客模板，生成静态页面到 gh-pages 分支 ./public，
 # 再将 Hexo 文章（日期-标题.md），推送到源仓库 main 分支 ./source/_posts
@@ -65,7 +65,7 @@ jobs:
       - name: Checkout blog repository (for issues)
         uses: actions/checkout@v4
         with:
-          repository: shenjuexiao/shenjuexiao.github.io
+          repository: shenjuexiao/shenjuexiao.cn
           token: ${{ secrets.ISSUES_SHENJUEXIAO }}
           path: blog-repo
           
@@ -92,7 +92,7 @@ jobs:
           ISSUE_DATA=""
           while true; do
             PAGE_ISSUES=$(curl -s -H "Authorization: token ${{ secrets.ISSUES_SHENJUEXIAO }}" \
-              "https://api.github.com/repos/shenjuexiao/shenjuexiao.github.io/issues?state=all&per_page=100&page=$PAGE")
+              "https://api.github.com/repos/shenjuexiao/shenjuexiao.cn/issues?state=all&per_page=100&page=$PAGE")
             
             COUNT=$(echo "$PAGE_ISSUES" | jq '. | length')
             if [ "$COUNT" -eq 0 ]; then
@@ -111,7 +111,7 @@ jobs:
           if [ -n "${{ github.event.inputs.issue_number }}" ]; then
             ISSUE_NUMBER="${{ github.event.inputs.issue_number }}"
             ISSUE=$(curl -s -H "Authorization: token ${{ secrets.ISSUES_SHENJUEXIAO }}" \
-              "https://api.github.com/repos/shenjuexiao/shenjuexiao.github.io/issues/$ISSUE_NUMBER")
+              "https://api.github.com/repos/shenjuexiao/shenjuexiao.cn/issues/$ISSUE_NUMBER")
             ISSUE_DATA="[$ISSUE]"
           fi
           
@@ -179,7 +179,7 @@ jobs:
           ALL_ISSUES=""
           while true; do
             PAGE_ISSUES=$(curl -s -H "Authorization: token ${{ secrets.ISSUES_SHENJUEXIAO }}" \
-              "https://api.github.com/repos/shenjuexiao/shenjuexiao.github.io/issues?state=all&per_page=100&page=$PAGE")
+              "https://api.github.com/repos/shenjuexiao/shenjuexiao.cn/issues?state=all&per_page=100&page=$PAGE")
             
             COUNT=$(echo "$PAGE_ISSUES" | jq '. | length')
             if [ "$COUNT" -eq 0 ]; then
@@ -198,7 +198,7 @@ jobs:
           if [ -n "${{ github.event.inputs.issue_number }}" ]; then
             ISSUE_NUMBER="${{ github.event.inputs.issue_number }}"
             ISSUE=$(curl -s -H "Authorization: token ${{ secrets.ISSUES_SHENJUEXIAO }}" \
-              "https://api.github.com/repos/shenjuexiao/shenjuexiao.github.io/issues/$ISSUE_NUMBER")
+              "https://api.github.com/repos/shenjuexiao/shenjuexiao.cn/issues/$ISSUE_NUMBER")
             ALL_ISSUES="[$ISSUE]"
           fi
           
@@ -299,7 +299,7 @@ jobs:
         if: steps.check_posts.outputs.post_count > 0
         uses: peaceiris/actions-gh-pages@v4
         with:
-          personal_token: ${{ secrets.ISSUES_SHENJUEXIAO }}
-          external_repository: shenjuexiao/shenjuexiao.github.io
+          personal_token: ${{ secrets.SHENJUEXIAO }}
+          external_repository: shenjuexiao/shenjuexiao.cn
           publish_branch: gh-pages
           publish_dir: ./source-repo/public
