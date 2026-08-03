@@ -41,9 +41,11 @@ on:
         required: false
         default: ''
 
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+# 移除 concurrency 配置
+# 这是 actions/deploy-pages 需要
+# concurrency:
+  # group: "pages"
+  # cancel-in-progress: false
 
 jobs:
   build-and-deploy:
