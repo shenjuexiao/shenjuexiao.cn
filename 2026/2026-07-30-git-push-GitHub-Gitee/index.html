@@ -20,15 +20,15 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"shenjuexiao.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"giscus","storage":true,"lazyload":false,"nav":null,"activeClass":"giscus"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="同步推送 GitHub 和 Gitee内容来源 同步推送 GitHub 和 Gitee（Deepseek）  将代码同时推送到 GitHub 和 Gitee，主要有两种方案。你可以根据自己的习惯，选择 Git 原生命令，或使用更自动化的工具。 方案一：使用 Git 原生命令（推荐）这是最基础和灵活的方式，只需几条命令配置好一个“聚合”的远程仓库，之后一条git push命令就能同时推送到两个平台。">
+    <meta name="description" content="同步推送 GitHub 和 Gitee📝 内容来源 同步推送 GitHub 和 Gitee（Deepseek）  将代码同时推送到 GitHub 和 Gitee，主要有两种方案。你可以根据自己的习惯，选择 Git 原生命令，或使用更自动化的工具。 🔧 方案一：使用 Git 原生命令（推荐）这是最基础和灵活的方式，只需几条命令配置好一个“聚合”的远程仓库，之后一条git push命令就能同时推送">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git push GitHub + Gitee">
 <meta property="og:url" content="https://shenjuexiao.com/2026/2026-07-30-git-push-GitHub-Gitee/index.html">
 <meta property="og:site_name" content="神觉晓">
-<meta property="og:description" content="同步推送 GitHub 和 Gitee内容来源 同步推送 GitHub 和 Gitee（Deepseek）  将代码同时推送到 GitHub 和 Gitee，主要有两种方案。你可以根据自己的习惯，选择 Git 原生命令，或使用更自动化的工具。 方案一：使用 Git 原生命令（推荐）这是最基础和灵活的方式，只需几条命令配置好一个“聚合”的远程仓库，之后一条git push命令就能同时推送到两个平台。">
+<meta property="og:description" content="同步推送 GitHub 和 Gitee📝 内容来源 同步推送 GitHub 和 Gitee（Deepseek）  将代码同时推送到 GitHub 和 Gitee，主要有两种方案。你可以根据自己的习惯，选择 Git 原生命令，或使用更自动化的工具。 🔧 方案一：使用 Git 原生命令（推荐）这是最基础和灵活的方式，只需几条命令配置好一个“聚合”的远程仓库，之后一条git push命令就能同时推送">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2026-07-30T06:34:04.000Z">
-<meta property="article:modified_time" content="2026-08-02T06:01:58.000Z">
+<meta property="article:modified_time" content="2026-08-04T06:32:49.000Z">
 <meta property="article:author" content="shenjuexiao">
 <meta name="twitter:card" content="summary">
 
@@ -130,7 +130,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E6%8E%A8%E9%80%81-GitHub-%E5%92%8C-Gitee"><span class="nav-number">1.</span> <span class="nav-text">同步推送 GitHub 和 Gitee</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%86%85%E5%AE%B9%E6%9D%A5%E6%BA%90"><span class="nav-number">1.1.</span> <span class="nav-text">内容来源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%B9%E6%A1%88%E4%B8%80%EF%BC%9A%E4%BD%BF%E7%94%A8-Git-%E5%8E%9F%E7%94%9F%E5%91%BD%E4%BB%A4%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">方案一：使用 Git 原生命令（推荐）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%B9%E6%A1%88%E4%BA%8C%EF%BC%9A%E4%BD%BF%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%B7%A5%E5%85%B7%E8%87%AA%E5%8A%A8%E5%8C%96"><span class="nav-number">1.2.1.</span> <span class="nav-text">方案二：使用第三方工具自动化</span></a></li></ol></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%90%8C%E6%AD%A5%E6%8E%A8%E9%80%81-GitHub-%E5%92%8C-Gitee"><span class="nav-number">1.</span> <span class="nav-text">同步推送 GitHub 和 Gitee</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%9D-%E5%86%85%E5%AE%B9%E6%9D%A5%E6%BA%90"><span class="nav-number">1.1.</span> <span class="nav-text">📝 内容来源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%A7-%E6%96%B9%E6%A1%88%E4%B8%80%EF%BC%9A%E4%BD%BF%E7%94%A8-Git-%E5%8E%9F%E7%94%9F%E5%91%BD%E4%BB%A4%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">🔧 方案一：使用 Git 原生命令（推荐）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%A4%96-%E6%96%B9%E6%A1%88%E4%BA%8C%EF%BC%9A%E4%BD%BF%E7%94%A8%E7%AC%AC%E4%B8%89%E6%96%B9%E5%B7%A5%E5%85%B7%E8%87%AA%E5%8A%A8%E5%8C%96"><span class="nav-number">1.3.</span> <span class="nav-text">🤖 方案二：使用第三方工具自动化</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -215,7 +215,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-02 14:01:58" itemprop="dateModified" datetime="2026-08-02T14:01:58+08:00">2026-08-02</time>
+      <time title="修改时间：2026-08-04 14:32:49" itemprop="dateModified" datetime="2026-08-04T14:32:49+08:00">2026-08-04</time>
     </span>
 
   
@@ -227,11 +227,11 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="同步推送-GitHub-和-Gitee"><a href="#同步推送-GitHub-和-Gitee" class="headerlink" title="同步推送 GitHub 和 Gitee"></a>同步推送 GitHub 和 Gitee</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
+    <div class="post-body" itemprop="articleBody"><h1 id="同步推送-GitHub-和-Gitee"><a href="#同步推送-GitHub-和-Gitee" class="headerlink" title="同步推送 GitHub 和 Gitee"></a>同步推送 GitHub 和 Gitee</h1><h2 id="📝-内容来源"><a href="#📝-内容来源" class="headerlink" title="📝 内容来源"></a>📝 内容来源</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/jcldaa4ma7iv5xmfb6">同步推送 GitHub 和 Gitee</a><a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/fcd433c7-8267-4ed0-bd52-ad2a78311fd9">（Deepseek）</a></li>
 </ul>
 <p>将代码同时推送到 GitHub 和 Gitee，主要有两种方案。你可以根据自己的习惯，选择 Git 原生命令，或使用更自动化的工具。</p>
-<h2 id="方案一：使用-Git-原生命令（推荐）"><a href="#方案一：使用-Git-原生命令（推荐）" class="headerlink" title="方案一：使用 Git 原生命令（推荐）"></a>方案一：使用 Git 原生命令（推荐）</h2><p>这是最基础和灵活的方式，只需几条命令配置好一个“聚合”的远程仓库，之后一条<code>git push</code>命令就能同时推送到两个平台。</p>
+<h2 id="🔧-方案一：使用-Git-原生命令（推荐）"><a href="#🔧-方案一：使用-Git-原生命令（推荐）" class="headerlink" title="🔧 方案一：使用 Git 原生命令（推荐）"></a>🔧 方案一：使用 Git 原生命令（推荐）</h2><p>这是最基础和灵活的方式，只需几条命令配置好一个“聚合”的远程仓库，之后一条<code>git push</code>命令就能同时推送到两个平台。</p>
 <p><strong>核心原理</strong>：给本地的<code>origin</code>（或任意名字）远程仓库设置<strong>多个推送（push）URL</strong>。这样，当执行<code>git push origin</code>时，Git 会依次向这些 URL 推送代码。</p>
 <p><strong>配置步骤</strong>：</p>
 <ol>
@@ -258,8 +258,6 @@
 <p>再次运行 <code>git remote -v</code>，你会看到 <code>origin</code> 有了两个 <code>(push)</code> 地址，但 <code>(fetch)</code> 仍只指向 Gitee。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">origin  https://gitee.com/你的用户名/项目名.git (fetch)</span><br><span class="line">origin  https://gitee.com/你的用户名/项目名.git (push)</span><br><span class="line">origin  https://github.com/你的用户名/项目名.git (push)</span><br></pre></td></tr></table></figure>
 
-
-
 <ol start="4">
 <li><strong>日常使用</strong>：</li>
 </ol>
@@ -272,7 +270,7 @@
 <blockquote>
 <p><strong>注意</strong>：这种方法的一个小缺点是，如果其中一个仓库推送失败（比如网络问题），整个推送操作会报错，需要你根据提示处理。</p>
 </blockquote>
-<h3 id="方案二：使用第三方工具自动化"><a href="#方案二：使用第三方工具自动化" class="headerlink" title="方案二：使用第三方工具自动化"></a>方案二：使用第三方工具自动化</h3><p>如果你希望有更丰富的功能，比如一键提交并推送、全量同步所有分支和标签，可以考虑使用现成的工具。</p>
+<h2 id="🤖-方案二：使用第三方工具自动化"><a href="#🤖-方案二：使用第三方工具自动化" class="headerlink" title="🤖 方案二：使用第三方工具自动化"></a>🤖 方案二：使用第三方工具自动化</h2><p>如果你希望有更丰富的功能，比如一键提交并推送、全量同步所有分支和标签，可以考虑使用现成的工具。</p>
 <table>
 <thead>
 <tr>
