@@ -858,7 +858,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-04 14:34:33" itemprop="dateModified" datetime="2026-08-04T14:34:33+08:00">2026-08-04</time>
+      <time title="修改时间：2026-08-04 14:44:07" itemprop="dateModified" datetime="2026-08-04T14:44:07+08:00">2026-08-04</time>
     </span>
 
   
@@ -882,8 +882,7 @@
 <p>微信web开发者工具：wechat_devtools_2.01.2510290_win32_x64.exe  </p>
 <p> IDE 版本（2.01.2510290），这套新版的配置方式确实需要特别注意。</p>
 <h2 id="🎯根本原因"><a href="#🎯根本原因" class="headerlink" title="🎯根本原因"></a>🎯根本原因</h2><p> <code>project.config.json</code> 中可能同时存在 <code>miniprogramRoot</code> 配置，而 <code>packNpmRelationList</code> 中的路径没有与之匹配，导致工具找不到 <code>node_modules</code>。</p>
-<p>##✅ 解决方案（三步走）</p>
-<h3 id="第一步：确认项目结构"><a href="#第一步：确认项目结构" class="headerlink" title="第一步：确认项目结构"></a>第一步：确认项目结构</h3><p>典型的微信小程序项目结构：</p>
+<h2 id="✅-解决方案（三步走）"><a href="#✅-解决方案（三步走）" class="headerlink" title="✅ 解决方案（三步走）"></a>✅ 解决方案（三步走）</h2><h3 id="第一步：确认项目结构"><a href="#第一步：确认项目结构" class="headerlink" title="第一步：确认项目结构"></a>第一步：确认项目结构</h3><p>典型的微信小程序项目结构：</p>
 <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">你的项目文件夹/</span><br><span class="line">├── miniprogram/	← 小程序代码（app.json<span class="punctuation">,</span> pages/ 等）</span><br><span class="line">├── node_modules/	← npm 包（安装后自动生成）</span><br><span class="line">├── package.json</span><br><span class="line">├── project.config.json</span><br><span class="line">└── ...</span><br></pre></td></tr></table></figure>
 <p>如果 <code>miniprogram/</code> 存在，说明 <code>miniprogramRoot</code> 已经指向了 <code>miniprogram</code> 文件夹。</p>
 <h3 id="第二步：修改-project-config-json（关键）"><a href="#第二步：修改-project-config-json（关键）" class="headerlink" title="第二步：修改 project.config.json（关键）"></a>第二步：修改 <code>project.config.json</code>（关键）</h3><p>在 <code>project.config.json</code> 中，按以下方式配置，注意 <code>miniprogramNpmDistDir</code> 的值要根据你的实际 <code>miniprogramRoot</code> 来调整。</p>
