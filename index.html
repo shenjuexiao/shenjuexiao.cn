@@ -138,7 +138,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">25</span>
+          <span class="site-state-item-count">26</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -164,6 +164,129 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-08-04-Valaxy-Deploy-to-GitHub-Pages/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-08-04-Valaxy-Deploy-to-GitHub-Pages/" class="post-title-link" itemprop="url">Valaxy Deploy to GitHub Pages</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-08-04 09:03:45" itemprop="dateCreated datePublished" datetime="2026-08-04T09:03:45+08:00">2026-08-04</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Valaxy-部署-GitHub-Pages"><a href="#Valaxy-部署-GitHub-Pages" class="headerlink" title="Valaxy 部署 GitHub Pages"></a>Valaxy 部署 GitHub Pages</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><blockquote>
+<p>VALAXY<br>下一代静态博客框架<br>简洁、强大、高性能。遇见你一直想要的现代博客框架。</p>
+</blockquote>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://valaxy.site/zh/">valaxy.site</a></li>
+<li><a target="_blank" rel="noopener" href="https://github.com/YunYouJun/valaxy/">YunYouJun&#x2F;valaxy</a></li>
+<li><a target="_blank" rel="noopener" href="https://valaxy.site/zh/guide/deploy">Valaxy  部署</a></li>
+</ul>
+<h2 id="自带的-gh-pages-yml"><a href="#自带的-gh-pages-yml" class="headerlink" title="自带的 gh-pages.yml"></a>自带的 <code>gh-pages.yml</code></h2><p><code>.github/workflows/gh-pages.yml</code></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># gh-pages.yml</span></span><br><span class="line"></span><br><span class="line"><span class="attr">name:</span> <span class="string">GitHub</span> <span class="string">Pages</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span></span><br><span class="line">      <span class="comment"># The branch where the project source code resides</span></span><br><span class="line">      <span class="comment"># 项目源代码所在的分支</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">main</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">master</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">valaxy</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">$&#123;&#123;</span> <span class="string">matrix.os</span> <span class="string">&#125;&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">strategy:</span></span><br><span class="line">      <span class="attr">matrix:</span></span><br><span class="line">        <span class="attr">node-version:</span> [<span class="string">lts/*</span>]</span><br><span class="line">        <span class="attr">os:</span> [<span class="string">ubuntu-latest</span>]</span><br><span class="line">      <span class="attr">fail-fast:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Use</span> <span class="string">Node.js</span> <span class="string">$&#123;&#123;</span> <span class="string">matrix.node-version</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="string">$&#123;&#123;</span> <span class="string">matrix.node-version</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">registry-url:</span> <span class="string">https://registry.npmjs.org/</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">📦</span> <span class="string">Install</span> <span class="string">Dependencies</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">i</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">🌌</span> <span class="string">Build</span> <span class="string">Valaxy</span> <span class="string">Blog</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">build</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">🪤</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">GitHub</span> <span class="string">Pages</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">github_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">publish_dir:</span> <span class="string">./dist</span></span><br><span class="line">          <span class="attr">force_orphan:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>在使用 <code>pnpm create valaxy</code> 创建模版项目时，已内置文件 <code>.github/workflows/gh-pages.yml</code> 以实现 <code>GitHub Actions</code> 的自动部署工作流。</p>
+<p>选择 <code>Github Repo</code>，打开 <code>Settings</code> -&gt; <code>Action</code> -&gt; <code>General</code> -&gt; <code>Workflow permissions</code>，选择 <code>read and write permissions</code>。<br>上传至 <code>GitHub Repo</code>，打开 <code>Settings</code> -&gt; <code>Pages</code>，选择 <code>gh-pages</code> 分支。<br><code>gh-pages</code> 已由 <code>.github/workflows/gh-pages.yml</code> 自动部署。</p>
+<p>注意修改 <code>gh-pages.yml</code> 中的 <code>on.push.branches</code> 为你源代码所在的分支，默认为 <code>main</code>。</p>
+<h2 id="Error-Action-failed"><a href="#Error-Action-failed" class="headerlink" title="Error: Action failed"></a>Error: Action failed</h2><p>Error: Action failed with &quot;The process ‘&#x2F;usr&#x2F;bin&#x2F;git’ failed with exit code 128&quot;</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Valaxy_Error_Action_failed.png" alt="Valaxy Error Action failed"></p>
+<p>不知道为什么在同一个仓库使用 <code>github_token: $&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125;</code> 还会权限不够。</p>
+<h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>这个错误是因为 GitHub Actions 的默认 token 权限不足，无法推送到 <code>gh-pages</code> 分支。以下是几种解决方案：</p>
+<h3 id="1：使用个人访问令牌"><a href="#1：使用个人访问令牌" class="headerlink" title="1：使用个人访问令牌"></a>1：使用个人访问令牌</h3><ul>
+<li><p>生成 <code>Personal Access Token</code></p>
+<ul>
+<li>前往 <code>GitHub Settings</code> → <code>Developer settings</code> → <code>Personal access tokens</code> → <code>Tokens (classic)</code></li>
+<li>生成新 token，勾选 <code>repo</code> 权限</li>
+<li>复制生成的 <code>token</code></li>
+</ul>
+</li>
+<li><p>在仓库中设置 <code>Secret</code></p>
+<ul>
+<li>前往仓库 <code>Settings</code> → <code>Secrets and variables</code> → <code>Actions</code></li>
+<li>添加新的 <code>secret</code>，命名为 <code>PERSONAL_TOKEN</code>，值粘贴你的 <code>token</code></li>
+</ul>
+</li>
+<li><p>修改 <code>workflow</code> 文件</p>
+</li>
+</ul>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">GitHub</span> <span class="string">Pages</span></span><br><span class="line">  <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">  <span class="attr">with:</span></span><br><span class="line">    <span class="attr">personal_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.PERSONAL_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">publish_dir:</span> <span class="string">./dist</span></span><br><span class="line">    <span class="comment"># 其他配置...</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2：使用-GitHub-自带的-GITHUB-TOKEN"><a href="#2：使用-GitHub-自带的-GITHUB-TOKEN" class="headerlink" title="2：使用 GitHub 自带的 GITHUB_TOKEN"></a>2：使用 GitHub 自带的 GITHUB_TOKEN</h3><p>修改 <code>workflow</code> 文件，添加写入权限：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Deploy</span></span><br><span class="line"></span><br><span class="line"><span class="attr">permissions:</span></span><br><span class="line">  <span class="attr">contents:</span> <span class="string">write</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">deploy:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="comment"># ... 其他步骤</span></span><br><span class="line">      </span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">GitHub</span> <span class="string">Pages</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">github_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">publish_dir:</span> <span class="string">./dist</span></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="补充：关于-Node-警告的解决方案"><a href="#补充：关于-Node-警告的解决方案" class="headerlink" title="补充：关于 Node 警告的解决方案"></a>补充：关于 Node 警告的解决方案</h2><p>在 <code>workflow</code> 中添加环境变量：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">env:</span></span><br><span class="line">  <span class="attr">ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>或者在部署步骤中指定：</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">GitHub</span> <span class="string">Pages</span></span><br><span class="line">  <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">  <span class="attr">with:</span></span><br><span class="line">    <span class="attr">github_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">publish_dir:</span> <span class="string">./dist</span></span><br><span class="line">    <span class="comment"># 在 env 中设置</span></span><br><span class="line">  <span class="attr">env:</span></span><br><span class="line">    <span class="attr">ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p>如果以上方案都不行，请检查：</p>
+<ol>
+<li>仓库是否属于组织？可能需要调整权限设置</li>
+<li>是否启用了分支保护规则？需要临时禁用或配置允许强制推送</li>
+</ol>
+<h2 id="修改后的-gh-pages-yml"><a href="#修改后的-gh-pages-yml" class="headerlink" title="修改后的 gh-pages.yml"></a>修改后的 <code>gh-pages.yml</code></h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># valaxy 自带 gh-pages.yml</span></span><br><span class="line"><span class="comment"># valaxy.site/zh/guide/deploy</span></span><br><span class="line"></span><br><span class="line"><span class="attr">name:</span> <span class="string">GitHub</span> <span class="string">Pages</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span></span><br><span class="line">      <span class="comment"># The branch where the project source code resides</span></span><br><span class="line">      <span class="comment"># 项目源代码所在的分支</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">main</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">master</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">valaxy</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 20260804</span></span><br><span class="line"><span class="comment"># 增加权限</span></span><br><span class="line"><span class="attr">permissions:</span></span><br><span class="line">  <span class="attr">contents:</span> <span class="string">write</span></span><br><span class="line">  <span class="attr">pages:</span> <span class="string">write</span></span><br><span class="line">  <span class="attr">id-token:</span> <span class="string">write</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">$&#123;&#123;</span> <span class="string">matrix.os</span> <span class="string">&#125;&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">strategy:</span></span><br><span class="line">      <span class="attr">matrix:</span></span><br><span class="line">        <span class="attr">node-version:</span> [<span class="string">lts/*</span>]</span><br><span class="line">        <span class="attr">os:</span> [<span class="string">ubuntu-latest</span>]</span><br><span class="line">      <span class="attr">fail-fast:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Use</span> <span class="string">Node.js</span> <span class="string">$&#123;&#123;</span> <span class="string">matrix.node-version</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="string">$&#123;&#123;</span> <span class="string">matrix.node-version</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">registry-url:</span> <span class="string">https://registry.npmjs.org/</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">📦</span> <span class="string">Install</span> <span class="string">Dependencies</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">i</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">🌌</span> <span class="string">Build</span> <span class="string">Valaxy</span> <span class="string">Blog</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">build</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">🪤</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">GitHub</span> <span class="string">Pages</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">github_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">publish_dir:</span> <span class="string">./dist</span></span><br><span class="line">          <span class="attr">force_orphan:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Valaxy_build_lts_ubuntu-lastest.png" alt="Valaxy build lts ubuntu-lastest"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1012,127 +1135,6 @@
 <ul>
 <li>需要一个包长期使用（比如项目依赖）→ 用 <strong><code>npm install</code></strong>。</li>
 <li>只是想临时跑一下某个命令或工具 → 用 <strong><code>npx</code></strong>。</li>
-</ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-GitHub-raw-vs-cdn/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="shenjuexiao">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="神觉晓">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 神觉晓">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/2026-07-30-GitHub-raw-vs-cdn/" class="post-title-link" itemprop="url">GitHub raw vs cdn</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2026-07-30 14:48:16" itemprop="dateCreated datePublished" datetime="2026-07-30T14:48:16+08:00">2026-07-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-02 14:03:24" itemprop="dateModified" datetime="2026-08-02T14:03:24+08:00">2026-08-02</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="GitHub-图片加速对比"><a href="#GitHub-图片加速对比" class="headerlink" title="GitHub 图片加速对比"></a>GitHub 图片加速对比</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/d6zojxbtsmt6vo9uyi">GitHub 图片加速对比</a><a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/c18ff170-9222-4548-a7a4-5b8be0cae5e4">（Deepseek）</a></li>
-</ul>
-<h2 id="🔍比较图片引用"><a href="#🔍比较图片引用" class="headerlink" title="🔍比较图片引用"></a>🔍比较图片引用</h2><p><code>raw.githubusercontent.com</code> 和 <code>cdn.jsdelivr.net/gh</code></p>
-<p>简单来说，<code>raw.githubusercontent.com</code> 是图片在 GitHub 上的<strong>源服务器地址</strong>，而 <code>cdn.jsdelivr.net/gh</code> 则是一个<strong>免费的 CDN 加速服务</strong>，它的核心作用就是为前者&quot;提速&quot;。</p>
-<p>下面是它们在几个关键维度上的直接对比：</p>
-<table>
-<thead>
-<tr>
-<th align="left">对比维度</th>
-<th align="left"><code>raw.githubusercontent.com</code> (源站)</th>
-<th align="left"><code>cdn.jsdelivr.net/gh</code> (CDN)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><strong>核心作用</strong></td>
-<td align="left">直接访问 GitHub 服务器上的原始文件</td>
-<td align="left">通过全球 CDN 节点缓存并分发文件，进行加速</td>
-</tr>
-<tr>
-<td align="left"><strong>访问速度</strong></td>
-<td align="left"><strong>通常较慢</strong>，尤其在中国大陆地区，延迟高，加载不稳定</td>
-<td align="left"><strong>显著更快</strong>，利用全球边缘节点就近响应，可大幅缩短加载时间</td>
-</tr>
-<tr>
-<td align="left"><strong>稳定性与限制</strong></td>
-<td align="left">存在<strong>请求频率限制 (Rate Limit)</strong>，高并发或大量图片时可能返回 <strong>HTTP 429 错误</strong>，导致图片无法加载</td>
-<td align="left">通常<strong>无严格的请求限制</strong>，但有<strong>单文件 50MB 的大小限制</strong>，且<strong>仅支持公开仓库</strong></td>
-</tr>
-<tr>
-<td align="left"><strong>缓存机制</strong></td>
-<td align="left">缓存策略较弱，重复访问可能仍需重新下载</td>
-<td align="left">具备<strong>强大的缓存机制</strong>（默认缓存24小时或更久），重复访问直接从 CDN 节点读取，速度极快</td>
-</tr>
-<tr>
-<td align="left"><strong>URL 格式示例</strong></td>
-<td align="left"><code>https://raw.githubusercontent.com/用户名/仓库名/分支名/图片路径.png</code></td>
-<td align="left"><code>https://cdn.jsdelivr.net/gh/用户名/仓库名@分支名或版本号/图片路径.png</code></td>
-</tr>
-</tbody></table>
-<h3 id="⚠️-重要的潜在问题与建议"><a href="#⚠️-重要的潜在问题与建议" class="headerlink" title="⚠️ 重要的潜在问题与建议"></a>⚠️ 重要的潜在问题与建议</h3><p>虽然 <code>jsDelivr</code> 优势明显，但在国内使用时需要留意一个已知风险：</p>
-<p><strong>国内 DNS 污染问题</strong>：<code>jsDelivr</code> 的官方域名 <code>cdn.jsdelivr.net</code> 在国内曾因DNS污染导致访问失败。如果你遇到这种情况，可以考虑使用它未被污染的备用域名，例如 <code>fastly.jsdelivr.net</code> 或 <code>gcore.jsdelivr.net</code> 作为替代方案。</p>
-<h3 id="💎-总结与选择建议"><a href="#💎-总结与选择建议" class="headerlink" title="💎 总结与选择建议"></a>💎 总结与选择建议</h3><ul>
-<li>对于个人项目、博客、官网等公开场景：强烈建议使用 <code>cdn.jsdelivr.net/gh</code>**。它能带来质的飞跃，让图片&quot;秒开&quot;不再困难，综合体验完胜直连源站。</li>
-<li><code>raw.githubusercontent.com</code> 的适用场景**：主要用于在 GitHub 页面上直接预览文件内容，或在你需要从服务器后台程序以编程方式获取文件原始内容时使用。</li>
 </ul>
 
       
