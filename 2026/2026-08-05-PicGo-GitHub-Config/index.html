@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/@shenjuexiao1C_32%C3%9732.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/@shenjuexiao1C_16%C3%9716.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"shenjuexiao.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"giscus","storage":true,"lazyload":false,"nav":null,"activeClass":"giscus"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="PicGo GitHub 图床搭建📝 笔记总结以下可以不用看，我已经卸载 PicGo。我现在使用的是直接保存图片，上传到 GitHub 仓库，然后通过链接地址引用。 例如： https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;用户名&#x2F;仓库名@分支名&#x2F;文件夹&#x2F;图片名 或： https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;用户名&#x2F;仓库名&#x2F;分支名&#x2F;图片名 之前的文章：GitHu">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PicGo GitHub Config">
+<meta property="og:url" content="https://shenjuexiao.com/2026/2026-08-05-PicGo-GitHub-Config/index.html">
+<meta property="og:site_name" content="神觉晓">
+<meta property="og:description" content="PicGo GitHub 图床搭建📝 笔记总结以下可以不用看，我已经卸载 PicGo。我现在使用的是直接保存图片，上传到 GitHub 仓库，然后通过链接地址引用。 例如： https:&#x2F;&#x2F;cdn.jsdelivr.net&#x2F;gh&#x2F;用户名&#x2F;仓库名@分支名&#x2F;文件夹&#x2F;图片名 或： https:&#x2F;&#x2F;raw.githubusercontent.com&#x2F;用户名&#x2F;仓库名&#x2F;分支名&#x2F;图片名 之前的文章：GitHu">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/PicGo_2.3.0_GitHub_Config.png">
+<meta property="article:published_time" content="2026-08-04T18:47:43.000Z">
+<meta property="article:modified_time" content="2026-08-04T18:47:43.000Z">
+<meta property="article:author" content="shenjuexiao">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/PicGo_2.3.0_GitHub_Config.png">
+
+
+<link rel="canonical" href="https://shenjuexiao.com/2026/2026-08-05-PicGo-GitHub-Config/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://shenjuexiao.com/2026/2026-08-05-PicGo-GitHub-Config/","path":"2026/2026-08-05-PicGo-GitHub-Config/","title":"PicGo GitHub Config"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>PicGo GitHub Config | 神觉晓</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">神觉晓</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">@shenjuexiao</p>
+      <img class="custom-logo-image" src="/images/@shenjuexiao1C_180%C3%97180.png" alt="神觉晓">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#PicGo-GitHub-%E5%9B%BE%E5%BA%8A%E6%90%AD%E5%BB%BA"><span class="nav-number">1.</span> <span class="nav-text">PicGo GitHub 图床搭建</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%9D-%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93"><span class="nav-number">1.1.</span> <span class="nav-text">📝 笔记总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%96-%E5%86%85%E5%AE%B9%E6%9D%A5%E6%BA%90"><span class="nav-number">1.2.</span> <span class="nav-text">📖 内容来源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%A7-%E5%88%9B%E5%BB%BA-GitHub-%E4%BB%93%E5%BA%93%E4%B8%8E-Token"><span class="nav-number">1.3.</span> <span class="nav-text">🔧 创建 GitHub 仓库与 Token</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%88%9B%E5%BB%BA%E5%85%AC%E5%BC%80%E4%BB%93%E5%BA%93"><span class="nav-number">1.3.1.</span> <span class="nav-text">1.  创建公开仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%94%9F%E6%88%90-Token"><span class="nav-number">1.3.2.</span> <span class="nav-text">2.  生成 Token</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E2%9A%99%EF%B8%8F-%E9%85%8D%E7%BD%AE-PicGo"><span class="nav-number">1.3.3.</span> <span class="nav-text">⚙️ 配置 PicGo</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9C%8D%EF%B8%8F-%E4%B8%8E-Typora-%E9%9B%86%E6%88%90%EF%BC%88%E5%8F%AF%E9%80%89%EF%BC%89"><span class="nav-number">1.4.</span> <span class="nav-text">✍️ 与 Typora 集成（可选）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9A%A0%EF%B8%8F-%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E6%8E%92%E9%94%99"><span class="nav-number">1.5.</span> <span class="nav-text">⚠️ 常见问题与排错</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">shenjuexiao</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/shenjuexiao" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;shenjuexiao" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-08-05-PicGo-GitHub-Config/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="PicGo GitHub Config | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          PicGo GitHub Config
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-08-05 02:47:43" itemprop="dateCreated datePublished" datetime="2026-08-05T02:47:43+08:00">2026-08-05</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="PicGo-GitHub-图床搭建"><a href="#PicGo-GitHub-图床搭建" class="headerlink" title="PicGo GitHub 图床搭建"></a>PicGo GitHub 图床搭建</h1><h2 id="📝-笔记总结"><a href="#📝-笔记总结" class="headerlink" title="📝 笔记总结"></a>📝 笔记总结</h2><p>以下可以不用看，我已经卸载 PicGo。我现在使用的是直接保存图片，上传到 GitHub 仓库，然后通过链接地址引用。</p>
+<p>例如：</p>
+<p><code>https://cdn.jsdelivr.net/gh/用户名/仓库名@分支名/文件夹/图片名</code></p>
+<p>或：</p>
+<p><code>https://raw.githubusercontent.com/用户名/仓库名/分支名/图片名</code></p>
+<p>之前的文章：<a target="_blank" rel="noopener" href="https://shenjuexiao.cn/2026/2026-07-30-GitHub-raw-vs-cdn/">GitHub raw vs cdn</a></p>
+<p>当然也可以使用 PicGo 进行 GitHub 图床设置。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/PicGo_2.3.0_GitHub_Config.png" alt="PicGo 2.3.0 GitHub Config"></p>
+<h2 id="📖-内容来源"><a href="#📖-内容来源" class="headerlink" title="📖 内容来源"></a>📖 内容来源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/nqd68klgbx1jctyaz5">PicGo GitHub 图床</a>（<a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/19094bf9-b94b-4885-97d0-a1d8066f257d">DeepSeek</a>）</li>
+</ul>
+<p>使用 <strong>PicGo + GitHub 图床</strong>，是一种很流行的免费方案，特别适合写博客、记笔记时管理图片。本质上是让 PicGo 这个工具，把你本地的图片自动上传到 GitHub 仓库，并生成一个在线的图片链接。</p>
+<h2 id="🔧-创建-GitHub-仓库与-Token"><a href="#🔧-创建-GitHub-仓库与-Token" class="headerlink" title="🔧 创建 GitHub 仓库与 Token"></a>🔧 创建 GitHub 仓库与 Token</h2><p>首先需要在 GitHub 上创建一个用来存放图片的“图床仓库”，并生成一个<strong>访问令牌 (Token)</strong>，这是 PicGo 上传图片的“钥匙”。</p>
+<h3 id="1-创建公开仓库"><a href="#1-创建公开仓库" class="headerlink" title="1.  创建公开仓库"></a>1.  创建公开仓库</h3><p>在 GitHub 点击右上角 <code>+</code> 号，选择 <code>New repository</code>。<strong>注意：仓库的可见性必须选 <code>Public</code></strong>，否则图片无法被公开访问。</p>
+<h3 id="2-生成-Token"><a href="#2-生成-Token" class="headerlink" title="2.  生成 Token"></a>2.  生成 Token</h3><p>点击头像 → <code>Settings</code> → 左下角 <code>Developer settings</code> → <code>Personal access tokens</code> → <code>Tokens (classic)</code> → <code>Generate new token (classic)</code>。<br>    *   <strong>Note (名称)</strong>：随便填一个，比如 <code>PicGo-image</code>。<br>    *   <strong>Expiration (过期时间)</strong>：<strong>建议选 <code>No expiration</code>（永不过期）</strong>，不然过期后需要重新生成并更新配置。<br>    *   <strong>Select scopes (权限)</strong>：务必<strong>勾选 <code>repo</code></strong> 这个选项，这会赋予 PicGo 读写你仓库的权限。<br>    *   点击生成后，<strong>立即复制并妥善保存这个 Token</strong>（它只显示一次）。</p>
+<h3 id="⚙️-配置-PicGo"><a href="#⚙️-配置-PicGo" class="headerlink" title="⚙️ 配置 PicGo"></a>⚙️ 配置 PicGo</h3><p>下载安装 PicGo 后，在“图床设置”里找到 GitHub 进行配置。</p>
+<table>
+<thead>
+<tr>
+<th align="left">配置项</th>
+<th align="left">填写内容</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>设定仓库名</strong></td>
+<td align="left"><code>你的GitHub用户名/仓库名</code></td>
+<td align="left">例如：<code>zhangsan/my-image-bed</code></td>
+</tr>
+<tr>
+<td align="left"><strong>设定分支名</strong></td>
+<td align="left"><code>main</code></td>
+<td align="left">2020年后GitHub新仓库默认分支为main</td>
+</tr>
+<tr>
+<td align="left"><strong>设定Token</strong></td>
+<td align="left">粘贴刚才保存的Token</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>指定存储路径</strong></td>
+<td align="left"><code>img/</code> (选填)</td>
+<td align="left">图片将上传到仓库下的<code>img</code>文件夹，不填则传至根目录</td>
+</tr>
+<tr>
+<td align="left"><strong>设定自定义域名</strong></td>
+<td align="left"><code>https://cdn.jsdelivr.net/gh/你的用户名/仓库名@main</code></td>
+<td align="left">这是最关键的一步，使用jsDelivr CDN加速访问，国内访问更快</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>小提示</strong>：如果上传成功后图片无法显示，大概率是“自定义域名”配置有误。可以尝试将域名改为 <code>https://raw.githubusercontent.com/你的用户名/仓库名/main</code> 测试。</p>
+</blockquote>
+<h2 id="✍️-与-Typora-集成（可选）"><a href="#✍️-与-Typora-集成（可选）" class="headerlink" title="✍️ 与 Typora 集成（可选）"></a>✍️ 与 Typora 集成（可选）</h2><p>如果你用 Typora 写 Markdown，可以配置它调用 PicGo 实现“粘贴即上传”：</p>
+<ol>
+<li>打开 Typora，进入 <code>文件</code> → <code>偏好设置</code> → <code>图像</code>。</li>
+<li><strong>插入图片时</strong>：选择 <code>上传图片</code>。</li>
+<li><strong>上传服务</strong>：选择 <code>PicGo (app)</code>，并指定你 PicGo 的安装路径。</li>
+<li>点击“验证图片上传选项”，成功后就可以在 Typora 里愉快地粘贴图片了。</li>
+</ol>
+<h2 id="⚠️-常见问题与排错"><a href="#⚠️-常见问题与排错" class="headerlink" title="⚠️ 常见问题与排错"></a>⚠️ 常见问题与排错</h2><ol>
+<li><strong>Token 过期</strong>：这是最容易被忽略的问题。如果之前能用，突然有一天上传失败，可以先检查一下你的 GitHub Token 是否已过期。建议生成时直接选 <code>No expiration</code>。</li>
+<li><strong>端口占用</strong>：PicGo 默认监听端口是 <code>36677</code>，如果同时开启了多个 PicGo 进程或其他加速工具（如 Steam++），可能会冲突，导致上传失败。</li>
+<li><strong>网络与 Hosts</strong>：由于 GitHub 服务器在国外，网络波动可能影响访问。如果上传很慢或失败，可以尝试修改 Hosts 文件，将 <code>raw.githubusercontent.com</code> 等域名指向可用 IP。</li>
+</ol>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>shenjuexiao
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://shenjuexiao.com/2026/2026-08-05-PicGo-GitHub-Config/" title="PicGo GitHub Config">https://shenjuexiao.com/2026/2026-08-05-PicGo-GitHub-Config/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/2026-08-04-Valaxy-Deploy-to-GitHub-Pages/" rel="prev" title="Valaxy Deploy to GitHub Pages">
+                  <i class="fa fa-angle-left"></i> Valaxy Deploy to GitHub Pages
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments giscus-container">
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">shenjuexiao</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"shenjuexiao/giscus","repo_id":"R_kgDOTr7hig","category":"Announcements","category_id":"DIC_kwDOTr7his4DCjIS","mapping":"pathname","strict":0,"reactions_enabled":1,"emit_metadata":0,"theme":"preferred_color_scheme","lang":"zh-CN","crossorigin":"anonymous","input_position":"top","loading":"lazy"}</script>
+
+<script>
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
+      },
+      parentNode: document.querySelector('.giscus-container')
+    }));
+});
+</script>
+
+</body>
+</html>

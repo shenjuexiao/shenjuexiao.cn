@@ -138,7 +138,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">26</span>
+          <span class="site-state-item-count">27</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -164,6 +164,139 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-08-05-PicGo-GitHub-Config/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-08-05-PicGo-GitHub-Config/" class="post-title-link" itemprop="url">PicGo GitHub Config</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-08-05 02:47:43" itemprop="dateCreated datePublished" datetime="2026-08-05T02:47:43+08:00">2026-08-05</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="PicGo-GitHub-图床搭建"><a href="#PicGo-GitHub-图床搭建" class="headerlink" title="PicGo GitHub 图床搭建"></a>PicGo GitHub 图床搭建</h1><h2 id="📝-笔记总结"><a href="#📝-笔记总结" class="headerlink" title="📝 笔记总结"></a>📝 笔记总结</h2><p>以下可以不用看，我已经卸载 PicGo。我现在使用的是直接保存图片，上传到 GitHub 仓库，然后通过链接地址引用。</p>
+<p>例如：</p>
+<p><code>https://cdn.jsdelivr.net/gh/用户名/仓库名@分支名/文件夹/图片名</code></p>
+<p>或：</p>
+<p><code>https://raw.githubusercontent.com/用户名/仓库名/分支名/图片名</code></p>
+<p>之前的文章：<a target="_blank" rel="noopener" href="https://shenjuexiao.cn/2026/2026-07-30-GitHub-raw-vs-cdn/">GitHub raw vs cdn</a></p>
+<p>当然也可以使用 PicGo 进行 GitHub 图床设置。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/PicGo_2.3.0_GitHub_Config.png" alt="PicGo 2.3.0 GitHub Config"></p>
+<h2 id="📖-内容来源"><a href="#📖-内容来源" class="headerlink" title="📖 内容来源"></a>📖 内容来源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/nqd68klgbx1jctyaz5">PicGo GitHub 图床</a>（<a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/19094bf9-b94b-4885-97d0-a1d8066f257d">DeepSeek</a>）</li>
+</ul>
+<p>使用 <strong>PicGo + GitHub 图床</strong>，是一种很流行的免费方案，特别适合写博客、记笔记时管理图片。本质上是让 PicGo 这个工具，把你本地的图片自动上传到 GitHub 仓库，并生成一个在线的图片链接。</p>
+<h2 id="🔧-创建-GitHub-仓库与-Token"><a href="#🔧-创建-GitHub-仓库与-Token" class="headerlink" title="🔧 创建 GitHub 仓库与 Token"></a>🔧 创建 GitHub 仓库与 Token</h2><p>首先需要在 GitHub 上创建一个用来存放图片的“图床仓库”，并生成一个<strong>访问令牌 (Token)</strong>，这是 PicGo 上传图片的“钥匙”。</p>
+<h3 id="1-创建公开仓库"><a href="#1-创建公开仓库" class="headerlink" title="1.  创建公开仓库"></a>1.  创建公开仓库</h3><p>在 GitHub 点击右上角 <code>+</code> 号，选择 <code>New repository</code>。<strong>注意：仓库的可见性必须选 <code>Public</code></strong>，否则图片无法被公开访问。</p>
+<h3 id="2-生成-Token"><a href="#2-生成-Token" class="headerlink" title="2.  生成 Token"></a>2.  生成 Token</h3><p>点击头像 → <code>Settings</code> → 左下角 <code>Developer settings</code> → <code>Personal access tokens</code> → <code>Tokens (classic)</code> → <code>Generate new token (classic)</code>。<br>    *   <strong>Note (名称)</strong>：随便填一个，比如 <code>PicGo-image</code>。<br>    *   <strong>Expiration (过期时间)</strong>：<strong>建议选 <code>No expiration</code>（永不过期）</strong>，不然过期后需要重新生成并更新配置。<br>    *   <strong>Select scopes (权限)</strong>：务必<strong>勾选 <code>repo</code></strong> 这个选项，这会赋予 PicGo 读写你仓库的权限。<br>    *   点击生成后，<strong>立即复制并妥善保存这个 Token</strong>（它只显示一次）。</p>
+<h3 id="⚙️-配置-PicGo"><a href="#⚙️-配置-PicGo" class="headerlink" title="⚙️ 配置 PicGo"></a>⚙️ 配置 PicGo</h3><p>下载安装 PicGo 后，在“图床设置”里找到 GitHub 进行配置。</p>
+<table>
+<thead>
+<tr>
+<th align="left">配置项</th>
+<th align="left">填写内容</th>
+<th align="left">备注</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>设定仓库名</strong></td>
+<td align="left"><code>你的GitHub用户名/仓库名</code></td>
+<td align="left">例如：<code>zhangsan/my-image-bed</code></td>
+</tr>
+<tr>
+<td align="left"><strong>设定分支名</strong></td>
+<td align="left"><code>main</code></td>
+<td align="left">2020年后GitHub新仓库默认分支为main</td>
+</tr>
+<tr>
+<td align="left"><strong>设定Token</strong></td>
+<td align="left">粘贴刚才保存的Token</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left"><strong>指定存储路径</strong></td>
+<td align="left"><code>img/</code> (选填)</td>
+<td align="left">图片将上传到仓库下的<code>img</code>文件夹，不填则传至根目录</td>
+</tr>
+<tr>
+<td align="left"><strong>设定自定义域名</strong></td>
+<td align="left"><code>https://cdn.jsdelivr.net/gh/你的用户名/仓库名@main</code></td>
+<td align="left">这是最关键的一步，使用jsDelivr CDN加速访问，国内访问更快</td>
+</tr>
+</tbody></table>
+<blockquote>
+<p><strong>小提示</strong>：如果上传成功后图片无法显示，大概率是“自定义域名”配置有误。可以尝试将域名改为 <code>https://raw.githubusercontent.com/你的用户名/仓库名/main</code> 测试。</p>
+</blockquote>
+<h2 id="✍️-与-Typora-集成（可选）"><a href="#✍️-与-Typora-集成（可选）" class="headerlink" title="✍️ 与 Typora 集成（可选）"></a>✍️ 与 Typora 集成（可选）</h2><p>如果你用 Typora 写 Markdown，可以配置它调用 PicGo 实现“粘贴即上传”：</p>
+<ol>
+<li>打开 Typora，进入 <code>文件</code> → <code>偏好设置</code> → <code>图像</code>。</li>
+<li><strong>插入图片时</strong>：选择 <code>上传图片</code>。</li>
+<li><strong>上传服务</strong>：选择 <code>PicGo (app)</code>，并指定你 PicGo 的安装路径。</li>
+<li>点击“验证图片上传选项”，成功后就可以在 Typora 里愉快地粘贴图片了。</li>
+</ol>
+<h2 id="⚠️-常见问题与排错"><a href="#⚠️-常见问题与排错" class="headerlink" title="⚠️ 常见问题与排错"></a>⚠️ 常见问题与排错</h2><ol>
+<li><strong>Token 过期</strong>：这是最容易被忽略的问题。如果之前能用，突然有一天上传失败，可以先检查一下你的 GitHub Token 是否已过期。建议生成时直接选 <code>No expiration</code>。</li>
+<li><strong>端口占用</strong>：PicGo 默认监听端口是 <code>36677</code>，如果同时开启了多个 PicGo 进程或其他加速工具（如 Steam++），可能会冲突，导致上传失败。</li>
+<li><strong>网络与 Hosts</strong>：由于 GitHub 服务器在国外，网络波动可能影响访问。如果上传很慢或失败，可以尝试修改 Hosts 文件，将 <code>raw.githubusercontent.com</code> 等域名指向可用 IP。</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1025,125 +1158,6 @@
 <h2 id="❌-Error-Failed-to-create-deployment-status-404"><a href="#❌-Error-Failed-to-create-deployment-status-404" class="headerlink" title="❌ Error: Failed to create deployment (status: 404)"></a>❌ Error: Failed to create deployment (status: 404)</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Deploy_to_GitHub_Pages.png" alt="Astro Deploy to GitHub Pages"></p>
 <p>这个错误表明 <code>GitHub Pages</code> 部署失败，主要原因是 <code>GitHub Pages</code> 没有在仓库设置中启用。错误信息明确指出：</p>
 <p>Ensure GitHub Pages has been enabled: <a target="_blank" rel="noopener" href="https://github.com/shenjuexiao/astro/settings/pages">https://github.com/shenjuexiao/astro/settings/pages</a></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-npm-vs-npx/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="shenjuexiao">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="神觉晓">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 神觉晓">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/2026-07-30-npm-vs-npx/" class="post-title-link" itemprop="url">npm vs npx</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2026-07-30 14:49:05" itemprop="dateCreated datePublished" datetime="2026-07-30T14:49:05+08:00">2026-07-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-04 09:51:50" itemprop="dateModified" datetime="2026-08-04T09:51:50+08:00">2026-08-04</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="npm-与-npx-区别"><a href="#npm-与-npx-区别" class="headerlink" title="npm 与 npx 区别"></a>npm 与 npx 区别</h1><h2 id="📝-内容来源"><a href="#📝-内容来源" class="headerlink" title="📝 内容来源"></a>📝 内容来源</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/nib71ed8ghaqfuyb1y">npm 与 npx 区别</a><a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/1ea1f80c-e11d-4e1f-845f-8023549a044c">（Deepseek）</a></li>
-<li><a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/v11/commands/npx">npx</a></li>
-</ul>
-<h2 id="😊-简单说明"><a href="#😊-简单说明" class="headerlink" title="😊 简单说明"></a>😊 简单说明</h2><p><code>npm</code> 和 <code>npx</code> 是 <strong>Node.js</strong> 生态里两个核心但职责不同的工具，可以用一句话来区分它们：</p>
-<blockquote>
-<p><strong>npm 是“包管理器”，负责安装、管理依赖；而 npx 是“包执行器”，负责运行命令，无需显式安装</strong>。</p>
-</blockquote>
-<h2 id="📊-表格比较"><a href="#📊-表格比较" class="headerlink" title="📊 表格比较"></a>📊 表格比较</h2><table>
-<thead>
-<tr>
-<th align="left">特性</th>
-<th align="left">npm (Node Package Manager)</th>
-<th align="left">npx (Node Package Execute)</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><strong>核心职责</strong></td>
-<td align="left">管理项目的依赖包，比如安装、卸载、更新、发布包</td>
-<td align="left">执行某个 Node.js 包提供的命令</td>
-</tr>
-<tr>
-<td align="left"><strong>是否需要安装</strong></td>
-<td align="left"><strong>需要</strong>。包会被下载并保存到 <code>node_modules</code> 或全局目录</td>
-<td align="left"><strong>通常不需要</strong>。它会临时下载并执行，用完即走，不污染环境</td>
-</tr>
-<tr>
-<td align="left"><strong>典型场景</strong></td>
-<td align="left">为项目安装核心依赖（如 <code>npm install react</code>）<br>运行 <code>package.json</code> 中定义的脚本（如 <code>npm run build</code>）</td>
-<td align="left">运行一次性的脚手架工具（如 <code>npx create-react-app my-app</code>）<br>快速测试不同版本的包（如 <code>npx webpack@4.44.1 -v</code>）</td>
-</tr>
-<tr>
-<td align="left"><strong>执行本地包</strong></td>
-<td align="left">需要通过 <code>./node_modules/.bin/</code> 路径或 <code>npm run</code> 命令间接运行</td>
-<td align="left">可以直接运行，它会自动在 <code>node_modules/.bin/</code> 中查找命令</td>
-</tr>
-</tbody></table>
-<p>除了用法上的不同，<code>npx</code> 还有一个非常便利的特性：它可以临时下载并运行一个远程的 npm 包，这在测试新工具或运行一次性脚本时能帮你节省不少时间。</p>
-<h2 id="💡-如何选择？"><a href="#💡-如何选择？" class="headerlink" title="💡 如何选择？"></a>💡 如何选择？</h2><p>一个很实用的场景是：创建 React 项目时，会先全局安装 <code>create-react-app</code>，再用它生成项目。有了 <code>npx</code>，可以直接 <code>npx create-react-app my-app</code>，不用全局安装，每次用的还都是最新版，非常方便。</p>
-<p><strong>一句话总结就是</strong>：</p>
-<ul>
-<li>需要一个包长期使用（比如项目依赖）→ 用 <strong><code>npm install</code></strong>。</li>
-<li>只是想临时跑一下某个命令或工具 → 用 <strong><code>npx</code></strong>。</li>
-</ul>
 
       
     </div>
