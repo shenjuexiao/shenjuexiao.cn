@@ -20,26 +20,28 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"shenjuexiao.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"giscus","storage":true,"lazyload":false,"nav":null,"activeClass":"giscus"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="npm 与 npx 区别📝 内容来源 npm 与 npx 区别（Deepseek） npx  😊 简单说明npm 和 npx 是 Node.js 生态里两个核心但职责不同的工具，可以用一句话来区分它们：  npm 是“包管理器”，负责安装、管理依赖；而 npx 是“包执行器”，负责运行命令，无需显式安装。  📊 表格比较   特性 npm (Node Package Manager) npx">
+    <meta name="description" content="Deno Windows 安装 📝 笔记总结PowerShell 脚本安装最方便。 12irm https:&#x2F;&#x2F;deno.land&#x2F;install.ps1 | iexdeno --version  📖 内容来源 安装 Deno Deno Windows 安装（DeepSeek）   Deno 是一个由 Node.js 的原始作者 Ryan Dahl 创建的 JavaScript、TypeScr">
 <meta property="og:type" content="article">
-<meta property="og:title" content="npm vs npx">
-<meta property="og:url" content="https://shenjuexiao.com/2026/2026-07-30-npm-vs-npx/index.html">
+<meta property="og:title" content="Deno Windows Install">
+<meta property="og:url" content="https://shenjuexiao.com/2026/2026-08-06-Deno-Windows-Install/index.html">
 <meta property="og:site_name" content="神觉晓">
-<meta property="og:description" content="npm 与 npx 区别📝 内容来源 npm 与 npx 区别（Deepseek） npx  😊 简单说明npm 和 npx 是 Node.js 生态里两个核心但职责不同的工具，可以用一句话来区分它们：  npm 是“包管理器”，负责安装、管理依赖；而 npx 是“包执行器”，负责运行命令，无需显式安装。  📊 表格比较   特性 npm (Node Package Manager) npx">
+<meta property="og:description" content="Deno Windows 安装 📝 笔记总结PowerShell 脚本安装最方便。 12irm https:&#x2F;&#x2F;deno.land&#x2F;install.ps1 | iexdeno --version  📖 内容来源 安装 Deno Deno Windows 安装（DeepSeek）   Deno 是一个由 Node.js 的原始作者 Ryan Dahl 创建的 JavaScript、TypeScr">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-07-30T06:49:05.000Z">
-<meta property="article:modified_time" content="2026-08-04T18:50:42.000Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Deno_Windows_PowerShell_irm.png">
+<meta property="article:published_time" content="2026-08-06T07:00:41.000Z">
+<meta property="article:modified_time" content="2026-08-06T07:00:41.000Z">
 <meta property="article:author" content="shenjuexiao">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Deno_Windows_PowerShell_irm.png">
 
 
-<link rel="canonical" href="https://shenjuexiao.com/2026/2026-07-30-npm-vs-npx/">
+<link rel="canonical" href="https://shenjuexiao.com/2026/2026-08-06-Deno-Windows-Install/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://shenjuexiao.com/2026/2026-07-30-npm-vs-npx/","path":"2026/2026-07-30-npm-vs-npx/","title":"npm vs npx"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://shenjuexiao.com/2026/2026-08-06-Deno-Windows-Install/","path":"2026/2026-08-06-Deno-Windows-Install/","title":"Deno Windows Install"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>npm vs npx | 神觉晓</title>
+<title>Deno Windows Install | 神觉晓</title>
   
 
 
@@ -130,7 +132,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#npm-%E4%B8%8E-npx-%E5%8C%BA%E5%88%AB"><span class="nav-number">1.</span> <span class="nav-text">npm 与 npx 区别</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%9D-%E5%86%85%E5%AE%B9%E6%9D%A5%E6%BA%90"><span class="nav-number">1.1.</span> <span class="nav-text">📝 内容来源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%98%8A-%E7%AE%80%E5%8D%95%E8%AF%B4%E6%98%8E"><span class="nav-number">1.2.</span> <span class="nav-text">😊 简单说明</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%8A-%E8%A1%A8%E6%A0%BC%E6%AF%94%E8%BE%83"><span class="nav-number">1.3.</span> <span class="nav-text">📊 表格比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%92%A1-%E5%A6%82%E4%BD%95%E9%80%89%E6%8B%A9%EF%BC%9F"><span class="nav-number">1.4.</span> <span class="nav-text">💡 如何选择？</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Deno-Windows-%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">Deno Windows 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%9D-%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93"><span class="nav-number">1.1.</span> <span class="nav-text">📝 笔记总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%96-%E5%86%85%E5%AE%B9%E6%9D%A5%E6%BA%90"><span class="nav-number">1.2.</span> <span class="nav-text">📖 内容来源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%A7-%E4%BD%BF%E7%94%A8-PowerShell-%E8%84%9A%E6%9C%AC%E5%AE%89%E8%A3%85%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="nav-number">1.3.</span> <span class="nav-text">🔧 使用 PowerShell 脚本安装（推荐）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%A6-%E5%85%B6%E4%BB%96%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F"><span class="nav-number">1.4.</span> <span class="nav-text">📦 其他安装方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%96%B1%EF%B8%8F-%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85%E4%B8%8E%E7%B3%BB%E7%BB%9F%E8%A6%81%E6%B1%82"><span class="nav-number">1.5.</span> <span class="nav-text">🖱️ 手动安装与系统要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%AC%86%EF%B8%8F-%E6%9B%B4%E6%96%B0-Deno"><span class="nav-number">1.6.</span> <span class="nav-text">⬆️ 更新 Deno</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -179,7 +181,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-npm-vs-npx/">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-08-06-Deno-Windows-Install/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -192,12 +194,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="npm vs npx | 神觉晓">
+      <meta itemprop="name" content="Deno Windows Install | 神觉晓">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          npm vs npx
+          Deno Windows Install
         </h1>
 
         <div class="post-meta-container">
@@ -208,14 +210,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2026-07-30 14:49:05" itemprop="dateCreated datePublished" datetime="2026-07-30T14:49:05+08:00">2026-07-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-05 02:50:42" itemprop="dateModified" datetime="2026-08-05T02:50:42+08:00">2026-08-05</time>
+      <time title="创建时间：2026-08-06 15:00:41" itemprop="dateCreated datePublished" datetime="2026-08-06T15:00:41+08:00">2026-08-06</time>
     </span>
 
   
@@ -227,50 +222,62 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="npm-与-npx-区别"><a href="#npm-与-npx-区别" class="headerlink" title="npm 与 npx 区别"></a>npm 与 npx 区别</h1><h2 id="📝-内容来源"><a href="#📝-内容来源" class="headerlink" title="📝 内容来源"></a>📝 内容来源</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/nib71ed8ghaqfuyb1y">npm 与 npx 区别</a>（<a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/1ea1f80c-e11d-4e1f-845f-8023549a044c">Deepseek</a>）</li>
-<li><a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/v11/commands/npx">npx</a></li>
+    <div class="post-body" itemprop="articleBody"><h1 id="Deno-Windows-安装"><a href="#Deno-Windows-安装" class="headerlink" title="Deno Windows 安装"></a>Deno Windows 安装</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Deno_Windows_PowerShell_irm.png" alt="Deno Windows PowerShell irm"></p>
+<h2 id="📝-笔记总结"><a href="#📝-笔记总结" class="headerlink" title="📝 笔记总结"></a>📝 笔记总结</h2><p>PowerShell 脚本安装最方便。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">irm</span> https://deno.land/install.ps1 | <span class="built_in">iex</span></span><br><span class="line">deno <span class="literal">--version</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="📖-内容来源"><a href="#📖-内容来源" class="headerlink" title="📖 内容来源"></a>📖 内容来源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://pagic.org/zh-CN/docs/usage.html">安装 Deno</a></li>
+<li><a target="_blank" rel="noopener" href="https://pagic.org/zh-CN/docs/usage.html">Deno Windows 安装</a>（<a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/29bfb074-8f83-4edb-a777-6f579fbbe845">DeepSeek</a>）</li>
 </ul>
-<h2 id="😊-简单说明"><a href="#😊-简单说明" class="headerlink" title="😊 简单说明"></a>😊 简单说明</h2><p><code>npm</code> 和 <code>npx</code> 是 <strong>Node.js</strong> 生态里两个核心但职责不同的工具，可以用一句话来区分它们：</p>
 <blockquote>
-<p><strong>npm 是“包管理器”，负责安装、管理依赖；而 npx 是“包执行器”，负责运行命令，无需显式安装</strong>。</p>
+<p>Deno 是一个由 Node.js 的原始作者 Ryan Dahl 创建的 JavaScript、TypeScript 和 WebAssembly 运行时。你可以把它看作是 Node.js 的“进化版”，旨在解决 Node.js 早期设计中的一些遗憾，为现代 Web 开发提供一个更安全、更高效的开发环境</p>
 </blockquote>
-<h2 id="📊-表格比较"><a href="#📊-表格比较" class="headerlink" title="📊 表格比较"></a>📊 表格比较</h2><table>
+<p>在 Windows 上安装 Deno 非常简单，有多种方法可供选择。官方推荐使用 PowerShell 脚本，因为它能提供更快的启动速度。</p>
+<h2 id="🔧-使用-PowerShell-脚本安装（推荐）"><a href="#🔧-使用-PowerShell-脚本安装（推荐）" class="headerlink" title="🔧 使用 PowerShell 脚本安装（推荐）"></a>🔧 使用 PowerShell 脚本安装（推荐）</h2><p>这是最快捷的官方安装方式。以管理员身份打开 PowerShell 并运行以下命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">irm</span> https://deno.land/install.ps1 | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p> 这行代码的意思是从网上下载脚本并立即运行。</p>
+</blockquote>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">irm</span> https://某个网站/脚本.ps1 | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这非常危险，因为你不知道脚本里写了什么，它可能会删除你的文件、窃取你的信息。除非你 100% 信任来源，并且仔细看过脚本内容，否则绝对不要执行这类命令。</p>
+</blockquote>
+<p>执行后，Deno 会默认安装到 <code>%USERPROFILE%\\.deno\\bin\\deno.exe</code>，安装程序通常会自动将此路径添加到系统 <code>PATH</code> 环境变量中。</p>
+<p>安装完成后，打开一个新的终端窗口，运行以下命令验证是否安装成功：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno <span class="literal">--version</span></span><br></pre></td></tr></table></figure>
+
+<p>如果能看到版本信息，就说明安装成功了。</p>
+<h2 id="📦-其他安装方式"><a href="#📦-其他安装方式" class="headerlink" title="📦 其他安装方式"></a>📦 其他安装方式</h2><p>如果你更习惯使用包管理器，这些也是不错的选择：</p>
+<table>
 <thead>
 <tr>
-<th align="left">特性</th>
-<th align="left">npm (Node Package Manager)</th>
-<th align="left">npx (Node Package Execute)</th>
+<th align="left">包管理器</th>
+<th align="left">命令</th>
 </tr>
 </thead>
 <tbody><tr>
-<td align="left"><strong>核心职责</strong></td>
-<td align="left">管理项目的依赖包，比如安装、卸载、更新、发布包</td>
-<td align="left">执行某个 Node.js 包提供的命令</td>
+<td align="left"><strong>Winget</strong></td>
+<td align="left"><code>winget install DenoLand.Deno</code></td>
 </tr>
 <tr>
-<td align="left"><strong>是否需要安装</strong></td>
-<td align="left"><strong>需要</strong>。包会被下载并保存到 <code>node_modules</code> 或全局目录</td>
-<td align="left"><strong>通常不需要</strong>。它会临时下载并执行，用完即走，不污染环境</td>
+<td align="left"><strong>Scoop</strong></td>
+<td align="left"><code>scoop install deno</code></td>
 </tr>
 <tr>
-<td align="left"><strong>典型场景</strong></td>
-<td align="left">为项目安装核心依赖（如 <code>npm install react</code>）<br>运行 <code>package.json</code> 中定义的脚本（如 <code>npm run build</code>）</td>
-<td align="left">运行一次性的脚手架工具（如 <code>npx create-react-app my-app</code>）<br>快速测试不同版本的包（如 <code>npx webpack@4.44.1 -v</code>）</td>
+<td align="left"><strong>Chocolatey</strong></td>
+<td align="left"><code>choco install deno</code></td>
 </tr>
 <tr>
-<td align="left"><strong>执行本地包</strong></td>
-<td align="left">需要通过 <code>./node_modules/.bin/</code> 路径或 <code>npm run</code> 命令间接运行</td>
-<td align="left">可以直接运行，它会自动在 <code>node_modules/.bin/</code> 中查找命令</td>
+<td align="left"><strong>npm</strong></td>
+<td align="left"><code>npm install -g deno</code>（启动性能略逊于官方脚本）</td>
 </tr>
 </tbody></table>
-<p>除了用法上的不同，<code>npx</code> 还有一个非常便利的特性：它可以临时下载并运行一个远程的 npm 包，这在测试新工具或运行一次性脚本时能帮你节省不少时间。</p>
-<h2 id="💡-如何选择？"><a href="#💡-如何选择？" class="headerlink" title="💡 如何选择？"></a>💡 如何选择？</h2><p>一个很实用的场景是：创建 React 项目时，会先全局安装 <code>create-react-app</code>，再用它生成项目。有了 <code>npx</code>，可以直接 <code>npx create-react-app my-app</code>，不用全局安装，每次用的还都是最新版，非常方便。</p>
-<p><strong>一句话总结就是</strong>：</p>
-<ul>
-<li>需要一个包长期使用（比如项目依赖）→ 用 <strong><code>npm install</code></strong>。</li>
-<li>只是想临时跑一下某个命令或工具 → 用 <strong><code>npx</code></strong>。</li>
-</ul>
+<h2 id="🖱️-手动安装与系统要求"><a href="#🖱️-手动安装与系统要求" class="headerlink" title="🖱️ 手动安装与系统要求"></a>🖱️ 手动安装与系统要求</h2><p>你也可以选择从 GitHub 的<a target="_blank" rel="noopener" href="https://github.com/denoland/deno/releases">发布页面</a>下载对应架构的 <code>.zip</code> 压缩包，解压后将 <code>deno.exe</code> 放在一个你方便管理的目录，并手动将其添加到系统 <code>PATH</code> 环境变量中。</p>
+<p><strong>系统要求</strong>：请确保你的 Windows 系统是 <strong>Windows 10 版本 1709</strong> 或 <strong>Windows Server 2016 版本 1709</strong> 及更新的版本。</p>
+<h2 id="⬆️-更新-Deno"><a href="#⬆️-更新-Deno" class="headerlink" title="⬆️ 更新 Deno"></a>⬆️ 更新 Deno</h2><p>当你需要更新到最新版本时，只需在终端中运行<code>deno upgrade</code>命令即可。</p>
 
     </div>
 
@@ -288,7 +295,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://shenjuexiao.com/2026/2026-07-30-npm-vs-npx/" title="npm vs npx">https://shenjuexiao.com/2026/2026-07-30-npm-vs-npx/</a>
+      <a href="https://shenjuexiao.com/2026/2026-08-06-Deno-Windows-Install/" title="Deno Windows Install">https://shenjuexiao.com/2026/2026-08-06-Deno-Windows-Install/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -301,14 +308,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2026/2026-07-30-GitHub-raw-vs-cdn/" rel="prev" title="GitHub raw vs cdn">
-                  <i class="fa fa-angle-left"></i> GitHub raw vs cdn
+                <a href="/2026/2026-08-05-PicGo-GitHub-Config/" rel="prev" title="PicGo GitHub Config">
+                  <i class="fa fa-angle-left"></i> PicGo GitHub Config
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2026/2026-07-30-Astro-GitHub-Actions/" rel="next" title="Astro GitHub Actions">
-                  Astro GitHub Actions <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>

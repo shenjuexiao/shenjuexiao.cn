@@ -140,7 +140,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">27</span>
+          <span class="site-state-item-count">28</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -166,6 +166,130 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-08-06-Deno-Windows-Install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="不懂就问，无趣的笔记">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-08-06-Deno-Windows-Install/" class="post-title-link" itemprop="url">Deno Windows Install</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-08-06 15:00:41" itemprop="dateCreated datePublished" datetime="2026-08-06T15:00:41+08:00">2026-08-06</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Deno-Windows-安装"><a href="#Deno-Windows-安装" class="headerlink" title="Deno Windows 安装"></a>Deno Windows 安装</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Deno_Windows_PowerShell_irm.png" alt="Deno Windows PowerShell irm"></p>
+<h2 id="📝-笔记总结"><a href="#📝-笔记总结" class="headerlink" title="📝 笔记总结"></a>📝 笔记总结</h2><p>PowerShell 脚本安装最方便。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">irm</span> https://deno.land/install.ps1 | <span class="built_in">iex</span></span><br><span class="line">deno <span class="literal">--version</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="📖-内容来源"><a href="#📖-内容来源" class="headerlink" title="📖 内容来源"></a>📖 内容来源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://pagic.org/zh-CN/docs/usage.html">安装 Deno</a></li>
+<li><a target="_blank" rel="noopener" href="https://pagic.org/zh-CN/docs/usage.html">Deno Windows 安装</a>（<a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/29bfb074-8f83-4edb-a777-6f579fbbe845">DeepSeek</a>）</li>
+</ul>
+<blockquote>
+<p>Deno 是一个由 Node.js 的原始作者 Ryan Dahl 创建的 JavaScript、TypeScript 和 WebAssembly 运行时。你可以把它看作是 Node.js 的“进化版”，旨在解决 Node.js 早期设计中的一些遗憾，为现代 Web 开发提供一个更安全、更高效的开发环境</p>
+</blockquote>
+<p>在 Windows 上安装 Deno 非常简单，有多种方法可供选择。官方推荐使用 PowerShell 脚本，因为它能提供更快的启动速度。</p>
+<h2 id="🔧-使用-PowerShell-脚本安装（推荐）"><a href="#🔧-使用-PowerShell-脚本安装（推荐）" class="headerlink" title="🔧 使用 PowerShell 脚本安装（推荐）"></a>🔧 使用 PowerShell 脚本安装（推荐）</h2><p>这是最快捷的官方安装方式。以管理员身份打开 PowerShell 并运行以下命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">irm</span> https://deno.land/install.ps1 | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p> 这行代码的意思是从网上下载脚本并立即运行。</p>
+</blockquote>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">irm</span> https://某个网站/脚本.ps1 | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这非常危险，因为你不知道脚本里写了什么，它可能会删除你的文件、窃取你的信息。除非你 100% 信任来源，并且仔细看过脚本内容，否则绝对不要执行这类命令。</p>
+</blockquote>
+<p>执行后，Deno 会默认安装到 <code>%USERPROFILE%\\.deno\\bin\\deno.exe</code>，安装程序通常会自动将此路径添加到系统 <code>PATH</code> 环境变量中。</p>
+<p>安装完成后，打开一个新的终端窗口，运行以下命令验证是否安装成功：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno <span class="literal">--version</span></span><br></pre></td></tr></table></figure>
+
+<p>如果能看到版本信息，就说明安装成功了。</p>
+<h2 id="📦-其他安装方式"><a href="#📦-其他安装方式" class="headerlink" title="📦 其他安装方式"></a>📦 其他安装方式</h2><p>如果你更习惯使用包管理器，这些也是不错的选择：</p>
+<table>
+<thead>
+<tr>
+<th align="left">包管理器</th>
+<th align="left">命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Winget</strong></td>
+<td align="left"><code>winget install DenoLand.Deno</code></td>
+</tr>
+<tr>
+<td align="left"><strong>Scoop</strong></td>
+<td align="left"><code>scoop install deno</code></td>
+</tr>
+<tr>
+<td align="left"><strong>Chocolatey</strong></td>
+<td align="left"><code>choco install deno</code></td>
+</tr>
+<tr>
+<td align="left"><strong>npm</strong></td>
+<td align="left"><code>npm install -g deno</code>（启动性能略逊于官方脚本）</td>
+</tr>
+</tbody></table>
+<h2 id="🖱️-手动安装与系统要求"><a href="#🖱️-手动安装与系统要求" class="headerlink" title="🖱️ 手动安装与系统要求"></a>🖱️ 手动安装与系统要求</h2><p>你也可以选择从 GitHub 的<a target="_blank" rel="noopener" href="https://github.com/denoland/deno/releases">发布页面</a>下载对应架构的 <code>.zip</code> 压缩包，解压后将 <code>deno.exe</code> 放在一个你方便管理的目录，并手动将其添加到系统 <code>PATH</code> 环境变量中。</p>
+<p><strong>系统要求</strong>：请确保你的 Windows 系统是 <strong>Windows 10 版本 1709</strong> 或 <strong>Windows Server 2016 版本 1709</strong> 及更新的版本。</p>
+<h2 id="⬆️-更新-Deno"><a href="#⬆️-更新-Deno" class="headerlink" title="⬆️ 更新 Deno"></a>⬆️ 更新 Deno</h2><p>当你需要更新到最新版本时，只需在终端中运行<code>deno upgrade</code>命令即可。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1122,130 +1246,6 @@
 <li><strong>静态站点生成器注意事项</strong>：如果你使用Hexo、Hugo等静态站点生成器，建议将<code>CNAME</code>文件放在项目的源文件夹（如<code>source</code>目录）下。这样每次部署时，它就会被自动复制到生成的<code>public</code>文件夹并推送到GitHub，避免每次部署后<code>CNAME</code>文件丢失的问题。</li>
 <li><strong>Apex 根域名</strong>：需要注意，对于 example.com 这样的根域名（也叫 Apex 域），由于 DNS 规范限制，不能使用 CNAME 记录。你需要配置 A 记录，将其指向 GitHub 的固定 IP 地址（185.199.108.153 等四个 IP），才能实现根域名的访问。不过，这并不影响在仓库中依然需要一个内容为 example.com 的 CNAME 文件来完成授权。</li>
 </ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-Astro-GitHub-Actions/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="shenjuexiao">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="神觉晓">
-      <meta itemprop="description" content="不懂就问，无趣的笔记">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 神觉晓">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/2026-07-30-Astro-GitHub-Actions/" class="post-title-link" itemprop="url">Astro GitHub Actions</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2026-07-30 14:50:51" itemprop="dateCreated datePublished" datetime="2026-07-30T14:50:51+08:00">2026-07-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-04 09:49:50" itemprop="dateModified" datetime="2026-08-04T09:49:50+08:00">2026-08-04</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Astro-安装及-GitHub-Actions-自动部署"><a href="#Astro-安装及-GitHub-Actions-自动部署" class="headerlink" title="Astro 安装及 GitHub Actions 自动部署"></a>Astro 安装及 GitHub Actions 自动部署</h1><h2 id="📄-内容来源"><a href="#📄-内容来源" class="headerlink" title="📄 内容来源"></a>📄 内容来源</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://docs.astro.build/zh-cn/install-and-setup/">安装 Astro</a></li>
-<li><a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/v11/commands/npx">npx</a></li>
-</ul>
-<h2 id="🛠️-通过-CLI-向导安装"><a href="#🛠️-通过-CLI-向导安装" class="headerlink" title="🛠️ 通过 CLI 向导安装"></a>🛠️ 通过 CLI 向导安装</h2><p><a target="_blank" rel="noopener" href="https://docs.astro.build/zh-cn/install-and-setup/">docs.astro.build&#x2F;zh-cn&#x2F;install-and-setup&#x2F;</a></p>
-<p>我选择的是 <code>Astro Use blog template</code>，也可以选择其他的选项，使用模板能快速建立页面。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Use_blog_template.png" alt="Astro Use blog template"></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 npm 创建一个新项目</span></span><br><span class="line">npm create astro@latest</span><br></pre></td></tr></table></figure>
-
-<p>或</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 pnpm 创建一个新项目</span></span><br><span class="line">pnpm create astro@latest</span><br></pre></td></tr></table></figure>
-
-<p>或</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 yarn 创建一个新项目</span></span><br><span class="line">yarn create astro</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_npm_create_astro@latest.png" alt="npm create astro@latest"></p>
-<h2 id="📁-目录和文件"><a href="#📁-目录和文件" class="headerlink" title="📁 目录和文件"></a>📁 目录和文件</h2><p><a target="_blank" rel="noopener" href="https://docs.astro.build/zh-cn/basics/project-structure/">docs.astro.build&#x2F;zh-cn&#x2F;basics&#x2F;project-structure&#x2F;</a></p>
-<blockquote>
-<p>Astro 采用一套约定俗成的文件夹布局来管理项目。每个 Astro 项目的根目录下都应该包括以下目录和文件：</p>
-</blockquote>
-<ul>
-<li>src&#x2F;* - 你的项目源代码（组件、页面、样式、图片等）。</li>
-<li>public&#x2F;* - 你的非代码、未处理的资源（字体、图标等）。</li>
-<li>package.json - 项目清单。</li>
-<li>astro.config.mjs - Astro 配置文件（推荐）。</li>
-<li>tsconfig.json - TypeScript 配置文件（推荐）。</li>
-</ul>
-<h2 id="🚀-启动-Astro-开发服务器"><a href="#🚀-启动-Astro-开发服务器" class="headerlink" title="🚀 启动 Astro 开发服务器"></a>🚀 启动 Astro 开发服务器</h2><p><a target="_blank" rel="noopener" href="https://docs.astro.build/zh-cn/develop-and-build/">docs.astro.build&#x2F;zh-cn&#x2F;develop-and-build&#x2F;</a></p>
-<blockquote>
-<p>Astro 自带了一个内置的开发服务器，它包含了项目开发所需的一切。astro dev CLI 命令将启动本地开发服务器，让你第一次看到你的新网站。</p>
-</blockquote>
-<blockquote>
-<p>每个起始模板都预配置了一个脚本，该脚本将为你运行 astro dev。在进入你的项目目录后，使用你喜欢的包管理器运行此命令并启动 Astro 开发服务器。</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
-
-
-<p>或</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm run dev</span><br></pre></td></tr></table></figure>
-
-
-<p>或</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn run dev</span><br></pre></td></tr></table></figure>
-
-<h2 id="🌐-部署你的-Astro-站点至-GitHub-Pages"><a href="#🌐-部署你的-Astro-站点至-GitHub-Pages" class="headerlink" title="🌐 部署你的 Astro 站点至 GitHub Pages"></a>🌐 部署你的 Astro 站点至 GitHub Pages</h2><p><a target="_blank" rel="noopener" href="https://docs.astro.build/zh-cn/guides/deploy/github/">docs.astro.build&#x2F;zh-cn&#x2F;guides&#x2F;deploy&#x2F;github&#x2F;</a></p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">GitHub</span> <span class="string">Pages</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="comment"># 每次推送到 `main` 分支时触发这个“工作流程”</span></span><br><span class="line">  <span class="comment"># 如果你使用了别的分支名，请按需将 `main` 替换成你的分支名</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span> [ <span class="string">main</span> ]</span><br><span class="line">  <span class="comment"># 允许你在 GitHub 上的 Actions 标签中手动触发此“工作流程”</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 允许 job 克隆 repo 并创建一个 page deployment</span></span><br><span class="line"></span><br><span class="line"><span class="string">```yaml</span></span><br><span class="line"><span class="attr">permissions:</span></span><br><span class="line">  <span class="attr">contents:</span> <span class="string">read</span></span><br><span class="line">  <span class="attr">pages:</span> <span class="string">write</span></span><br><span class="line">  <span class="attr">id-token:</span> <span class="string">write</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">your</span> <span class="string">repository</span> <span class="string">using</span> <span class="string">git</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v5</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install,</span> <span class="string">build,</span> <span class="string">and</span> <span class="string">upload</span> <span class="string">your</span> <span class="string">site</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">withastro/action@v5</span></span><br><span class="line">        <span class="comment"># with:</span></span><br><span class="line">          <span class="comment"># path: . # 存储库中 Astro 项目的根位置。（可选）</span></span><br><span class="line">          <span class="comment"># node-version: 20 # 用于构建站点的特定 Node.js 版本，默认为 20。（可选）</span></span><br><span class="line">          <span class="comment"># package-manager: pnpm@latest # 应使用哪个 Node.js 包管理器来安装依赖项和构建站点。会根据存储库中的 lockfile 自动检测。（可选）</span></span><br><span class="line">          <span class="comment"># build-cmd: pnpm run build # 用于构建你的网站的命令。默认运行软件包的构建脚本或任务。（可选）</span></span><br><span class="line">        <span class="comment"># env:</span></span><br><span class="line">          <span class="comment"># PUBLIC_POKEAPI: &#x27;https://pokeapi.co/api/v2&#x27; # 对变量值使用单引号。（可选）</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">deploy:</span></span><br><span class="line">    <span class="attr">needs:</span> <span class="string">build</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">name:</span> <span class="string">github-pages</span></span><br><span class="line">      <span class="attr">url:</span> <span class="string">$&#123;&#123;</span> <span class="string">steps.deployment.outputs.page_url</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">GitHub</span> <span class="string">Pages</span></span><br><span class="line">        <span class="attr">id:</span> <span class="string">deployment</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/deploy-pages@v4</span></span><br></pre></td></tr></table></figure>
-<h2 id="❌-Error-Failed-to-create-deployment-status-404"><a href="#❌-Error-Failed-to-create-deployment-status-404" class="headerlink" title="❌ Error: Failed to create deployment (status: 404)"></a>❌ Error: Failed to create deployment (status: 404)</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Deploy_to_GitHub_Pages.png" alt="Astro Deploy to GitHub Pages"></p>
-<p>这个错误表明 <code>GitHub Pages</code> 部署失败，主要原因是 <code>GitHub Pages</code> 没有在仓库设置中启用。错误信息明确指出：</p>
-<p>Ensure GitHub Pages has been enabled: <a target="_blank" rel="noopener" href="https://github.com/shenjuexiao/astro/settings/pages">https://github.com/shenjuexiao/astro/settings/pages</a></p>
 
       
     </div>
