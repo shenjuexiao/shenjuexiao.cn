@@ -140,7 +140,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">29</span>
+          <span class="site-state-item-count">30</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -166,6 +166,156 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-08-08-Pagic-Windows-Installation-Again/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="不懂就问，无趣的笔记">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-08-08-Pagic-Windows-Installation-Again/" class="post-title-link" itemprop="url">Pagic Windows Installation Again</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-08-08 10:24:03" itemprop="dateCreated datePublished" datetime="2026-08-08T10:24:03+08:00">2026-08-08</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Pagic-Windows-降级安装"><a href="#Pagic-Windows-降级安装" class="headerlink" title="Pagic Windows 降级安装"></a>Pagic Windows 降级安装</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Pagic_dist_on_http_127.png.png" alt="Pagic dist on http 127"></p>
+<h2 id="📝-笔记总结"><a href="#📝-笔记总结" class="headerlink" title="📝 笔记总结"></a>📝 笔记总结</h2><p>克隆仓库，修改 <code>i18n.tsx</code>，安装成功，但是部署中还会出现 CDN 错误。</p>
+<h2 id="📖-内容来源"><a href="#📖-内容来源" class="headerlink" title="📖 内容来源"></a>📖 内容来源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://pagic.org/zh-CN/docs/usage.html">Pagic 安装</a></li>
+<li><a target="_blank" rel="noopener" href="https://pagic.org/docs/usage.html">Pagic Installation</a></li>
+</ul>
+<blockquote>
+<p>Pagic：Deno + React 驱动的静态网站生成器</p>
+</blockquote>
+<h2 id="🔧-安装-Deno-v1-34-1"><a href="#🔧-安装-Deno-v1-34-1" class="headerlink" title="🔧 安装 Deno v1.34.1"></a>🔧 安装 Deno v1.34.1</h2><h3 id="PowerShell-Windows-（失败）"><a href="#PowerShell-Windows-（失败）" class="headerlink" title="PowerShell (Windows) （失败）"></a>PowerShell (Windows) （失败）</h3><p>原理是将脚本内容下载后，通过管道传递给 Invoke-Expression，并使用 -ArgumentList 来指定版本号：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">irm</span> https://deno.land/install.ps1 | <span class="built_in">iex</span> <span class="literal">-ArgumentList</span> \<span class="string">&quot;v1.34.1\&quot;</span></span><br></pre></td></tr></table></figure>
+<p>或</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">irm</span> https://deno.land/install.ps1 | <span class="built_in">iex</span> <span class="literal">-args</span> \<span class="string">&quot;v1.34.1\&quot;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="分两步执行（成功）"><a href="#分两步执行（成功）" class="headerlink" title="分两步执行（成功）"></a>分两步执行（成功）</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 下载脚本到本地临时文件夹</span></span><br><span class="line"><span class="built_in">Invoke-RestMethod</span> <span class="literal">-Uri</span> \<span class="string">&quot;https://deno.land/install.ps1\&quot;</span> <span class="literal">-OutFile</span> \<span class="string">&quot;<span class="variable">$env:TEMP</span>\\deno_install.ps1\&quot;</span></span><br><span class="line"><span class="comment"># 2. 执行脚本并传入参数</span></span><br><span class="line">&amp; \<span class="string">&quot;<span class="variable">$env:TEMP</span>\\deno_install.ps1\&quot;</span> \<span class="string">&quot;v1.34.1\&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Deno_Windows_deno_install_1.34.1.png" alt="Deno Windows deno install 1.34.1"></p>
+<h2 id="🧩-安装后验证"><a href="#🧩-安装后验证" class="headerlink" title="🧩 安装后验证"></a>🧩 安装后验证</h2><p>安装完成后，记得关闭并重新打开你的 <code>PowerShell</code> 终端，然后运行以下命令来确认版本：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno <span class="literal">--version</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="⬆️-安装-Pagic"><a href="#⬆️-安装-Pagic" class="headerlink" title="⬆️ 安装 Pagic"></a>⬆️ 安装 Pagic</h2><h3 id="安装最新版本"><a href="#安装最新版本" class="headerlink" title="安装最新版本"></a>安装最新版本</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span> <span class="literal">--allow-write</span> <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic https://deno.land/x/pagic/mod.ts</span><br></pre></td></tr></table></figure>
+
+<h3 id="安装指定版本"><a href="#安装指定版本" class="headerlink" title="安装指定版本"></a>安装指定版本</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span> <span class="literal">--allow-write</span> <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic https://deno.land/x/pagic@v1.<span class="number">6.3</span>/mod.ts</span><br></pre></td></tr></table></figure>
+
+<h3 id="指定读写目录的方式"><a href="#指定读写目录的方式" class="headerlink" title="指定读写目录的方式"></a>指定读写目录的方式</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span>=/home/xcatliu/site <span class="literal">--allow-write</span>=/home/xcatliu/site <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic https://deno.land/x/pagic/mod.ts</span><br></pre></td></tr></table></figure>
+
+<h3 id="指定读写目录的方式-1"><a href="#指定读写目录的方式-1" class="headerlink" title="指定读写目录的方式"></a>指定读写目录的方式</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span>=/home/xcatliu/site <span class="literal">--allow-write</span>=/home/xcatliu/site <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic https://deno.land/x/pagic/mod.ts</span><br></pre></td></tr></table></figure>
+
+<h2 id="🚫-CDN-错误"><a href="#🚫-CDN-错误" class="headerlink" title="🚫 CDN  错误"></a>🚫 CDN  错误</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">PS</span> D:\\git&gt; deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span> <span class="literal">--allow-write</span> <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic https://deno.land/x/pagic/mod.ts</span><br><span class="line">Warning Implicitly <span class="keyword">using</span> latest version (v1.6.3) for https://deno.land/x/pagic/mod.ts</span><br><span class="line">Sending fatal alert BadCertificatey@v0.<span class="number">25.7</span>/prompt/_generic_suggestions.ts (<span class="number">10</span>/<span class="number">57</span>)</span><br><span class="line">Sending fatal alert BadCertificate11.<span class="number">0</span>/fs/mod.ts <span class="number">0.40</span>KiB/<span class="number">0.40</span>KiB (<span class="number">15</span>/<span class="number">57</span>)</span><br><span class="line">error: error sending request <span class="keyword">for</span> url (https://cdn.pagic.org/i18next@<span class="number">19.8</span>.<span class="number">1</span>/esnext/i18next.js): error trying to connect: invalid peer certificate: NotValidForName</span><br><span class="line">    at https://deno.land/x/pagic@v1.<span class="number">6.3</span>/src/plugins/i18n.tsx:<span class="number">4</span>:<span class="number">21</span></span><br><span class="line"><span class="built_in">PS</span> D:\\git&gt;</span><br></pre></td></tr></table></figure>
+
+<p>错误是由于 Deno 在下载依赖时遇到了 SSL 证书验证问题。具体是 cdn.pagic.org 这个域名的证书无效（NotValidForName 错误）。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Pagic_error_sending_request_for_url.png" alt="Pagic error sending request for url"></p>
+<h2 id="🎯-本地安装"><a href="#🎯-本地安装" class="headerlink" title="🎯 本地安装"></a>🎯 本地安装</h2><h3 id="克隆仓库"><a href="#克隆仓库" class="headerlink" title="克隆仓库"></a>克隆仓库</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:xcatliu/pagic.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="修改-i18n-tsx"><a href="#修改-i18n-tsx" class="headerlink" title="修改 i18n.tsx"></a>修改 <code>i18n.tsx</code></h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pagic\\src\\plugins\\i18n.tsx</span></span><br><span class="line">import i18next from <span class="string">&#x27;../../cdn.pagic.org/i18next@19.8.1/esnext/i18next.js&#x27;</span>;</span><br><span class="line">import &#123; Trans as TransComponent &#125; from <span class="string">&#x27;../../cdn.pagic.org/react-i18next@11.7.3/Trans.js&#x27;</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="安装-Pagic"><a href="#安装-Pagic" class="headerlink" title="安装 Pagic"></a>安装 Pagic</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span> <span class="literal">--allow-write</span> <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic mod.ts</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Pagic_Successfully_installed_pagic.png" alt="Pagic Successfully installed pagic"></p>
+<p>##💡初始化项目</p>
+<blockquote>
+<p>要使用 pagic 构建静态网站，则该项目至少需要包含一个 pagic.config.ts 配置文件和一个 md&#x2F;tsx 页面文件：</p>
+</blockquote>
+<p>site&#x2F;<br>├── pagic.config.ts<br>└── README.md</p>
+<blockquote>
+<p>当然，pagic.config.ts 一开始可以只导出一个空对象：</p>
+</blockquote>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export default &#123;&#125;;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>README.md 可以是一个简单的 Markdown 文件：</p>
+</blockquote>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Hello world</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>你可以运行以下命令一次性创建出上面的 site 项目：</p>
+</blockquote>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir site &amp;&amp; <span class="built_in">cd</span> site &amp;&amp; <span class="built_in">echo</span> \<span class="string">&quot;export default &#123;&#125;;\&quot;</span> &gt; pagic.config.ts &amp;&amp; <span class="built_in">echo</span> \<span class="string">&quot;# Hello world\&quot;</span> &gt; README.md</span><br></pre></td></tr></table></figure>
+
+<h2 id="📚-运行-pagic-build"><a href="#📚-运行-pagic-build" class="headerlink" title="📚 运行 pagic build"></a>📚 运行 pagic build</h2><blockquote>
+<p>接下来，我们就可以在项目中使用 pagic build 命令了。它的基本用法如下：</p>
+</blockquote>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构建静态网站</span></span><br><span class="line">pagic build [<span class="type">options</span>]</span><br><span class="line"><span class="comment"># --watch   监听文件变动以重新构建</span></span><br><span class="line"><span class="comment"># --serve   启动本地服务，预览静态网站</span></span><br><span class="line"><span class="comment"># --port    指定本地服务的端口号</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>不妨试试在 site 目录下运行以下代码：</p>
+</blockquote>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pagic build <span class="literal">--watch</span> <span class="literal">--serve</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>然后用浏览器打开 <a target="_blank" rel="noopener" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> ，看看是不是显示出 Hello world 了呢？</p>
+</blockquote>
+<blockquote>
+<p>注意，构建结果在 dist 目录中（这里隐藏了一些次要的文件）：</p>
+</blockquote>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">site/</span><br><span class="line">|── dist    <span class="comment"># 构建结果目录</span></span><br><span class="line">|   └── index.html</span><br><span class="line">├── pagic.config.ts</span><br><span class="line">└── README.md</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>一般的 Markdown 文件会被构建为同名的 HTML 文件，但是 README.md 被构建为了 index.html，这是一种人性化的处理，方便同时在 GitHub 中和静态网站中展示首页的内容。</p>
+</blockquote>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Pagic_pagic_build_watch_serve.png" alt="Pagic pagic build watch serve"></p>
+<p>后面不尝试了，因为还会出现 CDN 出错，修改本地文件或许可以构建成功，但是不太顺利。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1140,106 +1290,6 @@
 <li><strong>全栈&#x2F;专家</strong>：<strong>3门</strong> 覆盖不同范式（如TS + Go + Python），其余按需了解。</li>
 </ul>
 <p>如果现在只让我选，我会建议：<strong>TypeScript（搞定前后端统一）+ Python（搞定AI和脚本）+ 深入学习Rust（为未来5年做准备）</strong>。😊</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-31-Gmeek-Deploy-Another-Repo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="shenjuexiao">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="神觉晓">
-      <meta itemprop="description" content="不懂就问，无趣的笔记">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 神觉晓">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/2026-07-31-Gmeek-Deploy-Another-Repo/" class="post-title-link" itemprop="url">Gmeek Deploy Another Repo</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2026-07-31 15:18:42" itemprop="dateCreated datePublished" datetime="2026-07-31T15:18:42+08:00">2026-07-31</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-02 14:03:00" itemprop="dateModified" datetime="2026-08-02T14:03:00+08:00">2026-08-02</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Gmeek-部署其他仓库"><a href="#Gmeek-部署其他仓库" class="headerlink" title="Gmeek 部署其他仓库"></a>Gmeek 部署其他仓库</h1><h2 id="📦-原有：-Gmeek-yml"><a href="#📦-原有：-Gmeek-yml" class="headerlink" title="📦 原有： Gmeek.yml"></a>📦 原有： <code>Gmeek.yml</code></h2><p>原有 <code>GitHub Actions</code> ，通过 <code>actions/upload-pages-artifact@v3</code> 和 <code>actions/deploy-pages@v4</code> 自动化部署到本仓库的虚拟机上（注：不知这样理解是否正确）。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">build</span> <span class="string">Gmeek</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line">  <span class="attr">issues:</span></span><br><span class="line">    <span class="attr">types:</span> [<span class="string">opened</span>, <span class="string">edited</span>]</span><br><span class="line">  <span class="attr">schedule:</span></span><br><span class="line">    <span class="bullet">-</span> <span class="attr">cron:</span> <span class="string">\&quot;0</span> <span class="number">16</span> <span class="string">*</span> <span class="string">*</span> <span class="string">*\&quot;</span></span><br><span class="line">    </span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Generate</span> <span class="string">blog</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-24.04</span></span><br><span class="line">    <span class="attr">if:</span> <span class="string">$&#123;&#123;</span> <span class="string">github.event.repository.owner.id</span> <span class="string">==</span> <span class="string">github.event.sender.id</span> <span class="string">||</span> <span class="string">github.event_name</span> <span class="string">==</span> <span class="string">&#x27;schedule&#x27;</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">permissions:</span> <span class="string">write-all</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v4</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Setup</span> <span class="string">Pages</span></span><br><span class="line">        <span class="attr">id:</span> <span class="string">pages</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/configure-pages@v4</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Get</span> <span class="string">config.json</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          echo \&quot;====== check config.josn file ======\&quot;</span></span><br><span class="line"><span class="string">          cat config.json</span></span><br><span class="line"><span class="string">          echo \&quot;====== check config.josn end  ======\&quot;</span></span><br><span class="line"><span class="string">          sudo apt-get install jq</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Set</span> <span class="string">up</span> <span class="string">Python</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-python@v5</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">python-version:</span> <span class="number">3.8</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Clone</span> <span class="string">source</span> <span class="string">code</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          GMEEK_VERSION=$(jq -r \&quot;.GMEEK_VERSION\&quot; config.json)</span></span><br><span class="line"><span class="string">          git clone https://github.com/Meekdai/Gmeek.git /opt/Gmeek;</span></span><br><span class="line"><span class="string">          cd /opt/Gmeek/</span></span><br><span class="line"><span class="string">          lastTag=$(git describe --tags `git rev-list --tags --max-count=1`)</span></span><br><span class="line"><span class="string">          if [ $GMEEK_VERSION == &#x27;last&#x27; ]; then git checkout $lastTag; else git checkout $GMEEK_VERSION; fi;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">dependencies</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          pip install --upgrade pip</span></span><br><span class="line"><span class="string">          pip install -r /opt/Gmeek/requirements.txt</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Generate</span> <span class="string">new</span> <span class="string">html</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          cp -r ./* /opt/Gmeek/</span></span><br><span class="line"><span class="string">          cd /opt/Gmeek/</span></span><br><span class="line"><span class="string">          python Gmeek.py $&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125; $&#123;&#123; github.repository &#125;&#125; --issue_number &#x27;$&#123;&#123; github.event.issue.number &#125;&#125;&#x27;</span></span><br><span class="line"><span class="string">          cp -a /opt/Gmeek/docs $&#123;&#123; github.workspace &#125;&#125; </span></span><br><span class="line"><span class="string">          cp -a /opt/Gmeek/backup $&#123;&#123; github.workspace &#125;&#125; </span></span><br><span class="line"><span class="string">          cp /opt/Gmeek/blogBase.json $&#123;&#123; github.workspace &#125;&#125; </span></span><br><span class="line"><span class="string"></span>          </span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">update</span> <span class="string">html</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          git config --local user.email \&quot;$(jq -r \&quot;.email\&quot; config.json)\&quot;</span></span><br><span class="line"><span class="string">          git config --local user.name \&quot;$&#123;&#123; github.repository_owner &#125;&#125;\&quot;</span></span><br><span class="line"><span class="string">          git add .</span></span><br><span class="line"><span class="string">          git commit -a -m &#x27;🎉auto update by Gmeek action&#x27; || echo \&quot;nothing to commit\&quot;</span></span><br><span class="line"><span class="string">          git push || echo \&quot;nothing to push\&quot;</span></span><br><span class="line"><span class="string">          sleep 3</span></span><br><span class="line"><span class="string"></span>          </span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Upload</span> <span class="string">artifact</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/upload-pages-artifact@v3</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">&#x27;docs/.&#x27;</span></span><br><span class="line">          </span><br><span class="line">  <span class="attr">deploy:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">blog</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-24.04</span></span><br><span class="line">    <span class="attr">needs:</span> <span class="string">build</span></span><br><span class="line">    <span class="attr">permissions:</span></span><br><span class="line">      <span class="attr">contents:</span> <span class="string">write</span></span><br><span class="line">      <span class="attr">pages:</span> <span class="string">write</span></span><br><span class="line">      <span class="attr">id-token:</span> <span class="string">write</span></span><br><span class="line">    <span class="attr">concurrency:</span></span><br><span class="line">      <span class="attr">group:</span> <span class="string">\&quot;pages\&quot;</span></span><br><span class="line">      <span class="attr">cancel-in-progress:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">name:</span> <span class="string">github-pages</span></span><br><span class="line">      <span class="attr">url:</span> <span class="string">$&#123;&#123;</span> <span class="string">steps.deployment.outputs.page_url</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">GitHub</span> <span class="string">Pages</span></span><br><span class="line">        <span class="attr">id:</span> <span class="string">deployment</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/deploy-pages@v4</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="🔧-yml-修改需求"><a href="#🔧-yml-修改需求" class="headerlink" title="🔧 .yml 修改需求"></a>🔧 <code>.yml</code> 修改需求</h2><p>源仓库生成相关文件后，将静态页面 <code>./docs</code> 下的文件推送到博客仓库分支 <code>gh-pages</code> 上，即网站部署在分支。</p>
-<ul>
-<li>源仓库： <code>shenjuexiao/gmeek-source</code></li>
-<li>博客仓库： <code>shenjuexiao/gmeek-docs</code></li>
-<li>工作流 Deploy 增加 docs 下静态页面部署到博客仓库 <code>gh-pages</code> 分支</li>
-<li>使用 <code>peaceiris/actions-gh-pages</code></li>
-<li>跨仓库使用 token：<code>$&#123;&#123; secrets.GMEEK_DOCS &#125;&#125;</code></li>
-</ul>
-<h2 id="❌-Error-HttpError-Not-Found"><a href="#❌-Error-HttpError-Not-Found" class="headerlink" title="❌ Error: HttpError: Not Found"></a>❌ Error: HttpError: Not Found</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Gmeek_Deploy_Setup_Pages.png" alt="Gmeek Deploy Setup Pages"></p>
-<p>注释掉本地的部署</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 不需要配置 GitHub Pages</span></span><br><span class="line"><span class="comment"># - name: Setup Pages</span></span><br><span class="line">  <span class="comment"># id: pages</span></span><br><span class="line">  <span class="comment"># uses: actions/configure-pages@v4</span></span><br></pre></td></tr></table></figure>
-
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 去掉源仓库的部署</span></span><br><span class="line"><span class="comment"># actions/upload-pages-artifact@v3 是专门为 GitHub Pages 设计的</span></span><br><span class="line"><span class="comment"># 创建特殊的 artifact，只能被 actions/deploy-pages@v4 使用</span></span><br><span class="line"><span class="comment"># - name: Upload artifact</span></span><br><span class="line">  <span class="comment"># uses: actions/upload-pages-artifact@v3</span></span><br><span class="line">  <span class="comment"># with:</span></span><br><span class="line">    <span class="comment"># path: &#x27;docs/.&#x27;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 去掉源仓库的部署</span></span><br><span class="line"><span class="comment"># - name: Deploy to GitHub Pages</span></span><br><span class="line">  <span class="comment">#   id: deployment</span></span><br><span class="line">  <span class="comment">#   uses: actions/deploy-pages@v4</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="🔑-Error-Action-failed-with-not-found-deploy-key-for-tokens"><a href="#🔑-Error-Action-failed-with-not-found-deploy-key-for-tokens" class="headerlink" title="🔑 Error: Action failed with &quot;not found deploy key for tokens&quot;"></a>🔑 Error: Action failed with &quot;not found deploy key for tokens&quot;</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Gmeek_Deploy_docs_to.png" alt="Gmeek Deploy docs to "></p>
-<p>源仓库需要设置  token</p>
-<ul>
-<li>创建 GitHub 个人访问令牌 PAT <code>Personal access tokens (classic)</code><br>GitHub 头像，<code>Settings</code> -&gt; <code>Developer settings</code> -&gt; <code>Personal access tokens</code> -&gt; <code>Tokens (classic)</code><br>新建 Token，勾选权限：repo（全部仓库读写权限）。<br>复制生成的 Token（仅展示一次，丢失需重建）。</li>
-<li>仓库配置 <code>Repository secrets</code><br>仓库首页， <code>Settings</code> -&gt; <code>Secrets and variables</code> -&gt; <code>Actions</code> -&gt; <code>New repository secret</code><br>Name：GH_TOKEN。<br>Value：粘贴上面的 PAT。</li>
-</ul>
-<h2 id="✅-修改后-gmeek-docs-yml"><a href="#✅-修改后-gmeek-docs-yml" class="headerlink" title="✅ 修改后 gmeek-docs.yml"></a>✅ 修改后 <code>gmeek-docs.yml</code></h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">build</span> <span class="string">Gmeek</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line">  <span class="attr">issues:</span></span><br><span class="line">    <span class="attr">types:</span> [<span class="string">opened</span>, <span class="string">edited</span>]</span><br><span class="line">  <span class="comment"># schedule:</span></span><br><span class="line">    <span class="comment"># - cron: \&quot;0 16 * * *\&quot;</span></span><br><span class="line">    </span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Generate</span> <span class="string">blog</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-24.04</span></span><br><span class="line">    <span class="attr">if:</span> <span class="string">$&#123;&#123;</span> <span class="string">github.event.repository.owner.id</span> <span class="string">==</span> <span class="string">github.event.sender.id</span> <span class="string">||</span> <span class="string">github.event_name</span> <span class="string">==</span> <span class="string">&#x27;schedule&#x27;</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">permissions:</span> <span class="string">write-all</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v4</span></span><br><span class="line">        </span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Get</span> <span class="string">config.json</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          echo \&quot;====== check config.josn file ======\&quot;</span></span><br><span class="line"><span class="string">          cat config.json</span></span><br><span class="line"><span class="string">          echo \&quot;====== check config.josn end  ======\&quot;</span></span><br><span class="line"><span class="string">          sudo apt-get install jq</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Set</span> <span class="string">up</span> <span class="string">Python</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-python@v5</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">python-version:</span> <span class="number">3.8</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Clone</span> <span class="string">source</span> <span class="string">code</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          GMEEK_VERSION=$(jq -r \&quot;.GMEEK_VERSION\&quot; config.json)</span></span><br><span class="line"><span class="string">          git clone https://github.com/Meekdai/Gmeek.git /opt/Gmeek;</span></span><br><span class="line"><span class="string">          cd /opt/Gmeek/</span></span><br><span class="line"><span class="string">          lastTag=$(git describe --tags `git rev-list --tags --max-count=1`)</span></span><br><span class="line"><span class="string">          if [ $GMEEK_VERSION == &#x27;last&#x27; ]; then git checkout $lastTag; else git checkout $GMEEK_VERSION; fi;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">dependencies</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          pip install --upgrade pip</span></span><br><span class="line"><span class="string">          pip install -r /opt/Gmeek/requirements.txt</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Generate</span> <span class="string">new</span> <span class="string">html</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          cp -r ./* /opt/Gmeek/</span></span><br><span class="line"><span class="string">          cd /opt/Gmeek/</span></span><br><span class="line"><span class="string">          python Gmeek.py $&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125; $&#123;&#123; github.repository &#125;&#125; --issue_number &#x27;$&#123;&#123; github.event.issue.number &#125;&#125;&#x27;</span></span><br><span class="line"><span class="string">          cp -a /opt/Gmeek/docs $&#123;&#123; github.workspace &#125;&#125; </span></span><br><span class="line"><span class="string">          cp -a /opt/Gmeek/backup $&#123;&#123; github.workspace &#125;&#125; </span></span><br><span class="line"><span class="string">          cp /opt/Gmeek/blogBase.json $&#123;&#123; github.workspace &#125;&#125; </span></span><br><span class="line"><span class="string"></span>      </span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">update</span> <span class="string">html</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          git config --local user.email \&quot;$(jq -r \&quot;.email\&quot; config.json)\&quot;</span></span><br><span class="line"><span class="string">          git config --local user.name \&quot;$&#123;&#123; github.repository_owner &#125;&#125;\&quot;</span></span><br><span class="line"><span class="string">          git add .</span></span><br><span class="line"><span class="string">          git commit -a -m &#x27;🎉auto update by Gmeek action&#x27; || echo \&quot;nothing to commit\&quot;</span></span><br><span class="line"><span class="string">          git push || echo \&quot;nothing to push\&quot;</span></span><br><span class="line"><span class="string">          sleep 3</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="comment"># 生成 HTML 后立即将 docs 文件夹上传为 artifact</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Upload</span> <span class="string">docs</span> <span class="string">artifact</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/upload-artifact@v4</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">name:</span> <span class="string">docs</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">$&#123;&#123;</span> <span class="string">github.workspace</span> <span class="string">&#125;&#125;/docs</span></span><br><span class="line">          <span class="comment"># 设置保留 1 天，节省存储空间</span></span><br><span class="line">          <span class="attr">retention-days:</span> <span class="number">1</span></span><br><span class="line">          </span><br><span class="line">  <span class="attr">deploy:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">blog</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-24.04</span></span><br><span class="line">    <span class="attr">needs:</span> <span class="string">build</span></span><br><span class="line">    <span class="attr">permissions:</span></span><br><span class="line">      <span class="attr">contents:</span> <span class="string">write</span></span><br><span class="line">      <span class="attr">pages:</span> <span class="string">write</span></span><br><span class="line">      <span class="attr">id-token:</span> <span class="string">write</span></span><br><span class="line">    <span class="attr">concurrency:</span></span><br><span class="line">      <span class="attr">group:</span> <span class="string">\&quot;pages\&quot;</span></span><br><span class="line">      <span class="attr">cancel-in-progress:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">name:</span> <span class="string">github-pages</span></span><br><span class="line">      <span class="attr">url:</span> <span class="string">$&#123;&#123;</span> <span class="string">steps.deployment.outputs.page_url</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">steps:</span>   </span><br><span class="line">      <span class="comment"># 先下载 build job 上传的 docs artifact，下载到 ./docs 目录</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Download</span> <span class="string">docs</span> <span class="string">artifact</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/download-artifact@v4</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">name:</span> <span class="string">docs</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">./docs</span></span><br><span class="line">      </span><br><span class="line">      <span class="comment"># 新增：部署 docs 到博客仓库的gh-pages分支</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">docs</span> <span class="string">to</span> <span class="string">gmeek-docs</span> <span class="string">gh-pages</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">personal_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GMEEK_DOCS</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">external_repository:</span> <span class="string">shenjuexiao/gmeek-docs</span></span><br><span class="line">          <span class="attr">publish_branch:</span> <span class="string">gh-pages</span></span><br><span class="line">          <span class="attr">publish_dir:</span> <span class="string">./docs</span></span><br><span class="line">          <span class="attr">commit_message:</span> <span class="string">&#x27;🚀 Deploy static pages to gh-pages&#x27;</span></span><br><span class="line">          <span class="attr">user_name:</span> <span class="string">&#x27;github-actions[bot]&#x27;</span></span><br><span class="line">          <span class="attr">user_email:</span> <span class="string">&#x27;github-actions[bot]@users.noreply.github.com&#x27;</span></span><br><span class="line">          <span class="attr">keep_files:</span> <span class="literal">false</span></span><br><span class="line">          <span class="attr">force_orphan:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
 
       
     </div>
