@@ -142,7 +142,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">32</span>
+          <span class="site-state-item-count">33</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -168,6 +168,132 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-Gitee-remote-error-hook-declined/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="不懂就问，无趣的笔记">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-07-30-Gitee-remote-error-hook-declined/" class="post-title-link" itemprop="url">Gitee remote error hook declined</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-07-30 14:34:37" itemprop="dateCreated datePublished" datetime="2026-07-30T14:34:37+08:00">2026-07-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-08-04 14:27:46" itemprop="dateModified" datetime="2026-08-04T14:27:46+08:00">2026-08-04</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Gitee-remote-error-hook-declined"><a href="#Gitee-remote-error-hook-declined" class="headerlink" title="Gitee remote error hook declined"></a>Gitee remote error hook declined</h1><h2 id="❓-问题"><a href="#❓-问题" class="headerlink" title="❓ 问题"></a>❓ 问题</h2><p>-同时推送到 GitHub 和 Gitee 两个仓库：</p>
+<h3 id="基本设置"><a href="#基本设置" class="headerlink" title="基本设置"></a>基本设置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git remote set-url origin git@github.com:shenjuexiao/shenjuexiao.git</span><br><span class="line">git remote set-url --add origin git@gitee.com:shenjuexiao/shenjuexiao.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="查看配置"><a href="#查看配置" class="headerlink" title="查看配置"></a>查看配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">git remote -v</span><br><span class="line">origin  git@github.com:shenjuexiao/shenjuexiao.git (fetch)</span><br><span class="line">origin  git@github.com:shenjuexiao/shenjuexiao.git (push)</span><br><span class="line">origin  git@gitee.com:shenjuexiao/shenjuexiao.git (push)</span><br></pre></td></tr></table></figure>
+
+<h3 id="推送文件"><a href="#推送文件" class="headerlink" title="推送文件"></a>推送文件</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">git add .</span><br><span class="line">git commit -m \&quot;20260722\&quot;</span><br><span class="line">git push origin main</span><br><span class="line">origin  git@github.com:shenjuexiao/shenjuexiao.git (fetch)</span><br><span class="line">origin  git@github.com:shenjuexiao/shenjuexiao.git (push)</span><br><span class="line">origin  git@gitee.com:shenjuexiao/shenjuexiao.git (push)</span><br></pre></td></tr></table></figure>
+
+<h3 id="返回结果"><a href="#返回结果" class="headerlink" title="返回结果"></a>返回结果</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">Everything up-to-date</span><br><span class="line">Enumerating objects: 68, <span class="keyword">done</span>.</span><br><span class="line">Counting objects: 100% (68/68), <span class="keyword">done</span>.</span><br><span class="line">Delta compression using up to 16 threads</span><br><span class="line">Compressing objects: 100% (67/67), <span class="keyword">done</span>.</span><br><span class="line">Writing objects: 100% (68/68), 5.68 MiB | 5.83 MiB/s, <span class="keyword">done</span>.</span><br><span class="line">Total 68 (delta 21), reused 0 (delta 0)</span><br><span class="line">remote: Powered by GITEE.COM [1.1.23]</span><br><span class="line">remote: Set trace flag b6498f96</span><br><span class="line">remote: Push will publish a hidden email, make email public or abandon related commits</span><br><span class="line">remote: error: hook declined to update refs/heads/main</span><br><span class="line">To gitee.com:shenjuexiao/shenjuexiao.git</span><br><span class="line"> ! [remote rejected] main -&gt; main (hook declined)</span><br><span class="line">error: failed to push some refs to <span class="string">&#x27;git@gitee.com:shenjuexiao/shenjuexiao.git&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<p>这个错误是 Gitee 服务端的 <strong>pre-receive hook（预接收钩子）</strong> 拒绝了你的推送。<code>hook declined</code> 表示服务端的自定义检查脚本未通过。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Gitee_remote_error_hook_declined.png" alt="Gitee remote error hook declined"></p>
+<h2 id="🔍-常见原因及解决方案"><a href="#🔍-常见原因及解决方案" class="headerlink" title="🔍 常见原因及解决方案"></a>🔍 常见原因及解决方案</h2><h3 id="1-提交信息不符合规范（最常见）"><a href="#1-提交信息不符合规范（最常见）" class="headerlink" title="1. 提交信息不符合规范（最常见）"></a>1. <strong>提交信息不符合规范</strong>（最常见）</h3><p>Gitee 可能要求提交信息符合某种格式（如包含 Issue ID、特定前缀等）。</p>
+<p><strong>解决方案：</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看最后一次提交信息</span></span><br><span class="line">git <span class="built_in">log</span> -1</span><br><span class="line"></span><br><span class="line"><span class="comment"># 修改最后一次提交信息</span></span><br><span class="line">git commit --amend -m \&quot;新的提交信息\&quot;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 强制推送（注意：如果多人协作需谨慎）</span></span><br><span class="line">git push -f origin main</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-邮箱-用户信息未公开"><a href="#2-邮箱-用户信息未公开" class="headerlink" title="2. 邮箱&#x2F;用户信息未公开"></a>2. <strong>邮箱&#x2F;用户信息未公开</strong></h3><p>错误信息中提到 &quot;Push will publish a hidden email, make email public or abandon related commits&quot;，这说明你的提交中使用了 Gitee 的私有邮箱。</p>
+<p><strong>解决方案：</strong></p>
+<ul>
+<li>在 Gitee 网页端设置中，将邮箱设置为公开</li>
+<li>或者修改本地 Git 配置，使用提交邮箱（<code>gitee.com</code> -&gt; <code>设置</code> -&gt; <code>邮箱设置</code>）</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git config user.email \&quot;你的真实邮箱@example.com\&quot;</span><br><span class="line"><span class="comment"># 然后修改最后一次提交的作者信息</span></span><br><span class="line">git commit --amend --reset-author</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-推送了敏感文件或大文件"><a href="#3-推送了敏感文件或大文件" class="headerlink" title="3. 推送了敏感文件或大文件"></a>3. <strong>推送了敏感文件或大文件</strong></h3><p>Gitee 可能限制了文件大小或禁止推送某些类型的文件。</p>
+<p><strong>解决方案：</strong></p>
+<ul>
+<li>检查是否有超过 100MB 的文件</li>
+<li>使用 <code>.gitignore</code> 排除不必要的文件</li>
+</ul>
+<h3 id="4-分支保护规则"><a href="#4-分支保护规则" class="headerlink" title="4. 分支保护规则"></a>4. <strong>分支保护规则</strong></h3><p>main 分支可能设置了保护规则，不允许直接推送。</p>
+<p><strong>解决方案：</strong></p>
+<ul>
+<li>通过 Pull Request&#x2F;Merge Request 方式合并</li>
+<li>或者联系仓库管理员修改保护规则</li>
+</ul>
+<h2 id="⚡-快速排查步骤"><a href="#⚡-快速排查步骤" class="headerlink" title="⚡ 快速排查步骤"></a>⚡ 快速排查步骤</h2><ol>
+<li><strong>查看详细错误信息：</strong></li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">GIT_CURL_VERBOSE=1 git push origin main</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li><p><strong>检查 Gitee 仓库设置：</strong></p>
+<ul>
+<li>进入仓库 → 管理 → 提交信息规范</li>
+<li>查看是否有强制要求</li>
+</ul>
+</li>
+<li><p><strong>尝试使用 –no-verify 跳过（如果允许）：</strong></p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git push --no-verify origin main</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1540,98 +1666,6 @@
 <li><strong>技术栈</strong>：Node.js, Golang</li>
 <li><strong>项目链接</strong>：<a target="_blank" rel="noopener" href="https://github.com/xizhibei/blog">https://github.com/xizhibei/blog</a></li>
 </ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-Github-Issues-Blog-Gitblog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="shenjuexiao">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="神觉晓">
-      <meta itemprop="description" content="不懂就问，无趣的笔记">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 神觉晓">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/2026-07-30-Github-Issues-Blog-Gitblog/" class="post-title-link" itemprop="url">Github Issues Blog Gitblog</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2026-07-30 14:00:48" itemprop="dateCreated datePublished" datetime="2026-07-30T14:00:48+08:00">2026-07-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-04 15:44:01" itemprop="dateModified" datetime="2026-08-04T15:44:01+08:00">2026-08-04</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Github-Issues-Blog-Gitblog"><a href="#Github-Issues-Blog-Gitblog" class="headerlink" title="Github Issues Blog Gitblog"></a>Github Issues Blog Gitblog</h1><p>用过 Jekyll、Hexo，捣鼓了一阵子，都没能长期使用持续写作，现在转头使用 GIthub Issue 搭建的博客系统。后者有两个优点，一来省去了生成、部署的操作；二来解决了图床的需求。只要仓库存在，Issues 可以一直保留，改天也可以换个相似的博客系统。</p>
-<h2 id="📖-内容来源"><a href="#📖-内容来源" class="headerlink" title="📖 内容来源"></a>📖 内容来源</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://github.com/gaishanke/gaishanke.github.io/issues/1">Gitblog</a></li>
-</ul>
-<h2 id="📦-项目地址和安装指南"><a href="#📦-项目地址和安装指南" class="headerlink" title="📦 项目地址和安装指南"></a>📦 项目地址和安装指南</h2><p><a target="_blank" rel="noopener" href="https://github.com/yihong0618/gitblog">yihong0618&#x2F;gitblog</a><br><a target="_blank" rel="noopener" href="https://github.com/yihong0618/gitblog/issues/177">这个博客开源了</a></p>
-<h2 id="🔧-安装方法"><a href="#🔧-安装方法" class="headerlink" title="🔧 安装方法"></a>🔧 安装方法</h2><h3 id="1-克隆仓库"><a href="#1-克隆仓库" class="headerlink" title="1. 克隆仓库"></a>1. 克隆仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:yihong0618/gitblog.git</span><br></pre></td></tr></table></figure>
-
-<h3 id="2-生成tokens"><a href="#2-生成tokens" class="headerlink" title="2. 生成tokens"></a>2. 生成tokens</h3><p>个人首页，<code>Settings</code> -&gt; <code>Developer Settings</code> -&gt; <code>Personal access tokens</code> -&gt; <code>Tokens (classic)</code> -&gt; <code>Generate New Tokens</code> -&gt;  <code>Generate new yokens (classic)</code></p>
-<p>或直达链接：<br><a target="_blank" rel="noopener" href="https://github.com/settings/tokens">settings&#x2F;tokens</a></p>
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Gitblog_Settings_Developer-Settings_Personal-access-tokens.png" alt="Gitblog Settings Developer Settings Personal access tokens"></p>
-<h3 id="3-仓库-actions"><a href="#3-仓库-actions" class="headerlink" title="3. 仓库 actions"></a>3. 仓库 actions</h3><p>仓库首页，<code>Settings</code> -&gt; <code>Security and quality</code> -&gt; <code>Secrets and variables</code> -&gt; <code>Actions</code> -&gt; <code>New repository secret</code></p>
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Gitblog_Settings_Security-and-quality_Secrets-and-variables.png" alt="Gitblog Settings Security and quality Secrets and variables"></p>
-<p>直接使用 <code>G_T</code>，就不用修改文件： <code>.github\\workflows\\generate_readme.yml</code> 中的 <code>$&#123;&#123; secrets.G_T &#125;&#125;</code> 字段。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Generate</span> <span class="string">new</span> <span class="string">md</span></span><br><span class="line">  <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">    <span class="string">python</span> <span class="string">main.py</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.G_T</span> <span class="string">&#125;&#125;</span> <span class="string">$&#123;&#123;</span> <span class="string">github.repository</span> <span class="string">&#125;&#125;</span> <span class="string">--issue_number</span> <span class="string">&#x27;$&#123;&#123; github.event.issue.number &#125;&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="4-修改generate-readme-yml"><a href="#4-修改generate-readme-yml" class="headerlink" title="4.  修改generate_readme.yml"></a>4.  <del>修改<code>generate_readme.yml</code></del></h3><p><code>.github/workflows/generate_readme.yml</code><br>新版不需要。</p>
-<h2 id="❓-其他问题"><a href="#❓-其他问题" class="headerlink" title="❓ 其他问题"></a>❓ 其他问题</h2><p>原作者后续更新了 <code>*.yml</code> 文件，有些参数不需要修改了。<br>后续更新补充。</p>
 
       
     </div>
