@@ -9,7 +9,6 @@ on:
   issues:
     # 当 Issue 被打开或编辑时触发
     types: [opened, edited, synchronize]
-  workflow_dispatch:
 
 jobs:
   sync-readme:
