@@ -265,8 +265,7 @@ jobs:
         if: steps.check_posts.outputs.post_count > 0
         uses: peaceiris/actions-gh-pages@v4
         with:
-          # personal_token: ${{ secrets.GITHUB_TOKEN }}
-          personal_token: ${{ secrets.SHENJUEXIAO }}
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
           publish_branch: gh-pages
           publish_dir: ./source-repo/public
           
