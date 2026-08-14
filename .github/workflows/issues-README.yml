@@ -1,0 +1,54 @@
+# issues-README-0.0.0.yml
+# github.com/shenjuexiao
+# 20260815
+
+# .github/workflows/issues-README-0.0.0.yml
+name: issues-README
+
+on:
+  issues:
+    # 当 Issue 被打开或编辑时触发
+    types: [opened, edited, synchronize]
+  workflow_dispatch:
+
+jobs:
+  sync-readme:
+    # 仅当 Issue 编号为35时运行
+    if: github.event.issue.number == 35
+    runs-on: ubuntu-latest
+    steps:
+      # 1. 检出当前本部仓库
+      - name: Checkout current repo
+        uses: actions/checkout@v4
+
+      # 2. 检出外部目标仓库
+      # 使用 Personal Access Token
+      - name: Checkout external repo
+        uses: actions/checkout@v4
+        with:
+          # 目标仓库
+          repository: shenjuexiao/scg-list 
+          # 需要有写权限的 token
+          # token: ${{ secrets.EXTERNAL_REPO_TOKEN }} 
+          token: ${{ secrets.ISSUES }} 
+          # 检出到子目录
+          path: scg-list 
+
+      # 3. 从Issue中提取内容并更新README.md
+      - name: Update README.md from Issue body
+        run: |
+          # 提取 Issue 正文，并替换或追加到 README.md
+          echo "${{ github.event.issue.body }}" > scg-list/README.md
+
+      # 4. 提交并推送更改到外部仓库
+      - name: Commit and push changes
+        run: |
+          cd scg-list
+          # git config user.name "github-actions[bot]"
+          git config user.name "shenjuexiao"
+          # git config user.email "github-actions[bot]@users.noreply.github.com"
+          git config user.email "shenjuexiao@qq.com"
+          git add README.md
+          # 如果文件有变更则提交，否则跳过
+          git diff --staged --quiet || git commit -m "Update README from issue #${{ github.event.issue.number }}"
+          git push
