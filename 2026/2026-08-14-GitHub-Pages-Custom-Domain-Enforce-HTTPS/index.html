@@ -20,26 +20,30 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"shenjuexiao.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"giscus","storage":true,"lazyload":false,"nav":null,"activeClass":"giscus"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
 
-    <meta name="description" content="GitHub CNAME 的作用📄 内容来源 Github CNAME 的作用（Deepseek）  GitHub仓库里的CNAME文件，核心作用是告诉GitHub Pages服务器，当用户通过你的自定义域名（比如 www.example.com）访问时，应该展示哪个仓库的网站内容。 你可以把它理解为在GitHub内部为你的域名和特定仓库建立的一个“认领”和“关联”关系。它需要在你的域名解析服务">
+    <meta name="description" content="GitHub Pages 自定义域名使用 HTTPS 📝 笔记总结子域名最好使用 CNAME 解析，不过有的就是无法使用 Enforce HTTPS 暂时未能解决，不如部署到其他服务商更为方便。 ❌ 选项 Enforce HTTPS 勾不上 错误信息通常源于DNS解析记录类型与平台要求不匹配，导致系统无法正确识别并路由站点。  docus.shenjuexiao.com is improperl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="GitHub CNAME">
-<meta property="og:url" content="https://shenjuexiao.com/2026/2026-07-30-GitHub-CNAME/index.html">
+<meta property="og:title" content="GitHub Pages Custom Domain Enforce HTTPS">
+<meta property="og:url" content="https://shenjuexiao.com/2026/2026-08-14-GitHub-Pages-Custom-Domain-Enforce-HTTPS/index.html">
 <meta property="og:site_name" content="神觉晓">
-<meta property="og:description" content="GitHub CNAME 的作用📄 内容来源 Github CNAME 的作用（Deepseek）  GitHub仓库里的CNAME文件，核心作用是告诉GitHub Pages服务器，当用户通过你的自定义域名（比如 www.example.com）访问时，应该展示哪个仓库的网站内容。 你可以把它理解为在GitHub内部为你的域名和特定仓库建立的一个“认领”和“关联”关系。它需要在你的域名解析服务">
+<meta property="og:description" content="GitHub Pages 自定义域名使用 HTTPS 📝 笔记总结子域名最好使用 CNAME 解析，不过有的就是无法使用 Enforce HTTPS 暂时未能解决，不如部署到其他服务商更为方便。 ❌ 选项 Enforce HTTPS 勾不上 错误信息通常源于DNS解析记录类型与平台要求不匹配，导致系统无法正确识别并路由站点。  docus.shenjuexiao.com is improperl">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2026-07-30T06:52:35.000Z">
-<meta property="article:modified_time" content="2026-08-04T18:48:44.000Z">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Custom_Domain.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Custom_Domain_Enforce_HTTPS.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Custom_DNS_Check_Successful.png">
+<meta property="article:published_time" content="2026-08-14T08:31:01.000Z">
+<meta property="article:modified_time" content="2026-08-14T08:31:01.000Z">
 <meta property="article:author" content="shenjuexiao">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Custom_Domain.png">
 
 
-<link rel="canonical" href="https://shenjuexiao.com/2026/2026-07-30-GitHub-CNAME/">
+<link rel="canonical" href="https://shenjuexiao.com/2026/2026-08-14-GitHub-Pages-Custom-Domain-Enforce-HTTPS/">
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://shenjuexiao.com/2026/2026-07-30-GitHub-CNAME/","path":"2026/2026-07-30-GitHub-CNAME/","title":"GitHub CNAME"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://shenjuexiao.com/2026/2026-08-14-GitHub-Pages-Custom-Domain-Enforce-HTTPS/","path":"2026/2026-08-14-GitHub-Pages-Custom-Domain-Enforce-HTTPS/","title":"GitHub Pages Custom Domain Enforce HTTPS"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>GitHub CNAME | 神觉晓</title>
+<title>GitHub Pages Custom Domain Enforce HTTPS | 神觉晓</title>
   
 
 
@@ -132,7 +136,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GitHub-CNAME-%E7%9A%84%E4%BD%9C%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">GitHub CNAME 的作用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%84-%E5%86%85%E5%AE%B9%E6%9D%A5%E6%BA%90"><span class="nav-number">1.1.</span> <span class="nav-text">📄 内容来源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9A%99%EF%B8%8F-%E5%A6%82%E4%BD%95%E5%B7%A5%E4%BD%9C"><span class="nav-number">1.2.</span> <span class="nav-text">⚙️ 如何工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8C%90-%E4%BB%93%E5%BA%93%E5%92%8C%E6%9C%8D%E5%8A%A1%E5%95%86-CNAME-%E6%AF%94%E8%BE%83"><span class="nav-number">1.3.</span> <span class="nav-text">🌐 仓库和服务商 CNAME 比较</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%8C-%E9%87%8D%E8%A6%81%E8%A1%A5%E5%85%85"><span class="nav-number">1.4.</span> <span class="nav-text">📌 重要补充</span></a></li></ol></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GitHub-Pages-%E8%87%AA%E5%AE%9A%E4%B9%89%E5%9F%9F%E5%90%8D%E4%BD%BF%E7%94%A8-HTTPS"><span class="nav-number">1.</span> <span class="nav-text">GitHub Pages 自定义域名使用 HTTPS</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%9D-%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93"><span class="nav-number">1.1.</span> <span class="nav-text">📝 笔记总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9D%8C-%E9%80%89%E9%A1%B9-Enforce-HTTPS-%E5%8B%BE%E4%B8%8D%E4%B8%8A"><span class="nav-number">1.2.</span> <span class="nav-text">❌ 选项 Enforce HTTPS 勾不上</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9A%A1-%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88"><span class="nav-number">1.3.</span> <span class="nav-text">⚡ 解决方案</span></a></li></ol></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -181,7 +185,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-GitHub-CNAME/">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-08-14-GitHub-Pages-Custom-Domain-Enforce-HTTPS/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -194,12 +198,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="GitHub CNAME | 神觉晓">
+      <meta itemprop="name" content="GitHub Pages Custom Domain Enforce HTTPS | 神觉晓">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          GitHub CNAME
+          GitHub Pages Custom Domain Enforce HTTPS
         </h1>
 
         <div class="post-meta-container">
@@ -210,14 +214,7 @@
       </span>
       <span class="post-meta-item-text">发表于</span>
 
-      <time title="创建时间：2026-07-30 14:52:35" itemprop="dateCreated datePublished" datetime="2026-07-30T14:52:35+08:00">2026-07-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-05 02:48:44" itemprop="dateModified" datetime="2026-08-05T02:48:44+08:00">2026-08-05</time>
+      <time title="创建时间：2026-08-14 16:31:01" itemprop="dateCreated datePublished" datetime="2026-08-14T16:31:01+08:00">2026-08-14</time>
     </span>
 
   
@@ -229,48 +226,23 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="GitHub-CNAME-的作用"><a href="#GitHub-CNAME-的作用" class="headerlink" title="GitHub CNAME 的作用"></a>GitHub CNAME 的作用</h1><h2 id="📄-内容来源"><a href="#📄-内容来源" class="headerlink" title="📄 内容来源"></a>📄 内容来源</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/jt35tym47ydbk1m6d1">Github CNAME 的作用</a>（<a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/9a2918ec-002e-425f-854b-e0e70bd15005">Deepseek</a>）</li>
+    <div class="post-body" itemprop="articleBody"><h1 id="GitHub-Pages-自定义域名使用-HTTPS"><a href="#GitHub-Pages-自定义域名使用-HTTPS" class="headerlink" title="GitHub Pages 自定义域名使用 HTTPS"></a>GitHub Pages 自定义域名使用 HTTPS</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Custom_Domain.png" alt="GitHub Custom Domain"></p>
+<h2 id="📝-笔记总结"><a href="#📝-笔记总结" class="headerlink" title="📝 笔记总结"></a>📝 笔记总结</h2><p>子域名最好使用 <code>CNAME</code> 解析，不过有的就是无法使用 <code>Enforce HTTPS</code> 暂时未能解决，不如部署到其他服务商更为方便。</p>
+<h2 id="❌-选项-Enforce-HTTPS-勾不上"><a href="#❌-选项-Enforce-HTTPS-勾不上" class="headerlink" title="❌ 选项 Enforce HTTPS 勾不上"></a>❌ 选项 <code>Enforce HTTPS</code> 勾不上</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Custom_Domain_Enforce_HTTPS.png" alt="GitHub Custom Domain Enforce HTTPS "></p>
+<p>错误信息通常源于DNS解析记录类型与平台要求不匹配，导致系统无法正确识别并路由站点。</p>
+<blockquote>
+<p>docus.shenjuexiao.com is improperly configured<br>Your site’s DNS settings are using a custom subdomain, docus-public.shenjuexiao.com, that is set up as an A record. We recommend you change this to a CNAME record pointing to shenjuexiao.com. For more information, see documentation (InvalidARecordError).</p>
+</blockquote>
+<p>问题原因（InvalidARecordError）：域名 docus.shenjuexiao.com 当前在DNS设置中被配置为 A记录（即直接指向一个固定的IP地址）。大多数 SaaS 平台或托管服务要求自定义子域名必须使用 <code>CNAME</code> 记录，以便将流量指向服务商提供的特定域名（如 <code>shenjuexiao.com</code>）。</p>
+<h2 id="⚡-解决方案"><a href="#⚡-解决方案" class="headerlink" title="⚡ 解决方案"></a>⚡ 解决方案</h2><p>需要登录域名所在的DNS管理后台，将子域名的A记录删除，并新建一条CNAME记录。通常CNAME记录的目标值应填写为主域名或服务商提供的特定别名地址。</p>
+<p>操作前的关键注意事项：</p>
+<ul>
+<li>确认目标地址：建议先检查平台后台（如 Vercel、Netlify 等）提供的具体 <code>CNAME</code> 目标值，以确保完全匹配。</li>
+<li>检查其他记录：如果该子域名下存在其他记录（如 <code>TXT</code> 或 <code>MX</code> ），需要确认是否需要保留，以免影响邮件或验证功能。</li>
+<li>生效时间：<code>DNS</code> 修改后通常需要几分钟到几小时不等才能全球生效，请耐心等待。</li>
 </ul>
-<p>GitHub仓库里的<code>CNAME</code>文件，核心作用是<strong>告诉GitHub Pages服务器，当用户通过你的自定义域名（比如 <code>www.example.com</code>）访问时，应该展示哪个仓库的网站内容</strong>。</p>
-<p>你可以把它理解为在GitHub内部为你的域名和特定仓库建立的一个“认领”和“关联”关系。它需要在你的域名解析服务商（如阿里云、Cloudflare）设置的DNS解析<strong>配合</strong>下才能正常工作。</p>
-<h2 id="⚙️-如何工作"><a href="#⚙️-如何工作" class="headerlink" title="⚙️ 如何工作"></a>⚙️ 如何工作</h2><p>当用户在浏览器输入你的自定义域名（如 <code>www.example.com</code>）并访问时，流程如下：</p>
-<ol>
-<li><strong>DNS解析</strong>：用户的请求首先会去DNS服务器查询<code>www.example.com</code>指向哪里。你需要在DNS服务商那里添加一条 <strong>CNAME记录</strong>，将 <code>www.example.com</code> 指向 <code>你的用户名.github.io</code>。这一步把域名指向了GitHub的服务器。</li>
-<li><strong>请求到达GitHub</strong>：请求到达GitHub的服务器后，服务器需要知道这个请求是给哪个仓库的。</li>
-<li><strong>读取CNAME文件</strong>：此时，GitHub会检查所有启用了Pages的仓库，寻找根目录下名为<code>CNAME</code>（<strong>必须大写</strong>）的文件。</li>
-<li><strong>匹配与响应</strong>：当GitHub在你的仓库里找到的<code>CNAME</code>文件内容（例如<code>www.example.com</code>），与用户请求的域名完全匹配时，它就知道要把这个仓库的网站内容返回给用户了。</li>
-</ol>
-<h2 id="🌐-仓库和服务商-CNAME-比较"><a href="#🌐-仓库和服务商-CNAME-比较" class="headerlink" title="🌐 仓库和服务商 CNAME 比较"></a>🌐 仓库和服务商 CNAME 比较</h2><p>两者的关系：分工明确的“钥匙”与“路标”。这两者缺一不可，它们共同完成从“自定义域名”到“具体 GitHub 仓库”的映射。</p>
-<table>
-<thead>
-<tr>
-<th align="left">组成部分</th>
-<th align="left">作用概括</th>
-<th align="left">配置位置</th>
-<th align="left">关键点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">仓库 CNAME 文件</td>
-<td align="left">“钥匙”：授权并告诉 GitHub，哪个域名可以访问这个仓库</td>
-<td align="left">仓库根目录下的 CNAME 文件</td>
-<td align="left">内容必须与 DNS 记录的子域名一致，且只能有一个域名</td>
-</tr>
-<tr>
-<td align="left">DNS CNAME 记录</td>
-<td align="left">“路标”：将互联网流量从你的域名指向 GitHub 服务器</td>
-<td align="left">域名注册商&#x2F;DNS 服务商的管理后台</td>
-<td align="left">通常用于 www 子域名，指向&lt;用户名&gt;.github.io</td>
-</tr>
-</tbody></table>
-<h2 id="📌-重要补充"><a href="#📌-重要补充" class="headerlink" title="📌 重要补充"></a>📌 重要补充</h2><ul>
-<li><strong>安全与唯一性</strong>：这个文件也是一种安全机制，确保只有你（仓库所有者）能决定哪个域名可以访问你的网站。如果一个域名已经被某个仓库的<code>CNAME</code>文件“占用”了，其他仓库就无法再使用该域名，除非你将其删除。</li>
-<li><strong>避免使用通配符</strong>：切记<strong>不要</strong>在你的DNS服务商处为GitHub Pages设置通配符记录（如 <code>*.example.com</code>）。因为任何GitHub用户都可以在自己的仓库里创建一个指向你任意子域名的<code>CNAME</code>文件，从而可能“劫持”你的子域名来托管他们的内容。</li>
-<li><strong>多域名支持</strong>：一个<code>CNAME</code>文件中<strong>只能包含一个域名</strong>。如果你想把多个域名都指向同一个网站，可以通过你的DNS服务商设置URL转发或使用其他DNS记录来实现。</li>
-<li><strong>静态站点生成器注意事项</strong>：如果你使用Hexo、Hugo等静态站点生成器，建议将<code>CNAME</code>文件放在项目的源文件夹（如<code>source</code>目录）下。这样每次部署时，它就会被自动复制到生成的<code>public</code>文件夹并推送到GitHub，避免每次部署后<code>CNAME</code>文件丢失的问题。</li>
-<li><strong>Apex 根域名</strong>：需要注意，对于 example.com 这样的根域名（也叫 Apex 域），由于 DNS 规范限制，不能使用 CNAME 记录。你需要配置 A 记录，将其指向 GitHub 的固定 IP 地址（185.199.108.153 等四个 IP），才能实现根域名的访问。不过，这并不影响在仓库中依然需要一个内容为 example.com 的 CNAME 文件来完成授权。</li>
-</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Custom_DNS_Check_Successful.png" alt="GitHub Custom DNS Check Successful"></p>
+<p>如果你不清楚具体的DNS管理后台在哪里，可以查看域名注册商（如阿里云、腾讯云、GoDaddy 等）的文档；如果不确定 <code>CNAME</code> 的具体目标值，建议检查当前托管平台（Netlify&#x2F;Vercel 等）后台的 <code>Domain</code> 或 <code>Site settings</code> 页面。</p>
 
     </div>
 
@@ -288,7 +260,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://shenjuexiao.com/2026/2026-07-30-GitHub-CNAME/" title="GitHub CNAME">https://shenjuexiao.com/2026/2026-07-30-GitHub-CNAME/</a>
+      <a href="https://shenjuexiao.com/2026/2026-08-14-GitHub-Pages-Custom-Domain-Enforce-HTTPS/" title="GitHub Pages Custom Domain Enforce HTTPS">https://shenjuexiao.com/2026/2026-08-14-GitHub-Pages-Custom-Domain-Enforce-HTTPS/</a>
   </li>
   <li class="post-copyright-license">
       <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -328,14 +300,11 @@
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2026/2026-07-30-Astro-GitHub-Actions/" rel="prev" title="Astro GitHub Actions">
-                  <i class="fa fa-angle-left"></i> Astro GitHub Actions
+                <a href="/2026/2026-08-14-SCG-Static-Code-Generation-List/" rel="prev" title="SCG (Static Code Generation) List">
+                  <i class="fa fa-angle-left"></i> SCG (Static Code Generation) List
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2026/2026-07-31-Gmeek-Deploy-Another-Repo/" rel="next" title="Gmeek Deploy Another Repo">
-                  Gmeek Deploy Another Repo <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>

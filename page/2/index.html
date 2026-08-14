@@ -142,7 +142,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -168,6 +168,114 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-08-03-hexo-theme-next-add-Giscus/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="不懂就问，无趣的笔记">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-08-03-hexo-theme-next-add-Giscus/" class="post-title-link" itemprop="url">hexo-theme-next add Giscus</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-08-03 07:56:10" itemprop="dateCreated datePublished" datetime="2026-08-03T07:56:10+08:00">2026-08-03</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="hexo-theme-next-add-Giscus"><a href="#hexo-theme-next-add-Giscus" class="headerlink" title="hexo-theme-next add Giscus"></a>hexo-theme-next add Giscus</h1><h1 id="hexo-theme-next-添加-Giscus"><a href="#hexo-theme-next-添加-Giscus" class="headerlink" title="hexo-theme-next 添加 Giscus"></a>hexo-theme-next 添加 Giscus</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/wz2ga1y2tetay2dh3e">hexo-theme-next 添加 Giscus</a><a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/65cfce1b-f3aa-43fd-9e4a-dce990ad05be">（DeepSeek）</a>(<a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/65cfce1b-f3aa-43fd-9e4a-dce990ad05be">https://chat.deepseek.com/a/chat/s/65cfce1b-f3aa-43fd-9e4a-dce990ad05be</a>)</li>
+<li><a target="_blank" rel="noopener" href="https://shirynl.github.io/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/">hexo-next &amp; giscus 评论测试</a></li>
+</ul>
+<p>在 NexT 主题中为 Hexo 博客添加 Giscus 评论系统，主要有这几个步骤：准备好 GitHub 仓库、安装 NexT 专用的 Giscus 插件，然后在主题配置文件中填入从 Giscus 官网获取的关键信息。</p>
+<h2 id="📝-第一步：准备工作"><a href="#📝-第一步：准备工作" class="headerlink" title="📝 第一步：准备工作"></a>📝 第一步：准备工作</h2><p>在开始配置前，需要先完成三项必要的 GitHub 设置，这些是所有后续操作的基础：</p>
+<ol>
+<li><p><strong>创建一个公开的 GitHub 仓库</strong>：Giscus 要求评论数据存放在公开仓库中。你可以用现有的博客仓库，或者为评论单独新建一个仓库。</p>
+</li>
+<li><p><strong>启用仓库的 Discussions 功能</strong>：进入仓库的 <code>Settings</code> -&gt; <code>General</code>，在 <code>Features</code> 部分找到并勾选 <code>Discussions</code>。</p>
+</li>
+<li><p><strong>安装 Giscus App</strong>：访问 <a target="_blank" rel="noopener" href="https://github.com/apps/giscus">GitHub Apps - giscus</a>，点击安装，并选择你刚刚准备好（已公开且开启 Discussions）的仓库。</p>
+</li>
+</ol>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Giscus_GitHub_Apps_giscus.png" alt="Giscus GitHub Apps giscus"></p>
+<h2 id="⚙️-第二步：安装与配置"><a href="#⚙️-第二步：安装与配置" class="headerlink" title="⚙️ 第二步：安装与配置"></a>⚙️ 第二步：安装与配置</h2><h3 id="1-安装-NexT-专用插件"><a href="#1-安装-NexT-专用插件" class="headerlink" title="1. 安装 NexT 专用插件"></a>1. 安装 NexT 专用插件</h3><p>由于 NexT 主题本身不直接支持 Giscus，需要安装一个社区插件来集成。在博客根目录下执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-next-giscus --save</span><br></pre></td></tr></table></figure>
+
+<p>这个插件会负责在页面中注入 Giscus 所需的代码，并让配置能和 NexT 主题很好地结合起来。</p>
+<h3 id="2-获取配置参数"><a href="#2-获取配置参数" class="headerlink" title="2. 获取配置参数"></a>2. 获取配置参数</h3><p>安装完插件后，访问 <a target="_blank" rel="noopener" href="https://giscus.app/zh-CN">Giscus 官网</a>，它会引导你完成配置并生成一段 <code>&lt;script&gt;</code> 代码。</p>
+<p>主要需要填写的几个关键信息是：</p>
+<ul>
+<li><strong>仓库</strong>：<code>你的GitHub用户名/评论仓库名</code></li>
+<li><strong>页面 ↔️ discussion 映射关系</strong>：对于 Hexo 博客，通常推荐选择 <strong><code>pathname</code></strong>，这样每篇文章的评论会和其 URL 路径绑定。</li>
+<li><strong>Discussion 分类</strong>：选择一个已有的分类，如 <code>General</code> 或 <code>Announcements</code>。建议选择 <code>Announcements</code>，这样新的 discussion 只能由维护者或 Giscus 创建，可以避免混乱。</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Giscus_giscus_app_zh-CN.png" alt="Giscus giscus.app&#x2F;zh-CN"></p>
+<p>配置好后，在页面最下方复制生成的代码，我们只需要从中提取几个以 <code>data-</code> 开头的参数值。</p>
+<h3 id="3-将参数填入-NexT-配置文件"><a href="#3-将参数填入-NexT-配置文件" class="headerlink" title="3. 将参数填入 NexT 配置文件"></a>3. 将参数填入 NexT 配置文件</h3><p>打开主题配置文件 <code>themes/next/_config.yml</code>（或者根目录的 <code>_config.next.yml</code>），在文件末尾添加或修改以下 <code>giscus</code> 配置块。</p>
+<p>将上一步从 Giscus 官网复制下来的参数（如 <code>data-repo</code>, <code>data-repo-id</code> 等）对应的值填写进去，<strong>注意不要保留 <code>data-</code> 前缀和引号</strong>。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在 themes/next/_config.yml 文件末尾添加</span></span><br><span class="line"><span class="attr">giscus:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 用户名/仓库名，对应 data-repo</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">用户名/仓库名</span></span><br><span class="line">  <span class="comment"># 仓库 ID，对应 data-repo-id</span></span><br><span class="line">  <span class="attr">repo_id:</span> <span class="string">仓库</span> <span class="string">ID</span></span><br><span class="line">  <span class="comment">#  选择的分类，对应 data-category</span></span><br><span class="line">  <span class="attr">category:</span> <span class="string">Announcements</span></span><br><span class="line">  <span class="comment"># 分类ID，对应 data-category-id           </span></span><br><span class="line">  <span class="attr">category_id:</span> <span class="string">你的分类</span> <span class="string">ID</span></span><br><span class="line">  <span class="comment"># 推荐用页面路径匹配，对应 data-mapping</span></span><br><span class="line">  <span class="attr">mapping:</span> <span class="string">pathname</span></span><br><span class="line">  <span class="comment"># 开启表情回应</span></span><br><span class="line">  <span class="attr">reactions_enabled:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">emit_metadata:</span> <span class="number">0</span></span><br><span class="line">  <span class="comment"># 评论框位置</span></span><br><span class="line">  <span class="attr">input_position:</span> <span class="string">bottom</span></span><br><span class="line">  <span class="comment"># 建议使用自动适配主题</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">preferred_color_scheme</span></span><br><span class="line">  <span class="comment"># 语言设置</span></span><br><span class="line">  <span class="attr">lang:</span> <span class="string">zh-CN</span></span><br><span class="line">  <span class="comment"># 懒加载，提升性能</span></span><br><span class="line">  <span class="attr">loading:</span> <span class="string">lazy</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="🚀-第三步：部署与测试"><a href="#🚀-第三步：部署与测试" class="headerlink" title="🚀 第三步：部署与测试"></a>🚀 第三步：部署与测试</h2><p>最后，重新生成并部署你的博客，就可以看到效果了：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>或者直接使用：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<p>部署成功后，打开任意一篇文章滑到底部，就能看到 Giscus 评论区了。如果页面没有显示，可以检查一下博客是否已经成功部署到线上。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Giscus_shenjuexiao_com.png" alt="Giscus shenjuexiao.com"></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1123,143 +1231,6 @@
 <li>对于个人项目、博客、官网等公开场景：强烈建议使用 <code>cdn.jsdelivr.net/gh</code>**。它能带来质的飞跃，让图片&quot;秒开&quot;不再困难，综合体验完胜直连源站。</li>
 <li><code>raw.githubusercontent.com</code> 的适用场景**：主要用于在 GitHub 页面上直接预览文件内容，或在你需要从服务器后台程序以编程方式获取文件原始内容时使用。</li>
 </ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-Bing-Wallpaper-API/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="shenjuexiao">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="神觉晓">
-      <meta itemprop="description" content="不懂就问，无趣的笔记">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 神觉晓">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/2026-07-30-Bing-Wallpaper-API/" class="post-title-link" itemprop="url">Bing Wallpaper API</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2026-07-30 14:41:59" itemprop="dateCreated datePublished" datetime="2026-07-30T14:41:59+08:00">2026-07-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-05 02:52:11" itemprop="dateModified" datetime="2026-08-05T02:52:11+08:00">2026-08-05</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="必应壁纸每日一图-API"><a href="#必应壁纸每日一图-API" class="headerlink" title="必应壁纸每日一图 API"></a>必应壁纸每日一图 API</h1><h2 id="📋-内容来源"><a href="#📋-内容来源" class="headerlink" title="📋 内容来源"></a>📋 内容来源</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/uumxj61bo84xh484tc">Bing 每日一图壁纸 API</a>（<a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/b7fb2e58-5ba6-40a2-ab53-2d72ea012045">Deepseek</a>）</li>
-</ul>
-<p>获取必应每日一图，主要有<strong>官方接口</strong>和<strong>第三方封装接口</strong>两种方式，按需选择即可。</p>
-<h2 id="🖼️-官方-API：最直接的数据源"><a href="#🖼️-官方-API：最直接的数据源" class="headerlink" title="🖼️ 官方 API：最直接的数据源"></a>🖼️ 官方 API：最直接的数据源</h2><p>Bing 官方提供了获取每日壁纸元数据的接口，这是最可靠的方式。</p>
-<h3 id="接口地址"><a href="#接口地址" class="headerlink" title="接口地址"></a>接口地址</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://cn.bing.com/HPImageArchive.aspx</span><br></pre></td></tr></table></figure>
-
-<h3 id="核心参数说明"><a href="#核心参数说明" class="headerlink" title="核心参数说明"></a>核心参数说明</h3><table>
-<thead>
-<tr>
-<th align="left">参数</th>
-<th align="left">说明</th>
-<th align="left">可选值示例</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><code>format</code></td>
-<td align="left"><strong>必填</strong>。指定返回的数据格式</td>
-<td align="left"><code>js</code> (JSON格式) 或 <code>xml</code></td>
-</tr>
-<tr>
-<td align="left"><code>idx</code></td>
-<td align="left"><strong>必填</strong>。图片的日期偏移量。<code>0</code>代表今天，<code>1</code>代表昨天，依此类推，最多可获取前16天的图片</td>
-<td align="left"><code>0</code>, <code>1</code>, <code>2</code></td>
-</tr>
-<tr>
-<td align="left"><code>n</code></td>
-<td align="left"><strong>必填</strong>。返回的图片数量，最大为<code>8</code></td>
-<td align="left"><code>1</code>, <code>3</code>, <code>8</code></td>
-</tr>
-<tr>
-<td align="left"><code>mkt</code></td>
-<td align="left">地区&#x2F;语言参数，影响图片说明和版权信息的语言</td>
-<td align="left"><code>zh-CN</code> (中文), <code>en-US</code> (英文)</td>
-</tr>
-<tr>
-<td align="left"><code>uhd</code></td>
-<td align="left">是否请求4K超高清图片。<code>1</code>表示请求</td>
-<td align="left"><code>1</code></td>
-</tr>
-</tbody></table>
-<h3 id="请求示例和返回数据"><a href="#请求示例和返回数据" class="headerlink" title="请求示例和返回数据"></a>请求示例和返回数据</h3><ul>
-<li>获取今天的图片信息（JSON 格式）：<br>  <code>https://cn.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1&amp;mkt=zh-CN</code></li>
-<li>返回示例  <figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">  \<span class="string">&quot;images\&quot;: [</span></span><br><span class="line"><span class="string">    &#123;</span></span><br><span class="line"><span class="string">      \&quot;startdate\&quot;: \&quot;20250105\&quot;,</span></span><br><span class="line"><span class="string">      \&quot;url\&quot;: \&quot;/th?id=OHR.RavennaBasilica_ZH-CN1406474730_UHD.jpg\&quot;,</span></span><br><span class="line"><span class="string">      \&quot;copyright\&quot;: \&quot;被水淹没的地下室，圣弗朗西斯大教堂，拉文纳，意大利 (© Andrea Pucci/Getty Images)\&quot;</span></span><br><span class="line"><span class="string">    &#125;</span></span><br><span class="line"><span class="string">  ]</span></span><br><span class="line"><span class="string">&#125;</span></span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>你需要在<code>url</code>前拼接上Bing的域名 <code>https://cn.bing.com</code> 才能得到完整图片地址。</p>
-<h2 id="⚙️-第三方封装接口：免去解析的麻烦"><a href="#⚙️-第三方封装接口：免去解析的麻烦" class="headerlink" title="⚙️ 第三方封装接口：免去解析的麻烦"></a>⚙️ 第三方封装接口：免去解析的麻烦</h2><p>如果你不想自己处理数据，可以直接使用第三方封装好的接口，它们通常会直接返回图片或更简洁的JSON数据。</p>
-<h3 id="bing-biturl-top-功能全面的替代API"><a href="#bing-biturl-top-功能全面的替代API" class="headerlink" title="bing.biturl.top 功能全面的替代API"></a><code>bing.biturl.top</code> 功能全面的替代API</h3><p>这个接口将官方数据封装得很简洁，支持指定分辨率和直接重定向到图片，非常方便。</p>
-<ul>
-<li>获取今日4K壁纸的JSON数据<br><code>https://bing.biturl.top/?resolution=UHD&amp;format=json&amp;index=0&amp;mkt=zh-CN</code></li>
-<li>直接获取今日壁纸图片（重定向）<br><code>https://bing.biturl.top/?resolution=1920&amp;format=image</code></li>
-<li>参数说明<br><code>resolution</code>支持<code>UHD</code>(4K)、<code>1920</code>、<code>1366</code>等；<code>index</code>支持<code>0</code>(今天)、<code>1</code>(昨天)或<code>random</code>(随机)。</li>
-</ul>
-<h3 id="npanuhin-Bing-Wallpaper-Archive-强大的历史归档项目"><a href="#npanuhin-Bing-Wallpaper-Archive-强大的历史归档项目" class="headerlink" title="npanuhin/Bing-Wallpaper-Archive 强大的历史归档项目"></a><code>npanuhin/Bing-Wallpaper-Archive</code> 强大的历史归档项目</h3><p>如果你想获取更久远的壁纸，这个项目维护了完整的图片归档。它按国家和语言组织数据，并且可以直接通过日期拼接图片地址，非常实用。</p>
-<ul>
-<li><p>获取归档数据*<br><code>https://bing.npanuhin.me/CN-zh.json</code></p>
-</li>
-<li><p>直接获取图片<br><code>https://bing.npanuhin.me/CN/zh/2024-01-16.jpg</code> (替换日期即可)</p>
-</li>
-</ul>
-<h3 id="其他可用API"><a href="#其他可用API" class="headerlink" title="其他可用API"></a>其他可用API</h3><p>根据搜索结果，还有一些可用的API服务，如 <code>https://api.1314.cool/bingimg</code> 和 <code>https://api.sunweihu.com/api/bing1/api.php</code>，使用时请注意其稳定性。</p>
-<h2 id="🚀-快速上手：JavaScript-示例"><a href="#🚀-快速上手：JavaScript-示例" class="headerlink" title="🚀 快速上手：JavaScript 示例"></a>🚀 快速上手：JavaScript 示例</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 使用官方API获取今日壁纸URL并显示</span></span><br><span class="line"><span class="title function_">fetch</span>(<span class="string">&#x27;https://cn.bing.com/HPImageArchive.aspx?format=js&amp;idx=0&amp;n=1&amp;mkt=zh-CN&#x27;</span>)</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function"><span class="params">response</span> =&gt;</span> response.<span class="title function_">json</span>())</span><br><span class="line">  .<span class="title function_">then</span>(<span class="function"><span class="params">data</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// 从返回数据中提取图片相对路径</span></span><br><span class="line">    <span class="keyword">const</span> imageUrl = data.<span class="property">images</span>[<span class="number">0</span>].<span class="property">url</span>;</span><br><span class="line">    <span class="comment">// 拼接完整URL</span></span><br><span class="line">    <span class="keyword">const</span> fullImageUrl = <span class="string">&#x27;https://cn.bing.com&#x27;</span> + imageUrl;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;今日壁纸:&#x27;</span>, fullImageUrl);</span><br><span class="line">    <span class="comment">// 可以将该URL用于设置背景图片等</span></span><br><span class="line">  &#125;);</span><br></pre></td></tr></table></figure>
 
       
     </div>

@@ -142,7 +142,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">35</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -168,6 +168,91 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-08-14-GitHub-Pages-Custom-Domain-Enforce-HTTPS/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="不懂就问，无趣的笔记">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-08-14-GitHub-Pages-Custom-Domain-Enforce-HTTPS/" class="post-title-link" itemprop="url">GitHub Pages Custom Domain Enforce HTTPS</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-08-14 16:31:01" itemprop="dateCreated datePublished" datetime="2026-08-14T16:31:01+08:00">2026-08-14</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="GitHub-Pages-自定义域名使用-HTTPS"><a href="#GitHub-Pages-自定义域名使用-HTTPS" class="headerlink" title="GitHub Pages 自定义域名使用 HTTPS"></a>GitHub Pages 自定义域名使用 HTTPS</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Custom_Domain.png" alt="GitHub Custom Domain"></p>
+<h2 id="📝-笔记总结"><a href="#📝-笔记总结" class="headerlink" title="📝 笔记总结"></a>📝 笔记总结</h2><p>子域名最好使用 <code>CNAME</code> 解析，不过有的就是无法使用 <code>Enforce HTTPS</code> 暂时未能解决，不如部署到其他服务商更为方便。</p>
+<h2 id="❌-选项-Enforce-HTTPS-勾不上"><a href="#❌-选项-Enforce-HTTPS-勾不上" class="headerlink" title="❌ 选项 Enforce HTTPS 勾不上"></a>❌ 选项 <code>Enforce HTTPS</code> 勾不上</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Custom_Domain_Enforce_HTTPS.png" alt="GitHub Custom Domain Enforce HTTPS "></p>
+<p>错误信息通常源于DNS解析记录类型与平台要求不匹配，导致系统无法正确识别并路由站点。</p>
+<blockquote>
+<p>docus.shenjuexiao.com is improperly configured<br>Your site’s DNS settings are using a custom subdomain, docus-public.shenjuexiao.com, that is set up as an A record. We recommend you change this to a CNAME record pointing to shenjuexiao.com. For more information, see documentation (InvalidARecordError).</p>
+</blockquote>
+<p>问题原因（InvalidARecordError）：域名 docus.shenjuexiao.com 当前在DNS设置中被配置为 A记录（即直接指向一个固定的IP地址）。大多数 SaaS 平台或托管服务要求自定义子域名必须使用 <code>CNAME</code> 记录，以便将流量指向服务商提供的特定域名（如 <code>shenjuexiao.com</code>）。</p>
+<h2 id="⚡-解决方案"><a href="#⚡-解决方案" class="headerlink" title="⚡ 解决方案"></a>⚡ 解决方案</h2><p>需要登录域名所在的DNS管理后台，将子域名的A记录删除，并新建一条CNAME记录。通常CNAME记录的目标值应填写为主域名或服务商提供的特定别名地址。</p>
+<p>操作前的关键注意事项：</p>
+<ul>
+<li>确认目标地址：建议先检查平台后台（如 Vercel、Netlify 等）提供的具体 <code>CNAME</code> 目标值，以确保完全匹配。</li>
+<li>检查其他记录：如果该子域名下存在其他记录（如 <code>TXT</code> 或 <code>MX</code> ），需要确认是否需要保留，以免影响邮件或验证功能。</li>
+<li>生效时间：<code>DNS</code> 修改后通常需要几分钟到几小时不等才能全球生效，请耐心等待。</li>
+</ul>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Custom_DNS_Check_Successful.png" alt="GitHub Custom DNS Check Successful"></p>
+<p>如果你不清楚具体的DNS管理后台在哪里，可以查看域名注册商（如阿里云、腾讯云、GoDaddy 等）的文档；如果不确定 <code>CNAME</code> 的具体目标值，建议检查当前托管平台（Netlify&#x2F;Vercel 等）后台的 <code>Domain</code> 或 <code>Site settings</code> 页面。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1307,114 +1392,6 @@
 <h2 id="📝-修改后的-gh-pages-yml"><a href="#📝-修改后的-gh-pages-yml" class="headerlink" title="📝 修改后的 gh-pages.yml"></a>📝 修改后的 <code>gh-pages.yml</code></h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># valaxy 自带 gh-pages.yml</span></span><br><span class="line"><span class="comment"># valaxy.site/zh/guide/deploy</span></span><br><span class="line"></span><br><span class="line"><span class="attr">name:</span> <span class="string">GitHub</span> <span class="string">Pages</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span></span><br><span class="line">      <span class="comment"># The branch where the project source code resides</span></span><br><span class="line">      <span class="comment"># 项目源代码所在的分支</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">main</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">master</span></span><br><span class="line">      <span class="bullet">-</span> <span class="string">valaxy</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 20260804</span></span><br><span class="line"><span class="comment"># 增加权限</span></span><br><span class="line"><span class="attr">permissions:</span></span><br><span class="line">  <span class="attr">contents:</span> <span class="string">write</span></span><br><span class="line">  <span class="attr">pages:</span> <span class="string">write</span></span><br><span class="line">  <span class="attr">id-token:</span> <span class="string">write</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">$&#123;&#123;</span> <span class="string">matrix.os</span> <span class="string">&#125;&#125;</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">strategy:</span></span><br><span class="line">      <span class="attr">matrix:</span></span><br><span class="line">        <span class="attr">node-version:</span> [<span class="string">lts/*</span>]</span><br><span class="line">        <span class="attr">os:</span> [<span class="string">ubuntu-latest</span>]</span><br><span class="line">      <span class="attr">fail-fast:</span> <span class="literal">false</span></span><br><span class="line"></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">uses:</span> <span class="string">actions/checkout@v2</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Use</span> <span class="string">Node.js</span> <span class="string">$&#123;&#123;</span> <span class="string">matrix.node-version</span> <span class="string">&#125;&#125;</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-node@v2</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">node-version:</span> <span class="string">$&#123;&#123;</span> <span class="string">matrix.node-version</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">registry-url:</span> <span class="string">https://registry.npmjs.org/</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">📦</span> <span class="string">Install</span> <span class="string">Dependencies</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">i</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">🌌</span> <span class="string">Build</span> <span class="string">Valaxy</span> <span class="string">Blog</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">npm</span> <span class="string">run</span> <span class="string">build</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">🪤</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">GitHub</span> <span class="string">Pages</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">github_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GITHUB_TOKEN</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">publish_dir:</span> <span class="string">./dist</span></span><br><span class="line">          <span class="attr">force_orphan:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
 
 <p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Valaxy_build_lts_ubuntu-lastest.png" alt="Valaxy build lts ubuntu-lastest"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-08-03-hexo-theme-next-add-Giscus/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="shenjuexiao">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="神觉晓">
-      <meta itemprop="description" content="不懂就问，无趣的笔记">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 神觉晓">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/2026-08-03-hexo-theme-next-add-Giscus/" class="post-title-link" itemprop="url">hexo-theme-next add Giscus</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2026-08-03 07:56:10" itemprop="dateCreated datePublished" datetime="2026-08-03T07:56:10+08:00">2026-08-03</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="hexo-theme-next-add-Giscus"><a href="#hexo-theme-next-add-Giscus" class="headerlink" title="hexo-theme-next add Giscus"></a>hexo-theme-next add Giscus</h1><h1 id="hexo-theme-next-添加-Giscus"><a href="#hexo-theme-next-添加-Giscus" class="headerlink" title="hexo-theme-next 添加 Giscus"></a>hexo-theme-next 添加 Giscus</h1><h2 id="内容来源"><a href="#内容来源" class="headerlink" title="内容来源"></a>内容来源</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/wz2ga1y2tetay2dh3e">hexo-theme-next 添加 Giscus</a><a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/65cfce1b-f3aa-43fd-9e4a-dce990ad05be">（DeepSeek）</a>(<a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/65cfce1b-f3aa-43fd-9e4a-dce990ad05be">https://chat.deepseek.com/a/chat/s/65cfce1b-f3aa-43fd-9e4a-dce990ad05be</a>)</li>
-<li><a target="_blank" rel="noopener" href="https://shirynl.github.io/2025/01/28/%E8%AF%84%E8%AE%BA%E6%B5%8B%E8%AF%95/">hexo-next &amp; giscus 评论测试</a></li>
-</ul>
-<p>在 NexT 主题中为 Hexo 博客添加 Giscus 评论系统，主要有这几个步骤：准备好 GitHub 仓库、安装 NexT 专用的 Giscus 插件，然后在主题配置文件中填入从 Giscus 官网获取的关键信息。</p>
-<h2 id="📝-第一步：准备工作"><a href="#📝-第一步：准备工作" class="headerlink" title="📝 第一步：准备工作"></a>📝 第一步：准备工作</h2><p>在开始配置前，需要先完成三项必要的 GitHub 设置，这些是所有后续操作的基础：</p>
-<ol>
-<li><p><strong>创建一个公开的 GitHub 仓库</strong>：Giscus 要求评论数据存放在公开仓库中。你可以用现有的博客仓库，或者为评论单独新建一个仓库。</p>
-</li>
-<li><p><strong>启用仓库的 Discussions 功能</strong>：进入仓库的 <code>Settings</code> -&gt; <code>General</code>，在 <code>Features</code> 部分找到并勾选 <code>Discussions</code>。</p>
-</li>
-<li><p><strong>安装 Giscus App</strong>：访问 <a target="_blank" rel="noopener" href="https://github.com/apps/giscus">GitHub Apps - giscus</a>，点击安装，并选择你刚刚准备好（已公开且开启 Discussions）的仓库。</p>
-</li>
-</ol>
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Giscus_GitHub_Apps_giscus.png" alt="Giscus GitHub Apps giscus"></p>
-<h2 id="⚙️-第二步：安装与配置"><a href="#⚙️-第二步：安装与配置" class="headerlink" title="⚙️ 第二步：安装与配置"></a>⚙️ 第二步：安装与配置</h2><h3 id="1-安装-NexT-专用插件"><a href="#1-安装-NexT-专用插件" class="headerlink" title="1. 安装 NexT 专用插件"></a>1. 安装 NexT 专用插件</h3><p>由于 NexT 主题本身不直接支持 Giscus，需要安装一个社区插件来集成。在博客根目录下执行以下命令：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-next-giscus --save</span><br></pre></td></tr></table></figure>
-
-<p>这个插件会负责在页面中注入 Giscus 所需的代码，并让配置能和 NexT 主题很好地结合起来。</p>
-<h3 id="2-获取配置参数"><a href="#2-获取配置参数" class="headerlink" title="2. 获取配置参数"></a>2. 获取配置参数</h3><p>安装完插件后，访问 <a target="_blank" rel="noopener" href="https://giscus.app/zh-CN">Giscus 官网</a>，它会引导你完成配置并生成一段 <code>&lt;script&gt;</code> 代码。</p>
-<p>主要需要填写的几个关键信息是：</p>
-<ul>
-<li><strong>仓库</strong>：<code>你的GitHub用户名/评论仓库名</code></li>
-<li><strong>页面 ↔️ discussion 映射关系</strong>：对于 Hexo 博客，通常推荐选择 <strong><code>pathname</code></strong>，这样每篇文章的评论会和其 URL 路径绑定。</li>
-<li><strong>Discussion 分类</strong>：选择一个已有的分类，如 <code>General</code> 或 <code>Announcements</code>。建议选择 <code>Announcements</code>，这样新的 discussion 只能由维护者或 Giscus 创建，可以避免混乱。</li>
-</ul>
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Giscus_giscus_app_zh-CN.png" alt="Giscus giscus.app&#x2F;zh-CN"></p>
-<p>配置好后，在页面最下方复制生成的代码，我们只需要从中提取几个以 <code>data-</code> 开头的参数值。</p>
-<h3 id="3-将参数填入-NexT-配置文件"><a href="#3-将参数填入-NexT-配置文件" class="headerlink" title="3. 将参数填入 NexT 配置文件"></a>3. 将参数填入 NexT 配置文件</h3><p>打开主题配置文件 <code>themes/next/_config.yml</code>（或者根目录的 <code>_config.next.yml</code>），在文件末尾添加或修改以下 <code>giscus</code> 配置块。</p>
-<p>将上一步从 Giscus 官网复制下来的参数（如 <code>data-repo</code>, <code>data-repo-id</code> 等）对应的值填写进去，<strong>注意不要保留 <code>data-</code> 前缀和引号</strong>。</p>
-<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 在 themes/next/_config.yml 文件末尾添加</span></span><br><span class="line"><span class="attr">giscus:</span></span><br><span class="line">  <span class="attr">enable:</span> <span class="literal">true</span></span><br><span class="line">  <span class="comment"># 用户名/仓库名，对应 data-repo</span></span><br><span class="line">  <span class="attr">repo:</span> <span class="string">用户名/仓库名</span></span><br><span class="line">  <span class="comment"># 仓库 ID，对应 data-repo-id</span></span><br><span class="line">  <span class="attr">repo_id:</span> <span class="string">仓库</span> <span class="string">ID</span></span><br><span class="line">  <span class="comment">#  选择的分类，对应 data-category</span></span><br><span class="line">  <span class="attr">category:</span> <span class="string">Announcements</span></span><br><span class="line">  <span class="comment"># 分类ID，对应 data-category-id           </span></span><br><span class="line">  <span class="attr">category_id:</span> <span class="string">你的分类</span> <span class="string">ID</span></span><br><span class="line">  <span class="comment"># 推荐用页面路径匹配，对应 data-mapping</span></span><br><span class="line">  <span class="attr">mapping:</span> <span class="string">pathname</span></span><br><span class="line">  <span class="comment"># 开启表情回应</span></span><br><span class="line">  <span class="attr">reactions_enabled:</span> <span class="number">1</span></span><br><span class="line">  <span class="attr">emit_metadata:</span> <span class="number">0</span></span><br><span class="line">  <span class="comment"># 评论框位置</span></span><br><span class="line">  <span class="attr">input_position:</span> <span class="string">bottom</span></span><br><span class="line">  <span class="comment"># 建议使用自动适配主题</span></span><br><span class="line">  <span class="attr">theme:</span> <span class="string">preferred_color_scheme</span></span><br><span class="line">  <span class="comment"># 语言设置</span></span><br><span class="line">  <span class="attr">lang:</span> <span class="string">zh-CN</span></span><br><span class="line">  <span class="comment"># 懒加载，提升性能</span></span><br><span class="line">  <span class="attr">loading:</span> <span class="string">lazy</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="🚀-第三步：部署与测试"><a href="#🚀-第三步：部署与测试" class="headerlink" title="🚀 第三步：部署与测试"></a>🚀 第三步：部署与测试</h2><p>最后，重新生成并部署你的博客，就可以看到效果了：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo clean &amp;&amp; hexo generate &amp;&amp; hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>或者直接使用：</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure>
-
-<p>部署成功后，打开任意一篇文章滑到底部，就能看到 Giscus 评论区了。如果页面没有显示，可以检查一下博客是否已经成功部署到线上。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Giscus_shenjuexiao_com.png" alt="Giscus shenjuexiao.com"></p>
 
       
     </div>
