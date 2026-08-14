@@ -33,14 +33,14 @@ jobs:
         uses: actions/checkout@v4
         with:
           repository: shenjuexiao/hexo-shenjuexiao
-          token: ${{ secrets.ISSUES_SHENJUEXIAO }}
+          token: ${{ secrets.SHENJUEXIAO }}
           path: source-repo
           
       - name: Checkout blog repository (for issues)
         uses: actions/checkout@v4
         with:
           repository: shenjuexiao/shenjuexiao.cn
-          token: ${{ secrets.ISSUES_SHENJUEXIAO }}
+          token: ${{ secrets.SHENJUEXIAO }}
           path: blog-repo
           
       - name: Setup Node.js
@@ -65,7 +65,7 @@ jobs:
           PAGE=1
           ISSUE_DATA=""
           while true; do
-            PAGE_ISSUES=$(curl -s -H "Authorization: token ${{ secrets.ISSUES_SHENJUEXIAO }}" \
+            PAGE_ISSUES=$(curl -s -H "Authorization: token ${{ secrets.SHENJUEXIAO }}" \
               "https://api.github.com/repos/shenjuexiao/shenjuexiao.cn/issues?state=all&per_page=100&page=$PAGE")
             
             COUNT=$(echo "$PAGE_ISSUES" | jq '. | length')
@@ -84,7 +84,7 @@ jobs:
           # 如果指定了 issue_number，只处理该 issue
           if [ -n "${{ github.event.inputs.issue_number }}" ]; then
             ISSUE_NUMBER="${{ github.event.inputs.issue_number }}"
-            ISSUE=$(curl -s -H "Authorization: token ${{ secrets.ISSUES_SHENJUEXIAO }}" \
+            ISSUE=$(curl -s -H "Authorization: token ${{ secrets.SHENJUEXIAO }}" \
               "https://api.github.com/repos/shenjuexiao/shenjuexiao.cn/issues/$ISSUE_NUMBER")
             ISSUE_DATA="[$ISSUE]"
           fi
@@ -140,7 +140,7 @@ jobs:
             echo "No orphaned or duplicate files to remove"
           else
             git commit -m "Remove orphaned and duplicate post files [skip ci]"
-            git push https://x-access-token:${{ secrets.ISSUES_SHENJUEXIAO }}@github.com/shenjuexiao/hexo-shenjuexiao.git main
+            git push https://x-access-token:${{ secrets.SHENJUEXIAO }}@github.com/shenjuexiao/hexo-shenjuexiao.git main
           fi
           
       - name: Fetch and convert issues to markdown
@@ -152,7 +152,7 @@ jobs:
           PAGE=1
           ALL_ISSUES=""
           while true; do
-            PAGE_ISSUES=$(curl -s -H "Authorization: token ${{ secrets.ISSUES_SHENJUEXIAO }}" \
+            PAGE_ISSUES=$(curl -s -H "Authorization: token ${{ secrets.SHENJUEXIAO }}" \
               "https://api.github.com/repos/shenjuexiao/shenjuexiao.cn/issues?state=all&per_page=100&page=$PAGE")
             
             COUNT=$(echo "$PAGE_ISSUES" | jq '. | length')
@@ -171,7 +171,7 @@ jobs:
           # 如果指定 issue_number，只处理此 issue
           if [ -n "${{ github.event.inputs.issue_number }}" ]; then
             ISSUE_NUMBER="${{ github.event.inputs.issue_number }}"
-            ISSUE=$(curl -s -H "Authorization: token ${{ secrets.ISSUES_SHENJUEXIAO }}" \
+            ISSUE=$(curl -s -H "Authorization: token ${{ secrets.SHENJUEXIAO }}" \
               "https://api.github.com/repos/shenjuexiao/shenjuexiao.cn/issues/$ISSUE_NUMBER")
             ALL_ISSUES="[$ISSUE]"
           fi
@@ -244,7 +244,7 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "Update posts from issues [skip ci]"
-            git push https://x-access-token:${{ secrets.ISSUES_SHENJUEXIAO }}@github.com/shenjuexiao/hexo-shenjuexiao.git main
+            git push https://x-access-token:${{ secrets.SHENJUEXIAO }}@github.com/shenjuexiao/hexo-shenjuexiao.git main
           fi
           
       - name: Check if any posts exist
@@ -265,7 +265,8 @@ jobs:
         if: steps.check_posts.outputs.post_count > 0
         uses: peaceiris/actions-gh-pages@v4
         with:
-          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          # personal_token: ${{ secrets.GITHUB_TOKEN }}
+          personal_token: ${{ secrets.SHENJUEXIAO }}
           publish_branch: gh-pages
           publish_dir: ./source-repo/public
           
@@ -273,7 +274,7 @@ jobs:
         if: steps.check_posts.outputs.post_count > 0
         uses: peaceiris/actions-gh-pages@v4
         with:
-          personal_token: ${{ secrets.ISSUES_SHENJUEXIAO }}
+          personal_token: ${{ secrets.SHENJUEXIAO }}
           external_repository: shenjuexiao/shenjuexiao.cn
           publish_branch: gh-pages
           publish_dir: ./source-repo/public
