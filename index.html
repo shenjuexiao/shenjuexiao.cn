@@ -142,7 +142,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">36</span>
+          <span class="site-state-item-count">37</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -168,6 +168,141 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-08-15-Eleventy-Quick-Setup/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="不懂就问，无趣的笔记">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-08-15-Eleventy-Quick-Setup/" class="post-title-link" itemprop="url">Eleventy Quick Setup</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-08-15 17:10:38" itemprop="dateCreated datePublished" datetime="2026-08-15T17:10:38+08:00">2026-08-15</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Eleventy-快速安装"><a href="#Eleventy-快速安装" class="headerlink" title="Eleventy 快速安装"></a>Eleventy 快速安装</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Fine-grained_tokens.png" alt="GitHub Fine-grained Tokens"></p>
+<h2 id="📝-笔记总结"><a href="#📝-笔记总结" class="headerlink" title="📝 笔记总结"></a>📝 笔记总结</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 检查 Node.js 版本</span></span><br><span class="line">node <span class="literal">--version</span></span><br><span class="line"><span class="comment"># 创建项目目录</span></span><br><span class="line">mkdir eleventy<span class="literal">-sample</span></span><br><span class="line"><span class="comment"># 进入项目目录</span></span><br><span class="line"><span class="built_in">cd</span> eleventy<span class="literal">-sample</span></span><br><span class="line"><span class="comment"># 创建 package.json，-y 使用默认值跳过问卷</span></span><br><span class="line">npm init <span class="literal">-y</span></span><br><span class="line"><span class="comment"># 如果项目中使用 ESM 而不是 CommonJS</span></span><br><span class="line">npm pkg <span class="built_in">set</span> <span class="built_in">type</span>=\<span class="string">&quot;module\&quot;</span></span><br><span class="line"><span class="comment"># 安装 Eleventy 并保存到项目的 `package.json` </span></span><br><span class="line">npm install @<span class="number">11</span>ty/eleventy</span><br><span class="line"><span class="comment"># 运行本地项目版本 Eleventy</span></span><br><span class="line">npx @<span class="number">11</span>ty/eleventy</span><br><span class="line"><span class="comment"># 创建两个新的模板文件</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;&lt;!doctype html&gt;&lt;title&gt;Page title&lt;/title&gt;&lt;p&gt;Hi&lt;/p&gt;&#x27;</span> | <span class="built_in">out-file</span> <span class="literal">-encoding</span> utf8 <span class="string">&#x27;index.html&#x27;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;# Heading&#x27;</span> | <span class="built_in">out-file</span> <span class="literal">-encoding</span> utf8 <span class="string">&#x27;README.md&#x27;</span></span><br><span class="line"><span class="comment"># 创建好模板后，再次运行 Eleventy</span></span><br><span class="line">npx @<span class="number">11</span>ty/eleventy</span><br><span class="line"><span class="comment"># --serve 启动支持热重载的本地 Web 服务器</span></span><br><span class="line">npx @<span class="number">11</span>ty/eleventy <span class="literal">--serve</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="📖-内容来源"><a href="#📖-内容来源" class="headerlink" title="📖 内容来源"></a>📖 内容来源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://www.11ty.dev/docs/">Eleventy Documentation - Guide - Get Started</a></li>
+</ul>
+<h2 id="🚀-快速安装"><a href="#🚀-快速安装" class="headerlink" title="🚀 快速安装"></a>🚀 快速安装</h2><h3 id="🔍-Node-js-18"><a href="#🔍-Node-js-18" class="headerlink" title="🔍 Node.js &gt; 18"></a>🔍 Node.js &gt; 18</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 检查 Node.js 版本</span></span><br><span class="line">node <span class="literal">--version</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="📁-步骤-1：创建项目目录"><a href="#📁-步骤-1：创建项目目录" class="headerlink" title="📁 步骤 1：创建项目目录"></a>📁 步骤 1：创建项目目录</h3><p><a target="_blank" rel="noopener" href="https://www.11ty.dev/docs/#step-1-make-a-project-director">step 1 make a project directory</a></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建项目目录</span></span><br><span class="line">mkdir eleventy<span class="literal">-sample</span></span><br><span class="line"><span class="comment"># 进入项目目录</span></span><br><span class="line"><span class="built_in">cd</span> eleventy<span class="literal">-sample</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="📦-步骤-2：安装-Eleventy"><a href="#📦-步骤-2：安装-Eleventy" class="headerlink" title="📦 步骤 2：安装 Eleventy"></a>📦 步骤 2：安装 Eleventy</h3><p><a target="_blank" rel="noopener" href="https://www.11ty.dev/docs/#step-2-install-eleventy">Step 2 Install Eleventy</a></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建 package.json，-y 使用默认值跳过问卷</span></span><br><span class="line">npm init <span class="literal">-y</span></span><br><span class="line"><span class="comment"># 如果项目中使用 ESM 而不是 CommonJS</span></span><br><span class="line">npm pkg <span class="built_in">set</span> <span class="built_in">type</span>=\<span class="string">&quot;module\&quot;</span></span><br><span class="line"><span class="comment"># 安装 Eleventy 并保存到项目的 `package.json` </span></span><br><span class="line">npm install @<span class="number">11</span>ty/eleventy</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Eleventy_npm_init_-y.png" alt="npm init -y"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Eleventy_npm_install_@11ty_eleventy.png" alt="npm install @11ty&#x2F;eleventy"></p>
+<h3 id="▶️-步骤-3：运行-Eleventy"><a href="#▶️-步骤-3：运行-Eleventy" class="headerlink" title="▶️ 步骤 3：运行 Eleventy"></a>▶️ 步骤 3：运行 Eleventy</h3><p><a target="_blank" rel="noopener" href="https://www.11ty.dev/docs/#step-3-run-eleventy">Step 3 Run Eleventy</a></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 运行本地项目版本 Eleventy</span></span><br><span class="line">npx @<span class="number">11</span>ty/eleventy</span><br></pre></td></tr></table></figure>
+
+<p>运行 Eleventy 后，命令行输出：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">11</span><span class="type">ty</span>] Wrote <span class="number">0</span> files <span class="keyword">in</span> <span class="number">0.03</span> seconds (v3.<span class="number">1.6</span>)</span><br></pre></td></tr></table></figure>
+
+<p>但是，Eleventy 没有处理任何文件，只有一个空文件夹，因为里面没有模板。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Eleventy_npx_@11ty_eleventy.png" alt="npx @11ty&#x2F;eleventy"></p>
+<h3 id="📝-步骤-4：创建模板"><a href="#📝-步骤-4：创建模板" class="headerlink" title="📝 步骤 4：创建模板"></a>📝 步骤 4：创建模板</h3><p><a target="_blank" rel="noopener" href="https://www.11ty.dev/docs/#step-4-create-some-templates">Step 4 Create some templates</a></p>
+<p>模板是一种内容文件，可以使用 Markdown、HTML、Liquid、Nunjucks 等格式编写，Eleventy 在构建站点时会将其转换成一个（或多个）页面。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建两个新的模板文件</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;&lt;!doctype html&gt;&lt;title&gt;Page title&lt;/title&gt;&lt;p&gt;Hi&lt;/p&gt;&#x27;</span> | <span class="built_in">out-file</span> <span class="literal">-encoding</span> utf8 <span class="string">&#x27;index.html&#x27;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;# Heading&#x27;</span> | <span class="built_in">out-file</span> <span class="literal">-encoding</span> utf8 <span class="string">&#x27;README.md&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果 <code>out-file</code> 命令在 Windows 终端窗口中不可用（PowerShell 特有的命令），改用跨平台方法。</li>
+<li>或者使用任何文本编辑器创建模板文件。</li>
+<li>确保保存到项目文件夹，文件扩展名正确。</li>
+</ul>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 创建好模板后，再次运行 Eleventy</span></span><br><span class="line">npx @<span class="number">11</span>ty/eleventy</span><br></pre></td></tr></table></figure>
+
+<p>命令行输出大致如下所示：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">11</span><span class="type">ty</span>] Writing _site/README/index.html from ./README.md (liquid)</span><br><span class="line">[<span class="number">11</span><span class="type">ty</span>] Writing _site/index.html from ./index.html (liquid)</span><br><span class="line">[<span class="number">11</span><span class="type">ty</span>] Wrote <span class="number">2</span> files <span class="keyword">in</span> <span class="number">0.04</span> seconds (v3.<span class="number">1.6</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Eleventy_echo_html.png" alt="npx @11ty&#x2F;eleventy"></p>
+<p>现在已将当前目录中的两个内容模板编译到输出文件夹中（默认为 <code>_site</code>）。</p>
+<p>如果进一步试验模板文件语法，编辑以下示例 <code>README.md</code> 文件，其中使用了 Front Matter、Liquid 和 Markdown 语法。</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="section">title: Heading</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"><span class="section"># &#123;&#123; title &#125;&#125;</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="👀-步骤-5：预览模板"><a href="#👀-步骤-5：预览模板" class="headerlink" title="👀 步骤 5：预览模板"></a>👀 步骤 5：预览模板</h2><p><a target="_blank" rel="noopener" href="https://www.11ty.dev/docs/#step-5-gaze-upon-your-templates">Step 5 Gaze upon your templates</a></p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># --serve 启动支持热重载的本地 Web 服务器</span></span><br><span class="line">npx @<span class="number">11</span>ty/eleventy <span class="literal">--serve</span></span><br></pre></td></tr></table></figure>
+
+<p>命令行输出大致如下所示：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[<span class="number">11</span><span class="type">ty</span>] Writing _site/index.html from ./index.html (liquid)</span><br><span class="line">[<span class="number">11</span><span class="type">ty</span>] Writing _site/README/index.html from ./README.md (liquid)</span><br><span class="line">[<span class="number">11</span><span class="type">ty</span>] Wrote <span class="number">2</span> files <span class="keyword">in</span> <span class="number">0.04</span> seconds (v3.<span class="number">1.6</span>)</span><br><span class="line">[<span class="number">11</span><span class="type">ty</span>] Watching…</span><br><span class="line">[<span class="number">11</span><span class="type">ty</span>] Server at http://localhost:<span class="number">8080</span>/</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Eleventy_npx_@11ty_eleventy_serve.png" alt="npx @11ty&#x2F;eleventy --serve"></p>
+<p>Web 浏览器中打开：<br> <code>http://localhost:8080/</code><br> 或<br> <code>http://localhost:8080/README/</code><br> 查看 Eleventy 站点！<br>修改再次保存模板文件时，Eleventy 将自动刷新浏览器使用新的更改。</p>
+<h2 id="🌐-步骤-6：上线（可选）"><a href="#🌐-步骤-6：上线（可选）" class="headerlink" title="🌐 步骤 6：上线（可选）"></a>🌐 步骤 6：上线（可选）</h2><p><a target="_blank" rel="noopener" href="https://www.11ty.dev/docs/#step-6-put-it-online-optional">Step 6 Put it online (optional)</a></p>
+<p>输出文件夹（<code>_site</code>）包含了网站所有的静态构建文件，可以将此文件夹上传到任何 Web 主机。</p>
+<p>更多信息查看部署文档：<a target="_blank" rel="noopener" href="https://www.11ty.dev/docs/deployment">Eleventy Documentation - Services - Deployment</a></p>
+<h2 id="📚-步骤-7：继续学习"><a href="#📚-步骤-7：继续学习" class="headerlink" title="📚 步骤 7：继续学习"></a>📚 步骤 7：继续学习</h2><p><a target="_blank" rel="noopener" href="https://www.11ty.dev/docs/#step-7-continue-learning">Step 7 Continue learning</a></p>
+<ul>
+<li>**添加更多内容：**试试 JavaScript、WebC（用于组件）、Nunjucks 和 Liquid。</li>
+<li>**使用布局文件：**不必在每个模板上重复样板代码。</li>
+<li>**添加配置文件：**以解锁 Eleventy 的高级功能。</li>
+<li><strong>将 CSS、JavaScript 或 Web 字体</strong>添加到项目中。</li>
+<li>**添加自动图像优化：**也非常容易。</li>
+<li>了解更多 Eleventy 的<strong>命令行选项</strong>。</li>
+<li>在项目中<strong>接入第三方 API 的数据</strong>。</li>
+</ul>
+<hr>
+<h2 id="📖-教程和入门项目"><a href="#📖-教程和入门项目" class="headerlink" title="📖 教程和入门项目"></a>📖 教程和入门项目</h2><p><a target="_blank" rel="noopener" href="https://www.11ty.dev/docs/#tutorials-and-starter-projects">Tutorials and Starter Projects</a></p>
+<p>从零开始（了解其工作原理）或使用官方博客入门项目（更快地启动和运行）。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1357,146 +1492,6 @@
 <h2 id="🖱️-手动安装与系统要求"><a href="#🖱️-手动安装与系统要求" class="headerlink" title="🖱️ 手动安装与系统要求"></a>🖱️ 手动安装与系统要求</h2><p>你也可以选择从 GitHub 的<a target="_blank" rel="noopener" href="https://github.com/denoland/deno/releases">发布页面</a>下载对应架构的 <code>.zip</code> 压缩包，解压后将 <code>deno.exe</code> 放在一个你方便管理的目录，并手动将其添加到系统 <code>PATH</code> 环境变量中。</p>
 <p><strong>系统要求</strong>：请确保你的 Windows 系统是 <strong>Windows 10 版本 1709</strong> 或 <strong>Windows Server 2016 版本 1709</strong> 及更新的版本。</p>
 <h2 id="⬆️-更新-Deno"><a href="#⬆️-更新-Deno" class="headerlink" title="⬆️ 更新 Deno"></a>⬆️ 更新 Deno</h2><p>当你需要更新到最新版本时，只需在终端中运行<code>deno upgrade</code>命令即可。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-08-05-PicGo-GitHub-Config/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="shenjuexiao">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="神觉晓">
-      <meta itemprop="description" content="不懂就问，无趣的笔记">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 神觉晓">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/2026-08-05-PicGo-GitHub-Config/" class="post-title-link" itemprop="url">PicGo GitHub Config</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2026-08-05 02:47:43" itemprop="dateCreated datePublished" datetime="2026-08-05T02:47:43+08:00">2026-08-05</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-15 16:14:17" itemprop="dateModified" datetime="2026-08-15T16:14:17+08:00">2026-08-15</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="PicGo-GitHub-图床搭建"><a href="#PicGo-GitHub-图床搭建" class="headerlink" title="PicGo GitHub 图床搭建"></a>PicGo GitHub 图床搭建</h1><h2 id="📝-笔记总结"><a href="#📝-笔记总结" class="headerlink" title="📝 笔记总结"></a>📝 笔记总结</h2><p>以下可以不用看，我已经卸载 PicGo。我现在使用的是直接保存图片，上传到 GitHub 仓库，然后通过链接地址引用。</p>
-<p>例如：</p>
-<p><code>https://cdn.jsdelivr.net/gh/用户名/仓库名@分支名/文件夹/图片名</code></p>
-<p>或：</p>
-<p><code>https://raw.githubusercontent.com/用户名/仓库名/分支名/图片名</code></p>
-<p>之前的文章：<a target="_blank" rel="noopener" href="https://shenjuexiao.cn/2026/2026-07-30-GitHub-raw-vs-cdn/">GitHub raw vs cdn</a></p>
-<p>当然也可以使用 PicGo 进行 GitHub 图床设置。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/PicGo_2.3.0_GitHub_Config.png" alt="PicGo 2.3.0 GitHub Config"></p>
-<h2 id="📖-内容来源"><a href="#📖-内容来源" class="headerlink" title="📖 内容来源"></a>📖 内容来源</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/nqd68klgbx1jctyaz5">PicGo GitHub 图床</a>（<a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/19094bf9-b94b-4885-97d0-a1d8066f257d">DeepSeek</a>）</li>
-</ul>
-<p>使用 <strong>PicGo + GitHub 图床</strong>，是一种很流行的免费方案，特别适合写博客、记笔记时管理图片。本质上是让 PicGo 这个工具，把你本地的图片自动上传到 GitHub 仓库，并生成一个在线的图片链接。</p>
-<h2 id="🔧-创建-GitHub-仓库与-Token"><a href="#🔧-创建-GitHub-仓库与-Token" class="headerlink" title="🔧 创建 GitHub 仓库与 Token"></a>🔧 创建 GitHub 仓库与 Token</h2><p>首先需要在 GitHub 上创建一个用来存放图片的“图床仓库”，并生成一个<strong>访问令牌 (Token)</strong>，这是 PicGo 上传图片的“钥匙”。</p>
-<h3 id="1-创建公开仓库"><a href="#1-创建公开仓库" class="headerlink" title="1.  创建公开仓库"></a>1.  创建公开仓库</h3><p>在 GitHub 点击右上角 <code>+</code> 号，选择 <code>New repository</code>。<strong>注意：仓库的可见性必须选 <code>Public</code></strong>，否则图片无法被公开访问。</p>
-<h3 id="2-生成-Token"><a href="#2-生成-Token" class="headerlink" title="2.  生成 Token"></a>2.  生成 Token</h3><p>点击头像 → <code>Settings</code> → 左下角 <code>Developer settings</code> → <code>Personal access tokens</code> → <code>Tokens (classic)</code> → <code>Generate new token (classic)</code>。<br>    *   <strong>Note (名称)</strong>：随便填一个，比如 <code>PicGo-image</code>。<br>    *   <strong>Expiration (过期时间)</strong>：<strong>建议选 <code>No expiration</code>（永不过期）</strong>，不然过期后需要重新生成并更新配置。<br>    *   <strong>Select scopes (权限)</strong>：务必<strong>勾选 <code>repo</code></strong> 这个选项，这会赋予 PicGo 读写你仓库的权限。<br>    *   点击生成后，<strong>立即复制并妥善保存这个 Token</strong>（它只显示一次）。</p>
-<h3 id="⚙️-配置-PicGo"><a href="#⚙️-配置-PicGo" class="headerlink" title="⚙️ 配置 PicGo"></a>⚙️ 配置 PicGo</h3><p>下载安装 PicGo 后，在“图床设置”里找到 GitHub 进行配置。</p>
-<table>
-<thead>
-<tr>
-<th align="left">配置项</th>
-<th align="left">填写内容</th>
-<th align="left">备注</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left"><strong>设定仓库名</strong></td>
-<td align="left"><code>你的GitHub用户名/仓库名</code></td>
-<td align="left">例如：<code>zhangsan/my-image-bed</code></td>
-</tr>
-<tr>
-<td align="left"><strong>设定分支名</strong></td>
-<td align="left"><code>main</code></td>
-<td align="left">2020年后GitHub新仓库默认分支为main</td>
-</tr>
-<tr>
-<td align="left"><strong>设定Token</strong></td>
-<td align="left">粘贴刚才保存的Token</td>
-<td align="left"></td>
-</tr>
-<tr>
-<td align="left"><strong>指定存储路径</strong></td>
-<td align="left"><code>img/</code> (选填)</td>
-<td align="left">图片将上传到仓库下的<code>img</code>文件夹，不填则传至根目录</td>
-</tr>
-<tr>
-<td align="left"><strong>设定自定义域名</strong></td>
-<td align="left"><code>https://cdn.jsdelivr.net/gh/你的用户名/仓库名@main</code></td>
-<td align="left">这是最关键的一步，使用jsDelivr CDN加速访问，国内访问更快</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p><strong>小提示</strong>：如果上传成功后图片无法显示，大概率是“自定义域名”配置有误。可以尝试将域名改为 <code>https://raw.githubusercontent.com/你的用户名/仓库名/main</code> 测试。</p>
-</blockquote>
-<h2 id="✍️-与-Typora-集成（可选）"><a href="#✍️-与-Typora-集成（可选）" class="headerlink" title="✍️ 与 Typora 集成（可选）"></a>✍️ 与 Typora 集成（可选）</h2><p>如果你用 Typora 写 Markdown，可以配置它调用 PicGo 实现“粘贴即上传”：</p>
-<ol>
-<li>打开 Typora，进入 <code>文件</code> → <code>偏好设置</code> → <code>图像</code>。</li>
-<li><strong>插入图片时</strong>：选择 <code>上传图片</code>。</li>
-<li><strong>上传服务</strong>：选择 <code>PicGo (app)</code>，并指定你 PicGo 的安装路径。</li>
-<li>点击“验证图片上传选项”，成功后就可以在 Typora 里愉快地粘贴图片了。</li>
-</ol>
-<h2 id="⚠️-常见问题与排错"><a href="#⚠️-常见问题与排错" class="headerlink" title="⚠️ 常见问题与排错"></a>⚠️ 常见问题与排错</h2><ol>
-<li><strong>Token 过期</strong>：这是最容易被忽略的问题。如果之前能用，突然有一天上传失败，可以先检查一下你的 GitHub Token 是否已过期。建议生成时直接选 <code>No expiration</code>。</li>
-<li><strong>端口占用</strong>：PicGo 默认监听端口是 <code>36677</code>，如果同时开启了多个 PicGo 进程或其他加速工具（如 Steam++），可能会冲突，导致上传失败。</li>
-<li><strong>网络与 Hosts</strong>：由于 GitHub 服务器在国外，网络波动可能影响访问。如果上传很慢或失败，可以尝试修改 Hosts 文件，将 <code>raw.githubusercontent.com</code> 等域名指向可用 IP。</li>
-</ol>
 
       
     </div>
