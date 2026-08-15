@@ -205,8 +205,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2026-08-15 17:10:38" itemprop="dateCreated datePublished" datetime="2026-08-15T17:10:38+08:00">2026-08-15</time>
+      <time title="创建时间：2026-08-15 17:10:38 / 修改时间：17:21:14" itemprop="dateCreated datePublished" datetime="2026-08-15T17:10:38+08:00">2026-08-15</time>
     </span>
 
   
@@ -219,12 +220,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Eleventy-快速安装"><a href="#Eleventy-快速安装" class="headerlink" title="Eleventy 快速安装"></a>Eleventy 快速安装</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Fine-grained_tokens.png" alt="GitHub Fine-grained Tokens"></p>
+          <h1 id="Eleventy-快速安装"><a href="#Eleventy-快速安装" class="headerlink" title="Eleventy 快速安装"></a>Eleventy 快速安装</h1><h2 id="Eleventy"><a href="#Eleventy" class="headerlink" title="Eleventy"></a>Eleventy</h2><p>技术栈：Node.js<br>官方网站：<a target="_blank" rel="noopener" href="https://www.11ty.dev/">11ty.dev</a><br>项目地址：<a target="_blank" rel="noopener" href="https://github.com/11ty/eleventy">github.com&#x2F;11ty&#x2F;eleventy</a><br>模板演示：<a target="_blank" rel="noopener" href="https://eleventy-simple.pages.dev/">eleventy-simple.pages.dev</a><br>插件演示: <a target="_blank" rel="noopener" href="https://fastcomments.com/commenting-system-for-11ty">fastcomments.com&#x2F;commenting-system-for-11ty</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/SCG_GitHub_11ty_buildawesome.png" alt="SCG GitHub 11ty&#x2F;buildawesome"></p>
 <h2 id="📝-笔记总结"><a href="#📝-笔记总结" class="headerlink" title="📝 笔记总结"></a>📝 笔记总结</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 检查 Node.js 版本</span></span><br><span class="line">node <span class="literal">--version</span></span><br><span class="line"><span class="comment"># 创建项目目录</span></span><br><span class="line">mkdir eleventy<span class="literal">-sample</span></span><br><span class="line"><span class="comment"># 进入项目目录</span></span><br><span class="line"><span class="built_in">cd</span> eleventy<span class="literal">-sample</span></span><br><span class="line"><span class="comment"># 创建 package.json，-y 使用默认值跳过问卷</span></span><br><span class="line">npm init <span class="literal">-y</span></span><br><span class="line"><span class="comment"># 如果项目中使用 ESM 而不是 CommonJS</span></span><br><span class="line">npm pkg <span class="built_in">set</span> <span class="built_in">type</span>=\<span class="string">&quot;module\&quot;</span></span><br><span class="line"><span class="comment"># 安装 Eleventy 并保存到项目的 `package.json` </span></span><br><span class="line">npm install @<span class="number">11</span>ty/eleventy</span><br><span class="line"><span class="comment"># 运行本地项目版本 Eleventy</span></span><br><span class="line">npx @<span class="number">11</span>ty/eleventy</span><br><span class="line"><span class="comment"># 创建两个新的模板文件</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;&lt;!doctype html&gt;&lt;title&gt;Page title&lt;/title&gt;&lt;p&gt;Hi&lt;/p&gt;&#x27;</span> | <span class="built_in">out-file</span> <span class="literal">-encoding</span> utf8 <span class="string">&#x27;index.html&#x27;</span></span><br><span class="line"><span class="built_in">echo</span> <span class="string">&#x27;# Heading&#x27;</span> | <span class="built_in">out-file</span> <span class="literal">-encoding</span> utf8 <span class="string">&#x27;README.md&#x27;</span></span><br><span class="line"><span class="comment"># 创建好模板后，再次运行 Eleventy</span></span><br><span class="line">npx @<span class="number">11</span>ty/eleventy</span><br><span class="line"><span class="comment"># --serve 启动支持热重载的本地 Web 服务器</span></span><br><span class="line">npx @<span class="number">11</span>ty/eleventy <span class="literal">--serve</span></span><br></pre></td></tr></table></figure>
 
+<hr>
 <h2 id="📖-内容来源"><a href="#📖-内容来源" class="headerlink" title="📖 内容来源"></a>📖 内容来源</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://www.11ty.dev/docs/">Eleventy Documentation - Guide - Get Started</a></li>
 </ul>
+<hr>
 <h2 id="🚀-快速安装"><a href="#🚀-快速安装" class="headerlink" title="🚀 快速安装"></a>🚀 快速安装</h2><h3 id="🔍-Node-js-18"><a href="#🔍-Node-js-18" class="headerlink" title="🔍 Node.js &gt; 18"></a>🔍 Node.js &gt; 18</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 检查 Node.js 版本</span></span><br><span class="line">node <span class="literal">--version</span></span><br></pre></td></tr></table></figure>
 
 <h3 id="📁-步骤-1：创建项目目录"><a href="#📁-步骤-1：创建项目目录" class="headerlink" title="📁 步骤 1：创建项目目录"></a>📁 步骤 1：创建项目目录</h3><p><a target="_blank" rel="noopener" href="https://www.11ty.dev/docs/#step-1-make-a-project-director">step 1 make a project directory</a></p>
@@ -262,7 +266,7 @@
 <p>如果进一步试验模板文件语法，编辑以下示例 <code>README.md</code> 文件，其中使用了 Front Matter、Liquid 和 Markdown 语法。</p>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">---</span><br><span class="line"><span class="section">title: Heading</span></span><br><span class="line"><span class="section">---</span></span><br><span class="line"><span class="section"># &#123;&#123; title &#125;&#125;</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="👀-步骤-5：预览模板"><a href="#👀-步骤-5：预览模板" class="headerlink" title="👀 步骤 5：预览模板"></a>👀 步骤 5：预览模板</h2><p><a target="_blank" rel="noopener" href="https://www.11ty.dev/docs/#step-5-gaze-upon-your-templates">Step 5 Gaze upon your templates</a></p>
+<h3 id="👀-步骤-5：预览模板"><a href="#👀-步骤-5：预览模板" class="headerlink" title="👀 步骤 5：预览模板"></a>👀 步骤 5：预览模板</h3><p><a target="_blank" rel="noopener" href="https://www.11ty.dev/docs/#step-5-gaze-upon-your-templates">Step 5 Gaze upon your templates</a></p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># --serve 启动支持热重载的本地 Web 服务器</span></span><br><span class="line">npx @<span class="number">11</span>ty/eleventy <span class="literal">--serve</span></span><br></pre></td></tr></table></figure>
 
 <p>命令行输出大致如下所示：</p>
@@ -270,10 +274,10 @@
 
 <p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Eleventy_npx_@11ty_eleventy_serve.png" alt="npx @11ty&#x2F;eleventy --serve"></p>
 <p>Web 浏览器中打开：<br> <code>http://localhost:8080/</code><br> 或<br> <code>http://localhost:8080/README/</code><br> 查看 Eleventy 站点！<br>修改再次保存模板文件时，Eleventy 将自动刷新浏览器使用新的更改。</p>
-<h2 id="🌐-步骤-6：上线（可选）"><a href="#🌐-步骤-6：上线（可选）" class="headerlink" title="🌐 步骤 6：上线（可选）"></a>🌐 步骤 6：上线（可选）</h2><p><a target="_blank" rel="noopener" href="https://www.11ty.dev/docs/#step-6-put-it-online-optional">Step 6 Put it online (optional)</a></p>
+<h3 id="🌐-步骤-6：上线（可选）"><a href="#🌐-步骤-6：上线（可选）" class="headerlink" title="🌐 步骤 6：上线（可选）"></a>🌐 步骤 6：上线（可选）</h3><p><a target="_blank" rel="noopener" href="https://www.11ty.dev/docs/#step-6-put-it-online-optional">Step 6 Put it online (optional)</a></p>
 <p>输出文件夹（<code>_site</code>）包含了网站所有的静态构建文件，可以将此文件夹上传到任何 Web 主机。</p>
 <p>更多信息查看部署文档：<a target="_blank" rel="noopener" href="https://www.11ty.dev/docs/deployment">Eleventy Documentation - Services - Deployment</a></p>
-<h2 id="📚-步骤-7：继续学习"><a href="#📚-步骤-7：继续学习" class="headerlink" title="📚 步骤 7：继续学习"></a>📚 步骤 7：继续学习</h2><p><a target="_blank" rel="noopener" href="https://www.11ty.dev/docs/#step-7-continue-learning">Step 7 Continue learning</a></p>
+<h3 id="📚-步骤-7：继续学习"><a href="#📚-步骤-7：继续学习" class="headerlink" title="📚 步骤 7：继续学习"></a>📚 步骤 7：继续学习</h3><p><a target="_blank" rel="noopener" href="https://www.11ty.dev/docs/#step-7-continue-learning">Step 7 Continue learning</a></p>
 <ul>
 <li>**添加更多内容：**试试 JavaScript、WebC（用于组件）、Nunjucks 和 Liquid。</li>
 <li>**使用布局文件：**不必在每个模板上重复样板代码。</li>
