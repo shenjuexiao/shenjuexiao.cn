@@ -979,7 +979,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-05 02:51:16" itemprop="dateModified" datetime="2026-08-05T02:51:16+08:00">2026-08-05</time>
+      <time title="修改时间：2026-08-15 06:30:55" itemprop="dateModified" datetime="2026-08-15T06:30:55+08:00">2026-08-15</time>
     </span>
 
   
@@ -1014,7 +1014,7 @@
 <th align="left">Token</th>
 <th align="center">Private repo</th>
 <th align="center">Public repo</th>
-<th align="center">Protocol</th>
+<th align="left">Protocol</th>
 <th align="left">Setup</th>
 </tr>
 </thead>
@@ -1022,21 +1022,21 @@
 <td align="left">github_token</td>
 <td align="center">✅</td>
 <td align="center">✅</td>
-<td align="center">HTTPS</td>
+<td align="left">HTTPS</td>
 <td align="left">Unnecessary</td>
 </tr>
 <tr>
 <td align="left">deploy_key</td>
 <td align="center">✅</td>
 <td align="center">✅</td>
-<td align="center">SSH</td>
+<td align="left">SSH</td>
 <td align="left">Necessary</td>
 </tr>
 <tr>
 <td align="left">personal_token</td>
 <td align="center">✅</td>
 <td align="center">✅</td>
-<td align="center">HTTPS</td>
+<td align="left">HTTPS</td>
 <td align="left">Necessary</td>
 </tr>
 </tbody></table>
@@ -1050,41 +1050,41 @@
 <h2 id="📊-对比表格"><a href="#📊-对比表格" class="headerlink" title="📊 对比表格"></a>📊 对比表格</h2><table>
 <thead>
 <tr>
-<th>特性</th>
-<th>GITHUB_TOKEN</th>
-<th>DEPLOY_KEY</th>
-<th>PERSONAL_TOKEN</th>
+<th align="left">特性</th>
+<th align="left">GITHUB_TOKEN</th>
+<th align="left">DEPLOY_KEY</th>
+<th align="left">PERSONAL_TOKEN</th>
 </tr>
 </thead>
 <tbody><tr>
-<td>关联对象</td>
-<td>当前工作流运行</td>
-<td>单个仓库</td>
-<td>你的个人账户</td>
+<td align="left">关联对象</td>
+<td align="left">当前工作流运行</td>
+<td align="left">单个仓库</td>
+<td align="left">你的个人账户</td>
 </tr>
 <tr>
-<td>权限范围</td>
-<td>仅限于当前仓库</td>
-<td>仅限于绑定的单个仓库（可读或读写）</td>
-<td>可访问你账户有权访问的所有仓库及资源</td>
+<td align="left">权限范围</td>
+<td align="left">仅限于当前仓库</td>
+<td align="left">仅限于绑定的单个仓库（可读或读写）</td>
+<td align="left">可访问你账户有权访问的所有仓库及资源</td>
 </tr>
 <tr>
-<td>身份验证方式</td>
-<td>HTTPS (Token)</td>
-<td>SSH (公钥&#x2F;私钥)</td>
-<td>HTTPS (Token)</td>
+<td align="left">身份验证方式</td>
+<td align="left">HTTPS (Token)</td>
+<td align="left">SSH（公钥&#x2F;私钥）</td>
+<td align="left">HTTPS (Token)</td>
 </tr>
 <tr>
-<td>有效期</td>
-<td>每次工作流作业开始时创建，作业完成后失效</td>
-<td>长期有效，直到手动删除</td>
-<td>长期有效，直到手动撤销或过期</td>
+<td align="left">有效期</td>
+<td align="left">每次工作流作业开始时创建，作业完成后失效</td>
+<td align="left">长期有效，直到手动删除</td>
+<td align="left">长期有效，直到手动撤销或过期</td>
 </tr>
 <tr>
-<td>典型使用场景</td>
-<td>GitHub Actions 中拉取当前仓库代码、进行常规操作</td>
-<td>在 Actions 中拉取或推送代码到特定仓库（尤其是私有仓库）</td>
-<td>需要在 Actions 中访问其他仓库、调用 GitHub API</td>
+<td align="left">典型使用场景</td>
+<td align="left">GitHub Actions 中拉取当前仓库代码、进行常规操作</td>
+<td align="left">在 Actions 中拉取或推送代码到特定仓库（尤其是私有仓库）</td>
+<td align="left">需要在 Actions 中访问其他仓库、调用 GitHub API</td>
 </tr>
 </tbody></table>
 <h2 id="🎯-如何选择"><a href="#🎯-如何选择" class="headerlink" title="🎯 如何选择"></a>🎯 如何选择</h2><ul>
@@ -1092,7 +1092,7 @@
 </li>
 <li><p>需要访问特定私有仓库时，使用 <code>DEPLOY_KEY</code>：当工作流需要从另一个特定的私有仓库拉取代码（例如一个公共工具库），但又不想把个人账户的所有权限都暴露出去时，<code>DEPLOY_KEY</code> 是绝佳选择。它的权限被&quot;锁死&quot;在目标仓库上。</p>
 </li>
-<li><p>万不得已时，使用 <code>PERSONAL_TOKEN</code>：当 <code>GITHUB_TOKEN</code> 权限不足（比如需要触发新的工作流），或者操作涉及到当前仓库之外的资源时，才考虑使用个人访问令牌。务必注意：由于它关联的是你的个人账户，权限非常宽泛，潜在风险也最大，因此要谨慎使用，并遵循最小权限原则（只授予必要的权限）</p>
+<li><p>万不得已时，使用 <code>PERSONAL_TOKEN</code>：当 <code>GITHUB_TOKEN</code> 权限不足（比如需要触发新的工作流），或者操作涉及到当前仓库之外的资源时，才考虑使用个人访问令牌。务必注意：由于它关联的是你的个人账户，权限非常宽泛，潜在风险也最大，因此要谨慎使用，并遵循最小权限原则（只授予必要的权限）。</p>
 </li>
 </ul>
 <h2 id="⚙️-如何设置"><a href="#⚙️-如何设置" class="headerlink" title="⚙️ 如何设置"></a>⚙️ 如何设置</h2><ul>
