@@ -142,7 +142,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">37</span>
+          <span class="site-state-item-count">38</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -168,6 +168,129 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-Astro-GitHub-Actions/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="不懂就问，无趣的笔记">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-07-30-Astro-GitHub-Actions/" class="post-title-link" itemprop="url">Astro GitHub Actions</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-07-30 14:50:51" itemprop="dateCreated datePublished" datetime="2026-07-30T14:50:51+08:00">2026-07-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-08-15 15:09:07" itemprop="dateModified" datetime="2026-08-15T15:09:07+08:00">2026-08-15</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Astro-安装及-GitHub-Actions-自动部署"><a href="#Astro-安装及-GitHub-Actions-自动部署" class="headerlink" title="Astro 安装及 GitHub Actions 自动部署"></a>Astro 安装及 GitHub Actions 自动部署</h1><h2 id="📄-内容来源"><a href="#📄-内容来源" class="headerlink" title="📄 内容来源"></a>📄 内容来源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://docs.astro.build/zh-cn/install-and-setup/">安装 Astro</a></li>
+<li><a target="_blank" rel="noopener" href="https://docs.npmjs.com/cli/v11/commands/npx">npx</a></li>
+</ul>
+<h2 id="🛠️-通过-CLI-向导安装"><a href="#🛠️-通过-CLI-向导安装" class="headerlink" title="🛠️ 通过 CLI 向导安装"></a>🛠️ 通过 CLI 向导安装</h2><p><a target="_blank" rel="noopener" href="https://docs.astro.build/zh-cn/install-and-setup/">docs.astro.build&#x2F;zh-cn&#x2F;install-and-setup&#x2F;</a></p>
+<p>我选择的是 <code>Astro Use blog template</code>，也可以选择其他的选项，使用模板能快速建立页面。</p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Use_blog_template.png" alt="Astro Use blog template"></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 npm 创建一个新项目</span></span><br><span class="line">npm create astro@latest</span><br></pre></td></tr></table></figure>
+
+<p>或</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 pnpm 创建一个新项目</span></span><br><span class="line">pnpm create astro@latest</span><br></pre></td></tr></table></figure>
+
+<p>或</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 使用 yarn 创建一个新项目</span></span><br><span class="line">yarn create astro</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_npm_create_astro@latest.png" alt="npm create astro@latest"></p>
+<h2 id="📁-目录和文件"><a href="#📁-目录和文件" class="headerlink" title="📁 目录和文件"></a>📁 目录和文件</h2><p><a target="_blank" rel="noopener" href="https://docs.astro.build/zh-cn/basics/project-structure/">docs.astro.build&#x2F;zh-cn&#x2F;basics&#x2F;project-structure&#x2F;</a></p>
+<blockquote>
+<p>Astro 采用一套约定俗成的文件夹布局来管理项目。每个 Astro 项目的根目录下都应该包括以下目录和文件：</p>
+</blockquote>
+<ul>
+<li>src&#x2F;* - 你的项目源代码（组件、页面、样式、图片等）。</li>
+<li>public&#x2F;* - 你的非代码、未处理的资源（字体、图标等）。</li>
+<li>package.json - 项目清单。</li>
+<li>astro.config.mjs - Astro 配置文件（推荐）。</li>
+<li>tsconfig.json - TypeScript 配置文件（推荐）。</li>
+</ul>
+<h2 id="🚀-启动-Astro-开发服务器"><a href="#🚀-启动-Astro-开发服务器" class="headerlink" title="🚀 启动 Astro 开发服务器"></a>🚀 启动 Astro 开发服务器</h2><p><a target="_blank" rel="noopener" href="https://docs.astro.build/zh-cn/develop-and-build/">docs.astro.build&#x2F;zh-cn&#x2F;develop-and-build&#x2F;</a></p>
+<blockquote>
+<p>Astro 自带了一个内置的开发服务器，它包含了项目开发所需的一切。astro dev CLI 命令将启动本地开发服务器，让你第一次看到你的新网站。</p>
+</blockquote>
+<blockquote>
+<p>每个起始模板都预配置了一个脚本，该脚本将为你运行 astro dev。在进入你的项目目录后，使用你喜欢的包管理器运行此命令并启动 Astro 开发服务器。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm run dev</span><br></pre></td></tr></table></figure>
+
+<p>或</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pnpm run dev</span><br></pre></td></tr></table></figure>
+
+<p>或</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yarn run dev</span><br></pre></td></tr></table></figure>
+
+<h2 id="🌐-部署你的-Astro-站点至-GitHub-Pages"><a href="#🌐-部署你的-Astro-站点至-GitHub-Pages" class="headerlink" title="🌐 部署你的 Astro 站点至 GitHub Pages"></a>🌐 部署你的 Astro 站点至 GitHub Pages</h2><p><a target="_blank" rel="noopener" href="https://docs.astro.build/zh-cn/guides/deploy/github/">docs.astro.build&#x2F;zh-cn&#x2F;guides&#x2F;deploy&#x2F;github&#x2F;</a></p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">GitHub</span> <span class="string">Pages</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="comment"># 每次推送到 `main` 分支时触发这个\&quot;工作流程\&quot;</span></span><br><span class="line">  <span class="comment"># 如果你使用了别的分支名，请按需将 `main` 替换成你的分支名</span></span><br><span class="line">  <span class="attr">push:</span></span><br><span class="line">    <span class="attr">branches:</span> [ <span class="string">main</span> ]</span><br><span class="line">  <span class="comment"># 允许你在 GitHub 上的 Actions 标签中手动触发此\&quot;工作流程\&quot;</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 允许 job 克隆 repo 并创建一个 page deployment</span></span><br><span class="line"><span class="attr">permissions:</span></span><br><span class="line">  <span class="attr">contents:</span> <span class="string">read</span></span><br><span class="line">  <span class="attr">pages:</span> <span class="string">write</span></span><br><span class="line">  <span class="attr">id-token:</span> <span class="string">write</span></span><br><span class="line"></span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span> <span class="string">your</span> <span class="string">repository</span> <span class="string">using</span> <span class="string">git</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v5</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install,</span> <span class="string">build,</span> <span class="string">and</span> <span class="string">upload</span> <span class="string">your</span> <span class="string">site</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">withastro/action@v5</span></span><br><span class="line">        <span class="comment"># with:</span></span><br><span class="line">          <span class="comment"># path: . # 存储库中 Astro 项目的根位置。（可选）</span></span><br><span class="line">          <span class="comment"># node-version: 20 # 用于构建站点的特定 Node.js 版本，默认为 20。（可选）</span></span><br><span class="line">          <span class="comment"># package-manager: pnpm@latest # 应使用哪个 Node.js 包管理器来安装依赖项和构建站点。会根据存储库中的 lockfile 自动检测。（可选）</span></span><br><span class="line">          <span class="comment"># build-cmd: pnpm run build # 用于构建你的网站的命令。默认运行软件包的构建脚本或任务。（可选）</span></span><br><span class="line">        <span class="comment"># env:</span></span><br><span class="line">          <span class="comment"># PUBLIC_POKEAPI: &#x27;https://pokeapi.co/api/v2&#x27; # 对变量值使用单引号。（可选）</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">deploy:</span></span><br><span class="line">    <span class="attr">needs:</span> <span class="string">build</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-latest</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">name:</span> <span class="string">github-pages</span></span><br><span class="line">      <span class="attr">url:</span> <span class="string">$&#123;&#123;</span> <span class="string">steps.deployment.outputs.page_url</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">to</span> <span class="string">GitHub</span> <span class="string">Pages</span></span><br><span class="line">        <span class="attr">id:</span> <span class="string">deployment</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/deploy-pages@v4</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="❌-Error-Failed-to-create-deployment-status-404"><a href="#❌-Error-Failed-to-create-deployment-status-404" class="headerlink" title="❌ Error: Failed to create deployment (status: 404)"></a>❌ Error: Failed to create deployment (status: 404)</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Deploy_to_GitHub_Pages.png" alt="Astro Deploy to GitHub Pages"></p>
+<p>这个错误表明 <code>GitHub Pages</code> 部署失败，主要原因是 <code>GitHub Pages</code> 没有在仓库设置中启用。错误信息明确指出：</p>
+<p>Ensure GitHub Pages has been enabled: <a target="_blank" rel="noopener" href="https://github.com/shenjuexiao/astro/settings/pages">https://github.com/shenjuexiao/astro/settings/pages</a></p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1343,91 +1466,6 @@
 <li><p>设置 <code>PERSONAL_TOKEN</code>（个人访问令牌，简称 PAT）主要分几步：进入创建页面、配置权限、生成并安全保存。你可以把它当作 GitHub 密码的替代品，用于命令行或 API 操作。</p>
 </li>
 </ul>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-Astro-Template/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="shenjuexiao">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="神觉晓">
-      <meta itemprop="description" content="不懂就问，无趣的笔记">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 神觉晓">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/2026-07-30-Astro-Template/" class="post-title-link" itemprop="url">Astro Template</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2026-07-30 14:29:48" itemprop="dateCreated datePublished" datetime="2026-07-30T14:29:48+08:00">2026-07-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-15 15:10:25" itemprop="dateModified" datetime="2026-08-15T15:10:25+08:00">2026-08-15</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Astro-模板"><a href="#Astro-模板" class="headerlink" title="Astro 模板"></a>Astro 模板</h1><h2 id="🌟-Astro-Paper"><a href="#🌟-Astro-Paper" class="headerlink" title="🌟 Astro Paper"></a>🌟 Astro Paper</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Template_satnaing_astro-paper.png" alt="satnaing&#x2F;astro-paper"><br>高评分、暗黑模式、RSS&#x2F;SEO 完善<br>Demo: <a target="_blank" rel="noopener" href="https://astro-paper.pages.dev/">astro-paper.pages.dev</a><br>Github: <a target="_blank" rel="noopener" href="https://github.com/satnaing/astro-paper">satnaing&#x2F;astro-paper</a></p>
-<h2 id="🚀-Astrofy"><a href="#🚀-Astrofy" class="headerlink" title="🚀 Astrofy"></a>🚀 Astrofy</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Template_manuelernestog_astrofy.png" alt="manuelernestog&#x2F;astrofy"><br>含简历&#x2F;商店&#x2F;博客多合一，CV+ 项目画廊<br>Demo: <a target="_blank" rel="noopener" href="https://astrofy-template.netlify.app/">astrofy-template.netlify.app</a><br>Github: <a target="_blank" rel="noopener" href="https://github.com/manuelernestog/astrofy">manuelernestog&#x2F;astrofy</a></p>
-<h2 id="⚡-EV0"><a href="#⚡-EV0" class="headerlink" title="⚡ EV0"></a>⚡ EV0</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Template_gndx_ev0-astro-theme.png" alt="gndx&#x2F;ev0-astro-theme"><br>极简响应式<br>Demo: <a target="_blank" rel="noopener" href="https://ev0.gndx.dev/">ev0.gndx.dev</a><br>Github: <a target="_blank" rel="noopener" href="https://github.com/gndx/ev0-astro-theme">withastro&#x2F;starlight</a></p>
-<h2 id="🪲-Firefly"><a href="#🪲-Firefly" class="headerlink" title="🪲 Firefly"></a>🪲 Firefly</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Template_CuteLeaf_Firefly.png" alt="CuteLeaf&#x2F;Firefly"><br>专为技术文档设计，支持多语言、搜索、版本切换<br>Demo: <a target="_blank" rel="noopener" href="https://firefly.cuteleaf.cn/">firefly.cuteleaf.cn</a><br>Github: <a target="_blank" rel="noopener" href="https://github.com/CuteLeaf/Firefly">CuteLeaf&#x2F;Firefly</a><br>Docs: <a target="_blank" rel="noopener" href="https://docs-firefly.cuteleaf.cn/zh/">docs-firefly.cuteleaf.cn</a></p>
-<h2 id="🎯-Pure"><a href="#🎯-Pure" class="headerlink" title="🎯 Pure"></a>🎯 Pure</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Template_cworld1_astro-theme-pure.png" alt="cworld1&#x2F;astro-theme-pure"><br>极简 + 全文搜索<br>Demo: <a target="_blank" rel="noopener" href="https://astro-pure.js.org/">astro-pure.js.org</a><br>Github: <a target="_blank" rel="noopener" href="https://github.com/cworld1/astro-theme-pure">cworld1&#x2F;astro-theme-pure</a></p>
-<blockquote>
-<p>这位作者的 Github 主页，可以追溯到 1990 年，不知道怎么弄出来的。</p>
-</blockquote>
-<h2 id="🎨-Sorolla"><a href="#🎨-Sorolla" class="headerlink" title="🎨 Sorolla"></a>🎨 Sorolla</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Template_jramma_sorollaportfolio.png" alt="jramma&#x2F;sorollaportfolio"><br>画册式排版<br>Demo: <a target="_blank" rel="noopener" href="https://sorolla.casset.cat/">sorolla.casset.cat</a><br>Github: <a target="_blank" rel="noopener" href="https://github.com/jramma/sorollaportfolio">jramma&#x2F;sorollaportfolio</a></p>
-<h2 id="📚-Starlight‌-官方"><a href="#📚-Starlight‌-官方" class="headerlink" title="📚 Starlight‌ 官方"></a>📚 Starlight‌ 官方</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Astro_Template_withastro_starlight.png" alt="withastro&#x2F;starlight"><br>专为技术文档设计，支持多语言、搜索、版本切换<br>Demo: <a target="_blank" rel="noopener" href="https://starlight.astro.build/">starlight.astro.build</a><br>Github: <a target="_blank" rel="noopener" href="https://github.com/withastro/starlight">withastro&#x2F;starlight</a></p>
 
       
     </div>
