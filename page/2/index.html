@@ -142,7 +142,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-count">39</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -168,6 +168,123 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-08-07-Pagic-Windows-Installation/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="不懂就问，无趣的笔记">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-08-07-Pagic-Windows-Installation/" class="post-title-link" itemprop="url">Pagic Windows Installation</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-08-07 07:02:06" itemprop="dateCreated datePublished" datetime="2026-08-07T07:02:06+08:00">2026-08-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-08-17 01:42:37" itemprop="dateModified" datetime="2026-08-17T01:42:37+08:00">2026-08-17</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="Pagic-Windows-安装"><a href="#Pagic-Windows-安装" class="headerlink" title="Pagic Windows 安装"></a>Pagic Windows 安装</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Deno_Windows_PowerShell_irm.png" alt="Deno Windows PowerShell irm"></p>
+<h2 id="📝-笔记总结"><a href="#📝-笔记总结" class="headerlink" title="📝 笔记总结"></a>📝 笔记总结</h2><p>未安装成功，Deno 版本 2.9.4，后续发现可能是因为 Deno 版本太高了，使用 Deno 1.34.1 再次尝试。</p>
+<h2 id="📖-内容来源"><a href="#📖-内容来源" class="headerlink" title="📖 内容来源"></a>📖 内容来源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://pagic.org/zh-CN/docs/usage.html">Pagic 安装</a></li>
+<li><a target="_blank" rel="noopener" href="https://pagic.org/docs/usage.html">Pagic Installation</a></li>
+</ul>
+<blockquote>
+<p>Pagic：Deno + React 驱动的静态网站生成器</p>
+</blockquote>
+<h2 id="🔧-安装-Deno"><a href="#🔧-安装-Deno" class="headerlink" title="🔧 安装 Deno"></a>🔧 安装 Deno</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">irm</span> https://deno.land/install.ps1 | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="⬆️-安装-Pagic"><a href="#⬆️-安装-Pagic" class="headerlink" title="⬆️ 安装 Pagic"></a>⬆️ 安装 Pagic</h2><h3 id="安装最新版本（失败）"><a href="#安装最新版本（失败）" class="headerlink" title="安装最新版本（失败）"></a>安装最新版本（失败）</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span> <span class="literal">--allow-write</span> <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic https://deno.land/x/pagic/mod.ts</span><br></pre></td></tr></table></figure>
+
+<p>⚠️ 链接不存在：<a target="_blank" rel="noopener" href="https://deno.land/x/pagic/mod.ts">https://deno.land/x/pagic/mod.ts</a></p>
+<h3 id="安装指定版本（失败）"><a href="#安装指定版本（失败）" class="headerlink" title="安装指定版本（失败）"></a>安装指定版本（失败）</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span> <span class="literal">--allow-write</span> <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic https://deno.land/x/pagic@v1.<span class="number">6.3</span>/mod.ts</span><br></pre></td></tr></table></figure>
+
+<p>⚠️ 链接存在：<a target="_blank" rel="noopener" href="https://deno.land/x/pagic@v1.6.3/mod.ts">https://deno.land/x/pagic@v1.6.3/mod.ts</a></p>
+<h3 id="指定读写目录的方式（未尝试）"><a href="#指定读写目录的方式（未尝试）" class="headerlink" title="指定读写目录的方式（未尝试）"></a>指定读写目录的方式（未尝试）</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span>=/home/xcatliu/site <span class="literal">--allow-write</span>=/home/xcatliu/site <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic https://deno.land/x/pagic/mod.ts</span><br></pre></td></tr></table></figure>
+
+<h2 id="❓安装错误提示一"><a href="#❓安装错误提示一" class="headerlink" title="❓安装错误提示一"></a>❓安装错误提示一</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">PS</span> D:\\Git&gt; deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span> <span class="literal">--allow-write</span> <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic https://deno.land/x/pagic@v1.<span class="number">6.3</span>/mod.ts</span><br><span class="line">error: the following required arguments were not provided:</span><br><span class="line">  <span class="literal">--global</span></span><br><span class="line"></span><br><span class="line">Note: Permission flags can only be used <span class="keyword">in</span> a global setting</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Deno_Windows_deno_install_error_1.png" alt="Deno Windows deno install error"></p>
+<blockquote>
+<p>Deno 要求在使用权限标志时，必须指定 –global 选项。正确的命令在你的命令末尾加上 –global</p>
+</blockquote>
+<ul>
+<li>加上 <code>--global</code>，Deno 1.30+ 版本，权限标志（如 <code>--allow-read</code>）只能<strong>全局安装</strong>使用</li>
+<li><code>--global</code></li>
+<li>去掉 <code>--unstable</code>，Deno 2.0+ 版本不需要</li>
+</ul>
+<p>正确的命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno install <span class="literal">--allow-read</span> <span class="literal">--allow-write</span> <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic <span class="literal">--global</span> https://deno.land/x/pagic@v1.<span class="number">6.3</span>/mod.ts</span><br></pre></td></tr></table></figure>
+
+<h2 id="🪲-安装错误提示二"><a href="#🪲-安装错误提示二" class="headerlink" title="🪲 安装错误提示二"></a>🪲 安装错误提示二</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PS D:\\Git&gt; deno install --allow-read --allow-write --allow-net --allow-env --allow-run --name=pagic --global https://deno.land/x/pagic@v1.6.3/mod.ts</span><br><span class="line">✅ Granted import access to \&quot;cdn.pagic.org:443\&quot;.</span><br><span class="line">error: Import &#x27;https://cdn.pagic.org/i18next@19.8.1/esnext/i18next.js&#x27; failed.</span><br><span class="line">    0: error sending request for url (https://cdn.pagic.org/i18next@19.8.1/esnext/i18next.js): client error (Connect): invalid peer certificate: certificate not valid for name \&quot;cdn.pagic.org\&quot;; certificate is only valid for DnsName(\&quot;*.cdn.myqcloud.com\&quot;), DnsName(\&quot;*.2144.cn\&quot;), DnsName(\&quot;*.2144.com\&quot;), DnsName(\&quot;*.4399.com\&quot;), DnsName(\&quot;*.5054399.com\&quot;), DnsName(\&quot;*.58cdn.com.cn\&quot;), DnsName(\&quot;*.bldimg.com\&quot;), DnsName(\&quot;*.cdn-go.cn\&quot;), DnsName(\&quot;*.cntv.qcloudcdn.com\&quot;), DnsName(\&quot;*.danmu.com\&quot;), DnsName(\&quot;*.dd.cdntips.net\&quot;), DnsName(\&quot;*.dd.qq.com\&quot;), DnsName(\&quot;*.dianping.com\&quot;), DnsName(\&quot;*.dl.txcdns.com\&quot;), DnsName(\&quot;*.dlied1.cdntips.net\&quot;), DnsName(\&quot;*.dpfile.com\&quot;), DnsName(\&quot;*.ffnews.cn\&quot;), DnsName(\&quot;*.file.myqcloud.com\&quot;), DnsName(\&quot;*.flash.2144.com\&quot;), DnsName(\&quot;*.flash.cn\&quot;), DnsName(\&quot;*.geetest.com\&quot;), DnsName(\&quot;*.gtimg.cn\&quot;), DnsName(\&quot;*.gtimg.com\&quot;), DnsName(\&quot;*.hls.cdn.myqcloud.com\&quot;), DnsName(\&quot;*.image.myqcloud.com\&quot;), DnsName(\&quot;*.img4399.com\&quot;), DnsName(\&quot;*.jsbchina.cn\&quot;), DnsName(\&quot;*.lof3.xyz\&quot;), DnsName(\&quot;*.meituan.net\&quot;), DnsName(\&quot;*.myapp.com\&quot;), DnsName(\&quot;*.mykeeta.net\&quot;), DnsName(\&quot;*.qcloudcdn.com\&quot;), DnsName(\&quot;*.qpic.cn\&quot;), DnsName(\&quot;*.sogoucdn.com\&quot;), DnsName(\&quot;*.suyinwealth.com\&quot;), DnsName(\&quot;*.ugdtimg.com\&quot;), DnsName(\&quot;*.uniqlo.cn\&quot;), DnsName(\&quot;*.vda.v.qcloudcdn.com\&quot;), DnsName(\&quot;*.video.myqcloud.com\&quot;), DnsName(\&quot;*.vip.cdngot.com\&quot;), DnsName(\&quot;*.vod-qcloud.com\&quot;), DnsName(\&quot;*.vod.cdn.myqcloud.com\&quot;), DnsName(\&quot;*.vod.myqcloud.com\&quot;), DnsName(\&quot;*.vod2.myqcloud.com\&quot;), DnsName(\&quot;*.wanyabox.com\&quot;), DnsName(\&quot;*.weishi.qq.com\&quot;), DnsName(\&quot;*.wx.qq.com\&quot;), DnsName(\&quot;*.zhongcheng818.com\&quot;), DnsName(\&quot;*.zservey.net\&quot;), DnsName(\&quot;cdn.myqcloud.com\&quot;), DnsName(\&quot;flash.cn\&quot;), DnsName(\&quot;nitrome.com.4399.com\&quot;), DnsName(\&quot;www.miniclip.com.4399pk.com\&quot;), DnsName(\&quot;www.tencentwm.com\&quot;), DnsName(\&quot;www.txfund.com\&quot;) or DnsName(\&quot;xpdl999.aiwan4399.com\&quot;)</span><br><span class="line">    1: client error (Connect)</span><br><span class="line">    2: invalid peer certificate: certificate not valid for name \&quot;cdn.pagic.org\&quot;; certificate is only valid for DnsName(\&quot;*.cdn.myqcloud.com\&quot;), DnsName(\&quot;*.2144.cn\&quot;), DnsName(\&quot;*.2144.com\&quot;), DnsName(\&quot;*.4399.com\&quot;), DnsName(\&quot;*.5054399.com\&quot;), DnsName(\&quot;*.58cdn.com.cn\&quot;), DnsName(\&quot;*.bldimg.com\&quot;), DnsName(\&quot;*.cdn-go.cn\&quot;), DnsName(\&quot;*.cntv.qcloudcdn.com\&quot;), DnsName(\&quot;*.danmu.com\&quot;), DnsName(\&quot;*.dd.cdntips.net\&quot;), DnsName(\&quot;*.dd.qq.com\&quot;), DnsName(\&quot;*.dianping.com\&quot;), DnsName(\&quot;*.dl.txcdns.com\&quot;), DnsName(\&quot;*.dlied1.cdntips.net\&quot;), DnsName(\&quot;*.dpfile.com\&quot;), DnsName(\&quot;*.ffnews.cn\&quot;), DnsName(\&quot;*.file.myqcloud.com\&quot;), DnsName(\&quot;*.flash.2144.com\&quot;), DnsName(\&quot;*.flash.cn\&quot;), DnsName(\&quot;*.geetest.com\&quot;), DnsName(\&quot;*.gtimg.cn\&quot;), DnsName(\&quot;*.gtimg.com\&quot;), DnsName(\&quot;*.hls.cdn.myqcloud.com\&quot;), DnsName(\&quot;*.image.myqcloud.com\&quot;), DnsName(\&quot;*.img4399.com\&quot;), DnsName(\&quot;*.jsbchina.cn\&quot;), DnsName(\&quot;*.lof3.xyz\&quot;), DnsName(\&quot;*.meituan.net\&quot;), DnsName(\&quot;*.myapp.com\&quot;), DnsName(\&quot;*.mykeeta.net\&quot;), DnsName(\&quot;*.qcloudcdn.com\&quot;), DnsName(\&quot;*.qpic.cn\&quot;), DnsName(\&quot;*.sogoucdn.com\&quot;), DnsName(\&quot;*.suyinwealth.com\&quot;), DnsName(\&quot;*.ugdtimg.com\&quot;), DnsName(\&quot;*.uniqlo.cn\&quot;), DnsName(\&quot;*.vda.v.qcloudcdn.com\&quot;), DnsName(\&quot;*.video.myqcloud.com\&quot;), DnsName(\&quot;*.vip.cdngot.com\&quot;), DnsName(\&quot;*.vod-qcloud.com\&quot;), DnsName(\&quot;*.vod.cdn.myqcloud.com\&quot;), DnsName(\&quot;*.vod.myqcloud.com\&quot;), DnsName(\&quot;*.vod2.myqcloud.com\&quot;), DnsName(\&quot;*.wanyabox.com\&quot;), DnsName(\&quot;*.weishi.qq.com\&quot;), DnsName(\&quot;*.wx.qq.com\&quot;), DnsName(\&quot;*.zhongcheng818.com\&quot;), DnsName(\&quot;*.zservey.net\&quot;), DnsName(\&quot;cdn.myqcloud.com\&quot;), DnsName(\&quot;flash.cn\&quot;), DnsName(\&quot;nitrome.com.4399.com\&quot;), DnsName(\&quot;www.miniclip.com.4399pk.com\&quot;), DnsName(\&quot;www.tencentwm.com\&quot;), DnsName(\&quot;www.txfund.com\&quot;) or DnsName(\&quot;xpdl999.aiwan4399.com\&quot;)</span><br><span class="line">    at https://deno.land/x/pagic@v1.6.3/src/plugins/i18n.tsx:4:21</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Deno_Windows_deno_install_error_2.png" alt="Deno Windows deno install error"></p>
+<p><code>cdn.pagic.org</code> DNS 被污染，解析到腾讯云 CDN 节点，但该节点证书并不是 <code>cdn.pagic.org</code> 的，出现证书域名不匹配，Deno HTTPS 校验直接拒绝。</p>
+<h2 id="🌟-待续……"><a href="#🌟-待续……" class="headerlink" title="🌟 待续……"></a>🌟 待续……</h2><p>⚡ 解决不掉了。😅</p>
+<h2 id="🧩-验证安装"><a href="#🧩-验证安装" class="headerlink" title="🧩 验证安装"></a>🧩 验证安装</h2><p>安装后，确保 <code>~/.deno/bin</code> 在你的系统 PATH 中，然后测试：</p>
+<pre><code class="language-powershell">pagic --version
+``
+</code></pre>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1157,123 +1274,6 @@
 <li>仓库配置 <code>Repository secrets</code><br>仓库首页， <code>Settings</code> -&gt; <code>Secrets and variables</code> -&gt; <code>Actions</code> -&gt; <code>New repository secret</code><br>Name：GH_TOKEN。<br>Value：粘贴上面的 PAT。</li>
 </ul>
 <h2 id="✅-修改后-gmeek-docs-yml"><a href="#✅-修改后-gmeek-docs-yml" class="headerlink" title="✅ 修改后 gmeek-docs.yml"></a>✅ 修改后 <code>gmeek-docs.yml</code></h2><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">name:</span> <span class="string">build</span> <span class="string">Gmeek</span></span><br><span class="line"></span><br><span class="line"><span class="attr">on:</span></span><br><span class="line">  <span class="attr">workflow_dispatch:</span></span><br><span class="line">  <span class="attr">issues:</span></span><br><span class="line">    <span class="attr">types:</span> [<span class="string">opened</span>, <span class="string">edited</span>]</span><br><span class="line">  <span class="comment"># schedule:</span></span><br><span class="line">    <span class="comment"># - cron: \&quot;0 16 * * *\&quot;</span></span><br><span class="line">    </span><br><span class="line"><span class="attr">jobs:</span></span><br><span class="line">  <span class="attr">build:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Generate</span> <span class="string">blog</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-24.04</span></span><br><span class="line">    <span class="attr">if:</span> <span class="string">$&#123;&#123;</span> <span class="string">github.event.repository.owner.id</span> <span class="string">==</span> <span class="string">github.event.sender.id</span> <span class="string">||</span> <span class="string">github.event_name</span> <span class="string">==</span> <span class="string">&#x27;schedule&#x27;</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">permissions:</span> <span class="string">write-all</span></span><br><span class="line">    <span class="attr">steps:</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Checkout</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/checkout@v4</span></span><br><span class="line">        </span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Get</span> <span class="string">config.json</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          echo \&quot;====== check config.josn file ======\&quot;</span></span><br><span class="line"><span class="string">          cat config.json</span></span><br><span class="line"><span class="string">          echo \&quot;====== check config.josn end  ======\&quot;</span></span><br><span class="line"><span class="string">          sudo apt-get install jq</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Set</span> <span class="string">up</span> <span class="string">Python</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/setup-python@v5</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">python-version:</span> <span class="number">3.8</span></span><br><span class="line"></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Clone</span> <span class="string">source</span> <span class="string">code</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          GMEEK_VERSION=$(jq -r \&quot;.GMEEK_VERSION\&quot; config.json)</span></span><br><span class="line"><span class="string">          git clone https://github.com/Meekdai/Gmeek.git /opt/Gmeek;</span></span><br><span class="line"><span class="string">          cd /opt/Gmeek/</span></span><br><span class="line"><span class="string">          lastTag=$(git describe --tags `git rev-list --tags --max-count=1`)</span></span><br><span class="line"><span class="string">          if [ $GMEEK_VERSION == &#x27;last&#x27; ]; then git checkout $lastTag; else git checkout $GMEEK_VERSION; fi;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Install</span> <span class="string">dependencies</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          pip install --upgrade pip</span></span><br><span class="line"><span class="string">          pip install -r /opt/Gmeek/requirements.txt</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Generate</span> <span class="string">new</span> <span class="string">html</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          cp -r ./* /opt/Gmeek/</span></span><br><span class="line"><span class="string">          cd /opt/Gmeek/</span></span><br><span class="line"><span class="string">          python Gmeek.py $&#123;&#123; secrets.GITHUB_TOKEN &#125;&#125; $&#123;&#123; github.repository &#125;&#125; --issue_number &#x27;$&#123;&#123; github.event.issue.number &#125;&#125;&#x27;</span></span><br><span class="line"><span class="string">          cp -a /opt/Gmeek/docs $&#123;&#123; github.workspace &#125;&#125; </span></span><br><span class="line"><span class="string">          cp -a /opt/Gmeek/backup $&#123;&#123; github.workspace &#125;&#125; </span></span><br><span class="line"><span class="string">          cp /opt/Gmeek/blogBase.json $&#123;&#123; github.workspace &#125;&#125; </span></span><br><span class="line"><span class="string"></span>      </span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">update</span> <span class="string">html</span></span><br><span class="line">        <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line"><span class="string">          git config --local user.email \&quot;$(jq -r \&quot;.email\&quot; config.json)\&quot;</span></span><br><span class="line"><span class="string">          git config --local user.name \&quot;$&#123;&#123; github.repository_owner &#125;&#125;\&quot;</span></span><br><span class="line"><span class="string">          git add .</span></span><br><span class="line"><span class="string">          git commit -a -m &#x27;🎉auto update by Gmeek action&#x27; || echo \&quot;nothing to commit\&quot;</span></span><br><span class="line"><span class="string">          git push || echo \&quot;nothing to push\&quot;</span></span><br><span class="line"><span class="string">          sleep 3</span></span><br><span class="line"><span class="string"></span></span><br><span class="line">      <span class="comment"># 生成 HTML 后立即将 docs 文件夹上传为 artifact</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Upload</span> <span class="string">docs</span> <span class="string">artifact</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/upload-artifact@v4</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">name:</span> <span class="string">docs</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">$&#123;&#123;</span> <span class="string">github.workspace</span> <span class="string">&#125;&#125;/docs</span></span><br><span class="line">          <span class="comment"># 设置保留 1 天，节省存储空间</span></span><br><span class="line">          <span class="attr">retention-days:</span> <span class="number">1</span></span><br><span class="line">          </span><br><span class="line">  <span class="attr">deploy:</span></span><br><span class="line">    <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">blog</span></span><br><span class="line">    <span class="attr">runs-on:</span> <span class="string">ubuntu-24.04</span></span><br><span class="line">    <span class="attr">needs:</span> <span class="string">build</span></span><br><span class="line">    <span class="attr">permissions:</span></span><br><span class="line">      <span class="attr">contents:</span> <span class="string">write</span></span><br><span class="line">      <span class="attr">pages:</span> <span class="string">write</span></span><br><span class="line">      <span class="attr">id-token:</span> <span class="string">write</span></span><br><span class="line">    <span class="attr">concurrency:</span></span><br><span class="line">      <span class="attr">group:</span> <span class="string">\&quot;pages\&quot;</span></span><br><span class="line">      <span class="attr">cancel-in-progress:</span> <span class="literal">false</span></span><br><span class="line">    <span class="attr">environment:</span></span><br><span class="line">      <span class="attr">name:</span> <span class="string">github-pages</span></span><br><span class="line">      <span class="attr">url:</span> <span class="string">$&#123;&#123;</span> <span class="string">steps.deployment.outputs.page_url</span> <span class="string">&#125;&#125;</span></span><br><span class="line">    <span class="attr">steps:</span>   </span><br><span class="line">      <span class="comment"># 先下载 build job 上传的 docs artifact，下载到 ./docs 目录</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Download</span> <span class="string">docs</span> <span class="string">artifact</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">actions/download-artifact@v4</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">name:</span> <span class="string">docs</span></span><br><span class="line">          <span class="attr">path:</span> <span class="string">./docs</span></span><br><span class="line">      </span><br><span class="line">      <span class="comment"># 新增：部署 docs 到博客仓库的gh-pages分支</span></span><br><span class="line">      <span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Deploy</span> <span class="string">docs</span> <span class="string">to</span> <span class="string">gmeek-docs</span> <span class="string">gh-pages</span></span><br><span class="line">        <span class="attr">uses:</span> <span class="string">peaceiris/actions-gh-pages@v3</span></span><br><span class="line">        <span class="attr">with:</span></span><br><span class="line">          <span class="attr">personal_token:</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.GMEEK_DOCS</span> <span class="string">&#125;&#125;</span></span><br><span class="line">          <span class="attr">external_repository:</span> <span class="string">shenjuexiao/gmeek-docs</span></span><br><span class="line">          <span class="attr">publish_branch:</span> <span class="string">gh-pages</span></span><br><span class="line">          <span class="attr">publish_dir:</span> <span class="string">./docs</span></span><br><span class="line">          <span class="attr">commit_message:</span> <span class="string">&#x27;🚀 Deploy static pages to gh-pages&#x27;</span></span><br><span class="line">          <span class="attr">user_name:</span> <span class="string">&#x27;github-actions[bot]&#x27;</span></span><br><span class="line">          <span class="attr">user_email:</span> <span class="string">&#x27;github-actions[bot]@users.noreply.github.com&#x27;</span></span><br><span class="line">          <span class="attr">keep_files:</span> <span class="literal">false</span></span><br><span class="line">          <span class="attr">force_orphan:</span> <span class="literal">false</span></span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-GitHub-CNAME/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="shenjuexiao">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="神觉晓">
-      <meta itemprop="description" content="不懂就问，无趣的笔记">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 神觉晓">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/2026-07-30-GitHub-CNAME/" class="post-title-link" itemprop="url">GitHub CNAME</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2026-07-30 14:52:35" itemprop="dateCreated datePublished" datetime="2026-07-30T14:52:35+08:00">2026-07-30</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-15 15:49:55" itemprop="dateModified" datetime="2026-08-15T15:49:55+08:00">2026-08-15</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="GitHub-CNAME-的作用"><a href="#GitHub-CNAME-的作用" class="headerlink" title="GitHub CNAME 的作用"></a>GitHub CNAME 的作用</h1><h2 id="📄-内容来源"><a href="#📄-内容来源" class="headerlink" title="📄 内容来源"></a>📄 内容来源</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/jt35tym47ydbk1m6d1">Github CNAME 的作用</a>（<a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/9a2918ec-002e-425f-854b-e0e70bd15005">Deepseek</a>）</li>
-</ul>
-<p>GitHub仓库里的<code>CNAME</code>文件，核心作用是<strong>告诉GitHub Pages服务器，当用户通过你的自定义域名（比如 <code>www.example.com</code>）访问时，应该展示哪个仓库的网站内容</strong>。</p>
-<p>你可以把它理解为在GitHub内部为你的域名和特定仓库建立的一个“认领”和“关联”关系。它需要在你的域名解析服务商（如阿里云、Cloudflare）设置的DNS解析<strong>配合</strong>下才能正常工作。</p>
-<h2 id="⚙️-如何工作"><a href="#⚙️-如何工作" class="headerlink" title="⚙️ 如何工作"></a>⚙️ 如何工作</h2><p>当用户在浏览器输入你的自定义域名（如 <code>www.example.com</code>）并访问时，流程如下：</p>
-<ol>
-<li><strong>DNS解析</strong>：用户的请求首先会去DNS服务器查询<code>www.example.com</code>指向哪里。你需要在DNS服务商那里添加一条 <strong>CNAME记录</strong>，将 <code>www.example.com</code> 指向 <code>你的用户名.github.io</code>。这一步把域名指向了GitHub的服务器。</li>
-<li><strong>请求到达GitHub</strong>：请求到达GitHub的服务器后，服务器需要知道这个请求是给哪个仓库的。</li>
-<li><strong>读取CNAME文件</strong>：此时，GitHub会检查所有启用了Pages的仓库，寻找根目录下名为<code>CNAME</code>（<strong>必须大写</strong>）的文件。</li>
-<li><strong>匹配与响应</strong>：当GitHub在你的仓库里找到的<code>CNAME</code>文件内容（例如<code>www.example.com</code>），与用户请求的域名完全匹配时，它就知道要把这个仓库的网站内容返回给用户了。</li>
-</ol>
-<h2 id="🌐-仓库和服务商-CNAME-比较"><a href="#🌐-仓库和服务商-CNAME-比较" class="headerlink" title="🌐 仓库和服务商 CNAME 比较"></a>🌐 仓库和服务商 CNAME 比较</h2><p>两者的关系：分工明确的“钥匙”与“路标”。这两者缺一不可，它们共同完成从“自定义域名”到“具体 GitHub 仓库”的映射。</p>
-<table>
-<thead>
-<tr>
-<th align="left">组成部分</th>
-<th align="left">作用概括</th>
-<th align="left">配置位置</th>
-<th align="left">关键点</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">仓库 CNAME 文件</td>
-<td align="left">“钥匙”：授权并告诉 GitHub，哪个域名可以访问这个仓库</td>
-<td align="left">仓库根目录下的 CNAME 文件</td>
-<td align="left">内容必须与 DNS 记录的子域名一致，且只能有一个域名</td>
-</tr>
-<tr>
-<td align="left">DNS CNAME 记录</td>
-<td align="left">“路标”：将互联网流量从你的域名指向 GitHub 服务器</td>
-<td align="left">域名注册商 &#x2F; DNS 服务商的管理后台</td>
-<td align="left">通常用于 www 子域名，指向 &lt;用户名&gt;.github.io</td>
-</tr>
-</tbody></table>
-<h2 id="📌-重要补充"><a href="#📌-重要补充" class="headerlink" title="📌 重要补充"></a>📌 重要补充</h2><ul>
-<li><strong>安全与唯一性</strong>：这个文件也是一种安全机制，确保只有你（仓库所有者）能决定哪个域名可以访问你的网站。如果一个域名已经被某个仓库的<code>CNAME</code>文件“占用”了，其他仓库就无法再使用该域名，除非你将其删除。</li>
-<li><strong>避免使用通配符</strong>：切记<strong>不要</strong>在你的DNS服务商处为GitHub Pages设置通配符记录（如 <code>*.example.com</code>）。因为任何GitHub用户都可以在自己的仓库里创建一个指向你任意子域名的<code>CNAME</code>文件，从而可能“劫持”你的子域名来托管他们的内容。</li>
-<li><strong>多域名支持</strong>：一个<code>CNAME</code>文件中<strong>只能包含一个域名</strong>。如果你想把多个域名都指向同一个网站，可以通过你的DNS服务商设置URL转发或使用其他DNS记录来实现。</li>
-<li><strong>静态站点生成器注意事项</strong>：如果你使用Hexo、Hugo等静态站点生成器，建议将<code>CNAME</code>文件放在项目的源文件夹（如<code>source</code>目录）下。这样每次部署时，它就会被自动复制到生成的<code>public</code>文件夹并推送到GitHub，避免每次部署后<code>CNAME</code>文件丢失的问题。</li>
-<li><strong>Apex 根域名</strong>：需要注意，对于 example.com 这样的根域名（也叫 Apex 域），由于 DNS 规范限制，不能使用 CNAME 记录。你需要配置 A 记录，将其指向 GitHub 的固定 IP 地址（185.199.108.153 等四个 IP），才能实现根域名的访问。不过，这并不影响在仓库中依然需要一个内容为 example.com 的 CNAME 文件来完成授权。</li>
-</ul>
 
       
     </div>

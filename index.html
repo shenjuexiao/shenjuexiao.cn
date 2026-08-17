@@ -142,7 +142,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-count">39</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -168,6 +168,109 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-08-17-npm-switches-mirrors/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="不懂就问，无趣的笔记">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-08-17-npm-switches-mirrors/" class="post-title-link" itemprop="url">npm switches mirrors</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-08-17 14:33:48" itemprop="dateCreated datePublished" datetime="2026-08-17T14:33:48+08:00">2026-08-17</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="npm-切换国内镜像"><a href="#npm-切换国内镜像" class="headerlink" title="npm 切换国内镜像"></a>npm 切换国内镜像</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/nrm_use_taobao.png" alt="nrm use taobao"></p>
+<h2 id="📝-笔记总结"><a href="#📝-笔记总结" class="headerlink" title="📝 笔记总结"></a>📝 笔记总结</h2><p>推荐使用 <code>nrm</code>，命令简单，切换方便。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 全局安装 nrm</span></span><br><span class="line">npm install -g nrm</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 查看所有可用的源（带 * 的是当前源）</span></span><br><span class="line">nrm <span class="built_in">ls</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 切换到淘宝镜像</span></span><br><span class="line">nrm use taobao</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. 验证是否设置成功</span></span><br><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
+
+<h2 id="📖-内容来源"><a href="#📖-内容来源" class="headerlink" title="📖 内容来源"></a>📖 内容来源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/jk9ajonzvgeu285q4f">NPM切换国内镜像</a>（<a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/1107102b-569f-412a-8e64-53a2221a2abd">DeepSeek</a>）</li>
+</ul>
+<h2 id="🎯-最新稳定镜像地址"><a href="#🎯-最新稳定镜像地址" class="headerlink" title="🎯 最新稳定镜像地址"></a>🎯 最新稳定镜像地址</h2><p>在国内使用 npm，切换镜像源几乎是必做的优化。核心操作很简单，但注意务必使用最新的地址。</p>
+<p><strong>淘宝 NPM 镜像（强烈推荐）</strong>：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://registry.npmmirror.com/</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p><strong>特别提醒</strong>：淘宝 NPM 官方源地址已于 2024 年迁移至 <code>npmmirror.com</code>，旧的 <code>npm.taobao.org</code> 域名已废弃，请勿继续使用。</p>
+</blockquote>
+<p>其他备选国内镜像源还有：</p>
+<ul>
+<li>腾讯云：<code>https://mirrors.cloud.tencent.com/npm/</code></li>
+<li>华为云：<code>https://mirrors.huaweicloud.com/repository/npm/</code></li>
+<li>阿里云：<code>https://npm.aliyun.com</code></li>
+</ul>
+<h2 id="🔧-切换方法"><a href="#🔧-切换方法" class="headerlink" title="🔧 切换方法"></a>🔧 切换方法</h2><h3 id="临时使用（仅对当前命令生效）"><a href="#临时使用（仅对当前命令生效）" class="headerlink" title="临时使用（仅对当前命令生效）"></a>临时使用（仅对当前命令生效）</h3><p>安装单个包时，直接通过 <code>--registry</code> 参数指定：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install [package-name] --registry=https://registry.npmmirror.com</span><br></pre></td></tr></table></figure>
+<p>这种方法快速、安全，适合临时下载某个包。</p>
+<h3 id="永久修改（全局生效）"><a href="#永久修改（全局生效）" class="headerlink" title="永久修改（全局生效）"></a>永久修改（全局生效）</h3><p>通过 <code>npm config set</code> 命令修改全局配置，这是最常用的方法：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 设置淘宝镜像为默认源</span></span><br><span class="line">npm config <span class="built_in">set</span> registry https://registry.npmmirror.com</span><br><span class="line"></span><br><span class="line"><span class="comment"># 验证是否设置成功</span></span><br><span class="line">npm config get registry</span><br></pre></td></tr></table></figure>
+
+<p>执行后，所有 <code>npm install</code> 都将使用国内镜像。</p>
+<h3 id="高级管理：nrm"><a href="#高级管理：nrm" class="headerlink" title="高级管理：nrm"></a>高级管理：<code>nrm</code></h3><p>如果经常需要在多个镜像源（如官方、淘宝、公司私有源）间切换，推荐使用 <strong>nrm</strong> 工具来管理：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 全局安装 nrm</span></span><br><span class="line">npm install -g nrm</span><br><span class="line"></span><br><span class="line"><span class="comment"># 2. 查看所有可用的源（带 * 的是当前源）</span></span><br><span class="line">nrm <span class="built_in">ls</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 3. 切换到淘宝镜像</span></span><br><span class="line">nrm use taobao</span><br><span class="line"></span><br><span class="line"><span class="comment"># 4. 验证是否设置成功</span></span><br><span class="line">npm config get registry</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>这样，只需要输入 <code>nrm use taobao</code> 或 <code>nrm use npm</code> 就能一键切换，无需记忆或输入长串地址。</p>
+<p><strong>可以随时切换回来，或者换成其他。</strong></p>
+<h3 id="💡-备选方案：cnpm"><a href="#💡-备选方案：cnpm" class="headerlink" title="💡 备选方案：cnpm"></a>💡 备选方案：<code>cnpm</code></h3><p>除了修改 npm 源，也可以直接安装 <code>cnpm</code> 工具，自动使用淘宝镜像，与 npm 命令基本一致：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npmmirror.com</span><br><span class="line"><span class="comment"># 之后使用 cnpm 代替 npm，如：cnpm install</span></span><br></pre></td></tr></table></figure>
+
+<p>按需选择最适合的方法就好。设置完后可以运行 <code>npm config get registry</code> 确认一下，新地址是 <code>https://registry.npmmirror.com/</code> 就说明成功了。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1382,123 +1485,6 @@
 </blockquote>
 <p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Pagic_pagic_build_watch_serve.png" alt="Pagic pagic build watch serve"></p>
 <p>后面不尝试了，因为还会出现 CDN 出错，修改本地文件或许可以构建成功，但是不太顺利。</p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-08-07-Pagic-Windows-Installation/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="shenjuexiao">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="神觉晓">
-      <meta itemprop="description" content="不懂就问，无趣的笔记">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 神觉晓">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/2026-08-07-Pagic-Windows-Installation/" class="post-title-link" itemprop="url">Pagic Windows Installation</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2026-08-07 07:02:06" itemprop="dateCreated datePublished" datetime="2026-08-07T07:02:06+08:00">2026-08-07</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-17 01:42:37" itemprop="dateModified" datetime="2026-08-17T01:42:37+08:00">2026-08-17</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Pagic-Windows-安装"><a href="#Pagic-Windows-安装" class="headerlink" title="Pagic Windows 安装"></a>Pagic Windows 安装</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Deno_Windows_PowerShell_irm.png" alt="Deno Windows PowerShell irm"></p>
-<h2 id="📝-笔记总结"><a href="#📝-笔记总结" class="headerlink" title="📝 笔记总结"></a>📝 笔记总结</h2><p>未安装成功，Deno 版本 2.9.4，后续发现可能是因为 Deno 版本太高了，使用 Deno 1.34.1 再次尝试。</p>
-<h2 id="📖-内容来源"><a href="#📖-内容来源" class="headerlink" title="📖 内容来源"></a>📖 内容来源</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://pagic.org/zh-CN/docs/usage.html">Pagic 安装</a></li>
-<li><a target="_blank" rel="noopener" href="https://pagic.org/docs/usage.html">Pagic Installation</a></li>
-</ul>
-<blockquote>
-<p>Pagic：Deno + React 驱动的静态网站生成器</p>
-</blockquote>
-<h2 id="🔧-安装-Deno"><a href="#🔧-安装-Deno" class="headerlink" title="🔧 安装 Deno"></a>🔧 安装 Deno</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">irm</span> https://deno.land/install.ps1 | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="⬆️-安装-Pagic"><a href="#⬆️-安装-Pagic" class="headerlink" title="⬆️ 安装 Pagic"></a>⬆️ 安装 Pagic</h2><h3 id="安装最新版本（失败）"><a href="#安装最新版本（失败）" class="headerlink" title="安装最新版本（失败）"></a>安装最新版本（失败）</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span> <span class="literal">--allow-write</span> <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic https://deno.land/x/pagic/mod.ts</span><br></pre></td></tr></table></figure>
-
-<p>⚠️ 链接不存在：<a target="_blank" rel="noopener" href="https://deno.land/x/pagic/mod.ts">https://deno.land/x/pagic/mod.ts</a></p>
-<h3 id="安装指定版本（失败）"><a href="#安装指定版本（失败）" class="headerlink" title="安装指定版本（失败）"></a>安装指定版本（失败）</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span> <span class="literal">--allow-write</span> <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic https://deno.land/x/pagic@v1.<span class="number">6.3</span>/mod.ts</span><br></pre></td></tr></table></figure>
-
-<p>⚠️ 链接存在：<a target="_blank" rel="noopener" href="https://deno.land/x/pagic@v1.6.3/mod.ts">https://deno.land/x/pagic@v1.6.3/mod.ts</a></p>
-<h3 id="指定读写目录的方式（未尝试）"><a href="#指定读写目录的方式（未尝试）" class="headerlink" title="指定读写目录的方式（未尝试）"></a>指定读写目录的方式（未尝试）</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span>=/home/xcatliu/site <span class="literal">--allow-write</span>=/home/xcatliu/site <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic https://deno.land/x/pagic/mod.ts</span><br></pre></td></tr></table></figure>
-
-<h2 id="❓安装错误提示一"><a href="#❓安装错误提示一" class="headerlink" title="❓安装错误提示一"></a>❓安装错误提示一</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">PS</span> D:\\Git&gt; deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span> <span class="literal">--allow-write</span> <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic https://deno.land/x/pagic@v1.<span class="number">6.3</span>/mod.ts</span><br><span class="line">error: the following required arguments were not provided:</span><br><span class="line">  <span class="literal">--global</span></span><br><span class="line"></span><br><span class="line">Note: Permission flags can only be used <span class="keyword">in</span> a global setting</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Deno_Windows_deno_install_error_1.png" alt="Deno Windows deno install error"></p>
-<blockquote>
-<p>Deno 要求在使用权限标志时，必须指定 –global 选项。正确的命令在你的命令末尾加上 –global</p>
-</blockquote>
-<ul>
-<li>加上 <code>--global</code>，Deno 1.30+ 版本，权限标志（如 <code>--allow-read</code>）只能<strong>全局安装</strong>使用</li>
-<li><code>--global</code></li>
-<li>去掉 <code>--unstable</code>，Deno 2.0+ 版本不需要</li>
-</ul>
-<p>正确的命令：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno install <span class="literal">--allow-read</span> <span class="literal">--allow-write</span> <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic <span class="literal">--global</span> https://deno.land/x/pagic@v1.<span class="number">6.3</span>/mod.ts</span><br></pre></td></tr></table></figure>
-
-<h2 id="🪲-安装错误提示二"><a href="#🪲-安装错误提示二" class="headerlink" title="🪲 安装错误提示二"></a>🪲 安装错误提示二</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PS D:\\Git&gt; deno install --allow-read --allow-write --allow-net --allow-env --allow-run --name=pagic --global https://deno.land/x/pagic@v1.6.3/mod.ts</span><br><span class="line">✅ Granted import access to \&quot;cdn.pagic.org:443\&quot;.</span><br><span class="line">error: Import &#x27;https://cdn.pagic.org/i18next@19.8.1/esnext/i18next.js&#x27; failed.</span><br><span class="line">    0: error sending request for url (https://cdn.pagic.org/i18next@19.8.1/esnext/i18next.js): client error (Connect): invalid peer certificate: certificate not valid for name \&quot;cdn.pagic.org\&quot;; certificate is only valid for DnsName(\&quot;*.cdn.myqcloud.com\&quot;), DnsName(\&quot;*.2144.cn\&quot;), DnsName(\&quot;*.2144.com\&quot;), DnsName(\&quot;*.4399.com\&quot;), DnsName(\&quot;*.5054399.com\&quot;), DnsName(\&quot;*.58cdn.com.cn\&quot;), DnsName(\&quot;*.bldimg.com\&quot;), DnsName(\&quot;*.cdn-go.cn\&quot;), DnsName(\&quot;*.cntv.qcloudcdn.com\&quot;), DnsName(\&quot;*.danmu.com\&quot;), DnsName(\&quot;*.dd.cdntips.net\&quot;), DnsName(\&quot;*.dd.qq.com\&quot;), DnsName(\&quot;*.dianping.com\&quot;), DnsName(\&quot;*.dl.txcdns.com\&quot;), DnsName(\&quot;*.dlied1.cdntips.net\&quot;), DnsName(\&quot;*.dpfile.com\&quot;), DnsName(\&quot;*.ffnews.cn\&quot;), DnsName(\&quot;*.file.myqcloud.com\&quot;), DnsName(\&quot;*.flash.2144.com\&quot;), DnsName(\&quot;*.flash.cn\&quot;), DnsName(\&quot;*.geetest.com\&quot;), DnsName(\&quot;*.gtimg.cn\&quot;), DnsName(\&quot;*.gtimg.com\&quot;), DnsName(\&quot;*.hls.cdn.myqcloud.com\&quot;), DnsName(\&quot;*.image.myqcloud.com\&quot;), DnsName(\&quot;*.img4399.com\&quot;), DnsName(\&quot;*.jsbchina.cn\&quot;), DnsName(\&quot;*.lof3.xyz\&quot;), DnsName(\&quot;*.meituan.net\&quot;), DnsName(\&quot;*.myapp.com\&quot;), DnsName(\&quot;*.mykeeta.net\&quot;), DnsName(\&quot;*.qcloudcdn.com\&quot;), DnsName(\&quot;*.qpic.cn\&quot;), DnsName(\&quot;*.sogoucdn.com\&quot;), DnsName(\&quot;*.suyinwealth.com\&quot;), DnsName(\&quot;*.ugdtimg.com\&quot;), DnsName(\&quot;*.uniqlo.cn\&quot;), DnsName(\&quot;*.vda.v.qcloudcdn.com\&quot;), DnsName(\&quot;*.video.myqcloud.com\&quot;), DnsName(\&quot;*.vip.cdngot.com\&quot;), DnsName(\&quot;*.vod-qcloud.com\&quot;), DnsName(\&quot;*.vod.cdn.myqcloud.com\&quot;), DnsName(\&quot;*.vod.myqcloud.com\&quot;), DnsName(\&quot;*.vod2.myqcloud.com\&quot;), DnsName(\&quot;*.wanyabox.com\&quot;), DnsName(\&quot;*.weishi.qq.com\&quot;), DnsName(\&quot;*.wx.qq.com\&quot;), DnsName(\&quot;*.zhongcheng818.com\&quot;), DnsName(\&quot;*.zservey.net\&quot;), DnsName(\&quot;cdn.myqcloud.com\&quot;), DnsName(\&quot;flash.cn\&quot;), DnsName(\&quot;nitrome.com.4399.com\&quot;), DnsName(\&quot;www.miniclip.com.4399pk.com\&quot;), DnsName(\&quot;www.tencentwm.com\&quot;), DnsName(\&quot;www.txfund.com\&quot;) or DnsName(\&quot;xpdl999.aiwan4399.com\&quot;)</span><br><span class="line">    1: client error (Connect)</span><br><span class="line">    2: invalid peer certificate: certificate not valid for name \&quot;cdn.pagic.org\&quot;; certificate is only valid for DnsName(\&quot;*.cdn.myqcloud.com\&quot;), DnsName(\&quot;*.2144.cn\&quot;), DnsName(\&quot;*.2144.com\&quot;), DnsName(\&quot;*.4399.com\&quot;), DnsName(\&quot;*.5054399.com\&quot;), DnsName(\&quot;*.58cdn.com.cn\&quot;), DnsName(\&quot;*.bldimg.com\&quot;), DnsName(\&quot;*.cdn-go.cn\&quot;), DnsName(\&quot;*.cntv.qcloudcdn.com\&quot;), DnsName(\&quot;*.danmu.com\&quot;), DnsName(\&quot;*.dd.cdntips.net\&quot;), DnsName(\&quot;*.dd.qq.com\&quot;), DnsName(\&quot;*.dianping.com\&quot;), DnsName(\&quot;*.dl.txcdns.com\&quot;), DnsName(\&quot;*.dlied1.cdntips.net\&quot;), DnsName(\&quot;*.dpfile.com\&quot;), DnsName(\&quot;*.ffnews.cn\&quot;), DnsName(\&quot;*.file.myqcloud.com\&quot;), DnsName(\&quot;*.flash.2144.com\&quot;), DnsName(\&quot;*.flash.cn\&quot;), DnsName(\&quot;*.geetest.com\&quot;), DnsName(\&quot;*.gtimg.cn\&quot;), DnsName(\&quot;*.gtimg.com\&quot;), DnsName(\&quot;*.hls.cdn.myqcloud.com\&quot;), DnsName(\&quot;*.image.myqcloud.com\&quot;), DnsName(\&quot;*.img4399.com\&quot;), DnsName(\&quot;*.jsbchina.cn\&quot;), DnsName(\&quot;*.lof3.xyz\&quot;), DnsName(\&quot;*.meituan.net\&quot;), DnsName(\&quot;*.myapp.com\&quot;), DnsName(\&quot;*.mykeeta.net\&quot;), DnsName(\&quot;*.qcloudcdn.com\&quot;), DnsName(\&quot;*.qpic.cn\&quot;), DnsName(\&quot;*.sogoucdn.com\&quot;), DnsName(\&quot;*.suyinwealth.com\&quot;), DnsName(\&quot;*.ugdtimg.com\&quot;), DnsName(\&quot;*.uniqlo.cn\&quot;), DnsName(\&quot;*.vda.v.qcloudcdn.com\&quot;), DnsName(\&quot;*.video.myqcloud.com\&quot;), DnsName(\&quot;*.vip.cdngot.com\&quot;), DnsName(\&quot;*.vod-qcloud.com\&quot;), DnsName(\&quot;*.vod.cdn.myqcloud.com\&quot;), DnsName(\&quot;*.vod.myqcloud.com\&quot;), DnsName(\&quot;*.vod2.myqcloud.com\&quot;), DnsName(\&quot;*.wanyabox.com\&quot;), DnsName(\&quot;*.weishi.qq.com\&quot;), DnsName(\&quot;*.wx.qq.com\&quot;), DnsName(\&quot;*.zhongcheng818.com\&quot;), DnsName(\&quot;*.zservey.net\&quot;), DnsName(\&quot;cdn.myqcloud.com\&quot;), DnsName(\&quot;flash.cn\&quot;), DnsName(\&quot;nitrome.com.4399.com\&quot;), DnsName(\&quot;www.miniclip.com.4399pk.com\&quot;), DnsName(\&quot;www.tencentwm.com\&quot;), DnsName(\&quot;www.txfund.com\&quot;) or DnsName(\&quot;xpdl999.aiwan4399.com\&quot;)</span><br><span class="line">    at https://deno.land/x/pagic@v1.6.3/src/plugins/i18n.tsx:4:21</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Deno_Windows_deno_install_error_2.png" alt="Deno Windows deno install error"></p>
-<p><code>cdn.pagic.org</code> DNS 被污染，解析到腾讯云 CDN 节点，但该节点证书并不是 <code>cdn.pagic.org</code> 的，出现证书域名不匹配，Deno HTTPS 校验直接拒绝。</p>
-<h2 id="🌟-待续……"><a href="#🌟-待续……" class="headerlink" title="🌟 待续……"></a>🌟 待续……</h2><p>⚡ 解决不掉了。😅</p>
-<h2 id="🧩-验证安装"><a href="#🧩-验证安装" class="headerlink" title="🧩 验证安装"></a>🧩 验证安装</h2><p>安装后，确保 <code>~/.deno/bin</code> 在你的系统 PATH 中，然后测试：</p>
-<pre><code class="language-powershell">pagic --version
-``
-</code></pre>
 
       
     </div>
