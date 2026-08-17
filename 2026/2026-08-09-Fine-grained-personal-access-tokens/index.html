@@ -27,13 +27,13 @@
 <meta property="og:site_name" content="神觉晓">
 <meta property="og:description" content="细粒度个人访问令牌 📝 笔记总结Personal access tokens (classic) 设置：repo - Full control of private repositoriesFine-grained personal access tokens 类似设置。 📖 内容来源 细粒度令牌权限设置（DeepSeek） 细粒度个人访问令牌所需的权限  🔍 简单说明Fine-graine">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Fine-grained_personal_access_tokens.png">
-<meta property="og:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Fine-grained_tokens_Permissions.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/GitHub_Fine-grained_personal_access_tokens.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/GitHub_Fine-grained_tokens_Permissions.png">
 <meta property="article:published_time" content="2026-08-08T23:50:13.000Z">
-<meta property="article:modified_time" content="2026-08-15T08:16:40.000Z">
+<meta property="article:modified_time" content="2026-08-16T17:44:19.000Z">
 <meta property="article:author" content="shenjuexiao">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Fine-grained_personal_access_tokens.png">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/GitHub_Fine-grained_personal_access_tokens.png">
 
 
 <link rel="canonical" href="https://shenjuexiao.com/2026/2026-08-09-Fine-grained-personal-access-tokens/">
@@ -220,7 +220,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-15 16:16:40" itemprop="dateModified" datetime="2026-08-15T16:16:40+08:00">2026-08-15</time>
+      <time title="修改时间：2026-08-17 01:44:19" itemprop="dateModified" datetime="2026-08-17T01:44:19+08:00">2026-08-17</time>
     </span>
 
   
@@ -232,7 +232,7 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><h1 id="细粒度个人访问令牌"><a href="#细粒度个人访问令牌" class="headerlink" title="细粒度个人访问令牌"></a>细粒度个人访问令牌</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Fine-grained_personal_access_tokens.png" alt="GitHub Fine-grained personal access tokens.png"></p>
+    <div class="post-body" itemprop="articleBody"><h1 id="细粒度个人访问令牌"><a href="#细粒度个人访问令牌" class="headerlink" title="细粒度个人访问令牌"></a>细粒度个人访问令牌</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/GitHub_Fine-grained_personal_access_tokens.png" alt="GitHub Fine-grained personal access tokens.png"></p>
 <h2 id="📝-笔记总结"><a href="#📝-笔记总结" class="headerlink" title="📝 笔记总结"></a>📝 笔记总结</h2><p>Personal access tokens (classic) 设置：<br><code>repo - Full control of private repositories</code><br>Fine-grained personal access tokens 类似设置。</p>
 <h2 id="📖-内容来源"><a href="#📖-内容来源" class="headerlink" title="📖 内容来源"></a>📖 内容来源</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/r4s3ni2nkcznw41pvf">细粒度令牌权限设置</a>（<a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/48458623-bb78-42d9-94fb-e87ffd3adf6e">DeepSeek</a>）</li>
@@ -276,7 +276,7 @@
 <h2 id="💡-总结建议"><a href="#💡-总结建议" class="headerlink" title="💡 总结建议"></a>💡 总结建议</h2><p>如果你是为了给CI&#x2F;CD（持续集成&#x2F;持续部署）系统授权，<strong>强烈不建议</strong>追求“Full control”。请只授予该CI任务必要的单个仓库和具体权限（如只需 <code>Contents: read</code> 来拉代码）。</p>
 <p>如果确因历史代码或工具限制必须使用<code>repo</code>全权限，那么<strong>不要</strong>尝试在细粒度令牌中寻找平替——直接创建经典令牌，但务必在风险评估后启用严格的过期和审计策略。</p>
 <h2 id="📋-简单案例"><a href="#📋-简单案例" class="headerlink" title="📋 简单案例"></a>📋 简单案例</h2><p>我现在使用 <code>Fine-grained tokens</code> 代替  <code>Tokens (classic)</code>，生成例如 Repo 权限全选用于从源码仓库使用 <code>GitHub Actions</code> 部署博客仓库的 gh-pages。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Fine-grained_tokens_Permissions.png" alt="GitHub Fine-grained tokens Permissions"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/GitHub_Fine-grained_tokens_Permissions.png" alt="GitHub Fine-grained tokens Permissions"></p>
 
     </div>
 
