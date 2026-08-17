@@ -1007,7 +1007,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-15 15:51:11" itemprop="dateModified" datetime="2026-08-15T15:51:11+08:00">2026-08-15</time>
+      <time title="修改时间：2026-08-17 01:34:38" itemprop="dateModified" datetime="2026-08-17T01:34:38+08:00">2026-08-17</time>
     </span>
 
   
@@ -1020,7 +1020,7 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="程序员应该掌握几种编程语言"><a href="#程序员应该掌握几种编程语言" class="headerlink" title="程序员应该掌握几种编程语言"></a>程序员应该掌握几种编程语言</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Programmer_Should_Master_Several_Programming_Languages.png" alt="Programmer Should Master Several Programming Languages"></p>
+          <h1 id="程序员应该掌握几种编程语言"><a href="#程序员应该掌握几种编程语言" class="headerlink" title="程序员应该掌握几种编程语言"></a>程序员应该掌握几种编程语言</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Programmer_Should_Master_Several_Programming_Languages.png" alt="Programmer Should Master Several Programming Languages"></p>
 <h2 id="📝-笔记总结"><a href="#📝-笔记总结" class="headerlink" title="📝 笔记总结"></a>📝 笔记总结</h2><p>程序员应该掌握几种编程语言：入门&#x2F;初级，1门主语言+SQL，做到精通；高级&#x2F;架构，2门精通（如Java+Python）+ 1门 熟悉（如Rust&#x2F;Go）+ Shell脚本；全栈&#x2F;专家，3门覆盖不同范式（如TS + Go + Python），其余按需了解。</p>
 <h2 id="📖-内容来源"><a href="#📖-内容来源" class="headerlink" title="📖 内容来源"></a>📖 内容来源</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://chat.deepseek.com/share/3f3e3hp91kletf0995">程序员应该掌握几种编程语言</a>（<a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/7c95829e-ce1d-41ba-bbb8-d269d097d017">DeepSeek</a>）</li>
@@ -1119,7 +1119,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-15 15:50:34" itemprop="dateModified" datetime="2026-08-15T15:50:34+08:00">2026-08-15</time>
+      <time title="修改时间：2026-08-17 01:34:15" itemprop="dateModified" datetime="2026-08-17T01:34:15+08:00">2026-08-17</time>
     </span>
 
   
@@ -1143,14 +1143,14 @@
 <li>使用 <code>peaceiris/actions-gh-pages</code></li>
 <li>跨仓库使用 token：<code>$&#123;&#123; secrets.GMEEK_DOCS &#125;&#125;</code></li>
 </ul>
-<h2 id="❌-Error-HttpError-Not-Found"><a href="#❌-Error-HttpError-Not-Found" class="headerlink" title="❌ Error: HttpError: Not Found"></a>❌ Error: HttpError: Not Found</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Gmeek_Deploy_Setup_Pages.png" alt="Gmeek Deploy Setup Pages"></p>
+<h2 id="❌-Error-HttpError-Not-Found"><a href="#❌-Error-HttpError-Not-Found" class="headerlink" title="❌ Error: HttpError: Not Found"></a>❌ Error: HttpError: Not Found</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Gmeek_Deploy_Setup_Pages.png" alt="Gmeek Deploy Setup Pages"></p>
 <p>注释掉本地的部署</p>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 不需要配置 GitHub Pages</span></span><br><span class="line"><span class="comment"># - name: Setup Pages</span></span><br><span class="line">  <span class="comment"># id: pages</span></span><br><span class="line">  <span class="comment"># uses: actions/configure-pages@v4</span></span><br></pre></td></tr></table></figure>
 
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 去掉源仓库的部署</span></span><br><span class="line"><span class="comment"># actions/upload-pages-artifact@v3 是专门为 GitHub Pages 设计的</span></span><br><span class="line"><span class="comment"># 创建特殊的 artifact，只能被 actions/deploy-pages@v4 使用</span></span><br><span class="line"><span class="comment"># - name: Upload artifact</span></span><br><span class="line">  <span class="comment"># uses: actions/upload-pages-artifact@v3</span></span><br><span class="line">  <span class="comment"># with:</span></span><br><span class="line">    <span class="comment"># path: &#x27;docs/.&#x27;</span></span><br></pre></td></tr></table></figure>
 <figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 去掉源仓库的部署</span></span><br><span class="line"><span class="comment"># - name: Deploy to GitHub Pages</span></span><br><span class="line">  <span class="comment">#   id: deployment</span></span><br><span class="line">  <span class="comment">#   uses: actions/deploy-pages@v4</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="🔑-Error-Action-failed-with-not-found-deploy-key-for-tokens"><a href="#🔑-Error-Action-failed-with-not-found-deploy-key-for-tokens" class="headerlink" title="🔑 Error: Action failed with &quot;not found deploy key for tokens&quot;"></a>🔑 Error: Action failed with &quot;not found deploy key for tokens&quot;</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/Gmeek_Deploy_docs_to.png" alt="Gmeek Deploy docs to "></p>
+<h2 id="🔑-Error-Action-failed-with-not-found-deploy-key-for-tokens"><a href="#🔑-Error-Action-failed-with-not-found-deploy-key-for-tokens" class="headerlink" title="🔑 Error: Action failed with &quot;not found deploy key for tokens&quot;"></a>🔑 Error: Action failed with &quot;not found deploy key for tokens&quot;</h2><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Gmeek_Deploy_docs_to.png" alt="Gmeek Deploy docs to "></p>
 <p>源仓库需要设置  token</p>
 <ul>
 <li>创建 GitHub 个人访问令牌 PAT <code>Personal access tokens (classic)</code><br>GitHub 头像，<code>Settings</code> -&gt; <code>Developer settings</code> -&gt; <code>Personal access tokens</code> -&gt; <code>Tokens (classic)</code><br>新建 Token，勾选权限：repo（全部仓库读写权限）。<br>复制生成的 Token（仅展示一次，丢失需重建）。</li>
