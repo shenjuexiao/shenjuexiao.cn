@@ -142,7 +142,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">39</span>
+          <span class="site-state-item-count">40</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -168,6 +168,152 @@
     </div>
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-08-18-Wiki-and-Blog-SCG-Template/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="不懂就问，无趣的笔记">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content=" | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2026/2026-08-18-Wiki-and-Blog-SCG-Template/" class="post-title-link" itemprop="url">Wiki and Blog SCG Template</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-08-18 09:39:48" itemprop="dateCreated datePublished" datetime="2026-08-18T09:39:48+08:00">2026-08-18</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h1 id="知识库与博客结合的模板"><a href="#知识库与博客结合的模板" class="headerlink" title="知识库与博客结合的模板"></a>知识库与博客结合的模板</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Fine-grained_tokens.png" alt="GitHub Fine-grained Tokens"></p>
+<p>知识库与博客的结合，关键在于处理好<strong>结构化知识沉淀</strong>与<strong>碎片化内容输出</strong>之间的关系。以下整理了三种主流的模板方案，可以根据自己对技术栈的偏好和功能需求来选择。</p>
+<hr>
+<h2 id="1️⃣-文档驱动型：VitePress-博客主题"><a href="#1️⃣-文档驱动型：VitePress-博客主题" class="headerlink" title="1️⃣ 文档驱动型：VitePress + 博客主题"></a>1️⃣ 文档驱动型：VitePress + 博客主题</h2><p><strong>适合</strong>：偏好纯文档风格，希望将技术笔记和博客文章统一管理，且追求极致性能的技术写作者。</p>
+<p>这个方案基于 VitePress（Vue 驱动的静态站点生成器），通过 <code>vitepress-theme-teek</code> 这类主题，在原生文档站基础上注入博客功能。模板会按文件路径自动生成侧边栏，构建出结构化的知识库；博客功能则作为“碎片化知识”的补充，支持文章分类、标签和归档。</p>
+<ul>
+<li><strong>技术栈</strong>：VitePress、Vue、Markdown。</li>
+<li><strong>核心能力</strong>：自动生成侧边栏&#x2F;目录页、全文搜索、暗黑模式、支持评论系统（Giscus&#x2F;Twikoo）。</li>
+<li><strong>快速体验</strong>：可直接克隆 <code>chuiyu_Wiki</code> 这类现成项目，或参照 Teek 主题文档初始化。</li>
+</ul>
+<h3 id="vitepress-theme-teek"><a href="#vitepress-theme-teek" class="headerlink" title="vitepress-theme-teek"></a>vitepress-theme-teek</h3><ul>
+<li>项目演示：<a target="_blank" rel="noopener" href="https://vp.teek.top/">VitePress Teek 主题演示站</a></li>
+<li>GitHub 地址：<a target="_blank" rel="noopener" href="https://github.com/Kele-Bingtang/vitepress-theme-teek">Kele-Bingtang&#x2F;vitepress-theme-teek</a></li>
+</ul>
+<h3 id="chuiyu-Wiki"><a href="#chuiyu-Wiki" class="headerlink" title="chuiyu_Wiki"></a>chuiyu_Wiki</h3><ul>
+<li>项目演示：<a target="_blank" rel="noopener" href="https://chuiyu.wiki/">chuiyu.wiki</a></li>
+<li>GitHub 地址：<a target="_blank" rel="noopener" href="https://github.com/ana52070/chuiyu_Wiki">ana52070&#x2F;chuiyu_Wiki</a></li>
+</ul>
+<h2 id="2️⃣-博客优先型：Astro-主题（知识图谱-搜索）"><a href="#2️⃣-博客优先型：Astro-主题（知识图谱-搜索）" class="headerlink" title="2️⃣ 博客优先型：Astro 主题（知识图谱 + 搜索）"></a>2️⃣ 博客优先型：Astro 主题（知识图谱 + 搜索）</h2><p><strong>适合</strong>：内容较为丰富、需要强大检索能力来盘活知识库的博主。</p>
+<p>Astro 因为对内容站点的高性能支持，出现了一批优秀的“博客+知识库”主题。例如 <code>astro-theme-iris</code>，它实现了<strong>双链笔记（Wikilink）<strong>和</strong>知识图谱（Graph View）</strong>，能直观看到文章间的关联。配合 FlexSearch 实现的实时全文检索，能极大提升查找历史笔记的效率。而 <code>qiyuan-blog-template</code> 则更进一步，在 Astro 基础上集成了 RAG（检索增强生成）AI 问答，让读者可以直接向你的知识库提问。</p>
+<ul>
+<li><strong>技术栈</strong>：Astro、TypeScript、FlexSearch&#x2F;D3.js。</li>
+<li><strong>核心能力</strong>：双链预览、知识图谱可视化、高性能搜索、AI 问答（RAG）。</li>
+<li><strong>快速体验</strong>：在 GitHub 搜索对应仓库，点击 &quot;Use this template&quot; 即可一键创建。</li>
+</ul>
+<h3 id="astro-theme-iris"><a href="#astro-theme-iris" class="headerlink" title="astro-theme-iris"></a>astro-theme-iris</h3><ul>
+<li>项目演示：<a target="_blank" rel="noopener" href="https://lemonadorable.github.io/">LemonAdorable 的 Astro Iris 主题演示</a></li>
+<li>GitHub 地址：<a target="_blank" rel="noopener" href="https://github.com/LemonAdorable/astro-theme-iris">LemonAdorable&#x2F;astro-theme-iris</a></li>
+</ul>
+<h3 id="qiyuan-blog-template"><a href="#qiyuan-blog-template" class="headerlink" title="qiyuan-blog-template"></a>qiyuan-blog-template</h3><ul>
+<li>项目演示：<a target="_blank" rel="noopener" href="https://www.qiyuan.icu/">qiyuan.icu</a></li>
+<li>GitHub 地址：<a target="_blank" rel="noopener" href="https://github.com/violet27chen/qiyuan-blog-template">violet27chen&#x2F;qiyuan-blog-template</a></li>
+</ul>
+<h2 id="3️⃣-全栈管理型：Next-js-全功能平台"><a href="#3️⃣-全栈管理型：Next-js-全功能平台" class="headerlink" title="3️⃣ 全栈管理型：Next.js 全功能平台"></a>3️⃣ 全栈管理型：Next.js 全功能平台</h2><p><strong>适合</strong>：需要后台管理、富文本编辑，且希望拥有 AI 辅助写作能力的深度内容创作者。</p>
+<p>如果觉得静态模板定制性有限，可以考虑 Next.js 打造的全栈平台。例如 <strong>Petrichor</strong>，它不仅是一个展示站点，更包含完整的 CMS（内容管理系统），支持富文本编辑、知识库目录树，甚至集成了 AI 续写、改写和周报生成功能。<code>next-ai-blog-cms</code> 则侧重技术实现，提供了完整的后台管理界面和基于向量检索（RAG）的站内问答，实现了从写作、存储到智能问答的闭环。</p>
+<ul>
+<li><strong>技术栈</strong>：Next.js、Supabase&#x2F;PostgreSQL、Prisma、TailwindCSS。</li>
+<li><strong>核心能力</strong>：AI 写作助手、富文本编辑器、后台仪表盘、RAG 知识库问答。</li>
+<li><strong>快速体验</strong>：项目通常支持一键部署到 Vercel，需准备好数据库（如 Supabase）和环境变量。</li>
+</ul>
+<h3 id="next-ai-blog-cms"><a href="#next-ai-blog-cms" class="headerlink" title="next-ai-blog-cms"></a>next-ai-blog-cms</h3><ul>
+<li>项目演示：<a target="_blank" rel="noopener" href="https://fcppddl.top/">fcppddl.top</a></li>
+<li>GitHub 地址：<a target="_blank" rel="noopener" href="https://github.com/fcppddl/next-ai-blog-cms">fcppddl&#x2F;next-ai-blog-cms</a></li>
+</ul>
+<h2 id="📊-表格对比"><a href="#📊-表格对比" class="headerlink" title="📊 表格对比"></a>📊 表格对比</h2><table>
+<thead>
+<tr>
+<th align="left">模板方案</th>
+<th align="left">推荐场景</th>
+<th align="left">主要技术</th>
+<th align="left">核心特色</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>VitePress + Teek 主题</strong></td>
+<td align="left">文档技术博客、笔记整理</td>
+<td align="left">VitePress, Vue</td>
+<td align="left">文档&#x2F;博客双模式，自动生成结构化目录</td>
+</tr>
+<tr>
+<td align="left"><strong>Astro 主题 (Iris&#x2F;Qiyuan)</strong></td>
+<td align="left">知识图谱展示、AI 问答博客</td>
+<td align="left">Astro, D3.js, RAG</td>
+<td align="left">可视化知识图谱，站内 AI 助手（RAG）</td>
+</tr>
+<tr>
+<td align="left"><strong>Next.js 全栈平台 (Petrichor)</strong></td>
+<td align="left">需后台管理、AI 辅助创作</td>
+<td align="left">Next.js, Supabase, Prisma</td>
+<td align="left">富文本编辑器，AI 写作与周报，后台 CMS</td>
+</tr>
+</tbody></table>
+<h2 id="🌟-选型建议"><a href="#🌟-选型建议" class="headerlink" title="🌟 选型建议"></a>🌟 选型建议</h2><ol>
+<li><strong>如果追求简单和速度</strong>：方案一（VitePress）最轻量，维护成本低，适合以 Markdown 为主的笔记博主。</li>
+<li><strong>如果希望内容被“盘活”</strong>：方案二（Astro）的图谱和 AI 能力，能让你的旧文章通过关联和问答重新被发现。</li>
+<li><strong>如果需要深度管理内容</strong>：方案三（Next.js）提供了完整的后台和 AI 写作流，更适合系列化、长周期的内容创作。</li>
+</ol>
+<p>以上方案均为开源项目，除自行部署外，也可参考 WorkBuddy + MaxKB 等方案，为现有静态博客快速接入知识库问答能力。</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1328,163 +1474,6 @@
 <p>如果确因历史代码或工具限制必须使用<code>repo</code>全权限，那么<strong>不要</strong>尝试在细粒度令牌中寻找平替——直接创建经典令牌，但务必在风险评估后启用严格的过期和审计策略。</p>
 <h2 id="📋-简单案例"><a href="#📋-简单案例" class="headerlink" title="📋 简单案例"></a>📋 简单案例</h2><p>我现在使用 <code>Fine-grained tokens</code> 代替  <code>Tokens (classic)</code>，生成例如 Repo 权限全选用于从源码仓库使用 <code>GitHub Actions</code> 部署博客仓库的 gh-pages。</p>
 <p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/GitHub_Fine-grained_tokens_Permissions.png" alt="GitHub Fine-grained tokens Permissions"></p>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-08-08-Pagic-Windows-Installation-Again/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="shenjuexiao">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="神觉晓">
-      <meta itemprop="description" content="不懂就问，无趣的笔记">
-    </span>
-
-    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content=" | 神觉晓">
-      <meta itemprop="description" content="">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2026/2026-08-08-Pagic-Windows-Installation-Again/" class="post-title-link" itemprop="url">Pagic Windows Installation Again</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2026-08-08 10:24:03" itemprop="dateCreated datePublished" datetime="2026-08-08T10:24:03+08:00">2026-08-08</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar-check"></i>
-      </span>
-      <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-17 01:44:03" itemprop="dateModified" datetime="2026-08-17T01:44:03+08:00">2026-08-17</time>
-    </span>
-
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h1 id="Pagic-Windows-降级安装"><a href="#Pagic-Windows-降级安装" class="headerlink" title="Pagic Windows 降级安装"></a>Pagic Windows 降级安装</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Pagic_dist_on_http_127.png" alt="Pagic dist on http 127"></p>
-<h2 id="📝-笔记总结"><a href="#📝-笔记总结" class="headerlink" title="📝 笔记总结"></a>📝 笔记总结</h2><p>克隆仓库，修改 <code>i18n.tsx</code>，安装成功，但是部署中还会出现 CDN 错误。</p>
-<h2 id="📖-内容来源"><a href="#📖-内容来源" class="headerlink" title="📖 内容来源"></a>📖 内容来源</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://pagic.org/zh-CN/docs/usage.html">Pagic 安装</a></li>
-<li><a target="_blank" rel="noopener" href="https://pagic.org/docs/usage.html">Pagic Installation</a></li>
-</ul>
-<blockquote>
-<p>Pagic：Deno + React 驱动的静态网站生成器</p>
-</blockquote>
-<h2 id="🔧-安装-Deno-v1-34-1"><a href="#🔧-安装-Deno-v1-34-1" class="headerlink" title="🔧 安装 Deno v1.34.1"></a>🔧 安装 Deno v1.34.1</h2><h3 id="PowerShell-Windows-（失败）"><a href="#PowerShell-Windows-（失败）" class="headerlink" title="PowerShell (Windows) （失败）"></a>PowerShell (Windows) （失败）</h3><p>原理是将脚本内容下载后，通过管道传递给 Invoke-Expression，并使用 -ArgumentList 来指定版本号：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">irm</span> https://deno.land/install.ps1 | <span class="built_in">iex</span> <span class="literal">-ArgumentList</span> \<span class="string">&quot;v1.34.1\&quot;</span></span><br></pre></td></tr></table></figure>
-<p>或</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">irm</span> https://deno.land/install.ps1 | <span class="built_in">iex</span> <span class="literal">-args</span> \<span class="string">&quot;v1.34.1\&quot;</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="分两步执行（成功）"><a href="#分两步执行（成功）" class="headerlink" title="分两步执行（成功）"></a>分两步执行（成功）</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 下载脚本到本地临时文件夹</span></span><br><span class="line"><span class="built_in">Invoke-RestMethod</span> <span class="literal">-Uri</span> \<span class="string">&quot;https://deno.land/install.ps1\&quot;</span> <span class="literal">-OutFile</span> \<span class="string">&quot;<span class="variable">$env:TEMP</span>\\deno_install.ps1\&quot;</span></span><br><span class="line"><span class="comment"># 2. 执行脚本并传入参数</span></span><br><span class="line">&amp; \<span class="string">&quot;<span class="variable">$env:TEMP</span>\\deno_install.ps1\&quot;</span> \<span class="string">&quot;v1.34.1\&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Deno_Windows_deno_install_1.34.1.png" alt="Deno Windows deno install 1.34.1"></p>
-<h2 id="🧩-安装后验证"><a href="#🧩-安装后验证" class="headerlink" title="🧩 安装后验证"></a>🧩 安装后验证</h2><p>安装完成后，记得关闭并重新打开你的 <code>PowerShell</code> 终端，然后运行以下命令来确认版本：</p>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno <span class="literal">--version</span></span><br></pre></td></tr></table></figure>
-
-<h2 id="⬆️-安装-Pagic"><a href="#⬆️-安装-Pagic" class="headerlink" title="⬆️ 安装 Pagic"></a>⬆️ 安装 Pagic</h2><h3 id="安装最新版本"><a href="#安装最新版本" class="headerlink" title="安装最新版本"></a>安装最新版本</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span> <span class="literal">--allow-write</span> <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic https://deno.land/x/pagic/mod.ts</span><br></pre></td></tr></table></figure>
-
-<h3 id="安装指定版本"><a href="#安装指定版本" class="headerlink" title="安装指定版本"></a>安装指定版本</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span> <span class="literal">--allow-write</span> <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic https://deno.land/x/pagic@v1.<span class="number">6.3</span>/mod.ts</span><br></pre></td></tr></table></figure>
-
-<h3 id="指定读写目录的方式"><a href="#指定读写目录的方式" class="headerlink" title="指定读写目录的方式"></a>指定读写目录的方式</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span>=/home/xcatliu/site <span class="literal">--allow-write</span>=/home/xcatliu/site <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic https://deno.land/x/pagic/mod.ts</span><br></pre></td></tr></table></figure>
-
-<h3 id="指定读写目录的方式-1"><a href="#指定读写目录的方式-1" class="headerlink" title="指定读写目录的方式"></a>指定读写目录的方式</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span>=/home/xcatliu/site <span class="literal">--allow-write</span>=/home/xcatliu/site <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic https://deno.land/x/pagic/mod.ts</span><br></pre></td></tr></table></figure>
-
-<h2 id="🚫-CDN-错误"><a href="#🚫-CDN-错误" class="headerlink" title="🚫 CDN  错误"></a>🚫 CDN  错误</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">PS</span> D:\\git&gt; deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span> <span class="literal">--allow-write</span> <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic https://deno.land/x/pagic/mod.ts</span><br><span class="line">Warning Implicitly <span class="keyword">using</span> latest version (v1.6.3) for https://deno.land/x/pagic/mod.ts</span><br><span class="line">Sending fatal alert BadCertificatey@v0.<span class="number">25.7</span>/prompt/_generic_suggestions.ts (<span class="number">10</span>/<span class="number">57</span>)</span><br><span class="line">Sending fatal alert BadCertificate11.<span class="number">0</span>/fs/mod.ts <span class="number">0.40</span>KiB/<span class="number">0.40</span>KiB (<span class="number">15</span>/<span class="number">57</span>)</span><br><span class="line">error: error sending request <span class="keyword">for</span> url (https://cdn.pagic.org/i18next@<span class="number">19.8</span>.<span class="number">1</span>/esnext/i18next.js): error trying to connect: invalid peer certificate: NotValidForName</span><br><span class="line">    at https://deno.land/x/pagic@v1.<span class="number">6.3</span>/src/plugins/i18n.tsx:<span class="number">4</span>:<span class="number">21</span></span><br><span class="line"><span class="built_in">PS</span> D:\\git&gt;</span><br></pre></td></tr></table></figure>
-
-<p>错误是由于 Deno 在下载依赖时遇到了 SSL 证书验证问题。具体是 cdn.pagic.org 这个域名的证书无效（NotValidForName 错误）。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Pagic_error_sending_request_for_url.png" alt="Pagic error sending request for url"></p>
-<h2 id="🎯-本地安装"><a href="#🎯-本地安装" class="headerlink" title="🎯 本地安装"></a>🎯 本地安装</h2><h3 id="克隆仓库"><a href="#克隆仓库" class="headerlink" title="克隆仓库"></a>克隆仓库</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:xcatliu/pagic.git</span><br></pre></td></tr></table></figure>
-
-<h3 id="修改-i18n-tsx"><a href="#修改-i18n-tsx" class="headerlink" title="修改 i18n.tsx"></a>修改 <code>i18n.tsx</code></h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pagic\\src\\plugins\\i18n.tsx</span></span><br><span class="line">import i18next from <span class="string">&#x27;../../cdn.pagic.org/i18next@19.8.1/esnext/i18next.js&#x27;</span>;</span><br><span class="line">import &#123; Trans as TransComponent &#125; from <span class="string">&#x27;../../cdn.pagic.org/react-i18next@11.7.3/Trans.js&#x27;</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h3 id="安装-Pagic"><a href="#安装-Pagic" class="headerlink" title="安装 Pagic"></a>安装 Pagic</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span> <span class="literal">--allow-write</span> <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic mod.ts</span><br></pre></td></tr></table></figure>
-
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Pagic_Successfully_installed_pagic.png" alt="Pagic Successfully installed pagic"></p>
-<p>##💡初始化项目</p>
-<blockquote>
-<p>要使用 pagic 构建静态网站，则该项目至少需要包含一个 pagic.config.ts 配置文件和一个 md&#x2F;tsx 页面文件：</p>
-</blockquote>
-<p>site&#x2F;<br>├── pagic.config.ts<br>└── README.md</p>
-<blockquote>
-<p>当然，pagic.config.ts 一开始可以只导出一个空对象：</p>
-</blockquote>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export default &#123;&#125;;</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>README.md 可以是一个简单的 Markdown 文件：</p>
-</blockquote>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># Hello world</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>你可以运行以下命令一次性创建出上面的 site 项目：</p>
-</blockquote>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir site &amp;&amp; <span class="built_in">cd</span> site &amp;&amp; <span class="built_in">echo</span> \<span class="string">&quot;export default &#123;&#125;;\&quot;</span> &gt; pagic.config.ts &amp;&amp; <span class="built_in">echo</span> \<span class="string">&quot;# Hello world\&quot;</span> &gt; README.md</span><br></pre></td></tr></table></figure>
-
-<h2 id="📚-运行-pagic-build"><a href="#📚-运行-pagic-build" class="headerlink" title="📚 运行 pagic build"></a>📚 运行 pagic build</h2><blockquote>
-<p>接下来，我们就可以在项目中使用 pagic build 命令了。它的基本用法如下：</p>
-</blockquote>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 构建静态网站</span></span><br><span class="line">pagic build [<span class="type">options</span>]</span><br><span class="line"><span class="comment"># --watch   监听文件变动以重新构建</span></span><br><span class="line"><span class="comment"># --serve   启动本地服务，预览静态网站</span></span><br><span class="line"><span class="comment"># --port    指定本地服务的端口号</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>不妨试试在 site 目录下运行以下代码：</p>
-</blockquote>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pagic build <span class="literal">--watch</span> <span class="literal">--serve</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>然后用浏览器打开 <a target="_blank" rel="noopener" href="http://127.0.0.1:8000/">http://127.0.0.1:8000/</a> ，看看是不是显示出 Hello world 了呢？</p>
-</blockquote>
-<blockquote>
-<p>注意，构建结果在 dist 目录中（这里隐藏了一些次要的文件）：</p>
-</blockquote>
-<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">site/</span><br><span class="line">|── dist    <span class="comment"># 构建结果目录</span></span><br><span class="line">|   └── index.html</span><br><span class="line">├── pagic.config.ts</span><br><span class="line">└── README.md</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>一般的 Markdown 文件会被构建为同名的 HTML 文件，但是 README.md 被构建为了 index.html，这是一种人性化的处理，方便同时在 GitHub 中和静态网站中展示首页的内容。</p>
-</blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Pagic_pagic_build_watch_serve.png" alt="Pagic pagic build watch serve"></p>
-<p>后面不尝试了，因为还会出现 CDN 出错，修改本地文件或许可以构建成功，但是不太顺利。</p>
 
       
     </div>

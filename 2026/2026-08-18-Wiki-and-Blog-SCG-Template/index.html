@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/@shenjuexiao1C_32%C3%9732.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/@shenjuexiao1C_16%C3%9716.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"shenjuexiao.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"giscus","storage":true,"lazyload":false,"nav":null,"activeClass":"giscus"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="知识库与博客结合的模板 知识库与博客的结合，关键在于处理好结构化知识沉淀与碎片化内容输出之间的关系。以下整理了三种主流的模板方案，可以根据自己对技术栈的偏好和功能需求来选择。  1️⃣ 文档驱动型：VitePress + 博客主题适合：偏好纯文档风格，希望将技术笔记和博客文章统一管理，且追求极致性能的技术写作者。 这个方案基于 VitePress（Vue 驱动的静态站点生成器），通过 vitepr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Wiki and Blog SCG Template">
+<meta property="og:url" content="https://shenjuexiao.com/2026/2026-08-18-Wiki-and-Blog-SCG-Template/index.html">
+<meta property="og:site_name" content="神觉晓">
+<meta property="og:description" content="知识库与博客结合的模板 知识库与博客的结合，关键在于处理好结构化知识沉淀与碎片化内容输出之间的关系。以下整理了三种主流的模板方案，可以根据自己对技术栈的偏好和功能需求来选择。  1️⃣ 文档驱动型：VitePress + 博客主题适合：偏好纯文档风格，希望将技术笔记和博客文章统一管理，且追求极致性能的技术写作者。 这个方案基于 VitePress（Vue 驱动的静态站点生成器），通过 vitepr">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Fine-grained_tokens.png">
+<meta property="article:published_time" content="2026-08-18T01:39:48.000Z">
+<meta property="article:modified_time" content="2026-08-18T01:39:48.000Z">
+<meta property="article:author" content="shenjuexiao">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Fine-grained_tokens.png">
+
+
+<link rel="canonical" href="https://shenjuexiao.com/2026/2026-08-18-Wiki-and-Blog-SCG-Template/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://shenjuexiao.com/2026/2026-08-18-Wiki-and-Blog-SCG-Template/","path":"2026/2026-08-18-Wiki-and-Blog-SCG-Template/","title":"Wiki and Blog SCG Template"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Wiki and Blog SCG Template | 神觉晓</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="神觉晓" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="神觉晓" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">神觉晓</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">@shenjuexiao</p>
+      <img class="custom-logo-image" src="/images/@shenjuexiao1C_180%C3%97180.png" alt="神觉晓">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E7%9F%A5%E8%AF%86%E5%BA%93%E4%B8%8E%E5%8D%9A%E5%AE%A2%E7%BB%93%E5%90%88%E7%9A%84%E6%A8%A1%E6%9D%BF"><span class="nav-number">1.</span> <span class="nav-text">知识库与博客结合的模板</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1%EF%B8%8F%E2%83%A3-%E6%96%87%E6%A1%A3%E9%A9%B1%E5%8A%A8%E5%9E%8B%EF%BC%9AVitePress-%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98"><span class="nav-number">1.1.</span> <span class="nav-text">1️⃣ 文档驱动型：VitePress + 博客主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#vitepress-theme-teek"><span class="nav-number">1.1.1.</span> <span class="nav-text">vitepress-theme-teek</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#chuiyu-Wiki"><span class="nav-number">1.1.2.</span> <span class="nav-text">chuiyu_Wiki</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2%EF%B8%8F%E2%83%A3-%E5%8D%9A%E5%AE%A2%E4%BC%98%E5%85%88%E5%9E%8B%EF%BC%9AAstro-%E4%B8%BB%E9%A2%98%EF%BC%88%E7%9F%A5%E8%AF%86%E5%9B%BE%E8%B0%B1-%E6%90%9C%E7%B4%A2%EF%BC%89"><span class="nav-number">1.2.</span> <span class="nav-text">2️⃣ 博客优先型：Astro 主题（知识图谱 + 搜索）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#astro-theme-iris"><span class="nav-number">1.2.1.</span> <span class="nav-text">astro-theme-iris</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#qiyuan-blog-template"><span class="nav-number">1.2.2.</span> <span class="nav-text">qiyuan-blog-template</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3%EF%B8%8F%E2%83%A3-%E5%85%A8%E6%A0%88%E7%AE%A1%E7%90%86%E5%9E%8B%EF%BC%9ANext-js-%E5%85%A8%E5%8A%9F%E8%83%BD%E5%B9%B3%E5%8F%B0"><span class="nav-number">1.3.</span> <span class="nav-text">3️⃣ 全栈管理型：Next.js 全功能平台</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#next-ai-blog-cms"><span class="nav-number">1.3.1.</span> <span class="nav-text">next-ai-blog-cms</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%8A-%E8%A1%A8%E6%A0%BC%E5%AF%B9%E6%AF%94"><span class="nav-number">1.4.</span> <span class="nav-text">📊 表格对比</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%8C%9F-%E9%80%89%E5%9E%8B%E5%BB%BA%E8%AE%AE"><span class="nav-number">1.5.</span> <span class="nav-text">🌟 选型建议</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">shenjuexiao</p>
+  <div class="site-description" itemprop="description">不懂就问，无趣的笔记</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">40</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/shenjuexiao" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;shenjuexiao" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-08-18-Wiki-and-Blog-SCG-Template/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="不懂就问，无趣的笔记">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Wiki and Blog SCG Template | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Wiki and Blog SCG Template
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-08-18 09:39:48" itemprop="dateCreated datePublished" datetime="2026-08-18T09:39:48+08:00">2026-08-18</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="知识库与博客结合的模板"><a href="#知识库与博客结合的模板" class="headerlink" title="知识库与博客结合的模板"></a>知识库与博客结合的模板</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Github_png/GitHub_Fine-grained_tokens.png" alt="GitHub Fine-grained Tokens"></p>
+<p>知识库与博客的结合，关键在于处理好<strong>结构化知识沉淀</strong>与<strong>碎片化内容输出</strong>之间的关系。以下整理了三种主流的模板方案，可以根据自己对技术栈的偏好和功能需求来选择。</p>
+<hr>
+<h2 id="1️⃣-文档驱动型：VitePress-博客主题"><a href="#1️⃣-文档驱动型：VitePress-博客主题" class="headerlink" title="1️⃣ 文档驱动型：VitePress + 博客主题"></a>1️⃣ 文档驱动型：VitePress + 博客主题</h2><p><strong>适合</strong>：偏好纯文档风格，希望将技术笔记和博客文章统一管理，且追求极致性能的技术写作者。</p>
+<p>这个方案基于 VitePress（Vue 驱动的静态站点生成器），通过 <code>vitepress-theme-teek</code> 这类主题，在原生文档站基础上注入博客功能。模板会按文件路径自动生成侧边栏，构建出结构化的知识库；博客功能则作为“碎片化知识”的补充，支持文章分类、标签和归档。</p>
+<ul>
+<li><strong>技术栈</strong>：VitePress、Vue、Markdown。</li>
+<li><strong>核心能力</strong>：自动生成侧边栏&#x2F;目录页、全文搜索、暗黑模式、支持评论系统（Giscus&#x2F;Twikoo）。</li>
+<li><strong>快速体验</strong>：可直接克隆 <code>chuiyu_Wiki</code> 这类现成项目，或参照 Teek 主题文档初始化。</li>
+</ul>
+<h3 id="vitepress-theme-teek"><a href="#vitepress-theme-teek" class="headerlink" title="vitepress-theme-teek"></a>vitepress-theme-teek</h3><ul>
+<li>项目演示：<a target="_blank" rel="noopener" href="https://vp.teek.top/">VitePress Teek 主题演示站</a></li>
+<li>GitHub 地址：<a target="_blank" rel="noopener" href="https://github.com/Kele-Bingtang/vitepress-theme-teek">Kele-Bingtang&#x2F;vitepress-theme-teek</a></li>
+</ul>
+<h3 id="chuiyu-Wiki"><a href="#chuiyu-Wiki" class="headerlink" title="chuiyu_Wiki"></a>chuiyu_Wiki</h3><ul>
+<li>项目演示：<a target="_blank" rel="noopener" href="https://chuiyu.wiki/">chuiyu.wiki</a></li>
+<li>GitHub 地址：<a target="_blank" rel="noopener" href="https://github.com/ana52070/chuiyu_Wiki">ana52070&#x2F;chuiyu_Wiki</a></li>
+</ul>
+<h2 id="2️⃣-博客优先型：Astro-主题（知识图谱-搜索）"><a href="#2️⃣-博客优先型：Astro-主题（知识图谱-搜索）" class="headerlink" title="2️⃣ 博客优先型：Astro 主题（知识图谱 + 搜索）"></a>2️⃣ 博客优先型：Astro 主题（知识图谱 + 搜索）</h2><p><strong>适合</strong>：内容较为丰富、需要强大检索能力来盘活知识库的博主。</p>
+<p>Astro 因为对内容站点的高性能支持，出现了一批优秀的“博客+知识库”主题。例如 <code>astro-theme-iris</code>，它实现了<strong>双链笔记（Wikilink）<strong>和</strong>知识图谱（Graph View）</strong>，能直观看到文章间的关联。配合 FlexSearch 实现的实时全文检索，能极大提升查找历史笔记的效率。而 <code>qiyuan-blog-template</code> 则更进一步，在 Astro 基础上集成了 RAG（检索增强生成）AI 问答，让读者可以直接向你的知识库提问。</p>
+<ul>
+<li><strong>技术栈</strong>：Astro、TypeScript、FlexSearch&#x2F;D3.js。</li>
+<li><strong>核心能力</strong>：双链预览、知识图谱可视化、高性能搜索、AI 问答（RAG）。</li>
+<li><strong>快速体验</strong>：在 GitHub 搜索对应仓库，点击 &quot;Use this template&quot; 即可一键创建。</li>
+</ul>
+<h3 id="astro-theme-iris"><a href="#astro-theme-iris" class="headerlink" title="astro-theme-iris"></a>astro-theme-iris</h3><ul>
+<li>项目演示：<a target="_blank" rel="noopener" href="https://lemonadorable.github.io/">LemonAdorable 的 Astro Iris 主题演示</a></li>
+<li>GitHub 地址：<a target="_blank" rel="noopener" href="https://github.com/LemonAdorable/astro-theme-iris">LemonAdorable&#x2F;astro-theme-iris</a></li>
+</ul>
+<h3 id="qiyuan-blog-template"><a href="#qiyuan-blog-template" class="headerlink" title="qiyuan-blog-template"></a>qiyuan-blog-template</h3><ul>
+<li>项目演示：<a target="_blank" rel="noopener" href="https://www.qiyuan.icu/">qiyuan.icu</a></li>
+<li>GitHub 地址：<a target="_blank" rel="noopener" href="https://github.com/violet27chen/qiyuan-blog-template">violet27chen&#x2F;qiyuan-blog-template</a></li>
+</ul>
+<h2 id="3️⃣-全栈管理型：Next-js-全功能平台"><a href="#3️⃣-全栈管理型：Next-js-全功能平台" class="headerlink" title="3️⃣ 全栈管理型：Next.js 全功能平台"></a>3️⃣ 全栈管理型：Next.js 全功能平台</h2><p><strong>适合</strong>：需要后台管理、富文本编辑，且希望拥有 AI 辅助写作能力的深度内容创作者。</p>
+<p>如果觉得静态模板定制性有限，可以考虑 Next.js 打造的全栈平台。例如 <strong>Petrichor</strong>，它不仅是一个展示站点，更包含完整的 CMS（内容管理系统），支持富文本编辑、知识库目录树，甚至集成了 AI 续写、改写和周报生成功能。<code>next-ai-blog-cms</code> 则侧重技术实现，提供了完整的后台管理界面和基于向量检索（RAG）的站内问答，实现了从写作、存储到智能问答的闭环。</p>
+<ul>
+<li><strong>技术栈</strong>：Next.js、Supabase&#x2F;PostgreSQL、Prisma、TailwindCSS。</li>
+<li><strong>核心能力</strong>：AI 写作助手、富文本编辑器、后台仪表盘、RAG 知识库问答。</li>
+<li><strong>快速体验</strong>：项目通常支持一键部署到 Vercel，需准备好数据库（如 Supabase）和环境变量。</li>
+</ul>
+<h3 id="next-ai-blog-cms"><a href="#next-ai-blog-cms" class="headerlink" title="next-ai-blog-cms"></a>next-ai-blog-cms</h3><ul>
+<li>项目演示：<a target="_blank" rel="noopener" href="https://fcppddl.top/">fcppddl.top</a></li>
+<li>GitHub 地址：<a target="_blank" rel="noopener" href="https://github.com/fcppddl/next-ai-blog-cms">fcppddl&#x2F;next-ai-blog-cms</a></li>
+</ul>
+<h2 id="📊-表格对比"><a href="#📊-表格对比" class="headerlink" title="📊 表格对比"></a>📊 表格对比</h2><table>
+<thead>
+<tr>
+<th align="left">模板方案</th>
+<th align="left">推荐场景</th>
+<th align="left">主要技术</th>
+<th align="left">核心特色</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>VitePress + Teek 主题</strong></td>
+<td align="left">文档技术博客、笔记整理</td>
+<td align="left">VitePress, Vue</td>
+<td align="left">文档&#x2F;博客双模式，自动生成结构化目录</td>
+</tr>
+<tr>
+<td align="left"><strong>Astro 主题 (Iris&#x2F;Qiyuan)</strong></td>
+<td align="left">知识图谱展示、AI 问答博客</td>
+<td align="left">Astro, D3.js, RAG</td>
+<td align="left">可视化知识图谱，站内 AI 助手（RAG）</td>
+</tr>
+<tr>
+<td align="left"><strong>Next.js 全栈平台 (Petrichor)</strong></td>
+<td align="left">需后台管理、AI 辅助创作</td>
+<td align="left">Next.js, Supabase, Prisma</td>
+<td align="left">富文本编辑器，AI 写作与周报，后台 CMS</td>
+</tr>
+</tbody></table>
+<h2 id="🌟-选型建议"><a href="#🌟-选型建议" class="headerlink" title="🌟 选型建议"></a>🌟 选型建议</h2><ol>
+<li><strong>如果追求简单和速度</strong>：方案一（VitePress）最轻量，维护成本低，适合以 Markdown 为主的笔记博主。</li>
+<li><strong>如果希望内容被“盘活”</strong>：方案二（Astro）的图谱和 AI 能力，能让你的旧文章通过关联和问答重新被发现。</li>
+<li><strong>如果需要深度管理内容</strong>：方案三（Next.js）提供了完整的后台和 AI 写作流，更适合系列化、长周期的内容创作。</li>
+</ol>
+<p>以上方案均为开源项目，除自行部署外，也可参考 WorkBuddy + MaxKB 等方案，为现有静态博客快速接入知识库问答能力。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>shenjuexiao
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://shenjuexiao.com/2026/2026-08-18-Wiki-and-Blog-SCG-Template/" title="Wiki and Blog SCG Template">https://shenjuexiao.com/2026/2026-08-18-Wiki-and-Blog-SCG-Template/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">ATOM</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/rss2.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS2</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/2026-08-17-npm-switches-mirrors/" rel="prev" title="npm switches mirrors">
+                  <i class="fa fa-angle-left"></i> npm switches mirrors
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments giscus-container">
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">shenjuexiao</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"shenjuexiao/giscus","repo_id":"R_kgDOTr7hig","category":"Announcements","category_id":"DIC_kwDOTr7his4DCjIS","mapping":"pathname","strict":0,"reactions_enabled":1,"emit_metadata":0,"theme":"preferred_color_scheme","lang":"zh-CN","crossorigin":"anonymous","input_position":"top","loading":"lazy"}</script>
+
+<script>
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
+      },
+      parentNode: document.querySelector('.giscus-container')
+    }));
+});
+</script>
+
+</body>
+</html>
