@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/@shenjuexiao1C_32%C3%9732.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/@shenjuexiao1C_16%C3%9716.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"shenjuexiao.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"giscus","storage":true,"lazyload":false,"nav":null,"activeClass":"giscus"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Github Issues Blog Gitblog 用过 Jekyll、Hexo，捣鼓了一阵子，都没能长期使用持续写作，现在转头使用 GIthub Issue 搭建的博客系统。后者有两个优点，一来省去了生成、部署的操作；二来解决了图床的需求。只要仓库存在，Issues 可以一直保留，改天也可以换个相似的博客系统。 📖 内容来源 Gitblog  📦 项目地址和安装指南yihong0618&amp;#">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Github Issues Blog Gitblog">
+<meta property="og:url" content="https://shenjuexiao.com/2026/2026-07-30-Github-Issues-Blog-Gitblog/index.html">
+<meta property="og:site_name" content="神觉晓">
+<meta property="og:description" content="Github Issues Blog Gitblog 用过 Jekyll、Hexo，捣鼓了一阵子，都没能长期使用持续写作，现在转头使用 GIthub Issue 搭建的博客系统。后者有两个优点，一来省去了生成、部署的操作；二来解决了图床的需求。只要仓库存在，Issues 可以一直保留，改天也可以换个相似的博客系统。 📖 内容来源 Gitblog  📦 项目地址和安装指南yihong0618&amp;#">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Github_Issues_Blog_Gitblog.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Gitblog_Settings_Developer-Settings_Personal-access-tokens.png">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Gitblog_Settings_Security-and-quality_Secrets-and-variables.png">
+<meta property="article:published_time" content="2026-07-30T06:00:48.000Z">
+<meta property="article:modified_time" content="2026-08-19T16:17:33.000Z">
+<meta property="article:author" content="shenjuexiao">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Github_Issues_Blog_Gitblog.png">
+
+
+<link rel="canonical" href="https://shenjuexiao.com/2026/2026-07-30-Github-Issues-Blog-Gitblog/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://shenjuexiao.com/2026/2026-07-30-Github-Issues-Blog-Gitblog/","path":"2026/2026-07-30-Github-Issues-Blog-Gitblog/","title":"Github Issues Blog Gitblog"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Github Issues Blog Gitblog | 神觉晓</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="神觉晓" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="神觉晓" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">神觉晓</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">@shenjuexiao</p>
+      <img class="custom-logo-image" src="/images/@shenjuexiao1C_180%C3%97180.png" alt="神觉晓">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Github-Issues-Blog-Gitblog"><span class="nav-number">1.</span> <span class="nav-text">Github Issues Blog Gitblog</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%96-%E5%86%85%E5%AE%B9%E6%9D%A5%E6%BA%90"><span class="nav-number">1.1.</span> <span class="nav-text">📖 内容来源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%A6-%E9%A1%B9%E7%9B%AE%E5%9C%B0%E5%9D%80%E5%92%8C%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97"><span class="nav-number">1.2.</span> <span class="nav-text">📦 项目地址和安装指南</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%A7-%E5%AE%89%E8%A3%85%E6%96%B9%E6%B3%95"><span class="nav-number">1.3.</span> <span class="nav-text">🔧 安装方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-%E5%85%8B%E9%9A%86%E4%BB%93%E5%BA%93"><span class="nav-number">1.3.1.</span> <span class="nav-text">1. 克隆仓库</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-%E7%94%9F%E6%88%90tokens"><span class="nav-number">1.3.2.</span> <span class="nav-text">2. 生成tokens</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-%E4%BB%93%E5%BA%93-actions"><span class="nav-number">1.3.3.</span> <span class="nav-text">3. 仓库 actions</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-%E4%BF%AE%E6%94%B9generate-readme-yml"><span class="nav-number">1.3.4.</span> <span class="nav-text">4.  修改generate_readme.yml</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%9D%93-%E5%85%B6%E4%BB%96%E9%97%AE%E9%A2%98"><span class="nav-number">1.4.</span> <span class="nav-text">❓ 其他问题</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">shenjuexiao</p>
+  <div class="site-description" itemprop="description">不懂就问，无趣的笔记</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/shenjuexiao" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;shenjuexiao" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-07-30-Github-Issues-Blog-Gitblog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="不懂就问，无趣的笔记">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Github Issues Blog Gitblog | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Github Issues Blog Gitblog
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-07-30 14:00:48" itemprop="dateCreated datePublished" datetime="2026-07-30T14:00:48+08:00">2026-07-30</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-08-20 00:17:33" itemprop="dateModified" datetime="2026-08-20T00:17:33+08:00">2026-08-20</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="Github-Issues-Blog-Gitblog"><a href="#Github-Issues-Blog-Gitblog" class="headerlink" title="Github Issues Blog Gitblog"></a>Github Issues Blog Gitblog</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Github_Issues_Blog_Gitblog.png" alt="Github Issues Blog Gitblog"></p>
+<p>用过 Jekyll、Hexo，捣鼓了一阵子，都没能长期使用持续写作，现在转头使用 GIthub Issue 搭建的博客系统。后者有两个优点，一来省去了生成、部署的操作；二来解决了图床的需求。只要仓库存在，Issues 可以一直保留，改天也可以换个相似的博客系统。</p>
+<h2 id="📖-内容来源"><a href="#📖-内容来源" class="headerlink" title="📖 内容来源"></a>📖 内容来源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/yihong0618/gitblog">Gitblog</a></li>
+</ul>
+<h2 id="📦-项目地址和安装指南"><a href="#📦-项目地址和安装指南" class="headerlink" title="📦 项目地址和安装指南"></a>📦 项目地址和安装指南</h2><p><a target="_blank" rel="noopener" href="https://github.com/yihong0618/gitblog">yihong0618&#x2F;gitblog</a><br><a target="_blank" rel="noopener" href="https://github.com/yihong0618/gitblog/issues/177">这个博客开源了</a></p>
+<h2 id="🔧-安装方法"><a href="#🔧-安装方法" class="headerlink" title="🔧 安装方法"></a>🔧 安装方法</h2><h3 id="1-克隆仓库"><a href="#1-克隆仓库" class="headerlink" title="1. 克隆仓库"></a>1. 克隆仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> git@github.com:yihong0618/gitblog.git</span><br></pre></td></tr></table></figure>
+
+<h3 id="2-生成tokens"><a href="#2-生成tokens" class="headerlink" title="2. 生成tokens"></a>2. 生成tokens</h3><p>个人首页，<code>Settings</code> -&gt; <code>Developer Settings</code> -&gt; <code>Personal access tokens</code> -&gt; <code>Tokens (classic)</code> -&gt; <code>Generate New Tokens</code> -&gt;  <code>Generate new yokens (classic)</code></p>
+<p>或直达链接：<br><a target="_blank" rel="noopener" href="https://github.com/settings/tokens">settings&#x2F;tokens</a></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Gitblog_Settings_Developer-Settings_Personal-access-tokens.png" alt="Gitblog Settings Developer Settings Personal access tokens"></p>
+<h3 id="3-仓库-actions"><a href="#3-仓库-actions" class="headerlink" title="3. 仓库 actions"></a>3. 仓库 actions</h3><p>仓库首页，<code>Settings</code> -&gt; <code>Security and quality</code> -&gt; <code>Secrets and variables</code> -&gt; <code>Actions</code> -&gt; <code>New repository secret</code></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/Gitblog_Settings_Security-and-quality_Secrets-and-variables.png" alt="Gitblog Settings Security and quality Secrets and variables"></p>
+<p>直接使用 <code>G_T</code>，就不用修改文件： <code>.github\\workflows\\generate_readme.yml</code> 中的 <code>$&#123;&#123; secrets.G_T &#125;&#125;</code> 字段。</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="bullet">-</span> <span class="attr">name:</span> <span class="string">Generate</span> <span class="string">new</span> <span class="string">md</span></span><br><span class="line">  <span class="attr">run:</span> <span class="string">|</span></span><br><span class="line">    <span class="string">python</span> <span class="string">main.py</span> <span class="string">$&#123;&#123;</span> <span class="string">secrets.G_T</span> <span class="string">&#125;&#125;</span> <span class="string">$&#123;&#123;</span> <span class="string">github.repository</span> <span class="string">&#125;&#125;</span> <span class="string">--issue_number</span> <span class="string">&#x27;$&#123;&#123; github.event.issue.number &#125;&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-修改generate-readme-yml"><a href="#4-修改generate-readme-yml" class="headerlink" title="4.  修改generate_readme.yml"></a>4.  <del>修改<code>generate_readme.yml</code></del></h3><p><code>.github/workflows/generate_readme.yml</code><br>新版不需要。</p>
+<h2 id="❓-其他问题"><a href="#❓-其他问题" class="headerlink" title="❓ 其他问题"></a>❓ 其他问题</h2><p>原作者后续更新了 <code>*.yml</code> 文件，有些参数不需要修改了。<br>后续更新补充。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>shenjuexiao
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://shenjuexiao.com/2026/2026-07-30-Github-Issues-Blog-Gitblog/" title="Github Issues Blog Gitblog">https://shenjuexiao.com/2026/2026-07-30-Github-Issues-Blog-Gitblog/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">ATOM</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/rss2.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS2</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/2026-07-30-Hello-World-2026/" rel="prev" title="Hello World 2026">
+                  <i class="fa fa-angle-left"></i> Hello World 2026
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2026/2026-07-30-Github-Issues-Blog-List/" rel="next" title="Github Issues Blog List">
+                  Github Issues Blog List <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments giscus-container">
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">shenjuexiao</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"shenjuexiao/giscus","repo_id":"R_kgDOTr7hig","category":"Announcements","category_id":"DIC_kwDOTr7his4DCjIS","mapping":"pathname","strict":0,"reactions_enabled":1,"emit_metadata":0,"theme":"preferred_color_scheme","lang":"zh-CN","crossorigin":"anonymous","input_position":"top","loading":"lazy"}</script>
+
+<script>
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
+      },
+      parentNode: document.querySelector('.giscus-container')
+    }));
+});
+</script>
+
+</body>
+</html>

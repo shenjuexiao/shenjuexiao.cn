@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#222" media="(prefers-color-scheme: dark)"><meta name="generator" content="Hexo 8.1.2">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/@shenjuexiao1C_32%C3%9732.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/@shenjuexiao1C_16%C3%9716.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha256-VHqXKFhhMxcpubYf9xiWdCiojEbY9NexQ4jh8AxbvcM=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"shenjuexiao.com","root":"/","images":"/images","scheme":"Pisces","darkmode":true,"version":"8.28.0","exturl":false,"sidebar":{"position":"left","width_expanded":320,"width_dual_column":240,"display":"always","padding":18,"offset":12},"hljswrap":true,"codeblock":{"theme":{"light":"default","dark":"stackoverflow-dark"},"prism":{"light":"prism","dark":"prism-dark"},"copy_button":{"enable":false,"style":null},"fold":{"enable":false,"height":500},"language":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"giscus","storage":true,"lazyload":false,"nav":null,"activeClass":"giscus"},"stickytabs":false,"motion":{"enable":true,"async":false,"duration":200,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"}}</script><script src="/js/config.js" defer></script>
+
+    <meta name="description" content="Deno Windows 安装 📝 笔记总结PowerShell 脚本安装最方便。 12irm https:&#x2F;&#x2F;deno.land&#x2F;install.ps1 | iexdeno --version  📖 内容来源 安装 Deno Deno Windows 安装（DeepSeek）   Deno 是一个由 Node.js 的原始作者 Ryan Dahl 创建的 JavaScript、TypeScr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Deno Windows Install">
+<meta property="og:url" content="https://shenjuexiao.com/2026/2026-08-06-Deno-Windows-Install/index.html">
+<meta property="og:site_name" content="神觉晓">
+<meta property="og:description" content="Deno Windows 安装 📝 笔记总结PowerShell 脚本安装最方便。 12irm https:&#x2F;&#x2F;deno.land&#x2F;install.ps1 | iexdeno --version  📖 内容来源 安装 Deno Deno Windows 安装（DeepSeek）   Deno 是一个由 Node.js 的原始作者 Ryan Dahl 创建的 JavaScript、TypeScr">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Deno_Windows_PowerShell_irm.png">
+<meta property="article:published_time" content="2026-08-06T07:00:41.000Z">
+<meta property="article:modified_time" content="2026-08-16T17:42:11.000Z">
+<meta property="article:author" content="shenjuexiao">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Deno_Windows_PowerShell_irm.png">
+
+
+<link rel="canonical" href="https://shenjuexiao.com/2026/2026-08-06-Deno-Windows-Install/">
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://shenjuexiao.com/2026/2026-08-06-Deno-Windows-Install/","path":"2026/2026-08-06-Deno-Windows-Install/","title":"Deno Windows Install"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Deno Windows Install | 神觉晓</title>
+  
+
+
+
+
+
+
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous" defer></script>
+<script src="/js/utils.js" defer></script><script src="/js/motion.js" defer></script><script src="/js/sidebar.js" defer></script><script src="/js/next-boot.js" defer></script>
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+<link rel="alternate" href="/atom.xml" title="神觉晓" type="application/atom+xml">
+<link rel="alternate" href="/rss2.xml" title="神觉晓" type="application/rss+xml">
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">神觉晓</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">@shenjuexiao</p>
+      <img class="custom-logo-image" src="/images/@shenjuexiao1C_180%C3%97180.png" alt="神觉晓">
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+  </ul>
+</nav>
+
+
+
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Deno-Windows-%E5%AE%89%E8%A3%85"><span class="nav-number">1.</span> <span class="nav-text">Deno Windows 安装</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%9D-%E7%AC%94%E8%AE%B0%E6%80%BB%E7%BB%93"><span class="nav-number">1.1.</span> <span class="nav-text">📝 笔记总结</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%96-%E5%86%85%E5%AE%B9%E6%9D%A5%E6%BA%90"><span class="nav-number">1.2.</span> <span class="nav-text">📖 内容来源</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%94%A7-%E4%BD%BF%E7%94%A8-PowerShell-%E8%84%9A%E6%9C%AC%E5%AE%89%E8%A3%85%EF%BC%88%E6%8E%A8%E8%8D%90%EF%BC%89"><span class="nav-number">1.3.</span> <span class="nav-text">🔧 使用 PowerShell 脚本安装（推荐）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%93%A6-%E5%85%B6%E4%BB%96%E5%AE%89%E8%A3%85%E6%96%B9%E5%BC%8F"><span class="nav-number">1.4.</span> <span class="nav-text">📦 其他安装方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%F0%9F%96%B1%EF%B8%8F-%E6%89%8B%E5%8A%A8%E5%AE%89%E8%A3%85%E4%B8%8E%E7%B3%BB%E7%BB%9F%E8%A6%81%E6%B1%82"><span class="nav-number">1.5.</span> <span class="nav-text">🖱️ 手动安装与系统要求</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E2%AC%86%EF%B8%8F-%E6%9B%B4%E6%96%B0-Deno"><span class="nav-number">1.6.</span> <span class="nav-text">⬆️ 更新 Deno</span></a></li></ol></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">shenjuexiao</p>
+  <div class="site-description" itemprop="description">不懂就问，无趣的笔记</div>
+</div>
+<div class="site-state-wrap animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">45</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author animated">
+      <span class="links-of-author-item">
+        <a href="https://github.com/shenjuexiao" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;shenjuexiao" rel="noopener me" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+  </div>
+  <div class="cc-license animated" itemprop="license">
+    <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" rel="noopener" target="_blank"><img src="https://cdnjs.cloudflare.com/ajax/libs/creativecommons-vocabulary/2020.11.3/assets/license_badges/big/by_nc_sa.svg" alt="Creative Commons"></a>
+  </div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://shenjuexiao.com/2026/2026-08-06-Deno-Windows-Install/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="shenjuexiao">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="神觉晓">
+      <meta itemprop="description" content="不懂就问，无趣的笔记">
+    </span>
+
+    <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
+      <meta itemprop="name" content="Deno Windows Install | 神觉晓">
+      <meta itemprop="description" content="">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Deno Windows Install
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2026-08-06 15:00:41" itemprop="dateCreated datePublished" datetime="2026-08-06T15:00:41+08:00">2026-08-06</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2026-08-17 01:42:11" itemprop="dateModified" datetime="2026-08-17T01:42:11+08:00">2026-08-17</time>
+    </span>
+
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody"><h1 id="Deno-Windows-安装"><a href="#Deno-Windows-安装" class="headerlink" title="Deno Windows 安装"></a>Deno Windows 安装</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Deno_Windows_PowerShell_irm.png" alt="Deno Windows PowerShell irm"></p>
+<h2 id="📝-笔记总结"><a href="#📝-笔记总结" class="headerlink" title="📝 笔记总结"></a>📝 笔记总结</h2><p>PowerShell 脚本安装最方便。</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">irm</span> https://deno.land/install.ps1 | <span class="built_in">iex</span></span><br><span class="line">deno <span class="literal">--version</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="📖-内容来源"><a href="#📖-内容来源" class="headerlink" title="📖 内容来源"></a>📖 内容来源</h2><ul>
+<li><a target="_blank" rel="noopener" href="https://pagic.org/zh-CN/docs/usage.html">安装 Deno</a></li>
+<li><a target="_blank" rel="noopener" href="https://pagic.org/zh-CN/docs/usage.html">Deno Windows 安装</a>（<a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/29bfb074-8f83-4edb-a777-6f579fbbe845">DeepSeek</a>）</li>
+</ul>
+<blockquote>
+<p>Deno 是一个由 Node.js 的原始作者 Ryan Dahl 创建的 JavaScript、TypeScript 和 WebAssembly 运行时。你可以把它看作是 Node.js 的“进化版”，旨在解决 Node.js 早期设计中的一些遗憾，为现代 Web 开发提供一个更安全、更高效的开发环境</p>
+</blockquote>
+<p>在 Windows 上安装 Deno 非常简单，有多种方法可供选择。官方推荐使用 PowerShell 脚本，因为它能提供更快的启动速度。</p>
+<h2 id="🔧-使用-PowerShell-脚本安装（推荐）"><a href="#🔧-使用-PowerShell-脚本安装（推荐）" class="headerlink" title="🔧 使用 PowerShell 脚本安装（推荐）"></a>🔧 使用 PowerShell 脚本安装（推荐）</h2><p>这是最快捷的官方安装方式。以管理员身份打开 PowerShell 并运行以下命令：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">irm</span> https://deno.land/install.ps1 | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p> 这行代码的意思是从网上下载脚本并立即运行。</p>
+</blockquote>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">irm</span> https://某个网站/脚本.ps1 | <span class="built_in">iex</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这非常危险，因为你不知道脚本里写了什么，它可能会删除你的文件、窃取你的信息。除非你 100% 信任来源，并且仔细看过脚本内容，否则绝对不要执行这类命令。</p>
+</blockquote>
+<p>执行后，Deno 会默认安装到 <code>%USERPROFILE%\\.deno\\bin\\deno.exe</code>，安装程序通常会自动将此路径添加到系统 <code>PATH</code> 环境变量中。</p>
+<p>安装完成后，打开一个新的终端窗口，运行以下命令验证是否安装成功：</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno <span class="literal">--version</span></span><br></pre></td></tr></table></figure>
+
+<p>如果能看到版本信息，就说明安装成功了。</p>
+<h2 id="📦-其他安装方式"><a href="#📦-其他安装方式" class="headerlink" title="📦 其他安装方式"></a>📦 其他安装方式</h2><p>如果你更习惯使用包管理器，这些也是不错的选择：</p>
+<table>
+<thead>
+<tr>
+<th align="left">包管理器</th>
+<th align="left">命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left"><strong>Winget</strong></td>
+<td align="left"><code>winget install DenoLand.Deno</code></td>
+</tr>
+<tr>
+<td align="left"><strong>Scoop</strong></td>
+<td align="left"><code>scoop install deno</code></td>
+</tr>
+<tr>
+<td align="left"><strong>Chocolatey</strong></td>
+<td align="left"><code>choco install deno</code></td>
+</tr>
+<tr>
+<td align="left"><strong>npm</strong></td>
+<td align="left"><code>npm install -g deno</code>（启动性能略逊于官方脚本）</td>
+</tr>
+</tbody></table>
+<h2 id="🖱️-手动安装与系统要求"><a href="#🖱️-手动安装与系统要求" class="headerlink" title="🖱️ 手动安装与系统要求"></a>🖱️ 手动安装与系统要求</h2><p>你也可以选择从 GitHub 的<a target="_blank" rel="noopener" href="https://github.com/denoland/deno/releases">发布页面</a>下载对应架构的 <code>.zip</code> 压缩包，解压后将 <code>deno.exe</code> 放在一个你方便管理的目录，并手动将其添加到系统 <code>PATH</code> 环境变量中。</p>
+<p><strong>系统要求</strong>：请确保你的 Windows 系统是 <strong>Windows 10 版本 1709</strong> 或 <strong>Windows Server 2016 版本 1709</strong> 及更新的版本。</p>
+<h2 id="⬆️-更新-Deno"><a href="#⬆️-更新-Deno" class="headerlink" title="⬆️ 更新 Deno"></a>⬆️ 更新 Deno</h2><p>当你需要更新到最新版本时，只需在终端中运行<code>deno upgrade</code>命令即可。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>shenjuexiao
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://shenjuexiao.com/2026/2026-08-06-Deno-Windows-Install/" title="Deno Windows Install">https://shenjuexiao.com/2026/2026-08-06-Deno-Windows-Install/</a>
+  </li>
+  <li class="post-copyright-license">
+      <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="followme">
+  <span>欢迎关注我的其它发布渠道</span>
+
+  <div class="social-list">
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/atom.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">ATOM</span>
+          </a>
+      </div>
+
+      <div class="social-item">
+          <a target="_blank" class="social-link" href="/rss2.xml">
+            <span class="icon">
+              <i class="fa fa-rss"></i>
+            </span>
+
+            <span class="label">RSS2</span>
+          </a>
+      </div>
+  </div>
+</div>
+
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2026/2026-08-05-PicGo-GitHub-Config/" rel="prev" title="PicGo GitHub Config">
+                  <i class="fa fa-angle-left"></i> PicGo GitHub Config
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2026/2026-08-07-Pagic-Windows-Installation/" rel="next" title="Pagic Windows Installation">
+                  Pagic Windows Installation <i class="fa fa-angle-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    
+  
+  <div class="comments giscus-container">
+  </div>
+  
+  
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 2020 – 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">shenjuexiao</span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+  <div class="sidebar-dimmer"></div>
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+<script class="next-config" data-name="giscus" type="application/json">{"enable":true,"repo":"shenjuexiao/giscus","repo_id":"R_kgDOTr7hig","category":"Announcements","category_id":"DIC_kwDOTr7his4DCjIS","mapping":"pathname","strict":0,"reactions_enabled":1,"emit_metadata":0,"theme":"preferred_color_scheme","lang":"zh-CN","crossorigin":"anonymous","input_position":"top","loading":"lazy"}</script>
+
+<script>
+document.addEventListener('page:loaded', () => {
+  if (!CONFIG.page.comments) return;
+
+  NexT.utils.loadComments('.giscus-container')
+    .then(() => NexT.utils.getScript('https://giscus.app/client.js', {
+      attributes: {
+        async                   : true,
+        crossOrigin             : 'anonymous',
+        'data-repo'             : CONFIG.giscus.repo,
+        'data-repo-id'          : CONFIG.giscus.repo_id,
+        'data-category'         : CONFIG.giscus.category,
+        'data-category-id'      : CONFIG.giscus.category_id,
+        'data-mapping'          : CONFIG.giscus.mapping,
+        'data-strict'           : CONFIG.giscus.strict,
+        'data-reactions-enabled': CONFIG.giscus.reactions_enabled,
+        'data-emit-metadata'    : CONFIG.giscus.emit_metadata,
+        'data-theme'            : CONFIG.giscus.theme,
+        'data-lang'             : CONFIG.giscus.lang,
+        'data-input-position'   : CONFIG.giscus.input_position,
+        'data-loading'          : CONFIG.giscus.loading
+      },
+      parentNode: document.querySelector('.giscus-container')
+    }));
+});
+</script>
+
+</body>
+</html>
