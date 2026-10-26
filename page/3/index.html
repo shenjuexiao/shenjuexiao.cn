@@ -333,7 +333,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-17 01:44:03" itemprop="dateModified" datetime="2026-08-17T01:44:03+08:00">2026-08-17</time>
+      <time title="修改时间：2026-10-26 07:58:16" itemprop="dateModified" datetime="2026-10-26T07:58:16+08:00">2026-10-26</time>
     </span>
 
   
@@ -346,10 +346,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Pagic-Windows-降级安装"><a href="#Pagic-Windows-降级安装" class="headerlink" title="Pagic Windows 降级安装"></a>Pagic Windows 降级安装</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Pagic_dist_on_http_127.png" alt="Pagic dist on http 127"></p>
+          <h1 id="Pagic-Windows-降级安装"><a href="#Pagic-Windows-降级安装" class="headerlink" title="Pagic Windows 降级安装"></a>Pagic Windows 降级安装</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/github_png/pagic_dist_on_http_127.png" alt="Pagic dist on http 127"></p>
 <h2 id="📝-笔记总结"><a href="#📝-笔记总结" class="headerlink" title="📝 笔记总结"></a>📝 笔记总结</h2><p>克隆仓库，修改 <code>i18n.tsx</code>，安装成功，但是部署中还会出现 CDN 错误。</p>
 <h2 id="📖-内容来源"><a href="#📖-内容来源" class="headerlink" title="📖 内容来源"></a>📖 内容来源</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://pagic.org/zh-CN/docs/usage.html">Pagic 安装</a></li>
+<li><a target="_blank" rel="noopener" href="https://pagic.org/zh-cn/docs/usage.html">Pagic 安装</a></li>
 <li><a target="_blank" rel="noopener" href="https://pagic.org/docs/usage.html">Pagic Installation</a></li>
 </ul>
 <blockquote>
@@ -362,7 +362,7 @@
 
 <h3 id="分两步执行（成功）"><a href="#分两步执行（成功）" class="headerlink" title="分两步执行（成功）"></a>分两步执行（成功）</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1. 下载脚本到本地临时文件夹</span></span><br><span class="line"><span class="built_in">Invoke-RestMethod</span> <span class="literal">-Uri</span> \<span class="string">&quot;https://deno.land/install.ps1\&quot;</span> <span class="literal">-OutFile</span> \<span class="string">&quot;<span class="variable">$env:TEMP</span>\\deno_install.ps1\&quot;</span></span><br><span class="line"><span class="comment"># 2. 执行脚本并传入参数</span></span><br><span class="line">&amp; \<span class="string">&quot;<span class="variable">$env:TEMP</span>\\deno_install.ps1\&quot;</span> \<span class="string">&quot;v1.34.1\&quot;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Deno_Windows_deno_install_1.34.1.png" alt="Deno Windows deno install 1.34.1"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/github_png/deno_windows_deno_install_1.34.1.png" alt="Deno Windows deno install 1.34.1"></p>
 <h2 id="🧩-安装后验证"><a href="#🧩-安装后验证" class="headerlink" title="🧩 安装后验证"></a>🧩 安装后验证</h2><p>安装完成后，记得关闭并重新打开你的 <code>PowerShell</code> 终端，然后运行以下命令来确认版本：</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno <span class="literal">--version</span></span><br></pre></td></tr></table></figure>
 
@@ -377,14 +377,14 @@
 <h2 id="🚫-CDN-错误"><a href="#🚫-CDN-错误" class="headerlink" title="🚫 CDN  错误"></a>🚫 CDN  错误</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">PS</span> D:\\git&gt; deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span> <span class="literal">--allow-write</span> <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic https://deno.land/x/pagic/mod.ts</span><br><span class="line">Warning Implicitly <span class="keyword">using</span> latest version (v1.6.3) for https://deno.land/x/pagic/mod.ts</span><br><span class="line">Sending fatal alert BadCertificatey@v0.<span class="number">25.7</span>/prompt/_generic_suggestions.ts (<span class="number">10</span>/<span class="number">57</span>)</span><br><span class="line">Sending fatal alert BadCertificate11.<span class="number">0</span>/fs/mod.ts <span class="number">0.40</span>KiB/<span class="number">0.40</span>KiB (<span class="number">15</span>/<span class="number">57</span>)</span><br><span class="line">error: error sending request <span class="keyword">for</span> url (https://cdn.pagic.org/i18next@<span class="number">19.8</span>.<span class="number">1</span>/esnext/i18next.js): error trying to connect: invalid peer certificate: NotValidForName</span><br><span class="line">    at https://deno.land/x/pagic@v1.<span class="number">6.3</span>/src/plugins/i18n.tsx:<span class="number">4</span>:<span class="number">21</span></span><br><span class="line"><span class="built_in">PS</span> D:\\git&gt;</span><br></pre></td></tr></table></figure>
 
 <p>错误是由于 Deno 在下载依赖时遇到了 SSL 证书验证问题。具体是 cdn.pagic.org 这个域名的证书无效（NotValidForName 错误）。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Pagic_error_sending_request_for_url.png" alt="Pagic error sending request for url"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/github_png/pagic_error_sending_request_for_url.png" alt="Pagic error sending request for url"></p>
 <h2 id="🎯-本地安装"><a href="#🎯-本地安装" class="headerlink" title="🎯 本地安装"></a>🎯 本地安装</h2><h3 id="克隆仓库"><a href="#克隆仓库" class="headerlink" title="克隆仓库"></a>克隆仓库</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:xcatliu/pagic.git</span><br></pre></td></tr></table></figure>
 
 <h3 id="修改-i18n-tsx"><a href="#修改-i18n-tsx" class="headerlink" title="修改 i18n.tsx"></a>修改 <code>i18n.tsx</code></h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># pagic\\src\\plugins\\i18n.tsx</span></span><br><span class="line">import i18next from <span class="string">&#x27;../../cdn.pagic.org/i18next@19.8.1/esnext/i18next.js&#x27;</span>;</span><br><span class="line">import &#123; Trans as TransComponent &#125; from <span class="string">&#x27;../../cdn.pagic.org/react-i18next@11.7.3/Trans.js&#x27;</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 <h3 id="安装-Pagic"><a href="#安装-Pagic" class="headerlink" title="安装 Pagic"></a>安装 Pagic</h3><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span> <span class="literal">--allow-write</span> <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic mod.ts</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Pagic_Successfully_installed_pagic.png" alt="Pagic Successfully installed pagic"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/github_png/pagic_successfully_installed_pagic.png" alt="Pagic Successfully installed pagic"></p>
 <p>##💡初始化项目</p>
 <blockquote>
 <p>要使用 pagic 构建静态网站，则该项目至少需要包含一个 pagic.config.ts 配置文件和一个 md&#x2F;tsx 页面文件：</p>
@@ -426,7 +426,7 @@
 <blockquote>
 <p>一般的 Markdown 文件会被构建为同名的 HTML 文件，但是 README.md 被构建为了 index.html，这是一种人性化的处理，方便同时在 GitHub 中和静态网站中展示首页的内容。</p>
 </blockquote>
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Pagic_pagic_build_watch_serve.png" alt="Pagic pagic build watch serve"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/github_png/pagic_pagic_build_watch_serve.png" alt="Pagic pagic build watch serve"></p>
 <p>后面不尝试了，因为还会出现 CDN 出错，修改本地文件或许可以构建成功，但是不太顺利。</p>
 
       
@@ -490,7 +490,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-17 01:42:37" itemprop="dateModified" datetime="2026-08-17T01:42:37+08:00">2026-08-17</time>
+      <time title="修改时间：2026-10-26 07:58:26" itemprop="dateModified" datetime="2026-10-26T07:58:26+08:00">2026-10-26</time>
     </span>
 
   
@@ -503,10 +503,10 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Pagic-Windows-安装"><a href="#Pagic-Windows-安装" class="headerlink" title="Pagic Windows 安装"></a>Pagic Windows 安装</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Deno_Windows_PowerShell_irm.png" alt="Deno Windows PowerShell irm"></p>
+          <h1 id="Pagic-Windows-安装"><a href="#Pagic-Windows-安装" class="headerlink" title="Pagic Windows 安装"></a>Pagic Windows 安装</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/github_png/deno_windows_powershell_irm.png" alt="Deno Windows PowerShell irm"></p>
 <h2 id="📝-笔记总结"><a href="#📝-笔记总结" class="headerlink" title="📝 笔记总结"></a>📝 笔记总结</h2><p>未安装成功，Deno 版本 2.9.4，后续发现可能是因为 Deno 版本太高了，使用 Deno 1.34.1 再次尝试。</p>
 <h2 id="📖-内容来源"><a href="#📖-内容来源" class="headerlink" title="📖 内容来源"></a>📖 内容来源</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://pagic.org/zh-CN/docs/usage.html">Pagic 安装</a></li>
+<li><a target="_blank" rel="noopener" href="https://pagic.org/zh-cn/docs/usage.html">Pagic 安装</a></li>
 <li><a target="_blank" rel="noopener" href="https://pagic.org/docs/usage.html">Pagic Installation</a></li>
 </ul>
 <blockquote>
@@ -524,7 +524,7 @@
 
 <h2 id="❓安装错误提示一"><a href="#❓安装错误提示一" class="headerlink" title="❓安装错误提示一"></a>❓安装错误提示一</h2><figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">PS</span> D:\\Git&gt; deno install <span class="literal">--unstable</span> <span class="literal">--allow-read</span> <span class="literal">--allow-write</span> <span class="literal">--allow-net</span> <span class="literal">--allow-env</span> <span class="literal">--allow-run</span> <span class="literal">--name</span>=pagic https://deno.land/x/pagic@v1.<span class="number">6.3</span>/mod.ts</span><br><span class="line">error: the following required arguments were not provided:</span><br><span class="line">  <span class="literal">--global</span></span><br><span class="line"></span><br><span class="line">Note: Permission flags can only be used <span class="keyword">in</span> a global setting</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Deno_Windows_deno_install_error_1.png" alt="Deno Windows deno install error"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/github_png/deno_windows_deno_install_error_1.png" alt="Deno Windows deno install error"></p>
 <blockquote>
 <p>Deno 要求在使用权限标志时，必须指定 –global 选项。正确的命令在你的命令末尾加上 –global</p>
 </blockquote>
@@ -538,7 +538,7 @@
 
 <h2 id="🪲-安装错误提示二"><a href="#🪲-安装错误提示二" class="headerlink" title="🪲 安装错误提示二"></a>🪲 安装错误提示二</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">PS D:\\Git&gt; deno install --allow-read --allow-write --allow-net --allow-env --allow-run --name=pagic --global https://deno.land/x/pagic@v1.6.3/mod.ts</span><br><span class="line">✅ Granted import access to \&quot;cdn.pagic.org:443\&quot;.</span><br><span class="line">error: Import &#x27;https://cdn.pagic.org/i18next@19.8.1/esnext/i18next.js&#x27; failed.</span><br><span class="line">    0: error sending request for url (https://cdn.pagic.org/i18next@19.8.1/esnext/i18next.js): client error (Connect): invalid peer certificate: certificate not valid for name \&quot;cdn.pagic.org\&quot;; certificate is only valid for DnsName(\&quot;*.cdn.myqcloud.com\&quot;), DnsName(\&quot;*.2144.cn\&quot;), DnsName(\&quot;*.2144.com\&quot;), DnsName(\&quot;*.4399.com\&quot;), DnsName(\&quot;*.5054399.com\&quot;), DnsName(\&quot;*.58cdn.com.cn\&quot;), DnsName(\&quot;*.bldimg.com\&quot;), DnsName(\&quot;*.cdn-go.cn\&quot;), DnsName(\&quot;*.cntv.qcloudcdn.com\&quot;), DnsName(\&quot;*.danmu.com\&quot;), DnsName(\&quot;*.dd.cdntips.net\&quot;), DnsName(\&quot;*.dd.qq.com\&quot;), DnsName(\&quot;*.dianping.com\&quot;), DnsName(\&quot;*.dl.txcdns.com\&quot;), DnsName(\&quot;*.dlied1.cdntips.net\&quot;), DnsName(\&quot;*.dpfile.com\&quot;), DnsName(\&quot;*.ffnews.cn\&quot;), DnsName(\&quot;*.file.myqcloud.com\&quot;), DnsName(\&quot;*.flash.2144.com\&quot;), DnsName(\&quot;*.flash.cn\&quot;), DnsName(\&quot;*.geetest.com\&quot;), DnsName(\&quot;*.gtimg.cn\&quot;), DnsName(\&quot;*.gtimg.com\&quot;), DnsName(\&quot;*.hls.cdn.myqcloud.com\&quot;), DnsName(\&quot;*.image.myqcloud.com\&quot;), DnsName(\&quot;*.img4399.com\&quot;), DnsName(\&quot;*.jsbchina.cn\&quot;), DnsName(\&quot;*.lof3.xyz\&quot;), DnsName(\&quot;*.meituan.net\&quot;), DnsName(\&quot;*.myapp.com\&quot;), DnsName(\&quot;*.mykeeta.net\&quot;), DnsName(\&quot;*.qcloudcdn.com\&quot;), DnsName(\&quot;*.qpic.cn\&quot;), DnsName(\&quot;*.sogoucdn.com\&quot;), DnsName(\&quot;*.suyinwealth.com\&quot;), DnsName(\&quot;*.ugdtimg.com\&quot;), DnsName(\&quot;*.uniqlo.cn\&quot;), DnsName(\&quot;*.vda.v.qcloudcdn.com\&quot;), DnsName(\&quot;*.video.myqcloud.com\&quot;), DnsName(\&quot;*.vip.cdngot.com\&quot;), DnsName(\&quot;*.vod-qcloud.com\&quot;), DnsName(\&quot;*.vod.cdn.myqcloud.com\&quot;), DnsName(\&quot;*.vod.myqcloud.com\&quot;), DnsName(\&quot;*.vod2.myqcloud.com\&quot;), DnsName(\&quot;*.wanyabox.com\&quot;), DnsName(\&quot;*.weishi.qq.com\&quot;), DnsName(\&quot;*.wx.qq.com\&quot;), DnsName(\&quot;*.zhongcheng818.com\&quot;), DnsName(\&quot;*.zservey.net\&quot;), DnsName(\&quot;cdn.myqcloud.com\&quot;), DnsName(\&quot;flash.cn\&quot;), DnsName(\&quot;nitrome.com.4399.com\&quot;), DnsName(\&quot;www.miniclip.com.4399pk.com\&quot;), DnsName(\&quot;www.tencentwm.com\&quot;), DnsName(\&quot;www.txfund.com\&quot;) or DnsName(\&quot;xpdl999.aiwan4399.com\&quot;)</span><br><span class="line">    1: client error (Connect)</span><br><span class="line">    2: invalid peer certificate: certificate not valid for name \&quot;cdn.pagic.org\&quot;; certificate is only valid for DnsName(\&quot;*.cdn.myqcloud.com\&quot;), DnsName(\&quot;*.2144.cn\&quot;), DnsName(\&quot;*.2144.com\&quot;), DnsName(\&quot;*.4399.com\&quot;), DnsName(\&quot;*.5054399.com\&quot;), DnsName(\&quot;*.58cdn.com.cn\&quot;), DnsName(\&quot;*.bldimg.com\&quot;), DnsName(\&quot;*.cdn-go.cn\&quot;), DnsName(\&quot;*.cntv.qcloudcdn.com\&quot;), DnsName(\&quot;*.danmu.com\&quot;), DnsName(\&quot;*.dd.cdntips.net\&quot;), DnsName(\&quot;*.dd.qq.com\&quot;), DnsName(\&quot;*.dianping.com\&quot;), DnsName(\&quot;*.dl.txcdns.com\&quot;), DnsName(\&quot;*.dlied1.cdntips.net\&quot;), DnsName(\&quot;*.dpfile.com\&quot;), DnsName(\&quot;*.ffnews.cn\&quot;), DnsName(\&quot;*.file.myqcloud.com\&quot;), DnsName(\&quot;*.flash.2144.com\&quot;), DnsName(\&quot;*.flash.cn\&quot;), DnsName(\&quot;*.geetest.com\&quot;), DnsName(\&quot;*.gtimg.cn\&quot;), DnsName(\&quot;*.gtimg.com\&quot;), DnsName(\&quot;*.hls.cdn.myqcloud.com\&quot;), DnsName(\&quot;*.image.myqcloud.com\&quot;), DnsName(\&quot;*.img4399.com\&quot;), DnsName(\&quot;*.jsbchina.cn\&quot;), DnsName(\&quot;*.lof3.xyz\&quot;), DnsName(\&quot;*.meituan.net\&quot;), DnsName(\&quot;*.myapp.com\&quot;), DnsName(\&quot;*.mykeeta.net\&quot;), DnsName(\&quot;*.qcloudcdn.com\&quot;), DnsName(\&quot;*.qpic.cn\&quot;), DnsName(\&quot;*.sogoucdn.com\&quot;), DnsName(\&quot;*.suyinwealth.com\&quot;), DnsName(\&quot;*.ugdtimg.com\&quot;), DnsName(\&quot;*.uniqlo.cn\&quot;), DnsName(\&quot;*.vda.v.qcloudcdn.com\&quot;), DnsName(\&quot;*.video.myqcloud.com\&quot;), DnsName(\&quot;*.vip.cdngot.com\&quot;), DnsName(\&quot;*.vod-qcloud.com\&quot;), DnsName(\&quot;*.vod.cdn.myqcloud.com\&quot;), DnsName(\&quot;*.vod.myqcloud.com\&quot;), DnsName(\&quot;*.vod2.myqcloud.com\&quot;), DnsName(\&quot;*.wanyabox.com\&quot;), DnsName(\&quot;*.weishi.qq.com\&quot;), DnsName(\&quot;*.wx.qq.com\&quot;), DnsName(\&quot;*.zhongcheng818.com\&quot;), DnsName(\&quot;*.zservey.net\&quot;), DnsName(\&quot;cdn.myqcloud.com\&quot;), DnsName(\&quot;flash.cn\&quot;), DnsName(\&quot;nitrome.com.4399.com\&quot;), DnsName(\&quot;www.miniclip.com.4399pk.com\&quot;), DnsName(\&quot;www.tencentwm.com\&quot;), DnsName(\&quot;www.txfund.com\&quot;) or DnsName(\&quot;xpdl999.aiwan4399.com\&quot;)</span><br><span class="line">    at https://deno.land/x/pagic@v1.6.3/src/plugins/i18n.tsx:4:21</span><br></pre></td></tr></table></figure>
 
-<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Deno_Windows_deno_install_error_2.png" alt="Deno Windows deno install error"></p>
+<p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/github_png/deno_windows_deno_install_error_2.png" alt="Deno Windows deno install error"></p>
 <p><code>cdn.pagic.org</code> DNS 被污染，解析到腾讯云 CDN 节点，但该节点证书并不是 <code>cdn.pagic.org</code> 的，出现证书域名不匹配，Deno HTTPS 校验直接拒绝。</p>
 <h2 id="🌟-待续……"><a href="#🌟-待续……" class="headerlink" title="🌟 待续……"></a>🌟 待续……</h2><p>⚡ 解决不掉了。😅</p>
 <h2 id="🧩-验证安装"><a href="#🧩-验证安装" class="headerlink" title="🧩 验证安装"></a>🧩 验证安装</h2><p>安装后，确保 <code>~/.deno/bin</code> 在你的系统 PATH 中，然后测试：</p>
@@ -607,7 +607,7 @@
         <i class="far fa-calendar-check"></i>
       </span>
       <span class="post-meta-item-text">更新于</span>
-      <time title="修改时间：2026-08-17 01:42:11" itemprop="dateModified" datetime="2026-08-17T01:42:11+08:00">2026-08-17</time>
+      <time title="修改时间：2026-10-26 07:58:40" itemprop="dateModified" datetime="2026-10-26T07:58:40+08:00">2026-10-26</time>
     </span>
 
   
@@ -620,13 +620,13 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          <h1 id="Deno-Windows-安装"><a href="#Deno-Windows-安装" class="headerlink" title="Deno Windows 安装"></a>Deno Windows 安装</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/GitHub_png/Deno_Windows_PowerShell_irm.png" alt="Deno Windows PowerShell irm"></p>
+          <h1 id="Deno-Windows-安装"><a href="#Deno-Windows-安装" class="headerlink" title="Deno Windows 安装"></a>Deno Windows 安装</h1><p><img src="https://cdn.jsdelivr.net/gh/shenjuexiao/shenjuexiao@main/github_png/deno_windows_powershell_irm.png" alt="Deno Windows PowerShell irm"></p>
 <h2 id="📝-笔记总结"><a href="#📝-笔记总结" class="headerlink" title="📝 笔记总结"></a>📝 笔记总结</h2><p>PowerShell 脚本安装最方便。</p>
 <figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">irm</span> https://deno.land/install.ps1 | <span class="built_in">iex</span></span><br><span class="line">deno <span class="literal">--version</span></span><br></pre></td></tr></table></figure>
 
 <h2 id="📖-内容来源"><a href="#📖-内容来源" class="headerlink" title="📖 内容来源"></a>📖 内容来源</h2><ul>
-<li><a target="_blank" rel="noopener" href="https://pagic.org/zh-CN/docs/usage.html">安装 Deno</a></li>
-<li><a target="_blank" rel="noopener" href="https://pagic.org/zh-CN/docs/usage.html">Deno Windows 安装</a>（<a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/29bfb074-8f83-4edb-a777-6f579fbbe845">DeepSeek</a>）</li>
+<li><a target="_blank" rel="noopener" href="https://pagic.org/zh-cn/docs/usage.html">安装 Deno</a></li>
+<li><a target="_blank" rel="noopener" href="https://pagic.org/zh-cn/docs/usage.html">Deno Windows 安装</a>（<a target="_blank" rel="noopener" href="https://chat.deepseek.com/a/chat/s/29bfb074-8f83-4edb-a777-6f579fbbe845">deepseek</a>）</li>
 </ul>
 <blockquote>
 <p>Deno 是一个由 Node.js 的原始作者 Ryan Dahl 创建的 JavaScript、TypeScript 和 WebAssembly 运行时。你可以把它看作是 Node.js 的“进化版”，旨在解决 Node.js 早期设计中的一些遗憾，为现代 Web 开发提供一个更安全、更高效的开发环境</p>
